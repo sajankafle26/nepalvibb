@@ -1,0 +1,88 @@
+import { NextResponse } from 'next/server';
+import dbConnect from '@/lib/mongodb';
+import PlanTripQuestion from '@/models/PlanTripQuestion';
+
+export async function GET() {
+  try {
+    await dbConnect();
+    
+    // Clear existing questions
+    await PlanTripQuestion.deleteMany({});
+
+    const initialQuestions = [
+      {
+        question: 'Your group size',
+        description: 'Hvem skal du reise sammen med?',
+        type: 'select',
+        options: [
+          { label: 'Solo', value: 'solo', icon: 'User' },
+          { label: 'Par', value: 'couple', icon: 'Users' },
+          { label: 'Familie', value: 'family', icon: 'Users' },
+          { label: 'Gruppe', value: 'group', icon: 'Users' }
+        ],
+        order: 0,
+        isActive: true
+      },
+      {
+        question: 'Travel dates',
+        description: 'Når planlegger du å besøke Himalaya?',
+        type: 'select',
+        options: [
+          { label: 'Fleksibel', value: 'flexible', icon: 'Calendar' },
+          { label: 'Spesifikke datoer', value: 'fixed', icon: 'Calendar' },
+          { label: 'Vår (Mars-Mai)', value: 'spring', icon: 'Calendar' },
+          { label: 'Høst (Sept-Nov)', value: 'autumn', icon: 'Calendar' }
+        ],
+        order: 1,
+        isActive: true
+      },
+      {
+        question: 'Travel information',
+        description: 'Er det noe spesielt vi bør vite om din reise?',
+        type: 'text',
+        options: [],
+        order: 2,
+        isActive: true
+      },
+      {
+        question: 'Tour details',
+        description: 'Vennligst oppgi detaljer om din ønskede tur.',
+        type: 'text', // Using text as a placeholder for the complex step
+        options: [
+          { 
+            label: 'Comfortable', 
+            value: 'comfortable', 
+            icon: 'Heart',
+            description: 'Equivalent to 3-star hotels. We will strive to provide comfortable, but not luxurious accommodation.' 
+          },
+          { 
+            label: 'Luxury', 
+            value: 'luxury', 
+            icon: 'Sparkles',
+            description: 'Equivalent to 4 star hotels and above. We offer the best luxury accommodation available throughout the tour.' 
+          },
+          { 
+            label: 'Luxury Plus', 
+            value: 'luxury-plus', 
+            icon: 'Sparkles',
+            description: 'Equivalent to 5 star hotels or more, we offer the best luxury accommodation available throughout the tour.' 
+          },
+          { 
+            label: 'Camping', 
+            value: 'camping', 
+            icon: 'Mountain',
+            description: 'You will have a different experience' 
+          }
+        ],
+        order: 3,
+        isActive: true
+      }
+    ];
+
+    await PlanTripQuestion.insertMany(initialQuestions);
+    
+    return NextResponse.json({ message: 'Questions seeded successfully' });
+  } catch (error) {
+    return NextResponse.json({ error: error.message }, { status: 500 });
+  }
+}

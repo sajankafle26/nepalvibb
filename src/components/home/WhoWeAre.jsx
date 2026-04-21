@@ -1,0 +1,132 @@
+"use client";
+
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { ShieldCheck, Award, Users } from 'lucide-react';
+
+export default function WhoWeAre({ content }) {
+  return (
+    <section className="py-40 bg-gray-50/50 overflow-hidden relative">
+      {/* Decorative Background Text */}
+      <div className="absolute top-20 -right-20 text-[15rem] font-black text-gray-100 uppercase tracking-tighter select-none pointer-events-none opacity-50">
+        Nepal
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 sm:px-8">
+        <div className="flex flex-col lg:flex-row items-center gap-24 relative z-10">
+          
+          {/* Image Side */}
+          <div className="lg:w-1/2 relative">
+            <motion.div 
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1 }}
+              className="grid grid-cols-2 gap-8"
+            >
+              <div className="pt-24">
+                <div className="relative group">
+                  <div className="absolute -inset-4 bg-orange-500/10 rounded-[3rem] blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                  <img 
+                    src={content?.image1 || "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=600&q=80"} 
+                    alt="Nepal landscape" 
+                    className="rounded-[3rem] shadow-2xl w-full h-[500px] object-cover relative z-10 grayscale hover:grayscale-0 transition-all duration-700"
+                  />
+                </div>
+              </div>
+              <div className="relative group">
+                <div className="absolute -inset-4 bg-primary/10 rounded-[3rem] blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                <img 
+                  src={content?.image2 || "https://images.unsplash.com/photo-1526715469145-8a881096a66d?auto=format&fit=crop&w=600&q=80"} 
+                  alt="Nepal culture" 
+                  className="rounded-[3rem] shadow-2xl w-full h-[500px] object-cover relative z-10 grayscale hover:grayscale-0 transition-all duration-700"
+                />
+              </div>
+            </motion.div>
+
+            {/* Floating Stats */}
+            <motion.div 
+              initial={{ scale: 0, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ type: "spring", stiffness: 100, delay: 0.5 }}
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-12 rounded-[3rem] text-center shadow-[0_30px_100px_rgba(0,0,0,0.1)] border border-gray-100 z-20 min-w-[200px]"
+            >
+              <span className="block text-7xl font-black text-primary leading-none mb-2">
+                {content?.yearsOfExperience || '15'}
+              </span>
+              <span className="text-[10px] uppercase font-black tracking-[0.3em] text-orange-500 block">Års Erfaring</span>
+              <div className="mt-6 flex justify-center space-x-1">
+                {[1, 2, 3, 4, 5].map(i => (
+                  <div key={i} className="w-1.5 h-1.5 rounded-full bg-orange-500" />
+                ))}
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Text Side */}
+          <div className="lg:w-1/2">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <h5 className="text-orange-500 font-black uppercase tracking-[0.4em] text-[11px] mb-8 flex items-center">
+                <span className="w-12 h-[2px] bg-orange-500 mr-4" /> {content?.subtitle || 'Hvem vi er'}
+              </h5>
+              <h2 className="text-6xl md:text-7xl font-black text-primary leading-[0.9] mb-12 uppercase tracking-tighter">
+                {content?.title || 'Eksperter på Himalaya Eventyr'}
+              </h2>
+              
+              <div className="space-y-10 text-gray-500 leading-relaxed text-lg font-light">
+                <p>
+                  {content?.description || 'Velkommen til Nepalvibb, et stolt datterselskap av Actual Adventure Pvt. Ltd. Med over 15 års dedikasjon har vi etablert oss som den fremste aktøren for skandinaviske reisende i Nepal.'}
+                </p>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-4">
+                  <div className="flex items-start space-x-4">
+                    <div className="bg-emerald-100 p-3 rounded-2xl text-primary">
+                      <ShieldCheck className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-black uppercase tracking-widest text-primary mb-1">{content?.feature1Title || 'Trygghet'}</h4>
+                      <p className="text-xs">{content?.feature1Desc || 'Sikkerhet i fokus på alle turer.'}</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-4">
+                    <div className="bg-orange-100 p-3 rounded-2xl text-orange-600">
+                      <Users className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-black uppercase tracking-widest text-primary mb-1">{content?.feature2Title || 'Ekspertise'}</h4>
+                      <p className="text-xs">{content?.feature2Desc || 'Lokale guider med dyp kunnskap.'}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-16 flex items-center space-x-12">
+                <Link href="/om-oss" className="inline-block bg-primary text-white px-14 py-6 text-[11px] font-black uppercase tracking-[0.3em] rounded-full hover:bg-emerald-900 transition-all shadow-[0_20px_40px_rgba(67,87,53,0.3)]">
+                  om oss
+                </Link>
+                <div className="hidden sm:flex items-center space-x-4">
+                  <div className="w-16 h-16 rounded-full border border-gray-200 flex items-center justify-center p-4">
+                    <Award className="text-orange-500 w-8 h-8" />
+                  </div>
+                  <span className="text-[10px] font-black uppercase tracking-widest text-primary leading-tight">Sertifisert <br /> Reisebyrå</span>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+        </div>
+      </div>
+      <style jsx>{`
+        .stroke-text-primary {
+          -webkit-text-stroke: 1px #435735;
+          color: transparent;
+        }
+      `}</style>
+    </section>
+  );
+}

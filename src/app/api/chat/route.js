@@ -1,0 +1,88 @@
+import { NextResponse } from 'next/server';
+import dbConnect from '@/lib/mongodb';
+import TripRequest from '@/models/TripRequest';
+
+const SPECIALIST_RESPONSES = [
+  "That's a wonderful choice! The mountain trekking and culture in Nepal is truly world-class. I'd love to weave that into your itinerary. Would you like to spend more time in the mountains or also include some time in Kathmandu valley?",
+  "Great — I can definitely arrange that. Based on what you've shared, I'm thinking a mix of cultural experiences and natural beauty would work perfectly for you. What's your feeling about homestays vs. boutique hotels?",
+  "Absolutely! That's one of my personal favorites too. I've taken many guests there and the experience is always incredible. Are you open to adding a short side trip to the Langtang Valley as well?",
+  "Perfect. I'll note that down. To help me finalize the best route, could you tell me — do you prefer early morning starts or a more relaxed pace during the day?",
+];
+
+function generateReply(message) {
+  const lower = message.toLowerCase();
+  
+  if (lower.includes('trekking')) return "The Annapurna and Everest Base Camp routes are absolutely spectacular right now. The trails are in great condition and the autumn weather is ideal. I'd recommend a 10-12 day trek for the best experience.";
+  if (lower.includes('culture')) return "Kathmandu valley has three UNESCO World Heritage cities — Kathmandu, Patan, and Bhaktapur — all within driving distance of each other. We can design a wonderful cultural immersion for you.";
+  if (lower.includes('price')) return "Nepal is actually quite affordable compared to Western destinations. I can give you a precise quote once we finalize the itinerary.";
+
+  return SPECIALIST_RESPONSES[Math.floor(Math.random() * SPECIALIST_RESPONSES.length)];
+}
+
+export async function POST(req) {
+  try {
+    await dbConnect();
+    const body = await req.json();
+    const { message, tripId, type, ...onboardingData } = body;
+    
+    let trip;
+
+    if (type === 'trip_request') {
+      // Create new trip from onboarding
+      trip = await TripRequest.create({
+        ...onboardingData,
+        messages: [{
+          sender: 'system',
+          text: `Trip request initiated for ${onboardingData.name || 'a new traveler'}.`
+        }, {
+          sender: 'user',
+          text: message || 'I am ready to plan my trip!'
+        }, {
+          sender: 'specialist',
+          text: "Welcome! I've received your trip preferences and I'm excited to help you plan your Nepal adventure. I'm reviewing your details now."
+        }]
+      });
+    } else {
+      // Update existing trip with new message
+      trip = await TripRequest.findById(tripId);
+      if (!trip) {
+        // Fallback for demo if ID is string based
+        trip = await TripRequest.findOne({ _id: tripId }).catch(() => null);
+      }
+
+      if (trip) {
+        const replyText = generateReply(message || '');
+        trip.messages.push({ sender: 'user', text: message });
+        trip.messages.push({ sender: 'specialist', text: replyText });
+        await trip.save();
+      }
+    }
+
+    return NextResponse.json({
+      success: true,
+      tripId: trip?._id || tripId,
+      reply: trip?.messages[trip.messages.length - 1]?.text || "I've received your message.",
+    });
+
+  } catch (error) {
+    console.error('Chat API Error:', error);
+    return NextResponse.json({ success: false, error: 'Failed to process message' }, { status: 500 });
+  }
+}
+
+export async function GET(req) {
+  try {
+    await dbConnect();
+    const { searchParams } = new URL(req.url);
+    const id = searchParams.get('id');
+    
+    if (id) {
+      const trip = await TripRequest.findById(id);
+      return NextResponse.json(trip);
+    }
+    
+    return NextResponse.json({ error: 'ID required' }, { status: 400 });
+  } catch (error) {
+    return NextResponse.json({ error: error.message }, { status: 500 });
+  }
+}

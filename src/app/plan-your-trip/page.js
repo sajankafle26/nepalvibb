@@ -104,6 +104,10 @@ export default function PlanYourTripPage() {
     // Validation
     if (currentStepIdx < questions.length) {
       if (currentQuestion.question === 'Tour details') {
+        if (!responses['accommodation']) {
+          setError('Vennligst velg et overnattingsalternativ.');
+          return;
+        }
         if (!responses['budget_flexible']) {
           setError('Vennligst oppgi om budsjettet ditt er fleksibelt.');
           return;
@@ -323,8 +327,8 @@ export default function PlanYourTripPage() {
                           <label className="text-[11px] font-black uppercase text-gray-500">Velg destinasjon</label>
                           <div className="relative">
                             <select
-                              value={responses[currentQuestion._id]?.[0] || ''}
-                              onChange={(e) => handleOptionToggle(currentQuestion._id, e.target.value, false)}
+                              value={responses['destination'] || ''}
+                              onChange={(e) => setResponses({ ...responses, destination: e.target.value })}
                               className="w-full bg-white border border-gray-200 rounded-xl px-6 py-4 text-sm font-medium text-gray-900 focus:ring-2 focus:ring-primary appearance-none pr-12 relative z-10 cursor-pointer"
                             >
                               <option value="">Velg destinasjon</option>
@@ -343,8 +347,8 @@ export default function PlanYourTripPage() {
                           <label className="text-[11px] font-black uppercase text-gray-500">Velg aktiviteter</label>
                           <div className="relative">
                             <select
-                              value={responses[currentQuestion._id]?.[0] || ''}
-                              onChange={(e) => handleOptionToggle(currentQuestion._id, e.target.value, true)}
+                              value={responses['activities'] || ''}
+                              onChange={(e) => setResponses({ ...responses, activities: e.target.value })}
                               className="w-full bg-white border border-gray-200 rounded-xl px-6 py-4 text-sm font-medium text-gray-900 focus:ring-2 focus:ring-primary appearance-none pr-12 relative z-10 cursor-pointer"
                             >
                               <option value="">Velg aktiviteter</option>
@@ -363,8 +367,8 @@ export default function PlanYourTripPage() {
                           <label className="text-[11px] font-black uppercase text-gray-500">Velg turer</label>
                           <div className="relative">
                             <select
-                              value={responses[currentQuestion._id]?.[0] || ''}
-                              onChange={(e) => handleOptionToggle(currentQuestion._id, e.target.value, false)}
+                              value={responses['tour'] || ''}
+                              onChange={(e) => setResponses({ ...responses, tour: e.target.value })}
                               className="w-full bg-white border border-gray-200 rounded-xl px-6 py-4 text-sm font-medium text-gray-900 focus:ring-2 focus:ring-primary appearance-none pr-12 relative z-10 cursor-pointer"
                             >
                               <option value="">Velg en tur</option>
@@ -383,20 +387,20 @@ export default function PlanYourTripPage() {
                         <div className="space-y-6">
                           <label className="text-[11px] font-black uppercase text-gray-500">Hvilke overnattingsalternativer? *</label>
                           <div className="space-y-6">
-                            {currentQuestion.options.map(opt => (
+                            {(currentQuestion.options || []).map(opt => (
                               <label key={opt.value} className="flex items-start space-x-4 cursor-pointer group">
                                 <div className="pt-1">
                                   <div className={cn(
                                     "w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all",
-                                    (responses[currentQuestion._id] || []).includes(opt.value) ? "border-primary bg-primary" : "border-gray-200 group-hover:border-primary"
+                                    responses['accommodation'] === opt.value ? "border-primary bg-primary" : "border-gray-200 group-hover:border-primary"
                                   )}>
                                     <div className="w-2 h-2 bg-white rounded-full" />
                                   </div>
                                   <input
                                     type="radio"
                                     className="hidden"
-                                    name={currentQuestion._id}
-                                    onChange={() => handleOptionToggle(currentQuestion._id, opt.value, false)}
+                                    name="accommodation"
+                                    onChange={() => setResponses({ ...responses, accommodation: opt.value })}
                                   />
                                 </div>
                                 <div className="space-y-1">
@@ -664,6 +668,39 @@ export default function PlanYourTripPage() {
                     </div>
                   );
                 })}
+
+                {responses['destination'] && (
+                  <div className="pt-4 border-t border-gray-50 flex flex-col space-y-1">
+                    <p className="text-[9px] font-black uppercase tracking-widest text-gray-400">Destinasjon</p>
+                    <p className="text-sm font-bold text-primary truncate">
+                      {destinations.find(d => d.slug === responses['destination'])?.title || responses['destination']}
+                    </p>
+                  </div>
+                )}
+                {responses['activities'] && (
+                  <div className="pt-4 border-t border-gray-50 flex flex-col space-y-1">
+                    <p className="text-[9px] font-black uppercase tracking-widest text-gray-400">Aktivitet</p>
+                    <p className="text-sm font-bold text-primary truncate">
+                      {activities.find(a => a.slug === responses['activities'])?.title || responses['activities']}
+                    </p>
+                  </div>
+                )}
+                {responses['tour'] && (
+                  <div className="pt-4 border-t border-gray-50 flex flex-col space-y-1">
+                    <p className="text-[9px] font-black uppercase tracking-widest text-gray-400">Valgt tur</p>
+                    <p className="text-sm font-bold text-primary truncate">
+                      {tours.find(t => t.slug === responses['tour'])?.title || responses['tour']}
+                    </p>
+                  </div>
+                )}
+                {responses['accommodation'] && (
+                  <div className="pt-4 border-t border-gray-50 flex flex-col space-y-1">
+                    <p className="text-[9px] font-black uppercase tracking-widest text-gray-400">Overnatting</p>
+                    <p className="text-sm font-bold text-primary truncate">
+                      {responses['accommodation']}
+                    </p>
+                  </div>
+                )}
 
                 {responses['budget'] && (
                   <div className="pt-4 border-t border-gray-50 flex flex-col space-y-1">

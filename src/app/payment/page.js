@@ -68,56 +68,45 @@ function PaymentContent() {
   }, [tripId]);
 
   const totalAmount = parseFloat(trip?.price || initialAmount);
-  const currency = "USD";
+  const currency = "NOK";
 
-  const createOrder = useCallback(async () => {
+  const createOrder = useCallback((data, actions) => {
     setStatus('processing');
-    try {
-      const res = await fetch('/api/payment/create-order', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          amount: totalAmount.toFixed(2),
-          currency: currency,
-          tripTitle: trip?.trip_title || trip?.destination || "Skreddersydd eventyr",
-          tripId: tripId,
-          bookingDetails
-        }),
-      });
-      const data = await res.json();
-      if (!data.orderId) throw new Error('No orderId returned');
-      return data.orderId;
-    } catch (err) {
+    return actions.order.create({
+      purchase_units: [
+        {
+          description: trip?.trip_title || trip?.destination || "Skreddersydd eventyr",
+          amount: {
+            currency_code: currency,
+            value: totalAmount.toFixed(2),
+          },
+        },
+      ],
+    }).catch(err => {
       setStatus('error');
       setErrorMsg('Kunne ikke opprette betaling. Vennligst prøv igjen.');
       throw err;
-    }
-  }, [totalAmount, trip, tripId, bookingDetails]);
+    });
+  }, [totalAmount, trip, currency]);
 
-  const onApprove = useCallback(async (data) => {
+  const onApprove = useCallback((data, actions) => {
     setStatus('processing');
-    try {
-      const res = await fetch('/api/payment/capture-order', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ 
-          orderId: data.orderID,
-          tripId: tripId,
-          bookingDetails
-        }),
+    return actions.order.capture().then((details) => {
+      setTransaction({
+        transactionId: details.id,
+        payerName: details.payer.name.given_name + ' ' + (details.payer.name.surname || ''),
+        payerEmail: details.payer.email_address,
+        amount: details.purchase_units[0].amount.value,
+        currency: details.purchase_units[0].amount.currency_code,
+        status: details.status,
+        tripId
       });
-      const result = await res.json();
-      if (result.success) {
-        setTransaction(result);
-        setStatus('success');
-      } else {
-        throw new Error('Capture failed');
-      }
-    } catch {
+      setStatus('success');
+    }).catch(err => {
       setStatus('error');
       setErrorMsg('Betalingen ble ikke fullført. Vennligst kontakt kundeservice.');
-    }
-  }, [tripId, bookingDetails]);
+    });
+  }, [tripId]);
 
   const onError = useCallback((err) => {
     setStatus('error');
@@ -354,7 +343,7 @@ function PaymentContent() {
                     <div className="pt-8 border-t border-gray-50 space-y-4">
                       <div className="flex items-center justify-between text-sm">
                         <span className="text-gray-400 font-medium italic">Grunnpris</span>
-                        <span className="font-black text-primary">${totalAmount.toLocaleString()}</span>
+                        <span className="font-black text-primary">kr {totalAmount.toLocaleString()}</span>
                       </div>
                       <div className="flex items-center justify-between text-sm">
                         <span className="text-gray-400 font-medium italic">Bestillingsgebyr</span>
@@ -362,7 +351,7 @@ function PaymentContent() {
                       </div>
                       <div className="pt-4 border-t-2 border-dashed border-gray-100 flex items-center justify-between">
                         <span className="text-lg font-black text-primary uppercase tracking-tight italic">Totalt</span>
-                        <span className="text-3xl font-black text-primary tracking-tighter">${totalAmount.toLocaleString()}</span>
+                        <span className="text-3xl font-black text-primary tracking-tighter">kr {totalAmount.toLocaleString()}</span>
                       </div>
                     </div>
 

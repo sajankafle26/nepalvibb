@@ -40,7 +40,7 @@ export default function Footer() {
     fetchData();
   }, []);
 
-  const s = dynamicData.settings || {
+  const fallbackSettings = {
     address: 'Nygata 12, 0159 Oslo, Norge',
     kathmanduAddress: 'Thamel, Kathmandu, Nepal',
     contactEmail: 'info@nepalvibb.com',
@@ -48,15 +48,24 @@ export default function Footer() {
     footerAbout: 'Nepalvibb er din personlige portal til Himalaya. Vi kobler deg med lokale eksperter for å skape uforglemmelige og bærekraftige reiseopplevelser i hjertet av Asia.',
     socialLinks: { facebook: '#', instagram: '#', youtube: '#', linkedin: '#' },
     affiliations: [
-      { name: 'NTB', logoUrl: 'https://www.actual-adventure.com/public/uploads/keep.svg' },
+      { name: 'NTB', logoUrl: 'https://www.actual-adventure.com/public/uploads/ntb.svg' },
       { name: 'TAAN', logoUrl: 'https://www.actual-adventure.com/public/uploads/taan.svg' },
-      { name: 'NMA', logoUrl: 'https://www.actual-adventure.com/public/uploads/nepal-goverment.svg' },
-      { name: 'RGF', logoUrl: 'https://www.actual-adventure.com/public/uploads/tap_logo_2.png' },
-      { name: 'Keep Nepal Green', logoUrl: 'https://www.actual-adventure.com/public/uploads/keep-nepal-green.png' },
+      { name: 'NMA', logoUrl: 'https://www.actual-adventure.com/public/uploads/nma.svg' },
+      { name: 'RGF', logoUrl: 'https://rgf.no/wp-content/themes/rgf/assets/img/logo.svg' },
+      { name: 'Keep Nepal Green', logoUrl: 'https://www.actual-adventure.com/public/uploads/keep.svg' },
       { name: 'Government of Nepal', logoUrl: 'https://www.actual-adventure.com/public/uploads/nepal-goverment.svg' }
     ],
     copyrightText: '© 2025 NEPALVIBB AS. ALL RIGHTS RESERVED.'
   };
+
+  const s = dynamicData.settings ? {
+    ...fallbackSettings,
+    ...dynamicData.settings,
+    // Ensure affiliations are merged carefully or fall back if empty
+    affiliations: (dynamicData.settings.affiliations && dynamicData.settings.affiliations.length > 0) 
+      ? dynamicData.settings.affiliations 
+      : fallbackSettings.affiliations
+  } : fallbackSettings;
 
   const footerLinks = [
     {

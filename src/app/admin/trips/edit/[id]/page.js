@@ -295,7 +295,7 @@ export default function EditTourPage({ params }) {
             </div>
             <div className="space-y-6">
               <div className="space-y-2">
-                <label className="text-[10px] font-black uppercase tracking-widest text-gray-400">Base Price (USD)</label>
+                <label className="text-[10px] font-black uppercase tracking-widest text-gray-400">Base Price (NOK)</label>
                 <input type="number" name="price" value={formData.price} onChange={handleChange} className="w-full border-2 border-gray-50 bg-gray-50/30 rounded-2xl px-6 py-3 text-sm font-black text-primary" />
               </div>
               <div className="grid grid-cols-2 gap-4">

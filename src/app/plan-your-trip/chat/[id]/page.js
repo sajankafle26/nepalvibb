@@ -7,10 +7,12 @@ import {
   Send, MapPin, Calendar, Users, 
   Clock, Edit2, ChevronRight, Paperclip,
   CheckCircle2, Circle, MoreHorizontal,
-  MessageCircle, Phone, Star, X, CreditCard, ArrowRight, Shield
+  MessageCircle, Phone, Star, X, CreditCard, ArrowRight, Shield,
+  Check, CheckCheck, Image as ImageIcon, FileIcon, ExternalLink
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
+import { io } from 'socket.io-client';
 
 const SPECIALIST = {
   name: "Nepalvibb Ekspert",
@@ -20,6 +22,23 @@ const SPECIALIST = {
   trips: 312,
   responseTime: "< 1 time",
 };
+
+// Notification sound - short beep using Web Audio API
+function playNotificationSound() {
+  try {
+    const ctx = new (window.AudioContext || window.webkitAudioContext)();
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.frequency.value = 880;
+    osc.type = 'sine';
+    gain.gain.setValueAtTime(0.3, ctx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.3);
+    osc.start(ctx.currentTime);
+    osc.stop(ctx.currentTime + 0.3);
+  } catch (e) { /* ignore audio errors */ }
+}
 
 const QUICK_REPLIES = [
   "Fjellvandring",
@@ -54,7 +73,91 @@ export default function ChatPage({ params }) {
   const [input, setInput] = useState('');
   const [sending, setSending] = useState(false);
   const [activeTab, setActiveTab] = useState('oversikt');
+  const [isSpecialistTyping, setIsSpecialistTyping] = useState(false);
+  const [specialistOnline, setSpecialistOnline] = useState(false);
+  const [connected, setConnected] = useState(false);
+  const [messagesRead, setMessagesRead] = useState(false);
+  const [showNewMsg, setShowNewMsg] = useState(false);
+
   const endRef = useRef(null);
+  const chatContainerRef = useRef(null);
+  const socketRef = useRef(null);
+  const typingTimeoutRef = useRef(null);
+  const fileInputRef = useRef(null);
+  const isAtBottomRef = useRef(true);
+
+  useEffect(() => {
+    let socket;
+    const initSocket = async () => {
+      await fetch('/api/socket');
+      socket = io({ path: '/api/socket' });
+      socketRef.current = socket;
+
+      socket.on('connect', () => {
+        setConnected(true);
+        socket.emit('join-room', { tripId: id, role: 'user' });
+        // Mark messages as read when user opens the chat
+        socket.emit('messages-read', { tripId: id, role: 'user' });
+      });
+
+      socket.on('disconnect', () => {
+        setConnected(false);
+      });
+
+      socket.on('receive-message', (data) => {
+        setMessages(prev => {
+          // Avoid duplicates
+          if (prev.some(m => m.id === data.id)) return prev;
+          return [...prev, data];
+        });
+
+        // If message is from specialist, play sound
+        if (data.from === 'specialist') {
+          playNotificationSound();
+          if (!isAtBottomRef.current) {
+            setShowNewMsg(true);
+          }
+          // Mark as read since user has the chat open
+          if (socketRef.current) {
+            socketRef.current.emit('messages-read', { tripId: id, role: 'user' });
+          }
+        }
+      });
+
+      socket.on('user-typing', (data) => {
+        if (data.role === 'specialist') {
+          setIsSpecialistTyping(true);
+        }
+      });
+
+      socket.on('user-stop-typing', (data) => {
+        if (data.role === 'specialist') {
+          setIsSpecialistTyping(false);
+        }
+      });
+
+      socket.on('presence-update', (data) => {
+        setSpecialistOnline(data.onlineRoles?.includes('specialist') || false);
+      });
+
+      socket.on('messages-marked-read', (data) => {
+        if (data.by === 'specialist') {
+          setMessagesRead(true);
+          setMessages(prev => prev.map(m => 
+            m.from === 'user' ? { ...m, read: true } : m
+          ));
+        }
+      });
+    };
+
+    if (id !== 'new') {
+      initSocket();
+    }
+
+    return () => {
+      if (socket) socket.disconnect();
+    };
+  }, [id]);
 
   useEffect(() => {
     const fetchChat = async () => {
@@ -73,10 +176,13 @@ export default function ChatPage({ params }) {
           setRequest(data);
           if (data.messages) {
             setMessages(data.messages.map((m, i) => ({
-              id: i,
+              id: m._id || `db-${i}`,
               from: m.sender === 'user' ? 'user' : 'specialist',
               text: m.text,
-              time: new Date(m.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+              attachment: m.attachment || null,
+              time: new Date(m.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+              read: m.read || false,
+              timestamp: m.timestamp
             })));
           }
         }
@@ -113,7 +219,9 @@ export default function ChatPage({ params }) {
   };
 
   useEffect(() => {
-    endRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (isAtBottomRef.current) {
+      endRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }
     const lastMsg = messages[messages.length - 1];
     if (lastMsg && lastMsg.from === 'specialist') {
       const txt = lastMsg.text.toLowerCase();
@@ -129,23 +237,102 @@ export default function ChatPage({ params }) {
     setInput('');
     setSending(true);
 
-    const userMsg = { id: Date.now(), from: 'user', text: msg, time: 'Akkurat nå' };
-    setMessages(prev => [...prev, userMsg]);
+    const userMsg = { id: `temp-${Date.now()}`, from: 'user', text: msg, time: 'Akkurat nå' };
+
+    if (id !== 'new' && socketRef.current?.connected) {
+      socketRef.current.emit('send-message', {
+        tripId: id,
+        message: msg,
+        from: 'user'
+      });
+      setSending(false);
+    } else {
+      // Local only / fallback
+      setMessages(prev => [...prev, userMsg]);
+      // For 'new' trips or if socket fails
+      setTimeout(() => {
+        const botMsg = { id: Date.now() + 1, from: 'specialist', text: "Takk! En ekspert vil se på dette snart.", time: 'Akkurat nå' };
+        setMessages(prev => [...prev, botMsg]);
+        setSending(false);
+      }, 1000);
+    }
+  };
+
+  const handleFileClick = () => {
+    fileInputRef.current?.click();
+  };
+
+  const handleFileChange = async (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    setSending(true);
+    const formData = new FormData();
+    formData.append('file', file);
 
     try {
-      const res = await fetch('/api/chat', {
+      const res = await fetch('/api/upload', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: msg, tripId: id }),
+        body: formData,
       });
       const data = await res.json();
-      const botMsg = { id: Date.now() + 1, from: 'specialist', text: data.reply, time: 'Akkurat nå' };
-      setMessages(prev => [...prev, botMsg]);
-    } catch {
-      const errMsg = { id: Date.now() + 1, from: 'specialist', text: "Beklager, jeg kunne ikke behandle meldingen din. Vennligst prøv igjen.", time: 'Akkurat nå' };
-      setMessages(prev => [...prev, errMsg]);
+
+      if (data.url) {
+        if (socketRef.current?.connected) {
+          socketRef.current.emit('send-message', {
+            tripId: id,
+            message: '',
+            from: 'user',
+            attachment: {
+              url: data.url,
+              type: data.type,
+              name: data.name
+            }
+          });
+        } else {
+          // No socket - just add locally (user chat usually doesn't have a REST respond API like admin)
+          setMessages(prev => [...prev, {
+            id: `fb-file-${Date.now()}`,
+            from: 'user',
+            text: '',
+            attachment: { url: data.url, type: data.type, name: data.name },
+            time: 'Akkurat nå',
+            read: false,
+            timestamp: new Date().toISOString()
+          }]);
+        }
+      }
+    } catch (err) {
+      console.error('File upload failed:', err);
     } finally {
       setSending(false);
+      if (fileInputRef.current) fileInputRef.current.value = '';
+    }
+  };
+
+  // Tracking scroll
+  const handleScroll = () => {
+    const container = chatContainerRef.current;
+    if (!container) return;
+    const threshold = 100;
+    isAtBottomRef.current = container.scrollHeight - container.scrollTop - container.clientHeight < threshold;
+    if (isAtBottomRef.current) setShowNewMsg(false);
+  };
+
+  const scrollToBottom = () => {
+    endRef.current?.scrollIntoView({ behavior: 'smooth' });
+    setShowNewMsg(false);
+  };
+
+  // Typing indicator emit
+  const handleInputChange = (e) => {
+    setInput(e.target.value);
+    if (socketRef.current) {
+      socketRef.current.emit('typing', { tripId: id, role: 'user' });
+      clearTimeout(typingTimeoutRef.current);
+      typingTimeoutRef.current = setTimeout(() => {
+        socketRef.current?.emit('stop-typing', { tripId: id, role: 'user' });
+      }, 1500);
     }
   };
 
@@ -172,11 +359,19 @@ export default function ChatPage({ params }) {
             <div className="flex items-center space-x-4">
               <div className="relative">
                 <img src={SPECIALIST.avatar} className="w-12 h-12 rounded-full object-cover border-2 border-primary" alt={SPECIALIST.name} />
-                <div className="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 bg-green-500 rounded-full border-2 border-white" />
+                <div className={cn(
+                  "absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 rounded-full border-2 border-white transition-colors",
+                  specialistOnline ? "bg-green-500" : "bg-gray-300"
+                )} />
               </div>
               <div>
                 <p className="font-black text-primary text-sm uppercase tracking-tight">{SPECIALIST.name}</p>
-                <p className="text-[10px] text-gray-400 font-medium">{SPECIALIST.title}</p>
+                <div className="flex items-center space-x-1.5">
+                  <div className={cn("w-1.5 h-1.5 rounded-full", specialistOnline ? "bg-green-500 animate-pulse" : "bg-gray-300")} />
+                  <p className="text-[9px] text-gray-400 font-black uppercase tracking-widest">
+                    {specialistOnline ? 'Online nå' : 'Offline'}
+                  </p>
+                </div>
               </div>
             </div>
             <div className="flex items-center space-x-6 text-[10px] font-bold uppercase tracking-widest text-gray-400">
@@ -192,7 +387,30 @@ export default function ChatPage({ params }) {
             </div>
           </div>
 
-          <div className="p-8 space-y-8 flex-1 overflow-y-auto">
+          <div className="bg-gradient-to-r from-primary to-emerald-700 px-8 py-3 flex items-center justify-between shrink-0 border-b border-white/10">
+            <div className="flex items-center space-x-4">
+              <div className="bg-white/10 p-2 rounded-xl">
+                <CreditCard className="w-4 h-4 text-white" />
+              </div>
+              <div>
+                <p className="text-white font-black text-[11px] uppercase tracking-tight">Bekreft reisen</p>
+                <p className="text-emerald-200 text-[9px] font-medium">Sikre datoene dine med et depositum.</p>
+              </div>
+            </div>
+            <Link
+              href={`/payment?tripId=${id}&amount=${tripSummary.price}`}
+              className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg text-[10px] font-black uppercase tracking-widest transition-all shadow-lg flex items-center space-x-2"
+            >
+              <span>Bestill</span>
+              <ArrowRight className="w-3 h-3" />
+            </Link>
+          </div>
+
+          <div 
+            ref={chatContainerRef}
+            onScroll={handleScroll}
+            className="p-8 space-y-8 flex-1 overflow-y-auto relative"
+          >
             <AnimatePresence initial={false}>
               {messages.map((msg) => (
                 <motion.div
@@ -210,68 +428,121 @@ export default function ChatPage({ params }) {
                       ? "bg-primary text-white rounded-br-sm" 
                       : "bg-white text-gray-700 rounded-bl-sm shadow-sm border border-gray-100"
                   )}>
-                    {msg.text}
-                    <p className={cn("text-[10px] mt-2 font-normal", msg.from === 'user' ? "text-white/50" : "text-gray-300")}>
-                      {msg.time}
-                    </p>
+                    {msg.attachment ? (
+                      <div className="space-y-2">
+                        {msg.attachment.type === 'image' ? (
+                          <div className="rounded-2xl overflow-hidden border border-gray-100/50 max-w-sm">
+                            <img src={msg.attachment.url} alt={msg.attachment.name} className="w-full h-auto max-h-64 object-cover" />
+                          </div>
+                        ) : (
+                          <a 
+                            href={msg.attachment.url} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className={cn(
+                              "flex items-center space-x-3 p-3 rounded-2xl border transition-all",
+                              msg.from === 'user' ? "bg-white/10 border-white/20 hover:bg-white/20" : "bg-gray-50 border-gray-100 hover:bg-gray-100"
+                            )}
+                          >
+                            <div className={cn(
+                              "p-2 rounded-lg",
+                              msg.from === 'user' ? "bg-white/20" : "bg-primary/10 text-primary"
+                            )}>
+                              <FileIcon className="w-4 h-4" />
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <p className="text-[10px] font-black truncate">{msg.attachment.name}</p>
+                              <p className="text-[8px] opacity-60 font-bold uppercase tracking-widest">Klikk for å åpne</p>
+                            </div>
+                            <ExternalLink className="w-3 h-3 opacity-40" />
+                          </a>
+                        )}
+                        {msg.text && <p className="mt-2">{msg.text}</p>}
+                      </div>
+                    ) : (
+                      msg.text
+                    )}
+                    <div className="flex items-center justify-between mt-2">
+                      <p className={cn("text-[10px] font-normal", msg.from === 'user' ? "text-white/50" : "text-gray-300")}>
+                        {msg.time}
+                      </p>
+                      {msg.from === 'user' && (
+                        <div className="ml-2">
+                          {msg.read ? (
+                            <CheckCheck className="w-3 h-3 text-white/70" />
+                          ) : (
+                            <Check className="w-3 h-3 text-white/40" />
+                          )}
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </motion.div>
               ))}
             </AnimatePresence>
 
-            {sending && (
+            {isSpecialistTyping && (
               <div className="flex items-end space-x-4">
                 <img src={SPECIALIST.avatar} className="w-8 h-8 rounded-full object-cover border border-gray-100" alt="" />
-                <div className="bg-white rounded-3xl rounded-bl-sm px-6 py-5 shadow-sm border border-gray-100 flex space-x-1.5 items-center">
+                <div className="bg-white rounded-3xl rounded-bl-sm px-6 py-4 shadow-sm border border-gray-100 flex space-x-1.5 items-center">
                   {[0, 1, 2].map(i => (
-                    <motion.div key={i} className="w-2 h-2 bg-gray-300 rounded-full" animate={{ y: [0, -6, 0] }} transition={{ duration: 0.8, repeat: Infinity, delay: i * 0.15 }} />
+                    <motion.div key={i} className="w-1.5 h-1.5 bg-gray-300 rounded-full" animate={{ y: [0, -4, 0] }} transition={{ duration: 0.8, repeat: Infinity, delay: i * 0.15 }} />
                   ))}
+                  <span className="text-[10px] text-gray-400 font-bold ml-2">skriver...</span>
                 </div>
               </div>
             )}
             <div ref={endRef} />
+
+            {/* New message indicator */}
+            <AnimatePresence>
+              {showNewMsg && (
+                <motion.button
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 10 }}
+                  onClick={scrollToBottom}
+                  className="sticky bottom-32 left-1/2 -translate-x-1/2 bg-primary text-white px-5 py-2.5 rounded-full text-[10px] font-black uppercase tracking-widest shadow-2xl z-50 flex items-center space-x-2 border-2 border-white/20 backdrop-blur-sm"
+                >
+                  <MessageCircle className="w-3.5 h-3.5" />
+                  <span>Ny melding ↓</span>
+                </motion.button>
+              )}
+            </AnimatePresence>
           </div>
 
-          <div className="px-8 pb-4 flex flex-wrap gap-3">
-            {QUICK_REPLIES.map(reply => (
-              <button
-                key={reply}
-                onClick={() => sendMessage(reply)}
-                className="text-[11px] font-bold border border-gray-200 rounded-full px-4 py-2 text-gray-600 hover:border-primary hover:text-primary hover:bg-emerald-50 transition-all"
-              >
-                {reply}
-              </button>
-            ))}
-          </div>
 
-          <div className="bg-gradient-to-r from-primary to-emerald-700 px-6 py-4 flex items-center justify-between shrink-0">
-            <div className="flex items-center space-x-4">
-              <div className="bg-white/10 p-2 rounded-xl">
-                <CreditCard className="w-5 h-5 text-white" />
-              </div>
-              <div>
-                <p className="text-white font-black text-sm uppercase tracking-tight">Klar for å bekrefte reisen?</p>
-                <p className="text-emerald-200 text-[10px] font-medium">Sikre datoene dine med et depositum. Gratis avbestilling 30+ dager før.</p>
-              </div>
+
+          <div className="bg-white border-t border-gray-100 p-5 shrink-0 sticky bottom-0 z-40 space-y-4">
+            <div className="flex flex-wrap gap-2">
+              {QUICK_REPLIES.map(reply => (
+                <button
+                  key={reply}
+                  onClick={() => sendMessage(reply)}
+                  className="text-[10px] font-bold border border-gray-200 rounded-full px-3 py-1.5 text-gray-500 hover:border-primary hover:text-primary hover:bg-emerald-50 transition-all"
+                >
+                  {reply}
+                </button>
+              ))}
             </div>
-            <Link
-              href={`/payment?tripId=${id}&amount=${tripSummary.price}`}
-              className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all hover:scale-105 active:scale-95 flex items-center space-x-2 shrink-0 shadow-xl"
-            >
-              <span>Bestill nå</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
-          </div>
-
-          <div className="bg-white border-t border-gray-100 p-5 shrink-0 sticky bottom-0 z-40">
             <div className="flex items-center space-x-4 bg-gray-50 rounded-2xl px-5 py-3 border-2 border-gray-100 focus-within:border-primary transition-colors">
-              <button className="text-gray-400 hover:text-primary transition-colors shrink-0">
+              <input 
+                type="file" 
+                ref={fileInputRef} 
+                onChange={handleFileChange} 
+                className="hidden" 
+                accept="image/*,.pdf,.doc,.docx"
+              />
+              <button 
+                onClick={handleFileClick}
+                className="text-gray-400 hover:text-primary transition-colors shrink-0"
+              >
                 <Paperclip className="w-5 h-5" />
               </button>
               <input
                 type="text"
                 value={input}
-                onChange={e => setInput(e.target.value)}
+                onChange={handleInputChange}
                 onKeyDown={e => e.key === 'Enter' && !e.shiftKey && sendMessage()}
                 placeholder="Send melding til din spesialist..."
                 className="flex-1 bg-transparent text-sm font-medium focus:outline-none text-gray-800 placeholder-gray-400"
@@ -367,7 +638,7 @@ export default function ChatPage({ params }) {
                   <div className="p-6 space-y-5">
                     <div>
                       <p className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-400">Fra</p>
-                      <p className="text-3xl font-black text-primary tracking-tighter mt-1">${tripPrice}<span className="text-sm text-gray-400 font-light">/person</span></p>
+                      <p className="text-3xl font-black text-primary tracking-tighter mt-1">NOK {tripPrice}<span className="text-sm text-gray-400 font-light">/person</span></p>
                     </div>
 
                     <Link

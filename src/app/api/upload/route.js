@@ -1,37 +1,43 @@
 import { NextResponse } from 'next/server';
 import { writeFile, mkdir } from 'fs/promises';
 import { join } from 'path';
-import { v4 as uuidv4 } from 'uuid';
+import { existsSync } from 'fs';
 
 export async function POST(request) {
   try {
-    const data = await request.formData();
-    const file = data.get('file');
+    const formData = await request.formData();
+    const file = formData.get('file');
 
     if (!file) {
-      return NextResponse.json({ error: 'No file uploaded' }, { status: 400 });
+      return NextResponse.json({ error: "No file provided" }, { status: 400 });
     }
 
     const bytes = await file.arrayBuffer();
     const buffer = Buffer.from(bytes);
 
-    // Create uploads directory if it doesn't exist
     const uploadDir = join(process.cwd(), 'public', 'uploads');
-    try {
+    
+    // Create directory if it doesn't exist
+    if (!existsSync(uploadDir)) {
       await mkdir(uploadDir, { recursive: true });
-    } catch (err) {
-      // Directory already exists
     }
 
-    const uniqueName = `${uuidv4()}-${file.name.replace(/\s+/g, '-')}`;
+    // Unique filename
+    const uniqueName = `${Date.now()}-${file.name.replace(/\s+/g, '_')}`;
     const path = join(uploadDir, uniqueName);
     
     await writeFile(path, buffer);
+    
     const url = `/uploads/${uniqueName}`;
+    const type = file.type.startsWith('image/') ? 'image' : 'file';
 
-    return NextResponse.json({ url });
+    return NextResponse.json({ 
+      url, 
+      type, 
+      name: file.name 
+    });
   } catch (error) {
-    console.error('Upload Error:', error);
+    console.error('Upload error:', error);
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }

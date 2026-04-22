@@ -122,7 +122,7 @@ export default function DashboardPage() {
                       <div className="flex items-center justify-between md:justify-end md:space-x-8 pt-4 md:pt-0 border-t md:border-t-0 border-gray-50">
                         <div className="text-left md:text-right">
                           <p className="text-[10px] font-black uppercase tracking-widest text-gray-400">Budsjett</p>
-                          <p className="text-sm font-black text-primary mt-0.5">{trip.budget ? `${trip.budget} USD` : 'Fleksibelt'}</p>
+                          <p className="text-sm font-black text-primary mt-0.5">{trip.budget ? `${trip.budget} NOK` : 'Fleksibelt'}</p>
                         </div>
                         <div className="w-12 h-12 rounded-2xl bg-gray-50 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm">
                           <ChevronRight className="w-5 h-5" />

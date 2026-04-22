@@ -25,7 +25,7 @@ async function getAccessToken() {
 // POST /api/payment/create-order
 export async function POST(req) {
   try {
-    const { amount, currency = 'USD', tripTitle, tripId } = await req.json();
+    const { amount, currency = 'NOK', tripTitle, tripId } = await req.json();
 
     const accessToken = await getAccessToken();
 

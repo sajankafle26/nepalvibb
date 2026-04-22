@@ -34,7 +34,8 @@ function PaymentContent() {
     email: '',
     phone: '',
     startDate: '',
-    endDate: ''
+    endDate: '',
+    groupSize: ''
   });
 
   useEffect(() => {
@@ -82,6 +83,11 @@ function PaymentContent() {
           },
         },
       ],
+      application_context: {
+        brand_name: "NEPALVIBB",
+        shipping_preference: 'NO_SHIPPING',
+        user_action: 'PAY_NOW'
+      },
     }).catch(err => {
       setStatus('error');
       setErrorMsg('Kunne ikke opprette betaling. Vennligst prøv igjen.');
@@ -159,36 +165,7 @@ function PaymentContent() {
                 <p className="text-gray-400 font-medium">Vennligst bekreft detaljene nedenfor for å sikre din reise.</p>
               </div>
 
-              {/* Step 1: Dates */}
-              <div className="bg-white rounded-[2.5rem] border border-gray-100 p-8 shadow-sm space-y-8">
-                <div className="flex items-center space-x-4">
-                  <div className="w-10 h-10 bg-orange-50 rounded-xl flex items-center justify-center">
-                    <Calendar className="w-5 h-5 text-orange-500" />
-                  </div>
-                  <h3 className="text-[11px] font-black uppercase tracking-[0.2em] text-primary">Steg 1: Reisedatoer</h3>
-                </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-1">Startdato</label>
-                    <input 
-                      type="date" 
-                      value={bookingDetails.startDate}
-                      onChange={e => setBookingDetails({ ...bookingDetails, startDate: e.target.value })}
-                      className="w-full border-2 border-gray-50 bg-gray-50/50 rounded-2xl px-6 py-4 text-sm font-bold focus:border-primary focus:bg-white outline-none transition-all" 
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-1">Sluttdato</label>
-                    <input 
-                      type="date" 
-                      value={bookingDetails.endDate}
-                      onChange={e => setBookingDetails({ ...bookingDetails, endDate: e.target.value })}
-                      className="w-full border-2 border-gray-50 bg-gray-50/50 rounded-2xl px-6 py-4 text-sm font-bold focus:border-primary focus:bg-white outline-none transition-all" 
-                    />
-                  </div>
-                </div>
-              </div>
+
 
               {/* Step 2: Traveler Info */}
               <div className="bg-white rounded-[2.5rem] border border-gray-100 p-8 shadow-sm space-y-8">
@@ -196,7 +173,7 @@ function PaymentContent() {
                   <div className="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center">
                     <Users className="w-5 h-5 text-blue-500" />
                   </div>
-                  <h3 className="text-[11px] font-black uppercase tracking-[0.2em] text-primary">Steg 2: Reiseinformasjon</h3>
+                  <h3 className="text-[11px] font-black uppercase tracking-[0.2em] text-primary">Steg 1: Reiseinformasjon</h3>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -218,6 +195,17 @@ function PaymentContent() {
                       className="w-full border-2 border-gray-50 bg-gray-50/50 rounded-2xl px-6 py-4 text-sm font-bold focus:border-primary focus:bg-white outline-none transition-all" 
                     />
                   </div>
+                  {/* Group Size */}
+                  <div className="space-y-2">
+                    <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-1">Gruppestørrelse</label>
+                    <input 
+                      type="number" 
+                      min="1"
+                      value={bookingDetails.groupSize}
+                      onChange={e => setBookingDetails({ ...bookingDetails, groupSize: e.target.value })}
+                      className="w-full border-2 border-gray-50 bg-gray-50/50 rounded-2xl px-6 py-4 text-sm font-bold focus:border-primary focus:bg-white outline-none transition-all" 
+                    />
+                  </div>
                   <div className="md:col-span-2 space-y-2">
                     <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-1">E-post</label>
                     <input 
@@ -230,8 +218,32 @@ function PaymentContent() {
                 </div>
               </div>
 
-              {/* Step 3: Payment */}
-              <div className="bg-white rounded-[2.5rem] border border-gray-100 p-8 shadow-sm space-y-8">
+                {/* Step 3: Kontakt reiseekspert */}
+                <div className="bg-white rounded-[2.5rem] border border-gray-100 p-8 shadow-sm space-y-8">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-10 h-10 bg-purple-50 rounded-xl flex items-center justify-center">
+                      <Users className="w-5 h-5 text-purple-500" />
+                    </div>
+                    <h3 className="text-[11px] font-black uppercase tracking-[0.2em] text-primary">Steg 2: Kontakt reiseekspert</h3>
+                  </div>
+                  <div className="space-y-4">
+                    <p className="text-sm text-gray-600">Vi vil kontakte deg basert på følgende informasjon:</p>
+                    <ul className="list-disc list-inside text-gray-700">
+                      <li>Gruppestørrelse: {bookingDetails.groupSize}</li>
+                      <li>Reisedatoer: {bookingDetails.startDate} - {bookingDetails.endDate}</li>
+                      <li>Navn: {bookingDetails.firstName} {bookingDetails.lastName}</li>
+                      <li>E‑post: {bookingDetails.email}</li>
+                    </ul>
+                    <button
+                      onClick={() => alert('Kontakt reiseekspert forespørsel sendt!')}
+                      className="mt-4 w-full py-3 bg-primary text-white rounded-2xl font-black uppercase tracking-widest hover:bg-emerald-900 transition-colors"
+                    >
+                      Send forespørsel
+                    </button>
+                  </div>
+                </div>
+                {/* Step 4: Payment */}
+                <div className="bg-white rounded-[2.5rem] border border-gray-100 p-8 shadow-sm space-y-8">
                 <div className="flex items-center space-x-4">
                   <div className="w-10 h-10 bg-emerald-50 rounded-xl flex items-center justify-center">
                     <CreditCard className="w-5 h-5 text-emerald-500" />
@@ -273,19 +285,27 @@ function PaymentContent() {
                   )}
 
                   {paymentMethod === 'paypal' ? (
-                    <div className="space-y-4">
-                      <PayPalButtons
-                        style={{ layout: 'vertical', color: 'gold', shape: 'rect', label: 'pay', height: 55 }}
-                        disabled={!bookingDetails.startDate || !bookingDetails.endDate || !bookingDetails.email}
-                        createOrder={createOrder}
-                        onApprove={onApprove}
-                        onError={onError}
-                        onCancel={onCancel}
-                      />
-                      {!bookingDetails.startDate && (
-                        <p className="text-[10px] text-orange-500 font-bold uppercase tracking-widest text-center">Vennligst velg reisedatoer for å aktivere betaling</p>
-                      )}
-                    </div>
+                      <div key={currency} className="space-y-4">
+                        <PayPalButtons
+                          style={{ layout: 'vertical', color: 'gold', shape: 'rect', label: 'pay', height: 55 }}
+                          createOrder={(data, actions) => {
+                            if (!bookingDetails.startDate || !bookingDetails.endDate || !bookingDetails.email) {
+                              setErrorMsg('Vennligst fyll ut alle feltene (datoer og e-post) før du betaler.');
+                              setStatus('error');
+                              return Promise.reject(new Error('Missing fields'));
+                            }
+                            return createOrder(data, actions);
+                          }}
+                          onApprove={onApprove}
+                          onError={onError}
+                          onCancel={onCancel}
+                        />
+                        {(!bookingDetails.startDate || !bookingDetails.endDate || !bookingDetails.email) && (
+                          <p className="text-[10px] text-orange-500 font-bold uppercase tracking-widest text-center animate-pulse">
+                            Vennligst fyll ut reisedatoer og e-post for å aktivere betaling
+                          </p>
+                        )}
+                      </div>
                   ) : (
                     <Elements stripe={stripePromise}>
                       <StripeForm 
@@ -343,15 +363,14 @@ function PaymentContent() {
                     <div className="pt-8 border-t border-gray-50 space-y-4">
                       <div className="flex items-center justify-between text-sm">
                         <span className="text-gray-400 font-medium italic">Grunnpris</span>
-                        <span className="font-black text-primary">kr {totalAmount.toLocaleString()}</span>
+                        <span className="font-black text-primary">NOK {totalAmount.toLocaleString()}</span>
                       </div>
                       <div className="flex items-center justify-between text-sm">
                         <span className="text-gray-400 font-medium italic">Bestillingsgebyr</span>
                         <span className="font-bold text-emerald-500 uppercase">Gratis</span>
                       </div>
                       <div className="pt-4 border-t-2 border-dashed border-gray-100 flex items-center justify-between">
-                        <span className="text-lg font-black text-primary uppercase tracking-tight italic">Totalt</span>
-                        <span className="text-3xl font-black text-primary tracking-tighter">kr {totalAmount.toLocaleString()}</span>
+                        <span className="text-3xl font-black text-primary tracking-tighter">NOK {totalAmount.toLocaleString()}</span>
                       </div>
                     </div>
 
@@ -414,7 +433,7 @@ function StripeForm({ amount, tripId, details, onSuccess, onError, disabled }) {
           payerName: `${details.firstName} ${details.lastName}`,
           payerEmail: details.email,
           amount: amount,
-          currency: 'USD',
+          currency: 'NOK',
           status: 'COMPLETED',
           tripId
         });

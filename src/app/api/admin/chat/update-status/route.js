@@ -5,19 +5,20 @@ import TripRequest from '@/models/TripRequest';
 export async function POST(request) {
   try {
     await dbConnect();
-    const { tripId, price } = await request.json();
+    const { tripId, status } = await request.json();
     
     const trip = await TripRequest.findByIdAndUpdate(
       tripId,
-      { price },
+      { status },
       { new: true }
     );
     
-    // Add a system message about the price update
+    // Add a system message about the status update
     if (trip) {
+      const statusLabel = status === 'booked' ? 'BOOKED' : status.toUpperCase();
       const systemMsg = {
         sender: 'system',
-        text: `Spesialisten har oppdatert prisen til NOK ${price}`,
+        text: `Trip status updated to ${statusLabel}`,
         timestamp: new Date()
       };
       trip.messages.push(systemMsg);

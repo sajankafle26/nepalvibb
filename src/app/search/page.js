@@ -9,8 +9,6 @@ import {
   Compass, Calendar, X
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
 
 function SearchContent() {
   const searchParams = useSearchParams();
@@ -39,7 +37,6 @@ function SearchContent() {
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
-      <Navbar />
       
       <main className="flex-1 pt-40 pb-24 px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -134,7 +131,6 @@ function SearchContent() {
         </div>
       </main>
 
-      <Footer />
     </div>
   );
 }

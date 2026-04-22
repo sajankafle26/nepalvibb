@@ -8,12 +8,18 @@ const MessageSchema = new mongoose.Schema({
   },
   text: {
     type: String,
-    required: true,
+    required: false, // Optional if attachment exists
+  },
+  attachment: {
+    url: String,
+    type: { type: String }, // 'image', 'file'
+    name: String,
   },
   timestamp: {
     type: Date,
     default: Date.now,
   },
+  read: { type: Boolean, default: false },
 });
 
 const TripRequestSchema = new mongoose.Schema({

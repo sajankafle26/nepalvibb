@@ -115,10 +115,15 @@ export default function RequestsAdminPage() {
                   <div className="flex items-center space-x-3">
                     <Link 
                       href={`/admin/requests/${req._id}`}
-                      className="bg-primary text-white px-6 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-emerald-900 transition-all shadow-lg shadow-primary/10 flex items-center space-x-2"
+                      className="relative bg-primary text-white px-6 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-emerald-900 transition-all shadow-lg shadow-primary/10 flex items-center space-x-2"
                     >
                       <MessageSquare className="w-3.5 h-3.5" />
                       <span>Respond</span>
+                      {req.messages?.filter(m => m.sender === 'user' && !m.read).length > 0 && (
+                        <span className="absolute -top-1.5 -right-1.5 w-5 h-5 bg-red-500 border-2 border-white rounded-full flex items-center justify-center text-[8px] animate-bounce">
+                          {req.messages.filter(m => m.sender === 'user' && !m.read).length}
+                        </span>
+                      )}
                     </Link>
                     <button 
                       onClick={() => handleDelete(req._id)}

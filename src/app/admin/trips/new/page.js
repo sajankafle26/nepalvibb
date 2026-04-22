@@ -412,7 +412,7 @@ export default function NewTourPage() {
 
             <div className="space-y-6">
               <div className="space-y-2">
-                <label className="text-[10px] font-black uppercase tracking-widest text-gray-400">Base Price (USD)</label>
+                <label className="text-[10px] font-black uppercase tracking-widest text-gray-400">Base Price (NOK)</label>
                 <div className="relative">
                   <DollarSign className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
                   <input 

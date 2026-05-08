@@ -23,7 +23,7 @@ export default function Footer() {
         const [destRes, actRes, setRes] = await Promise.all([
           fetch('/api/destinations'),
           fetch('/api/activities'),
-          fetch('/api/admin/settings') // Using the public-ish settings route
+          fetch('/api/admin/settings') 
         ]);
         const dests = await destRes.json();
         const acts = await actRes.json();
@@ -47,6 +47,15 @@ export default function Footer() {
     contactPhone: '+47 486 72 979',
     footerAbout: 'Nepalvibb er din personlige portal til Himalaya. Vi kobler deg med lokale eksperter for å skape uforglemmelige og bærekraftige reiseopplevelser i hjertet av Asia.',
     socialLinks: { facebook: '#', instagram: '#', youtube: '#', linkedin: '#' },
+    affiliatedLabel: 'Vi er tilknyttet',
+    subsidiaryLabel: 'Datterselskap av',
+    subsidiaryLogo: 'https://www.actual-adventure.com/public/uploads/actual-adventure-logo-np.svg',
+    subsidiaryUrl: 'https://www.actual-adventure.com',
+    visitingAddressLabel: 'Besøksadresse',
+    callUsLabel: 'Ring Oss',
+    callUsHours: 'Man-Fre: 09:00 - 17:00',
+    sendEmailLabel: 'Send E-post',
+    replyTimeLabel: 'Svar innen 24 timer',
     affiliations: [
       { name: 'NTB', logoUrl: 'https://www.actual-adventure.com/public/uploads/ntb.svg' },
       { name: 'TAAN', logoUrl: 'https://www.actual-adventure.com/public/uploads/taan.svg' },
@@ -61,7 +70,6 @@ export default function Footer() {
   const s = dynamicData.settings ? {
     ...fallbackSettings,
     ...dynamicData.settings,
-    // Ensure affiliations are merged carefully or fall back if empty
     affiliations: (dynamicData.settings.affiliations && dynamicData.settings.affiliations.length > 0) 
       ? dynamicData.settings.affiliations 
       : fallbackSettings.affiliations
@@ -164,7 +172,9 @@ export default function Footer() {
         {/* Affiliations Section */}
         <div className="py-16 border-t border-gray-100">
           <div className="flex flex-col items-center space-y-10">
-            <h5 className="text-[10px] font-black uppercase tracking-[0.4em] text-gray-300">Vi er tilknyttet</h5>
+            <h5 className="text-[10px] font-black uppercase tracking-[0.4em] text-gray-300">
+              {s.affiliatedLabel}
+            </h5>
             <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20">
 
               {s.affiliations?.map((logo, i) => (
@@ -173,10 +183,6 @@ export default function Footer() {
                     src={logo.logoUrl}
                     alt={logo.name}
                     className="h-14 md:h-16 w-auto object-contain grayscale opacity-30 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
-                    onError={(e) => {
-                      e.target.style.display = 'none';
-                      if (e.target.nextSibling) e.target.nextSibling.style.display = 'flex';
-                    }}
                   />
                   <div className="hidden h-14 md:h-16 px-6 items-center justify-center border-2 border-dashed border-gray-100 rounded-2xl text-[10px] font-black uppercase tracking-widest text-gray-300 group-hover:border-primary/20 group-hover:text-primary transition-all">
                     {logo.name}
@@ -190,18 +196,19 @@ export default function Footer() {
         {/* Subsidiary Section */}
         <div className="py-10 border-t border-gray-100 ">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <span className="text-[10px] font-black uppercase tracking-[0.4em] text-gray-300">Datterselskap av</span>
+            <span className="text-[10px] font-black uppercase tracking-[0.4em] text-gray-300">
+              {s.subsidiaryLabel}
+            </span>
             <a
-              href="https://www.actual-adventure.com"
+              href={s.subsidiaryUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center space-x-3 px-6 py-3 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-md transition-all duration-300 border border-transparent hover:border-gray-100"
             >
               <img
-                src="https://www.actual-adventure.com/public/uploads/actual-adventure-logo-np.svg"
-                alt="Actual Adventure"
-                className="h-8 bg-gray-500 w-auto object-contain grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
-                onError={(e) => { e.target.style.display = 'none'; }}
+                src={s.subsidiaryLogo}
+                alt="Subsidiary"
+                className="h-8 w-auto object-contain grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
               />
               <ExternalLink className="w-3 h-3 text-gray-300 group-hover:text-orange-500 transition-colors" />
             </a>
@@ -215,7 +222,9 @@ export default function Footer() {
               <MapPin className="w-6 h-6" />
             </div>
             <div>
-              <h5 className="text-[10px] font-black uppercase tracking-widest text-primary mb-3">Besøksadresse</h5>
+              <h5 className="text-[10px] font-black uppercase tracking-widest text-primary mb-3">
+                {s.visitingAddressLabel}
+              </h5>
               <div className="text-sm font-bold text-gray-500 leading-relaxed">
                 <p>{s.address}</p>
                 {s.kathmanduAddress && <p className="mt-1 opacity-60">Nepal: {s.kathmanduAddress}</p>}
@@ -227,10 +236,12 @@ export default function Footer() {
               <Phone className="w-6 h-6" />
             </div>
             <div>
-              <h5 className="text-[10px] font-black uppercase tracking-widest text-primary mb-3">Ring Oss</h5>
+              <h5 className="text-[10px] font-black uppercase tracking-widest text-primary mb-3">
+                {s.callUsLabel}
+              </h5>
               <p className="text-sm font-bold text-gray-500 leading-relaxed">
                 {s.contactPhone}<br />
-                <span className="opacity-60">Man-Fre: 09:00 - 17:00</span>
+                <span className="opacity-60">{s.callUsHours}</span>
               </p>
             </div>
           </div>
@@ -239,10 +250,12 @@ export default function Footer() {
               <Mail className="w-6 h-6" />
             </div>
             <div>
-              <h5 className="text-[10px] font-black uppercase tracking-widest text-primary mb-3">Send E-post</h5>
+              <h5 className="text-[10px] font-black uppercase tracking-widest text-primary mb-3">
+                {s.sendEmailLabel}
+              </h5>
               <p className="text-sm font-bold text-gray-500 leading-relaxed">
                 {s.contactEmail}<br />
-                <span className="opacity-60">Svar innen 24 timer</span>
+                <span className="opacity-60">{s.replyTimeLabel}</span>
               </p>
             </div>
           </div>

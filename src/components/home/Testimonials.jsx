@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { Star, MessageSquare, Quote } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
-export default function Testimonials() {
+export default function Testimonials({ content }) {
   const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -30,8 +30,12 @@ export default function Testimonials() {
     <section className="py-32 bg-gray-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-24 space-y-4">
-          <h5 className="text-orange-500 font-black uppercase tracking-[0.4em] text-[10px]">Gjestevurderinger</h5>
-          <h2 className="text-5xl md:text-7xl font-black text-primary uppercase tracking-tighter leading-none italic">Hva våre<br />gjester sier</h2>
+          <h5 className="text-orange-500 font-black uppercase tracking-[0.4em] text-[10px]">
+            {content?.subtitle || 'Gjestevurderinger'}
+          </h5>
+          <h2 className="text-5xl md:text-7xl font-black text-primary uppercase tracking-tighter leading-none italic">
+            {content?.title || 'Hva våre gjester sier'}
+          </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

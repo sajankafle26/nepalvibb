@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { 
   LayoutDashboard, Map, Compass, MessageSquare, 
   Settings, LogOut, Plus, Search, 
-  Menu, X, Bell, User, Image as ImageIcon,
+  Menu, X, Bell, User, Users, Image as ImageIcon,
   Mountain, Newspaper, Layout
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -41,6 +41,8 @@ export default function AdminLayout({ children }) {
     { label: 'Blogs', icon: Newspaper, href: '/admin/blogs' },
     { label: 'Banners', icon: ImageIcon, href: '/admin/banners' },
     { label: 'Home Content', icon: Layout, href: '/admin/home-content' },
+    { label: 'About Content', icon: Layout, href: '/admin/about-content' },
+    { label: 'Team', icon: Users, href: '/admin/team' },
     { label: 'Plan Trip Form', icon: Settings, href: '/admin/plan-trip' },
     { label: 'Reviews', icon: MessageSquare, href: '/admin/reviews' },
     { label: 'Users', icon: User, href: '/admin/users' },

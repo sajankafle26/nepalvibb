@@ -35,7 +35,7 @@ function PaymentContent() {
     phone: '',
     startDate: '',
     endDate: '',
-    groupSize: ''
+    groupSize: '1'
   });
 
   useEffect(() => {
@@ -49,14 +49,27 @@ function PaymentContent() {
         const data = await res.json();
         if (data) {
           setTrip(data);
+          // Format dates to YYYY-MM-DD for input[type="date"]
+          const formatDate = (dateStr) => {
+            if (!dateStr) return '';
+            try {
+              const d = new Date(dateStr);
+              return d.toISOString().split('T')[0];
+            } catch (e) {
+              return '';
+            }
+          };
+
           setBookingDetails(prev => ({
             ...prev,
             firstName: data.name?.split(' ')[0] || '',
             lastName: data.name?.split(' ').slice(1).join(' ') || '',
             email: data.email || '',
             phone: data.phone || '',
-            startDate: data.departure_date || '',
-            endDate: data.return_date || ''
+            // Handle both legacy and new field names for auto-fill
+            startDate: formatDate(data.startDate || data.departure_date),
+            endDate: formatDate(data.endDate || data.return_date),
+            groupSize: data.adults?.toString() || data.group || '1'
           }));
         }
       } catch (err) {
@@ -71,7 +84,14 @@ function PaymentContent() {
   const totalAmount = parseFloat(trip?.price || initialAmount);
   const currency = "NOK";
 
+  const isFormValid = bookingDetails.firstName && bookingDetails.lastName && bookingDetails.email && bookingDetails.startDate && bookingDetails.endDate;
+
   const createOrder = useCallback((data, actions) => {
+    if (!isFormValid) {
+      setErrorMsg('Vennligst fyll ut alle feltene (navn, e-post og datoer) før du betaler.');
+      setStatus('error');
+      return Promise.reject(new Error('Missing fields'));
+    }
     setStatus('processing');
     return actions.order.create({
       purchase_units: [
@@ -93,7 +113,7 @@ function PaymentContent() {
       setErrorMsg('Kunne ikke opprette betaling. Vennligst prøv igjen.');
       throw err;
     });
-  }, [totalAmount, trip, currency]);
+  }, [totalAmount, trip, currency, isFormValid]);
 
   const onApprove = useCallback((data, actions) => {
     setStatus('processing');
@@ -165,9 +185,6 @@ function PaymentContent() {
                 <p className="text-gray-400 font-medium">Vennligst bekreft detaljene nedenfor for å sikre din reise.</p>
               </div>
 
-
-
-              {/* Step 2: Traveler Info */}
               <div className="bg-white rounded-[2.5rem] border border-gray-100 p-8 shadow-sm space-y-8">
                 <div className="flex items-center space-x-4">
                   <div className="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center">
@@ -181,8 +198,9 @@ function PaymentContent() {
                     <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-1">Fornavn</label>
                     <input 
                       type="text" 
+                      placeholder="Fornavn"
                       value={bookingDetails.firstName}
-                      onChange={e => setBookingDetails({ ...bookingDetails, firstName: e.target.value })}
+                      onChange={e => { setErrorMsg(''); setBookingDetails({ ...bookingDetails, firstName: e.target.value }); }}
                       className="w-full border-2 border-gray-50 bg-gray-50/50 rounded-2xl px-6 py-4 text-sm font-bold focus:border-primary focus:bg-white outline-none transition-all" 
                     />
                   </div>
@@ -190,14 +208,24 @@ function PaymentContent() {
                     <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-1">Etternavn</label>
                     <input 
                       type="text" 
+                      placeholder="Etternavn"
                       value={bookingDetails.lastName}
-                      onChange={e => setBookingDetails({ ...bookingDetails, lastName: e.target.value })}
+                      onChange={e => { setErrorMsg(''); setBookingDetails({ ...bookingDetails, lastName: e.target.value }); }}
                       className="w-full border-2 border-gray-50 bg-gray-50/50 rounded-2xl px-6 py-4 text-sm font-bold focus:border-primary focus:bg-white outline-none transition-all" 
                     />
                   </div>
-                  {/* Group Size */}
                   <div className="space-y-2">
-                    <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-1">Gruppestørrelse</label>
+                    <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-1">E-post</label>
+                    <input 
+                      type="email" 
+                      placeholder="ola@nordmann.no"
+                      value={bookingDetails.email}
+                      onChange={e => { setErrorMsg(''); setBookingDetails({ ...bookingDetails, email: e.target.value }); }}
+                      className="w-full border-2 border-gray-50 bg-gray-50/50 rounded-2xl px-6 py-4 text-sm font-bold focus:border-primary focus:bg-white outline-none transition-all" 
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-1">Antall personer</label>
                     <input 
                       type="number" 
                       min="1"
@@ -206,49 +234,41 @@ function PaymentContent() {
                       className="w-full border-2 border-gray-50 bg-gray-50/50 rounded-2xl px-6 py-4 text-sm font-bold focus:border-primary focus:bg-white outline-none transition-all" 
                     />
                   </div>
-                  <div className="md:col-span-2 space-y-2">
-                    <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-1">E-post</label>
-                    <input 
-                      type="email" 
-                      value={bookingDetails.email}
-                      onChange={e => setBookingDetails({ ...bookingDetails, email: e.target.value })}
-                      className="w-full border-2 border-gray-50 bg-gray-50/50 rounded-2xl px-6 py-4 text-sm font-bold focus:border-primary focus:bg-white outline-none transition-all" 
-                    />
+                  
+                  <div className="space-y-2">
+                    <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-1">Departure date</label>
+                    <div className="relative">
+                      <Calendar className="absolute left-6 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-300" />
+                      <input 
+                        type="date" 
+                        value={bookingDetails.startDate}
+                        onChange={e => { setErrorMsg(''); setBookingDetails({ ...bookingDetails, startDate: e.target.value }); }}
+                        className="w-full border-2 border-gray-50 bg-gray-50/50 rounded-2xl px-14 py-4 text-sm font-bold focus:border-primary focus:bg-white outline-none transition-all" 
+                      />
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-1">Return date</label>
+                    <div className="relative">
+                      <Calendar className="absolute left-6 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-300" />
+                      <input 
+                        type="date" 
+                        value={bookingDetails.endDate}
+                        min={bookingDetails.startDate}
+                        onChange={e => { setErrorMsg(''); setBookingDetails({ ...bookingDetails, endDate: e.target.value }); }}
+                        className="w-full border-2 border-gray-50 bg-gray-50/50 rounded-2xl px-14 py-4 text-sm font-bold focus:border-primary focus:bg-white outline-none transition-all" 
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
 
-                {/* Step 3: Kontakt reiseekspert */}
-                <div className="bg-white rounded-[2.5rem] border border-gray-100 p-8 shadow-sm space-y-8">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-10 h-10 bg-purple-50 rounded-xl flex items-center justify-center">
-                      <Users className="w-5 h-5 text-purple-500" />
-                    </div>
-                    <h3 className="text-[11px] font-black uppercase tracking-[0.2em] text-primary">Steg 2: Kontakt reiseekspert</h3>
-                  </div>
-                  <div className="space-y-4">
-                    <p className="text-sm text-gray-600">Vi vil kontakte deg basert på følgende informasjon:</p>
-                    <ul className="list-disc list-inside text-gray-700">
-                      <li>Gruppestørrelse: {bookingDetails.groupSize}</li>
-                      <li>Reisedatoer: {bookingDetails.startDate} - {bookingDetails.endDate}</li>
-                      <li>Navn: {bookingDetails.firstName} {bookingDetails.lastName}</li>
-                      <li>E‑post: {bookingDetails.email}</li>
-                    </ul>
-                    <button
-                      onClick={() => alert('Kontakt reiseekspert forespørsel sendt!')}
-                      className="mt-4 w-full py-3 bg-primary text-white rounded-2xl font-black uppercase tracking-widest hover:bg-emerald-900 transition-colors"
-                    >
-                      Send forespørsel
-                    </button>
-                  </div>
-                </div>
-                {/* Step 4: Payment */}
-                <div className="bg-white rounded-[2.5rem] border border-gray-100 p-8 shadow-sm space-y-8">
+              <div className="bg-white rounded-[2.5rem] border border-gray-100 p-8 shadow-sm space-y-8">
                 <div className="flex items-center space-x-4">
                   <div className="w-10 h-10 bg-emerald-50 rounded-xl flex items-center justify-center">
                     <CreditCard className="w-5 h-5 text-emerald-500" />
                   </div>
-                  <h3 className="text-[11px] font-black uppercase tracking-[0.2em] text-primary">Steg 3: Betalingsmetode</h3>
+                  <h3 className="text-[11px] font-black uppercase tracking-[0.2em] text-primary">Steg 2: Betalingsmetode</h3>
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">
@@ -273,38 +293,37 @@ function PaymentContent() {
                        <CreditCard className="w-6 h-6 text-primary" />
                        <span className="font-black italic text-primary">Kort</span>
                     </div>
-                    <span className="text-[10px] font-black uppercase tracking-widest text-primary">Direkte betaling</span>
+                    <span className="text-[10px] font-black uppercase tracking-widest text-primary">Stripe betaling</span>
                   </button>
                 </div>
 
                 <div className="pt-6 border-t border-gray-50">
-                  {status === 'error' && (
-                    <div className="mb-6 p-4 bg-red-50 border border-red-100 rounded-2xl text-red-600 text-xs font-bold uppercase tracking-widest text-center flex items-center justify-center">
+                  {errorMsg && (
+                    <div className="mb-6 p-4 bg-red-50 border border-red-100 rounded-2xl text-red-600 text-[10px] font-black uppercase tracking-widest text-center flex items-center justify-center shadow-sm">
                       <AlertCircle className="w-4 h-4 mr-2" /> {errorMsg}
                     </div>
                   )}
 
+                  {!isFormValid && (
+                    <div className="mb-8 p-6 bg-orange-50 border border-orange-100 rounded-3xl space-y-2">
+                      <div className="flex items-center space-x-2 text-orange-600">
+                        <Info className="w-4 h-4" />
+                        <span className="text-[10px] font-black uppercase tracking-widest">Informasjon mangler</span>
+                      </div>
+                      <p className="text-[11px] text-orange-500 font-medium italic">Vennligst fyll ut navn, e-post og reisedatoer ovenfor for å aktivere betalingsknappene.</p>
+                    </div>
+                  )}
+
                   {paymentMethod === 'paypal' ? (
-                      <div key={currency} className="space-y-4">
+                      <div className={cn("space-y-4 transition-opacity", !isFormValid ? "opacity-50 pointer-events-none" : "opacity-100")}>
                         <PayPalButtons
                           style={{ layout: 'vertical', color: 'gold', shape: 'rect', label: 'pay', height: 55 }}
-                          createOrder={(data, actions) => {
-                            if (!bookingDetails.startDate || !bookingDetails.endDate || !bookingDetails.email) {
-                              setErrorMsg('Vennligst fyll ut alle feltene (datoer og e-post) før du betaler.');
-                              setStatus('error');
-                              return Promise.reject(new Error('Missing fields'));
-                            }
-                            return createOrder(data, actions);
-                          }}
+                          disabled={!isFormValid}
+                          createOrder={createOrder}
                           onApprove={onApprove}
                           onError={onError}
                           onCancel={onCancel}
                         />
-                        {(!bookingDetails.startDate || !bookingDetails.endDate || !bookingDetails.email) && (
-                          <p className="text-[10px] text-orange-500 font-bold uppercase tracking-widest text-center animate-pulse">
-                            Vennligst fyll ut reisedatoer og e-post for å aktivere betaling
-                          </p>
-                        )}
                       </div>
                   ) : (
                     <Elements stripe={stripePromise}>
@@ -314,7 +333,7 @@ function PaymentContent() {
                         details={bookingDetails} 
                         onSuccess={(tx) => { setTransaction(tx); setStatus('success'); }} 
                         onError={(msg) => { setErrorMsg(msg); setStatus('error'); }}
-                        disabled={!bookingDetails.startDate || !bookingDetails.endDate || !bookingDetails.email}
+                        disabled={!isFormValid}
                       />
                     </Elements>
                   )}
@@ -322,7 +341,6 @@ function PaymentContent() {
               </div>
             </div>
 
-            {/* RIGHT: Summary */}
             <aside className="lg:w-[40%]">
               <div className="sticky top-32 space-y-6">
                 <div className="bg-white rounded-[3rem] border border-gray-100 overflow-hidden shadow-sm p-1">
@@ -355,7 +373,7 @@ function PaymentContent() {
                         <p className="text-[9px] font-black uppercase tracking-widest text-gray-400">Reisende</p>
                         <div className="flex items-center space-x-2 text-primary font-bold text-sm">
                           <Users className="w-4 h-4 text-orange-500" />
-                          <span>{trip?.group || 'Skreddersydd'}</span>
+                          <span>{bookingDetails.groupSize} Personer</span>
                         </div>
                       </div>
                     </div>
@@ -410,12 +428,18 @@ function StripeForm({ amount, tripId, details, onSuccess, onError, disabled }) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ amount, tripId, details }),
       });
-      const { clientSecret } = await res.json();
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Intent creation failed');
+      
+      const { clientSecret } = data;
 
       const { error, paymentIntent } = await stripe.confirmCardPayment(clientSecret, {
         payment_method: {
           card: elements.getElement(CardElement),
-          billing_details: { name: `${details.firstName} ${details.lastName}`, email: details.email },
+          billing_details: { 
+            name: `${details.firstName} ${details.lastName}`, 
+            email: details.email 
+          },
         },
       });
 
@@ -439,7 +463,7 @@ function StripeForm({ amount, tripId, details, onSuccess, onError, disabled }) {
         });
       }
     } catch (err) {
-      onError("Tilkobling til Stripe mislyktes.");
+      onError(err.message || "Tilkobling til Stripe mislyktes.");
     } finally {
       setProcessing(false);
     }

@@ -5,7 +5,7 @@ import {
   Settings, Save, Mail, Phone, 
   MapPin, Globe, Lock, Shield, 
   CheckCircle2, AlertCircle, Facebook, Instagram, Youtube, Linkedin,
-  Plus, Trash2, Link as LinkIcon
+  Plus, Trash2, Link as LinkIcon, Building, Clock, MessageSquare, Info, ShieldCheck
 } from 'lucide-react';
 
 export default function SettingsAdminPage() {
@@ -120,7 +120,7 @@ export default function SettingsAdminPage() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
         
-        {/* Contact Info */}
+        {/* Basic Contact Info */}
         <section className="bg-white rounded-[3rem] border border-gray-100 p-10 space-y-8 shadow-sm">
           <div className="flex items-center space-x-4">
             <div className="p-3 bg-blue-50 text-blue-500 rounded-2xl">
@@ -148,6 +148,75 @@ export default function SettingsAdminPage() {
               <div className="space-y-2">
                 <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-2">Telefon</label>
                 <input name="contactPhone" value={settings.contactPhone} onChange={handleChange} className="w-full bg-gray-50 border-0 rounded-xl px-6 py-4 text-sm font-bold focus:ring-2 focus:ring-primary transition-all" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Subsidiary Info */}
+        <section className="bg-white rounded-[3rem] border border-gray-100 p-10 space-y-8 shadow-sm">
+          <div className="flex items-center space-x-4">
+            <div className="p-3 bg-orange-50 text-orange-500 rounded-2xl">
+              <Building className="w-6 h-6" />
+            </div>
+            <h2 className="text-xl font-black text-primary uppercase tracking-tight italic">Datterselskap & Tilknytning</h2>
+          </div>
+
+          <div className="space-y-6">
+            <div className="space-y-2">
+              <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-2">Tilknyttet Etikett (f.eks. Vi er tilknyttet)</label>
+              <input name="affiliatedLabel" value={settings.affiliatedLabel} onChange={handleChange} className="w-full bg-gray-50 border-0 rounded-xl px-6 py-4 text-sm font-bold focus:ring-2 focus:ring-primary transition-all" />
+            </div>
+            <div className="space-y-2">
+              <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-2">Datterselskap Etikett (f.eks. Datterselskap av)</label>
+              <input name="subsidiaryLabel" value={settings.subsidiaryLabel} onChange={handleChange} className="w-full bg-gray-50 border-0 rounded-xl px-6 py-4 text-sm font-bold focus:ring-2 focus:ring-primary transition-all" />
+            </div>
+            <div className="grid grid-cols-2 gap-6">
+              <div className="space-y-2">
+                <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-2">Logo URL</label>
+                <input name="subsidiaryLogo" value={settings.subsidiaryLogo} onChange={handleChange} className="w-full bg-gray-50 border-0 rounded-xl px-6 py-4 text-sm font-bold focus:ring-2 focus:ring-primary transition-all" />
+              </div>
+              <div className="space-y-2">
+                <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-2">Nettside URL</label>
+                <input name="subsidiaryUrl" value={settings.subsidiaryUrl} onChange={handleChange} className="w-full bg-gray-50 border-0 rounded-xl px-6 py-4 text-sm font-bold focus:ring-2 focus:ring-primary transition-all" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Footer Support Labels */}
+        <section className="bg-white rounded-[3rem] border border-gray-100 p-10 space-y-8 shadow-sm lg:col-span-2">
+          <div className="flex items-center space-x-4">
+            <div className="p-3 bg-emerald-50 text-emerald-500 rounded-2xl">
+              <MessageSquare className="w-6 h-6" />
+            </div>
+            <h2 className="text-xl font-black text-primary uppercase tracking-tight italic">Footer Støtte-etiketter</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="space-y-4 p-6 bg-gray-50 rounded-3xl border border-gray-100">
+              <h3 className="text-[10px] font-black uppercase tracking-widest text-primary">Besøksadresse</h3>
+              <div className="space-y-2">
+                <label className="text-[9px] font-bold uppercase text-gray-400">Overskrift</label>
+                <input name="visitingAddressLabel" value={settings.visitingAddressLabel} onChange={handleChange} className="w-full bg-white border-0 rounded-xl px-4 py-3 text-xs font-bold" />
+              </div>
+            </div>
+            <div className="space-y-4 p-6 bg-gray-50 rounded-3xl border border-gray-100">
+              <h3 className="text-[10px] font-black uppercase tracking-widest text-primary">Ring Oss</h3>
+              <div className="space-y-2">
+                <label className="text-[9px] font-bold uppercase text-gray-400">Overskrift</label>
+                <input name="callUsLabel" value={settings.callUsLabel} onChange={handleChange} className="w-full bg-white border-0 rounded-xl px-4 py-3 text-xs font-bold mb-2" />
+                <label className="text-[9px] font-bold uppercase text-gray-400">Åpningstider</label>
+                <input name="callUsHours" value={settings.callUsHours} onChange={handleChange} className="w-full bg-white border-0 rounded-xl px-4 py-3 text-xs font-bold" />
+              </div>
+            </div>
+            <div className="space-y-4 p-6 bg-gray-50 rounded-3xl border border-gray-100">
+              <h3 className="text-[10px] font-black uppercase tracking-widest text-primary">Send E-post</h3>
+              <div className="space-y-2">
+                <label className="text-[9px] font-bold uppercase text-gray-400">Overskrift</label>
+                <input name="sendEmailLabel" value={settings.sendEmailLabel} onChange={handleChange} className="w-full bg-white border-0 rounded-xl px-4 py-3 text-xs font-bold mb-2" />
+                <label className="text-[9px] font-bold uppercase text-gray-400">Svartid</label>
+                <input name="replyTimeLabel" value={settings.replyTimeLabel} onChange={handleChange} className="w-full bg-white border-0 rounded-xl px-4 py-3 text-xs font-bold" />
               </div>
             </div>
           </div>
@@ -183,7 +252,7 @@ export default function SettingsAdminPage() {
         </section>
 
         {/* Footer About */}
-        <section className="bg-white rounded-[3rem] border border-gray-100 p-10 space-y-8 shadow-sm lg:col-span-2">
+        <section className="bg-white rounded-[3rem] border border-gray-100 p-10 space-y-8 shadow-sm">
           <div className="flex items-center space-x-4">
             <div className="p-3 bg-orange-50 text-orange-500 rounded-2xl">
               <Info className="w-6 h-6" />
@@ -259,6 +328,3 @@ export default function SettingsAdminPage() {
     </div>
   );
 }
-
-// Icons needed but not imported in previous view
-import { Info, ShieldCheck } from 'lucide-react';

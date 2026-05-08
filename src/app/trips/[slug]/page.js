@@ -154,7 +154,7 @@ export default function TripDetailPage({ params }) {
               </button>
             ))}
           </div>
-          <Link href="/plan-your-trip" className="hidden md:block bg-primary text-white px-10 py-4 rounded-2xl text-[10px] font-black uppercase tracking-widest shadow-xl hover:bg-orange-500 transition-all">Bestill Reisen</Link>
+          <Link href={`/plan-your-trip?tour=${slug}&dest=${trip.destination}`} className="hidden md:block bg-primary text-white px-10 py-4 rounded-2xl text-[10px] font-black uppercase tracking-widest shadow-xl hover:bg-orange-500 transition-all">Bestill Reisen</Link>
         </div>
       </div>
 
@@ -314,8 +314,8 @@ export default function TripDetailPage({ params }) {
                 <p className="text-6xl font-black text-primary tracking-tighter">NOK {trip.price?.toLocaleString()}</p>
               </div>
               <div className="space-y-4">
-                <Link href="/plan-your-trip" className="block bg-emerald-500 text-white py-6 rounded-[2rem] font-black uppercase tracking-widest text-[11px] shadow-xl shadow-emerald-500/20 hover:scale-105 transition-all">Bestill nå</Link>
-                <Link href="/plan-your-trip" className="block border-2 border-gray-100 py-6 rounded-[2rem] font-black uppercase tracking-widest text-[11px] hover:border-primary transition-all">Snakk med ekspert</Link>
+                <Link href={`/plan-your-trip?tour=${slug}&dest=${trip.destination}`} className="block bg-emerald-500 text-white py-6 rounded-[2rem] font-black uppercase tracking-widest text-[11px] shadow-xl shadow-emerald-500/20 hover:scale-105 transition-all">Bestill nå</Link>
+                <Link href={`/plan-your-trip?tour=${slug}&dest=${trip.destination}`} className="block border-2 border-gray-100 py-6 rounded-[2rem] font-black uppercase tracking-widest text-[11px] hover:border-primary transition-all">Snakk med ekspert</Link>
               </div>
               <div className="pt-8 border-t border-gray-50 space-y-4">
                 <div className="flex items-center justify-center space-x-3 text-[9px] font-black uppercase tracking-widest text-gray-400">

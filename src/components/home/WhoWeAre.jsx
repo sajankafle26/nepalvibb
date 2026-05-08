@@ -55,7 +55,9 @@ export default function WhoWeAre({ content }) {
               <span className="block text-7xl font-black text-primary leading-none mb-2">
                 {content?.yearsOfExperience || '15'}
               </span>
-              <span className="text-[10px] uppercase font-black tracking-[0.3em] text-orange-500 block">Års Erfaring</span>
+              <span className="text-[10px] uppercase font-black tracking-[0.3em] text-orange-500 block">
+                {content?.yearsOfExperienceLabel || 'Års Erfaring'}
+              </span>
               <div className="mt-6 flex justify-center space-x-1">
                 {[1, 2, 3, 4, 5].map(i => (
                   <div key={i} className="w-1.5 h-1.5 rounded-full bg-orange-500" />

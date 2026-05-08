@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect } from 'react';
-import { Save, Layout, Info, Heart, Newspaper, Map, Activity, Compass } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
+import { Save, Layout, Info, Heart, Newspaper, Map, Activity, Compass, MessageSquare, Upload, Image as ImageIcon, X } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function AdminHomeContentPage() {
@@ -37,7 +37,8 @@ export default function AdminHomeContentPage() {
       if (res.ok) {
         setMessage('Home content updated successfully!');
       } else {
-        setMessage('Error updating content.');
+        const errData = await res.json();
+        setMessage(`Error: ${errData.error || 'Updating content failed'}`);
       }
     } catch (err) {
       console.error(err);
@@ -57,6 +58,24 @@ export default function AdminHomeContentPage() {
     }));
   };
 
+  const handleFileUpload = async (section, field, file) => {
+    const formData = new FormData();
+    formData.append('file', file);
+
+    try {
+      const res = await fetch('/api/upload', {
+        method: 'POST',
+        body: formData
+      });
+      const data = await res.json();
+      if (data.url) {
+        updateSection(section, field, data.url);
+      }
+    } catch (err) {
+      console.error('Upload failed:', err);
+    }
+  };
+
   if (loading) return (
     <div className="flex items-center justify-center h-[60vh]">
       <div className="w-10 h-10 border-4 border-primary/20 border-t-primary rounded-full animate-spin" />
@@ -66,9 +85,10 @@ export default function AdminHomeContentPage() {
   const sections = [
     { id: 'destinations', name: 'Destinations Section', icon: Map },
     { id: 'activities', name: 'Activities Section', icon: Activity },
-    { id: 'whoWeAre', name: 'Who We Are Section', icon: Info, hasDescription: true, hasYears: true },
+    { id: 'whoWeAre', name: 'Who We Are Section', icon: Info, hasDescription: true, hasYears: true, images: ['image1', 'image2'] },
     { id: 'tours', name: 'Popular Tours Section', icon: Compass },
-    { id: 'purpose', name: 'Purpose/CSR Section', icon: Heart, hasDescription: true, hasButton: true },
+    { id: 'purpose', name: 'Purpose/CSR Section', icon: Heart, hasDescription: true, hasButton: true, images: ['image'] },
+    { id: 'testimonials', name: 'Testimonials Section', icon: MessageSquare },
     { id: 'blog', name: 'Blog/News Section', icon: Newspaper },
   ];
 
@@ -77,7 +97,7 @@ export default function AdminHomeContentPage() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-4xl font-black text-primary uppercase tracking-tighter italic">Home Page Content</h1>
-          <p className="text-gray-400 font-medium">Edit section titles and introductory text</p>
+          <p className="text-gray-400 font-medium">Manage all dynamic content and images</p>
         </div>
         <button 
           onClick={handleSave}
@@ -95,7 +115,7 @@ export default function AdminHomeContentPage() {
         </div>
       )}
 
-      <form onSubmit={handleSave} className="grid grid-cols-1 xl:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
         {sections.map((section) => (
           <motion.div 
             key={section.id}
@@ -131,11 +151,59 @@ export default function AdminHomeContentPage() {
                 />
               </div>
 
+              {section.images?.map(imgField => (
+                <div key={imgField} className="space-y-4">
+                  <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 px-2">
+                    {imgField === 'image' ? 'Background Image' : imgField === 'image1' ? 'First Image' : 'Second Image'}
+                  </label>
+                  <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center bg-gray-50 p-4 rounded-3xl border border-dashed border-gray-200">
+                    <div className="w-20 h-20 bg-white rounded-2xl overflow-hidden border border-gray-100 shrink-0">
+                      {content[section.id]?.[imgField] ? (
+                        <img src={content[section.id][imgField]} className="w-full h-full object-cover" alt="" />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center text-gray-300">
+                          <ImageIcon className="w-6 h-6" />
+                        </div>
+                      )}
+                    </div>
+                    <div className="flex-1 space-y-2 w-full">
+                      <input 
+                        type="text" 
+                        value={content[section.id]?.[imgField] || ''}
+                        onChange={e => updateSection(section.id, imgField, e.target.value)}
+                        className="w-full bg-white border-none rounded-xl px-4 py-2 text-[10px] font-medium focus:ring-1 focus:ring-primary transition-all"
+                        placeholder="Image URL"
+                      />
+                      <div className="flex gap-2">
+                        <label className="flex-1 cursor-pointer bg-primary/10 hover:bg-primary/20 text-primary px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest flex items-center justify-center transition-all">
+                          <Upload className="w-3.5 h-3.5 mr-2" />
+                          Upload Local
+                          <input 
+                            type="file" 
+                            className="hidden" 
+                            accept="image/*"
+                            onChange={e => e.target.files?.[0] && handleFileUpload(section.id, imgField, e.target.files[0])}
+                          />
+                        </label>
+                        {content[section.id]?.[imgField] && (
+                          <button 
+                            onClick={() => updateSection(section.id, imgField, '')}
+                            className="p-2 text-red-400 hover:text-red-500 hover:bg-red-50 rounded-xl transition-all"
+                          >
+                            <X className="w-4 h-4" />
+                          </button>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+
               {section.hasYears && (
-                <div className="space-y-6">
+                <div className="space-y-6 pt-4 border-t border-gray-50">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-3">
-                      <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 px-2">Years of Experience</label>
+                      <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 px-2">Years of Experience (Number)</label>
                       <input 
                         type="text" 
                         value={content[section.id]?.yearsOfExperience || ''}
@@ -143,27 +211,17 @@ export default function AdminHomeContentPage() {
                         className="w-full bg-gray-50 border-none rounded-2xl px-6 py-4 text-sm font-medium focus:ring-2 focus:ring-primary transition-all"
                       />
                     </div>
-                  </div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-3">
-                      <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 px-2">Image 1 URL</label>
+                      <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 px-2">Experience Label (Text)</label>
                       <input 
                         type="text" 
-                        value={content[section.id]?.image1 || ''}
-                        onChange={e => updateSection(section.id, 'image1', e.target.value)}
-                        className="w-full bg-gray-50 border-none rounded-2xl px-6 py-4 text-sm font-medium focus:ring-2 focus:ring-primary transition-all"
-                      />
-                    </div>
-                    <div className="space-y-3">
-                      <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 px-2">Image 2 URL</label>
-                      <input 
-                        type="text" 
-                        value={content[section.id]?.image2 || ''}
-                        onChange={e => updateSection(section.id, 'image2', e.target.value)}
+                        value={content[section.id]?.yearsOfExperienceLabel || ''}
+                        onChange={e => updateSection(section.id, 'yearsOfExperienceLabel', e.target.value)}
                         className="w-full bg-gray-50 border-none rounded-2xl px-6 py-4 text-sm font-medium focus:ring-2 focus:ring-primary transition-all"
                       />
                     </div>
                   </div>
+                  
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 border-t border-gray-50">
                     <div className="space-y-4">
                       <h4 className="text-[10px] font-black uppercase tracking-widest text-primary">Feature Box 1</h4>
@@ -225,7 +283,7 @@ export default function AdminHomeContentPage() {
             </div>
           </motion.div>
         ))}
-      </form>
+      </div>
     </div>
   );
 }

@@ -14,6 +14,7 @@ const HomeContentSchema = new mongoose.Schema({
     title: { type: String, default: 'Eksperter på Himalaya Eventyr' },
     description: { type: String, default: 'Velkommen til Nepalvibb, et stolt datterselskap av Actual Adventure Pvt. Ltd. Med over 15 års dedikasjon har vi etablert oss som den fremste aktøren for skandinaviske reisende i Nepal.' },
     yearsOfExperience: { type: String, default: '15' },
+    yearsOfExperienceLabel: { type: String, default: 'Års Erfaring' },
     image1: { type: String, default: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80' },
     image2: { type: String, default: 'https://images.unsplash.com/photo-1551882547-ff43c63faf76?auto=format&fit=crop&w=800&q=80' },
     feature1Title: { type: String, default: 'TRYGGHET' },
@@ -30,6 +31,11 @@ const HomeContentSchema = new mongoose.Schema({
     title: { type: String, default: 'En Reise med Formål: Ditt Eventyr – Deres Håp' },
     description: { type: String, default: 'Vi støtter lokale prosjekter for gatehunder i Nepal. Ved å reise med oss bidrar du direkte til å gi disse dyrene et bedre liv gjennom Actual Adventure Foundation.' },
     buttonText: { type: String, default: 'Les mer om prosjektet' },
+    image: { type: String, default: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1920&q=80' },
+  },
+  testimonials: {
+    subtitle: { type: String, default: 'Gjestevurderinger' },
+    title: { type: String, default: 'Hva våre gjester sier' },
   },
   blog: {
     subtitle: { type: String, default: 'Tips og inspirasjon' },

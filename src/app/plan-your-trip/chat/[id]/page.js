@@ -198,9 +198,11 @@ export default function ChatPage({ params }) {
   const tripSummary = {
     title: tripTitle,
     destination: tripDestination,
-    dates: 'September 2025',
+    dates: request?.startDate 
+      ? `${new Date(request.startDate).toLocaleDateString('no-NO', { day: '2-digit', month: 'short' })} - ${request.endDate ? new Date(request.endDate).toLocaleDateString('no-NO', { day: '2-digit', month: 'short' }) : ''}`
+      : 'Ikke valgt',
     duration: tripDuration,
-    travelers: '2 reisende',
+    travelers: request?.adults ? `${request.adults} voksne` : '2 reisende',
     budget: request?.budget || 'Middels',
     status: request?.status || 'Planlegging pågår',
     price: request?.price || tripPrice,

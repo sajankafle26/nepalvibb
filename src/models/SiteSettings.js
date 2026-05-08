@@ -26,6 +26,17 @@ const SiteSettingsSchema = new mongoose.Schema({
     logoUrl: String,
     url: String,
   }],
+
+  // New Footer Dynamic Fields
+  affiliatedLabel: { type: String, default: 'Vi er tilknyttet' },
+  subsidiaryLabel: { type: String, default: 'Datterselskap av' },
+  subsidiaryLogo: { type: String, default: 'https://www.actual-adventure.com/public/uploads/actual-adventure-logo-np.svg' },
+  subsidiaryUrl: { type: String, default: 'https://www.actual-adventure.com' },
+  visitingAddressLabel: { type: String, default: 'Besøksadresse' },
+  callUsLabel: { type: String, default: 'Ring Oss' },
+  callUsHours: { type: String, default: 'Man-Fre: 09:00 - 17:00' },
+  sendEmailLabel: { type: String, default: 'Send E-post' },
+  replyTimeLabel: { type: String, default: 'Svar innen 24 timer' },
   
   copyrightText: { type: String, default: '© 2025 NEPALVIBB AS. ALL RIGHTS RESERVED.' },
   

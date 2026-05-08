@@ -42,6 +42,7 @@ export default function AdminLayout({ children }) {
     { label: 'Banners', icon: ImageIcon, href: '/admin/banners' },
     { label: 'Home Content', icon: Layout, href: '/admin/home-content' },
     { label: 'About Content', icon: Layout, href: '/admin/about-content' },
+    { label: 'Contact Content', icon: MessageSquare, href: '/admin/contact-content' },
     { label: 'Team', icon: Users, href: '/admin/team' },
     { label: 'Plan Trip Form', icon: Settings, href: '/admin/plan-trip' },
     { label: 'Reviews', icon: MessageSquare, href: '/admin/reviews' },

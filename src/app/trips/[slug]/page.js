@@ -167,9 +167,9 @@ export default function TripDetailPage({ params }) {
           {/* Oversikt Section */}
           <section id="oversikt" className="scroll-mt-36 space-y-8">
             <div className="space-y-4">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-display text-primary tracking-tight leading-tight">Om reisen</h2>
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold font-display text-primary tracking-tight">Om reisen</h2>
               <div 
-                className="prose prose-primary max-w-none text-gray-600 font-light leading-relaxed prose-p:text-base md:prose-p:lg prose-p:mb-6 prose-strong:font-semibold" 
+                className="prose prose-primary max-w-none text-gray-600 font-light leading-relaxed prose-p:text-sm md:prose-p:base prose-p:mb-4 prose-strong:font-semibold" 
                 dangerouslySetInnerHTML={{ __html: trip.overview || trip.summary }} 
               />
             </div>
@@ -196,7 +196,7 @@ export default function TripDetailPage({ params }) {
           {/* Turdetaljer Section */}
           {trip.tripDetails?.length > 0 && (
             <section id="turdetaljer" className="scroll-mt-36 space-y-6">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-display text-primary tracking-tight leading-tight">Turdetaljer</h2>
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold font-display text-primary tracking-tight">Turdetaljer</h2>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
                 {trip.tripDetails.map((detail, i) => {
                   const Icon = ({
@@ -231,16 +231,16 @@ export default function TripDetailPage({ params }) {
 
           {/* Reiserute Section */}
           <section id="reiserute" className="scroll-mt-36 space-y-6">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-display text-primary tracking-tight leading-tight">Detaljert reiserute</h2>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold font-display text-primary tracking-tight">Detaljert reiserute</h2>
             <div className="space-y-6 relative">
               <div className="absolute left-6 top-8 bottom-8 w-0.5 bg-gray-100 hidden md:block" />
               {(trip.itinerary || []).map((item, idx) => (
                 <div key={idx} className="relative md:pl-16 group">
                   <div className="absolute left-0 top-1 w-12 h-12 bg-white border border-gray-200 rounded-xl flex items-center justify-center font-bold text-primary text-sm shadow-sm group-hover:bg-primary group-hover:text-white transition-all hidden md:flex z-10">{item.day}</div>
                   <div className="bg-white rounded-2xl border border-gray-100 p-6 md:p-8 hover:shadow-md transition-all">
-                    <h3 className="text-lg font-bold font-display text-primary mb-3">{item.title}</h3>
+                    <h3 className="text-base font-bold font-display text-primary mb-2">{item.title}</h3>
                     <div 
-                      className="prose prose-primary max-w-none text-gray-600 font-light prose-p:text-sm md:prose-p:base prose-p:leading-relaxed" 
+                      className="prose prose-primary max-w-none text-gray-600 font-light prose-p:text-xs md:prose-p:sm prose-p:leading-relaxed" 
                       dangerouslySetInnerHTML={{ __html: item.details }} 
                     />
                   </div>
@@ -251,24 +251,24 @@ export default function TripDetailPage({ params }) {
 
           {/* Tjenester Section */}
           <section id="tjenester" className="scroll-mt-36 space-y-6">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-display text-primary tracking-tight leading-tight">Inkludert & Ekskludert</h2>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold font-display text-primary tracking-tight">Inkludert & Ekskludert</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-              <div className="bg-emerald-50/30 p-8 rounded-3xl border border-emerald-100/50 space-y-6">
-                <h3 className="text-lg font-bold font-display text-emerald-700 tracking-tight flex items-center"><CheckCircle className="w-5 h-5 mr-2 text-emerald-600" /> Pris inkluderer</h3>
-                <ul className="space-y-3">
+              <div className="bg-emerald-50/30 p-6 rounded-3xl border border-emerald-100/50 space-y-4">
+                <h3 className="text-base font-bold font-display text-emerald-700 tracking-tight flex items-center"><CheckCircle className="w-4 h-4 mr-2 text-emerald-600" /> Pris inkluderer</h3>
+                <ul className="space-y-2">
                   {trip.priceIncludes?.map((item, i) => (
-                    <li key={i} className="flex items-start space-x-3 text-sm font-medium text-emerald-800/80 leading-relaxed">
-                      <Check className="w-4 h-4 mt-0.5 flex-shrink-0 text-emerald-600" /> <span>{item}</span>
+                    <li key={i} className="flex items-start space-x-2 text-xs font-medium text-emerald-800/80 leading-relaxed">
+                      <Check className="w-3.5 h-3.5 mt-0.5 flex-shrink-0 text-emerald-600" /> <span>{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
-              <div className="bg-red-50/30 p-8 rounded-3xl border border-red-100/50 space-y-6">
-                <h3 className="text-lg font-bold font-display text-red-700 tracking-tight flex items-center"><XCircle className="w-5 h-5 mr-2 text-red-600" /> Pris ekskluderer</h3>
-                <ul className="space-y-3">
+              <div className="bg-red-50/30 p-6 rounded-3xl border border-red-100/50 space-y-4">
+                <h3 className="text-base font-bold font-display text-red-700 tracking-tight flex items-center"><XCircle className="w-4 h-4 mr-2 text-red-600" /> Pris ekskluderer</h3>
+                <ul className="space-y-2">
                   {trip.priceExcludes?.map((item, i) => (
-                    <li key={i} className="flex items-start space-x-3 text-sm font-medium text-red-800/80 leading-relaxed">
-                      <XCircle className="w-4 h-4 mt-0.5 flex-shrink-0 text-red-500" /> <span>{item}</span>
+                    <li key={i} className="flex items-start space-x-2 text-xs font-medium text-red-800/80 leading-relaxed">
+                      <XCircle className="w-3.5 h-3.5 mt-0.5 flex-shrink-0 text-red-500" /> <span>{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -278,7 +278,7 @@ export default function TripDetailPage({ params }) {
 
           {/* Galleri Section */}
           <section id="galleri" className="scroll-mt-36 space-y-6">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-display text-primary tracking-tight leading-tight">Bildegalleri</h2>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold font-display text-primary tracking-tight">Bildegalleri</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               {trip.gallery?.map((img, i) => (
                 <div key={i} className="h-64 md:h-72 rounded-2xl overflow-hidden shadow-sm">
@@ -290,7 +290,7 @@ export default function TripDetailPage({ params }) {
 
           {/* Info Section */}
           <section id="info" className="scroll-mt-36 space-y-6">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-display text-primary tracking-tight leading-tight">Viktig informasjon</h2>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold font-display text-primary tracking-tight">Viktig informasjon</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               {[
                 { label: 'Beste Reisetid', value: trip.usefulInfo?.bestTime, icon: Calendar },
@@ -304,7 +304,7 @@ export default function TripDetailPage({ params }) {
                     <item.icon className="w-5 h-5 text-orange-500" />
                   </div>
                   <h4 className="text-[10px] font-semibold uppercase tracking-wider text-gray-400">{item.label}</h4>
-                  <p className="text-sm font-medium text-primary leading-relaxed">{item.value}</p>
+                  <p className="text-xs font-medium text-primary leading-relaxed">{item.value}</p>
                 </div>
               ))}
             </div>

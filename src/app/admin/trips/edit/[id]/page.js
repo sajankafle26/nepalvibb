@@ -8,6 +8,8 @@ import {
   Trash2, Star
 } from 'lucide-react';
 import Link from 'next/link';
+import ImageUpload from '@/components/admin/ImageUpload';
+
 
 export default function EditTourPage({ params }) {
   const { id } = use(params);
@@ -25,7 +27,18 @@ export default function EditTourPage({ params }) {
       const res = await fetch(`/api/admin/trips/${id}`);
       if (!res.ok) throw new Error('Tour not found');
       const data = await res.json();
-      setFormData(data);
+      
+      // Transform Mongoose schema fields to frontend states
+      const loadedData = {
+        ...data,
+        days: parseInt(data.duration) || 7,
+        inclusions: data.priceIncludes || [],
+        exclusions: data.priceExcludes || [],
+        briefItinerary: data.itinerary?.map(it => ({ day: it.day, highlight: it.title, overnight: '' })) || [],
+        detailedItinerary: data.itinerary?.map(it => ({ day: it.day, title: it.title, desc: it.details, image: it.image || '' })) || []
+      };
+      
+      setFormData(loadedData);
     } catch (error) {
       console.error(error);
       alert('Error fetching tour');
@@ -72,17 +85,35 @@ export default function EditTourPage({ params }) {
     e.preventDefault();
     setSaving(true);
     try {
+      // Map frontend fields to MongoDB TourSchema fields
+      const submitData = {
+        ...formData,
+        duration: `${formData.days} Dager`, // duration is required
+        priceIncludes: formData.inclusions.filter(Boolean),
+        priceExcludes: formData.exclusions.filter(Boolean),
+        itinerary: formData.detailedItinerary.map(item => ({
+          day: item.day,
+          title: item.title,
+          details: item.desc,
+          image: item.image
+        }))
+      };
+
       const response = await fetch(`/api/admin/trips/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(submitData),
       });
 
-      if (!response.ok) throw new Error('Failed to update tour');
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to update tour');
+      }
+      
       router.push('/admin/trips');
     } catch (error) {
       console.error(error);
-      alert('Error saving tour');
+      alert(`Error saving tour: ${error.message}`);
     } finally {
       setSaving(false);
     }
@@ -275,10 +306,11 @@ export default function EditTourPage({ params }) {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <textarea rows={6} value={item.desc} onChange={(e) => updateArrayItem('detailedItinerary', index, 'desc', e.target.value)} className="w-full bg-white border border-gray-100 rounded-xl px-5 py-4 text-xs font-medium resize-none" />
                     <div className="space-y-4">
-                      <input type="text" value={item.image} onChange={(e) => updateArrayItem('detailedItinerary', index, 'image', e.target.value)} placeholder="Image URL" className="w-full bg-white border border-gray-100 rounded-xl px-5 py-3 text-xs font-medium" />
-                      <div className="aspect-video bg-white rounded-2xl border border-dashed border-gray-200 flex items-center justify-center overflow-hidden">
-                        {item.image ? <img src={item.image} className="w-full h-full object-cover" alt="" /> : <ImageIcon className="w-8 h-8 text-gray-200" />}
-                      </div>
+                      <ImageUpload 
+                        value={item.image} 
+                        onChange={url => updateArrayItem('detailedItinerary', index, 'image', url)} 
+                        label="Itinerary Image" 
+                      />
                     </div>
                   </div>
                 </div>
@@ -314,10 +346,11 @@ export default function EditTourPage({ params }) {
                 <div><p className="text-xs font-black text-primary uppercase">Featured Tour</p><p className="text-[9px] text-gray-400 uppercase">Show on home page</p></div>
                 <input type="checkbox" name="isFeatured" checked={formData.isFeatured} onChange={handleChange} className="w-5 h-5 accent-primary" />
               </div>
-              <div className="space-y-2">
-                <label className="text-[10px] font-black uppercase tracking-widest text-gray-400">Main Banner Image</label>
-                <input type="text" name="image" value={formData.image} onChange={handleChange} className="w-full border-2 border-gray-50 bg-gray-50/30 rounded-2xl px-6 py-3 text-xs font-medium" />
-              </div>
+              <ImageUpload 
+                value={formData.image} 
+                onChange={url => setFormData(prev => ({ ...prev, image: url }))} 
+                label="Trip Cover Image" 
+              />
             </div>
           </section>
         </div>

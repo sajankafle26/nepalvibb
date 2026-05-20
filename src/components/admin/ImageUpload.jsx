@@ -11,6 +11,12 @@ export default function ImageUpload({ value, onChange, label = "Upload Image" })
     const file = e.target.files?.[0];
     if (!file) return;
 
+    // Validate size (max 10MB)
+    if (file.size > 10 * 1024 * 1024) {
+      alert("Filen er for stor. Maksimal filstørrelse er 10MB.");
+      return;
+    }
+
     setUploading(true);
     const formData = new FormData();
     formData.append('file', file);
@@ -20,12 +26,21 @@ export default function ImageUpload({ value, onChange, label = "Upload Image" })
         method: 'POST',
         body: formData,
       });
+      
       const data = await res.json();
+      
+      if (!res.ok) {
+        throw new Error(data.error || `Server returned status ${res.status}`);
+      }
+
       if (data.url) {
         onChange(data.url);
+      } else {
+        throw new Error("Klarte ikke å hente opplastet fil-URL.");
       }
     } catch (err) {
       console.error('Upload failed:', err);
+      alert(`Opplasting feilet: ${err.message}`);
     } finally {
       setUploading(false);
     }
@@ -49,7 +64,7 @@ export default function ImageUpload({ value, onChange, label = "Upload Image" })
           </div>
         </div>
       ) : (
-        <div className="relative">
+        <div className="relative group">
           <input 
             type="file" 
             accept="image/*"
@@ -80,3 +95,4 @@ export default function ImageUpload({ value, onChange, label = "Upload Image" })
     </div>
   );
 }
+

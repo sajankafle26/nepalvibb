@@ -91,22 +91,32 @@ export default function AdminTripsPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
       });
+      const data = await res.json();
       if (res.ok) {
         setIsEditing(null);
         fetchTrips();
+      } else {
+        alert("Kunne ikke lagre turen: " + (data.error || "Ukjent feil"));
       }
     } catch (err) {
       console.error(err);
+      alert("Feil ved tilkobling til serveren.");
     }
   };
 
   const deleteTrip = async (id) => {
-    if (!confirm('Delete this trip?')) return;
+    if (!confirm('Vil du slette denne turen?')) return;
     try {
-      await fetch(`/api/admin/trips/${id}`, { method: 'DELETE' });
-      fetchTrips();
+      const res = await fetch(`/api/admin/trips/${id}`, { method: 'DELETE' });
+      if (res.ok) {
+        fetchTrips();
+      } else {
+        const data = await res.json();
+        alert("Kunne ikke slette turen: " + (data.error || "Ukjent feil"));
+      }
     } catch (err) {
       console.error(err);
+      alert("Feil ved tilkobling til serveren.");
     }
   };
 

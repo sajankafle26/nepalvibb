@@ -17,6 +17,7 @@ const TourSchema = new mongoose.Schema({
       day: Number,
       title: String,
       details: String,
+      image: String,
     }
   ],
   // New Dynamic Trip Details section

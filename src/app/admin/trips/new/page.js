@@ -8,6 +8,8 @@ import {
   ChevronDown, ChevronUp, Trash2, CheckCircle, XCircle
 } from 'lucide-react';
 import Link from 'next/link';
+import ImageUpload from '@/components/admin/ImageUpload';
+
 
 export default function NewTourPage() {
   const router = useRouter();
@@ -74,24 +76,40 @@ export default function NewTourPage() {
     e.preventDefault();
     setLoading(true);
     try {
+      // Map frontend fields to MongoDB TourSchema fields
+      const submitData = {
+        ...formData,
+        duration: `${formData.days} Dager`, // duration is required
+        priceIncludes: formData.inclusions.filter(Boolean),
+        priceExcludes: formData.exclusions.filter(Boolean),
+        itinerary: formData.detailedItinerary.map(item => ({
+          day: item.day,
+          title: item.title,
+          details: item.desc,
+          image: item.image
+        }))
+      };
+
       const response = await fetch('/api/admin/trips', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(submitData),
       });
 
       if (!response.ok) {
-        throw new Error('Failed to create tour');
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to create tour');
       }
 
       router.push('/admin/trips');
     } catch (error) {
       console.error('Error creating tour:', error);
-      alert('Error creating tour. Please try again.');
+      alert(`Error creating tour: ${error.message}`);
     } finally {
       setLoading(false);
     }
   };
+
 
   return (
     <div className="max-w-5xl mx-auto space-y-10 pb-20">
@@ -373,23 +391,11 @@ export default function NewTourPage() {
                       </div>
                     </div>
                     <div className="space-y-4">
-                      <div className="space-y-2">
-                        <label className="text-[9px] font-black uppercase tracking-widest text-gray-300">Image URL</label>
-                        <input 
-                          type="text" 
-                          value={item.image}
-                          onChange={(e) => updateArrayItem('detailedItinerary', index, 'image', e.target.value)}
-                          placeholder="https://images.unsplash.com/..."
-                          className="w-full bg-white border border-gray-100 rounded-xl px-5 py-3 text-xs font-medium focus:outline-none focus:border-primary"
-                        />
-                      </div>
-                      <div className="aspect-video bg-white rounded-2xl border border-dashed border-gray-200 flex items-center justify-center overflow-hidden">
-                        {item.image ? (
-                          <img src={item.image} className="w-full h-full object-cover" alt="" />
-                        ) : (
-                          <ImageIcon className="w-8 h-8 text-gray-200" />
-                        )}
-                      </div>
+                      <ImageUpload 
+                        value={item.image} 
+                        onChange={url => updateArrayItem('detailedItinerary', index, 'image', url)} 
+                        label="Itinerary Image" 
+                      />
                     </div>
                   </div>
                 </div>
@@ -466,17 +472,11 @@ export default function NewTourPage() {
                 />
               </div>
 
-              <div className="space-y-2">
-                <label className="text-[10px] font-black uppercase tracking-widest text-gray-400">Main Banner Image</label>
-                <input 
-                  type="text" 
-                  name="image"
-                  value={formData.image}
-                  onChange={handleChange}
-                  placeholder="URL to high-res banner"
-                  className="w-full border-2 border-gray-50 bg-gray-50/30 rounded-2xl px-6 py-3 text-xs font-medium focus:outline-none focus:border-primary"
-                />
-              </div>
+              <ImageUpload 
+                value={formData.image} 
+                onChange={url => setFormData(prev => ({ ...prev, image: url }))} 
+                label="Trip Cover Image" 
+              />
             </div>
 
             {/* Inclusions / Exclusions */}

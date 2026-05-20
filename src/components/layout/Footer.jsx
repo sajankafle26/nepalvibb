@@ -23,7 +23,7 @@ export default function Footer() {
         const [destRes, actRes, setRes] = await Promise.all([
           fetch('/api/destinations'),
           fetch('/api/activities'),
-          fetch('/api/admin/settings') 
+          fetch('/api/admin/settings')
         ]);
         const dests = await destRes.json();
         const acts = await actRes.json();
@@ -70,8 +70,8 @@ export default function Footer() {
   const s = dynamicData.settings ? {
     ...fallbackSettings,
     ...dynamicData.settings,
-    affiliations: (dynamicData.settings.affiliations && dynamicData.settings.affiliations.length > 0) 
-      ? dynamicData.settings.affiliations 
+    affiliations: (dynamicData.settings.affiliations && dynamicData.settings.affiliations.length > 0)
+      ? dynamicData.settings.affiliations
       : fallbackSettings.affiliations
   } : fallbackSettings;
 
@@ -181,14 +181,14 @@ export default function Footer() {
             </h5>
             <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6">
               {s.affiliations?.map((logo, i) => (
-                <div 
-                  key={i} 
+                <div
+                  key={i}
                   className="group bg-white border border-transparent rounded-2xl p-4 flex items-center justify-center w-28 h-16 sm:w-36 sm:h-20 shadow-sm hover:shadow-md hover:border-orange-500/20 transition-all duration-300"
                 >
                   <img
                     src={logo.logoUrl}
                     alt={logo.name}
-                    className="max-h-10 sm:max-h-12 max-w-full object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                    className="max-h-10 sm:max-h-12 max-w-full object-contain transition-all duration-300"
                   />
                 </div>
               ))}
@@ -197,7 +197,7 @@ export default function Footer() {
         </div>
 
         {/* Subsidiary Section */}
-        <div className="py-8 border-t border-b border-white/10 bg-white/5 -mx-6 px-6 lg:-mx-8 lg:px-8 my-6">
+        <div className="py-8 border-t border-b border-white/10 bg-black/25 -mx-6 px-6 lg:-mx-8 lg:px-8 my-6">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <span className="text-[10px] font-black uppercase tracking-[0.4em] text-stone-300/80">
               {s.subsidiaryLabel}
@@ -206,12 +206,12 @@ export default function Footer() {
               href={s.subsidiaryUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center space-x-3 px-6 py-3 rounded-2xl bg-white hover:shadow-md transition-all duration-300 border border-transparent hover:border-orange-500/20 shadow-sm"
+              className="group flex items-center space-x-3 px-6 py-3 rounded-2xl bg-green-900 hover:shadow-md transition-all duration-300 border border-transparent hover:border-orange-500/20 shadow-sm"
             >
               <img
                 src={s.subsidiaryLogo}
                 alt="Subsidiary"
-                className="h-8 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                className="h-8 w-auto object-contain transition-all duration-300"
               />
               <ExternalLink className="w-3.5 h-3.5 text-emerald-600 group-hover:text-orange-500 transition-colors" />
             </a>

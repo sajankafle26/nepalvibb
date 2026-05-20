@@ -11,6 +11,55 @@ import { ArrowRight } from 'lucide-react';
 import HomeContent from '@/models/HomeContent';
 import dbConnect from '@/lib/mongodb';
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://nepalvibb.com';
+
+export const metadata = {
+  title: 'Nepalvibb – Din Norske Reisepartner til Nepal & Himalaya',
+  description: 'Opplev Nepal med Nepalvibb. Vi tilbyr skreddersydde trekking-, kultur- og eventyrreiser i Himalaya. Norskspråklig support, lokale eksperter og uforglemmelige opplevelser.',
+  keywords: ['Nepal reise', 'trekking Nepal', 'Himalaya', 'Everest Base Camp', 'Annapurna', 'Nepal tur', 'reisebyrå Nepal', 'norsk reisebyrå'],
+  authors: [{ name: 'Nepalvibb' }],
+  creator: 'Nepalvibb',
+  publisher: 'Nepalvibb',
+  metadataBase: new URL(siteUrl),
+  alternates: {
+    canonical: '/',
+    languages: { 'no': '/' },
+  },
+  openGraph: {
+    title: 'Nepalvibb – Din Norske Reisepartner til Nepal & Himalaya',
+    description: 'Skreddersydde trekking-, kultur- og eventyrreiser i Nepal. Norskspråklig support og lokale eksperter.',
+    url: siteUrl,
+    siteName: 'Nepalvibb',
+    locale: 'nb_NO',
+    type: 'website',
+    images: [
+      {
+        url: `${siteUrl}/og-image.jpg`,
+        width: 1200,
+        height: 630,
+        alt: 'Nepalvibb – Reiser til Nepal og Himalaya',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Nepalvibb – Din Norske Reisepartner til Nepal & Himalaya',
+    description: 'Skreddersydde trekking-, kultur- og eventyrreiser i Nepal. Norskspråklig support og lokale eksperter.',
+    images: [`${siteUrl}/og-image.jpg`],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+};
+
 async function getHomeContent() {
   await dbConnect();
   let content = await HomeContent.findOne({});

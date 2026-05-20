@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useEffect, use } from 'react';
-import { 
-  MapPin, Clock, Tag, LayoutGrid, List, 
+import {
+  MapPin, Clock, Tag, LayoutGrid, List,
   Filter as FilterIcon, ChevronRight, Compass,
   AlertCircle, ArrowRight, Star, Heart
 } from 'lucide-react';
@@ -55,7 +55,7 @@ export default function DestinationDetailPage({ params }) {
 
   const filteredTours = tours.filter(tour => {
     const matchActivity = filters.activity === 'Alle' || tour.category === filters.activity;
-    
+
     let matchDuration = true;
     if (filters.duration !== 'Alle') {
       const days = parseInt(tour.duration);
@@ -63,7 +63,7 @@ export default function DestinationDetailPage({ params }) {
       if (filters.duration === 'Middels') matchDuration = days > 5 && days <= 12;
       if (filters.duration === 'Lang') matchDuration = days > 12;
     }
-    
+
     return matchActivity && matchDuration;
   });
 
@@ -71,10 +71,10 @@ export default function DestinationDetailPage({ params }) {
 
   return (
     <div className="min-h-screen bg-stone-50/30">
-      
+
       {/* Dynamic Hero Section */}
       <div className="relative h-[60vh] md:h-[75vh] min-h-[500px] flex items-center justify-center overflow-hidden">
-        <motion.div 
+        <motion.div
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
           transition={{ duration: 1.5 }}
@@ -87,16 +87,16 @@ export default function DestinationDetailPage({ params }) {
           <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-stone-50/30 via-transparent to-transparent"></div>
         </motion.div>
-        
+
         <div className="relative z-10 text-center px-6 pt-20">
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-orange-400 font-bold uppercase tracking-wider text-xs mb-4"
           >
             Opplev hjertet av Himalaya
           </motion.p>
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
@@ -108,10 +108,10 @@ export default function DestinationDetailPage({ params }) {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 -mt-20 relative z-20">
-        
+
         {/* Description Section */}
         <div className="bg-white rounded-3xl shadow-sm p-8 sm:p-12 lg:p-16 border border-gray-100 mb-16">
-          <div className="max-w-4xl">
+          <div className="">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-display text-primary tracking-tight mb-8">
               Om <span className="text-orange-500">{destination.name}</span>
             </h2>
@@ -127,15 +127,15 @@ export default function DestinationDetailPage({ params }) {
             <h3 className="text-2xl sm:text-3xl font-bold font-display text-primary tracking-tight">Tilgjengelige opplevelser</h3>
             <p className="text-xs text-gray-400 font-bold uppercase tracking-wider mt-1">{filteredTours.length} Opplevelser funnet i {destination.name}</p>
           </div>
-          
+
           <div className="flex items-center space-x-2 bg-gray-100/60 p-1.5 rounded-xl border border-gray-100 shadow-sm">
-            <button 
+            <button
               onClick={() => setView('grid')}
               className={cn("p-2.5 rounded-lg transition-all", view === 'grid' ? "bg-primary text-white shadow-sm" : "text-gray-400 hover:bg-white")}
             >
               <LayoutGrid className="w-4 h-4" />
             </button>
-            <button 
+            <button
               onClick={() => setView('list')}
               className={cn("p-2.5 rounded-lg transition-all", view === 'list' ? "bg-primary text-white shadow-sm" : "text-gray-400 hover:bg-white")}
             >
@@ -146,15 +146,15 @@ export default function DestinationDetailPage({ params }) {
 
         {/* Main Content */}
         <div className="flex flex-col lg:flex-row gap-10 items-start pb-24">
-          
+
           {/* Sidebar Filters */}
-          <aside className="w-full lg:w-[320px] sticky top-32 space-y-8">
+          <aside className="w-full lg:w-[320px] sticky top-32 space-y-8 hidden lg:block">
             <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm">
               <div className="flex items-center space-x-3 mb-8">
                 <div className="p-2.5 bg-emerald-50 rounded-xl text-primary">
                   <FilterIcon className="w-5 h-5" />
                 </div>
-                <span className="text-xs font-bold uppercase tracking-wider text-primary">Filtrer resultater</span>
+                <span className="hidden sm:inline text-xs font-bold uppercase tracking-wider text-primary">Filtrer resultater</span>
               </div>
 
               {/* Activity Filter */}
@@ -162,9 +162,9 @@ export default function DestinationDetailPage({ params }) {
                 <p className="text-[10px] font-bold uppercase tracking-wider text-gray-400">Aktivitetstype</p>
                 <div className="space-y-2">
                   {activities.map(act => (
-                    <button 
+                    <button
                       key={act}
-                      onClick={() => setFilters({...filters, activity: act})}
+                      onClick={() => setFilters({ ...filters, activity: act })}
                       className={cn(
                         "w-full text-left px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all",
                         filters.activity === act ? "bg-primary text-white shadow-sm" : "text-gray-400 hover:bg-gray-50 border border-transparent"
@@ -186,9 +186,9 @@ export default function DestinationDetailPage({ params }) {
                     { label: '6-12 Dager', value: 'Middels' },
                     { label: '13+ Dager', value: 'Lang' }
                   ].map(dur => (
-                    <button 
+                    <button
                       key={dur.value}
-                      onClick={() => setFilters({...filters, duration: dur.value})}
+                      onClick={() => setFilters({ ...filters, duration: dur.value })}
                       className={cn(
                         "w-full text-left px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all",
                         filters.duration === dur.value ? "bg-orange-500 text-white shadow-sm" : "text-gray-400 hover:bg-gray-50 border border-transparent"
@@ -218,21 +218,21 @@ export default function DestinationDetailPage({ params }) {
           <div className="flex-1 w-full">
             <AnimatePresence mode="wait">
               {filteredTours.length === 0 ? (
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   className="bg-white rounded-3xl p-16 text-center border border-gray-100 shadow-sm"
                 >
                   <p className="text-lg font-bold font-display text-primary tracking-tight mb-4">Ingen reiser samsvarer med filtrene</p>
-                  <button 
-                    onClick={() => setFilters({activity: 'Alle', duration: 'Alle'})}
+                  <button
+                    onClick={() => setFilters({ activity: 'Alle', duration: 'Alle' })}
                     className="text-orange-500 font-bold uppercase tracking-wider text-[10px] underline hover:text-primary transition-colors"
                   >
                     Nullstill alle filtre
                   </button>
                 </motion.div>
               ) : (
-                <motion.div 
+                <motion.div
                   layout
                   className={cn(
                     "grid gap-6",
@@ -240,9 +240,9 @@ export default function DestinationDetailPage({ params }) {
                   )}
                 >
                   {filteredTours.map((tour) => (
-                    <motion.div 
+                    <motion.div
                       layout
-                      key={tour._id} 
+                      key={tour._id}
                       className={cn(
                         "bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 group border border-gray-100 flex",
                         view === 'list' ? "flex-col md:flex-row h-auto md:h-72" : "flex-col"
@@ -254,7 +254,7 @@ export default function DestinationDetailPage({ params }) {
                           {tour.category || 'Eventyr'}
                         </div>
                       </div>
-                      
+
                       <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between">
                         <div className="space-y-3">
                           <h3 className="text-lg sm:text-xl font-bold font-display text-primary mb-3 line-clamp-2 leading-snug group-hover:text-orange-500 transition-colors">
@@ -264,7 +264,7 @@ export default function DestinationDetailPage({ params }) {
                             {tour.summary}
                           </p>
                         </div>
-                        
+
                         <div className="flex items-center justify-between pt-6 border-t border-gray-50 mt-6">
                           <div className="flex items-center space-x-6">
                             <div className="flex items-center space-x-1.5 text-xs font-bold text-gray-400 uppercase tracking-wider">

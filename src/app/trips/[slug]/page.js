@@ -167,7 +167,7 @@ export default function TripDetailPage({ params }) {
           {/* Oversikt Section */}
           <section id="oversikt" className="scroll-mt-36 space-y-8">
             <div className="space-y-4">
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold font-display text-primary tracking-tight">Om reisen</h2>
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold font-display text-primary tracking-tight">Oversikt</h2>
               <div 
                 className="prose prose-primary max-w-none text-gray-600 font-light leading-relaxed prose-p:text-sm md:prose-p:base prose-p:mb-4 prose-strong:font-semibold" 
                 dangerouslySetInnerHTML={{ __html: trip.overview || trip.summary }} 

@@ -2,8 +2,8 @@
 
 import { useState, useEffect, use } from 'react';
 import Link from 'next/link';
-import { 
-  Clock, MapPin, Star, Compass, 
+import {
+  Clock, MapPin, Star, Compass,
   ArrowRight, Mountain, Wind, Zap
 } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -48,21 +48,21 @@ export default function ActivityDetailPage({ params }) {
 
   return (
     <div className="min-h-screen bg-white">
-      
+
       {/* Hero Section */}
       <section className="relative h-[70vh] min-h-[500px] overflow-hidden flex items-center pt-20">
-        <img 
-          src={activity.image || 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80'} 
+        <img
+          src={activity.image || 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80'}
           className="absolute inset-0 w-full h-full object-cover"
           alt={activity.name}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
-        
+
         <div className="relative max-w-7xl mx-auto px-6 w-full pt-20">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
-            className="max-w-2xl space-y-6"
+            className=""
           >
             <h5 className="text-orange-500 font-bold uppercase tracking-wider text-[10px]">Opplev mer i Himalaya</h5>
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold font-display text-white tracking-tight leading-tight">
@@ -91,16 +91,16 @@ export default function ActivityDetailPage({ params }) {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {trips.length > 0 ? trips.map((trip) => (
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                key={trip._id} 
+                key={trip._id}
                 className="bg-white rounded-3xl overflow-hidden shadow-md border border-gray-100/50 group transition-all hover:-translate-y-2 hover:shadow-lg"
               >
                 <div className="h-64 overflow-hidden relative">
-                  <img 
-                    src={trip.image} 
+                  <img
+                    src={trip.image}
                     className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                     alt={trip.title}
                   />

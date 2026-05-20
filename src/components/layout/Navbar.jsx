@@ -288,12 +288,12 @@ export default function Navbar() {
                   <div key={link.name}>
                     {link.dropdown ? (
                       <div className="space-y-4">
-                        <p className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-400">{link.name}</p>
+                        <p className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-400 font-display">{link.name}</p>
                         {link.dropdown.map((sub) => (
                           <Link
                             key={sub.name}
                             href={sub.href}
-                            className="block text-xl font-black text-primary uppercase tracking-tighter"
+                            className="block text-xl font-black text-primary uppercase tracking-tighter font-display"
                             onClick={() => setIsOpen(false)}
                           >
                             {sub.name}
@@ -303,7 +303,7 @@ export default function Navbar() {
                     ) : (
                       <Link
                         href={link.href}
-                        className="block text-3xl font-black text-primary uppercase tracking-tighter"
+                        className="block text-3xl font-black text-primary uppercase tracking-tighter font-display"
                         onClick={() => setIsOpen(false)}
                       >
                         {link.name}
@@ -324,7 +324,7 @@ export default function Navbar() {
                     <div className="space-y-4">
                        <Link 
                         href="/dashboard" 
-                        className="flex items-center space-x-4 text-xl font-black text-primary uppercase tracking-tighter"
+                        className="flex items-center space-x-4 text-xl font-black text-primary uppercase tracking-tighter font-display"
                         onClick={() => setIsOpen(false)}
                       >
                         <Layout className="w-6 h-6" />
@@ -332,7 +332,7 @@ export default function Navbar() {
                       </Link>
                       <button 
                         onClick={() => signOut()}
-                        className="flex items-center space-x-4 text-xl font-black text-red-500 uppercase tracking-tighter"
+                        className="flex items-center space-x-4 text-xl font-black text-red-500 uppercase tracking-tighter font-display"
                       >
                         <LogOut className="w-6 h-6" />
                         <span>Logg ut</span>
@@ -341,7 +341,7 @@ export default function Navbar() {
                   ) : (
                     <Link 
                       href="/login" 
-                      className="flex items-center space-x-4 text-2xl font-black text-primary uppercase tracking-tighter"
+                      className="flex items-center space-x-4 text-2xl font-black text-primary uppercase tracking-tighter font-display"
                       onClick={() => setIsOpen(false)}
                     >
                       <User className="w-7 h-7" />

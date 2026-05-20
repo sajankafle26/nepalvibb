@@ -30,7 +30,7 @@ const SiteSettingsSchema = new mongoose.Schema({
   // New Footer Dynamic Fields
   affiliatedLabel: { type: String, default: 'Vi er tilknyttet' },
   subsidiaryLabel: { type: String, default: 'Datterselskap av' },
-  subsidiaryLogo: { type: String, default: 'https://www.actual-adventure.com/public/uploads/actual-adventure-logo-np.svg' },
+  subsidiaryLogo: { type: String, default: '/uploads/actual-adventure-logo-np.svg' },
   subsidiaryUrl: { type: String, default: 'https://www.actual-adventure.com' },
   visitingAddressLabel: { type: String, default: 'Besøksadresse' },
   callUsLabel: { type: String, default: 'Ring Oss' },

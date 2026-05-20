@@ -49,7 +49,7 @@ export default function Footer() {
     socialLinks: { facebook: '#', instagram: '#', youtube: '#', linkedin: '#' },
     affiliatedLabel: 'Vi er tilknyttet',
     subsidiaryLabel: 'Datterselskap av',
-    subsidiaryLogo: 'https://www.actual-adventure.com/public/uploads/actual-adventure-logo-np.svg',
+    subsidiaryLogo: '/uploads/actual-adventure-logo-np.svg',
     subsidiaryUrl: 'https://www.actual-adventure.com',
     visitingAddressLabel: 'Besøksadresse',
     callUsLabel: 'Ring Oss',
@@ -57,12 +57,13 @@ export default function Footer() {
     sendEmailLabel: 'Send E-post',
     replyTimeLabel: 'Svar innen 24 timer',
     affiliations: [
-      { name: 'NTB', logoUrl: 'https://www.actual-adventure.com/public/uploads/ntb.svg' },
-      { name: 'TAAN', logoUrl: 'https://www.actual-adventure.com/public/uploads/taan.svg' },
-      { name: 'NMA', logoUrl: 'https://www.actual-adventure.com/public/uploads/nma.svg' },
-      { name: 'RGF', logoUrl: 'https://rgf.no/wp-content/themes/rgf/assets/img/logo.svg' },
-      { name: 'Keep Nepal Green', logoUrl: 'https://www.actual-adventure.com/public/uploads/keep.svg' },
-      { name: 'Government of Nepal', logoUrl: 'https://www.actual-adventure.com/public/uploads/nepal-goverment.svg' }
+      { name: 'NATTA', logoUrl: '/uploads/natta.png' },
+      { name: 'NTB', logoUrl: '/uploads/ntb.svg' },
+      { name: 'TAAN', logoUrl: '/uploads/taan.svg' },
+      { name: 'NMA', logoUrl: '/uploads/nma.png' },
+      { name: 'RGF', logoUrl: '/uploads/rgf.jpg' },
+      { name: 'Keep Nepal Green', logoUrl: '/uploads/keep.svg' },
+      { name: 'Government of Nepal', logoUrl: '/uploads/nepal-goverment.svg' }
     ],
     copyrightText: '© 2025 NEPALVIBB AS. ALL RIGHTS RESERVED.'
   };

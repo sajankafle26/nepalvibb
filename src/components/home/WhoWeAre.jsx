@@ -28,7 +28,7 @@ export default function WhoWeAre({ content }) {
                 <div className="relative group">
                   <div className="absolute -inset-4 bg-orange-500/10 rounded-[3rem] blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                   <img 
-                    src={content?.image1 || "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=600&q=80"} 
+                    src={content?.image1 || "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=600&q=80"} 
                     alt="Nepal landscape" 
                     className="rounded-[3rem] shadow-2xl w-full h-[500px] object-cover relative z-10 grayscale hover:grayscale-0 transition-all duration-700"
                   />
@@ -37,7 +37,7 @@ export default function WhoWeAre({ content }) {
               <div className="relative group">
                 <div className="absolute -inset-4 bg-primary/10 rounded-[3rem] blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                 <img 
-                  src={content?.image2 || "https://images.unsplash.com/photo-1526715469145-8a881096a66d?auto=format&fit=crop&w=600&q=80"} 
+                  src={content?.image2 || "https://images.unsplash.com/photo-1486916856992-e4db22c8df33?auto=format&fit=crop&w=600&q=80"} 
                   alt="Nepal culture" 
                   className="rounded-[3rem] shadow-2xl w-full h-[500px] object-cover relative z-10 grayscale hover:grayscale-0 transition-all duration-700"
                 />
@@ -73,14 +73,14 @@ export default function WhoWeAre({ content }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h5 className="text-orange-500 font-black uppercase tracking-[0.4em] text-[11px] mb-8 flex items-center">
+              <h5 className="text-orange-500 font-bold uppercase tracking-wider text-xs mb-6 flex items-center">
                 <span className="w-12 h-[2px] bg-orange-500 mr-4" /> {content?.subtitle || 'Hvem vi er'}
               </h5>
-              <h2 className="text-6xl md:text-7xl font-black text-primary leading-[0.9] mb-12 uppercase tracking-tighter">
-                {content?.title || 'Eksperter på Himalaya Eventyr'}
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-display text-primary leading-tight mb-8 tracking-tight">
+                {content?.title || 'Eksperter på Himalaya-eventyr'}
               </h2>
               
-              <div className="space-y-10 text-gray-500 leading-relaxed text-lg font-light">
+              <div className="space-y-8 text-gray-500 leading-relaxed text-lg font-light">
                 <p>
                   {content?.description || 'Velkommen til Nepalvibb, et stolt datterselskap av Actual Adventure Pvt. Ltd. Med over 15 års dedikasjon har vi etablert oss som den fremste aktøren for skandinaviske reisende i Nepal.'}
                 </p>
@@ -91,7 +91,7 @@ export default function WhoWeAre({ content }) {
                       <ShieldCheck className="w-6 h-6" />
                     </div>
                     <div>
-                      <h4 className="text-sm font-black uppercase tracking-widest text-primary mb-1">{content?.feature1Title || 'Trygghet'}</h4>
+                      <h4 className="text-sm font-bold uppercase tracking-wider text-primary mb-1">{content?.feature1Title || 'Trygghet'}</h4>
                       <p className="text-xs">{content?.feature1Desc || 'Sikkerhet i fokus på alle turer.'}</p>
                     </div>
                   </div>
@@ -100,22 +100,22 @@ export default function WhoWeAre({ content }) {
                       <Users className="w-6 h-6" />
                     </div>
                     <div>
-                      <h4 className="text-sm font-black uppercase tracking-widest text-primary mb-1">{content?.feature2Title || 'Ekspertise'}</h4>
+                      <h4 className="text-sm font-bold uppercase tracking-wider text-primary mb-1">{content?.feature2Title || 'Ekspertise'}</h4>
                       <p className="text-xs">{content?.feature2Desc || 'Lokale guider med dyp kunnskap.'}</p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-16 flex items-center space-x-12">
-                <Link href="/om-oss" className="inline-block bg-primary text-white px-14 py-6 text-[11px] font-black uppercase tracking-[0.3em] rounded-full hover:bg-emerald-900 transition-all shadow-[0_20px_40px_rgba(67,87,53,0.3)]">
-                  om oss
+              <div className="mt-12 flex items-center space-x-10">
+                <Link href="/om-oss" className="inline-block bg-primary text-white px-10 py-4.5 text-xs font-bold uppercase tracking-wider rounded-full hover:bg-emerald-900 transition-all shadow-md">
+                  Om oss
                 </Link>
                 <div className="hidden sm:flex items-center space-x-4">
-                  <div className="w-16 h-16 rounded-full border border-gray-200 flex items-center justify-center p-4">
-                    <Award className="text-orange-500 w-8 h-8" />
+                  <div className="w-14 h-14 rounded-full border border-gray-200 flex items-center justify-center p-3">
+                    <Award className="text-orange-500 w-7 h-7" />
                   </div>
-                  <span className="text-[10px] font-black uppercase tracking-widest text-primary leading-tight">Sertifisert <br /> Reisebyrå</span>
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-primary leading-tight">Sertifisert <br /> Reisebyrå</span>
                 </div>
               </div>
             </motion.div>

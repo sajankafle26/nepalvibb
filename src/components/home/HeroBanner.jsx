@@ -94,7 +94,7 @@ export default function HeroBanner() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.7 }}
-              className="text-[2.75rem] leading-[0.9] xs:text-5xl sm:text-7xl md:text-8xl font-black text-white mb-10 sm:mb-12 drop-shadow-[0_20px_20px_rgba(0,0,0,0.5)] uppercase tracking-tighter italic"
+              className="text-4xl xs:text-5xl sm:text-7xl md:text-8xl lg:text-[6.5rem] font-bold font-display text-white mb-10 sm:mb-12 drop-shadow-[0_10px_20px_rgba(0,0,0,0.3)] tracking-tight leading-[1.05]"
             >
               {currentBanner.title} <br /> 
               {currentBanner.highlightText && (
@@ -173,10 +173,30 @@ export default function HeroBanner() {
         Scroll for å oppdage
       </div>
 
+      {/* Cloud Wavy Divider */}
+      <div 
+        className="cloud-img pointer-events-none"
+        style={{
+          backgroundImage: `url('/cloud-overlay.png')`,
+        }}
+      />
+
       <style jsx>{`
         .stroke-text-white {
           -webkit-text-stroke: 1px rgba(255,255,255,0.8);
           color: transparent;
+        }
+        .cloud-img {
+          position: absolute;
+          bottom: -100px;
+          left: 0;
+          right: 0;
+          width: 100%;
+          height: 300px;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          z-index: 1;
         }
       `}</style>
     </div>

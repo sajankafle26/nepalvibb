@@ -27,18 +27,18 @@ export default function Testimonials({ content }) {
   if (loading || reviews.length === 0) return null;
 
   return (
-    <section className="py-32 bg-gray-50 overflow-hidden">
+    <section className="py-16 sm:py-24 bg-gray-50/30 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-24 space-y-4">
-          <h5 className="text-orange-500 font-black uppercase tracking-[0.4em] text-[10px]">
+        <div className="text-center mb-16 space-y-3">
+          <h5 className="text-orange-500 font-bold uppercase tracking-wider text-xs">
             {content?.subtitle || 'Gjestevurderinger'}
           </h5>
-          <h2 className="text-5xl md:text-7xl font-black text-primary uppercase tracking-tighter leading-none italic">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-display text-primary tracking-tight leading-tight">
             {content?.title || 'Hva våre gjester sier'}
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {reviews.map((review, i) => (
             <motion.div 
               key={review._id}
@@ -46,28 +46,30 @@ export default function Testimonials({ content }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="bg-white p-12 rounded-[3.5rem] border border-gray-100 shadow-sm hover:shadow-2xl transition-all group relative"
+              className="bg-white p-8 sm:p-10 rounded-3xl border border-gray-100 hover:shadow-lg transition-all group relative flex flex-col justify-between"
             >
-              <Quote className="absolute top-8 right-10 w-12 h-12 text-primary/5 group-hover:text-orange-500/10 transition-colors" />
+              <Quote className="absolute top-6 right-8 w-10 h-10 text-primary/5 group-hover:text-orange-500/10 transition-colors" />
               
-              <div className="space-y-8 relative z-10">
-                <div className="flex text-orange-500">
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <Star key={star} className={cn("w-4 h-4", review.rating >= star ? "fill-current" : "opacity-10")} />
-                  ))}
+              <div className="space-y-6 relative z-10 flex-1 flex flex-col justify-between">
+                <div className="space-y-4">
+                  <div className="flex text-orange-500">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <Star key={star} className={cn("w-4 h-4", review.rating >= star ? "fill-current" : "opacity-10")} />
+                    ))}
+                  </div>
+                  
+                  <p className="text-gray-600 font-light leading-relaxed text-base">
+                    "{review.comment.length > 120 ? review.comment.substring(0, 120) + '...' : review.comment}"
+                  </p>
                 </div>
-                
-                <p className="text-gray-500 font-medium italic leading-relaxed text-lg">
-                  "{review.comment.length > 120 ? review.comment.substring(0, 120) + '...' : review.comment}"
-                </p>
 
-                <div className="flex items-center space-x-4 pt-4">
-                  <div className="w-12 h-12 bg-primary text-white rounded-2xl flex items-center justify-center font-black text-xl shadow-lg">
+                <div className="flex items-center space-x-3 pt-6 border-t border-gray-50 mt-6">
+                  <div className="w-10 h-10 bg-primary text-white rounded-xl flex items-center justify-center font-bold text-lg shadow-sm">
                     {review.userName[0]}
                   </div>
                   <div>
-                    <h4 className="text-sm font-black text-primary uppercase tracking-tight">{review.userName}</h4>
-                    <p className="text-[9px] font-black uppercase tracking-widest text-orange-500">{review.tripId?.title || 'Nepalvibb Gjest'}</p>
+                    <h4 className="text-sm font-bold text-primary tracking-tight">{review.userName}</h4>
+                    <p className="text-[10px] font-bold uppercase tracking-wider text-orange-500">{review.tripId?.title || 'Nepalvibb Gjest'}</p>
                   </div>
                 </div>
               </div>

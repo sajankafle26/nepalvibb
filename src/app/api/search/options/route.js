@@ -8,8 +8,13 @@ export async function GET() {
   try {
     await dbConnect();
 
-    // 1. Get unique destinations
-    const destinations = await Destination.find({}, 'name').sort({ name: 1 });
+    // 1. Get unique destinations (sort Nepal first)
+    const rawDestinations = await Destination.find({}, 'name');
+    const destinations = rawDestinations.map(d => d.name).sort((a, b) => {
+      if (a === 'Nepal') return -1;
+      if (b === 'Nepal') return 1;
+      return a.localeCompare(b);
+    });
 
     // 2. Get unique activities (from dedicated Activity model)
     const activities = await Activity.find({}, 'name').sort({ name: 1 });
@@ -23,7 +28,7 @@ export async function GET() {
     ];
 
     return NextResponse.json({
-      destinations: destinations.map(d => d.name),
+      destinations,
       activities: activities.map(a => a.name),
       durations
     });

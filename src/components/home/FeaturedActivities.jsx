@@ -1,21 +1,30 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, Mountain, Wind, Zap, Compass } from 'lucide-react';
+import { ArrowRight, Compass, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function FeaturedActivities({ content }) {
   const [activities, setActivities] = useState([]);
   const [loading, setLoading] = useState(true);
+  const scrollRef = useRef(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
 
   useEffect(() => {
     const fetchActivities = async () => {
       try {
         const res = await fetch('/api/activities');
         const data = await res.json();
-        const featured = Array.isArray(data) ? data.filter(a => a.isFeatured) : [];
-        setActivities(featured);
+        if (Array.isArray(data)) {
+          let featured = data.filter(a => a.isFeatured);
+          if (featured.length < 5) {
+            const nonFeatured = data.filter(a => !a.isFeatured);
+            featured = [...featured, ...nonFeatured];
+          }
+          setActivities(featured.slice(0, 5));
+        }
       } catch (err) {
         console.error(err);
       } finally {
@@ -25,26 +34,87 @@ export default function FeaturedActivities({ content }) {
     fetchActivities();
   }, []);
 
+  const checkScroll = () => {
+    if (scrollRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+      setCanScrollLeft(scrollLeft > 5);
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 5);
+    }
+  };
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (el) {
+      el.addEventListener('scroll', checkScroll);
+      checkScroll();
+      window.addEventListener('resize', checkScroll);
+    }
+    return () => {
+      if (el) el.removeEventListener('scroll', checkScroll);
+      window.removeEventListener('resize', checkScroll);
+    };
+  }, [activities]);
+
+  const scroll = (direction) => {
+    if (scrollRef.current) {
+      const { clientWidth } = scrollRef.current;
+      const scrollAmount = direction === 'left' ? -clientWidth * 0.75 : clientWidth * 0.75;
+      scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
+
   if (loading || activities.length === 0) return null;
 
   return (
-    <section className="py-32 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-8">
-          <div className="max-w-2xl space-y-4">
-            <h5 className="text-orange-500 font-black uppercase tracking-[0.3em] text-[10px]">
+    <section className="py-16 sm:py-24 bg-white overflow-hidden">
+      <div className="max-w-[1400px] mx-auto px-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+          <div className="max-w-2xl space-y-3">
+            <h5 className="text-orange-500 font-bold uppercase tracking-wider text-xs">
               {content?.subtitle || 'Ting å gjøre i Nepal'}
             </h5>
-            <h2 className="text-5xl md:text-7xl font-black text-primary uppercase tracking-tighter leading-[0.8] italic">
-              {content?.title || 'Eventyrlige Opplevelser'}
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-display text-primary tracking-tight leading-tight">
+              {content?.title || 'Eventyrlige opplevelser'}
             </h2>
           </div>
-          <Link href="/activity/all" className="bg-primary/5 hover:bg-primary hover:text-white text-primary px-8 py-4 rounded-2xl text-[10px] font-black uppercase tracking-widest transition-all">
-            Se alle aktiviteter
-          </Link>
+          
+          <div className="flex items-center justify-between sm:justify-start gap-4">
+            <div className="flex items-center space-x-2">
+              <button 
+                onClick={() => scroll('left')}
+                disabled={!canScrollLeft}
+                className={`w-11 h-11 rounded-full border border-gray-200 flex items-center justify-center transition-all ${
+                  canScrollLeft 
+                    ? 'bg-white text-primary hover:border-orange-500 hover:text-orange-500 cursor-pointer shadow-sm' 
+                    : 'bg-gray-50 text-gray-300 cursor-not-allowed'
+                }`}
+                aria-label="Scroll left"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </button>
+              <button 
+                onClick={() => scroll('right')}
+                disabled={!canScrollRight}
+                className={`w-11 h-11 rounded-full border border-gray-200 flex items-center justify-center transition-all ${
+                  canScrollRight 
+                    ? 'bg-white text-primary hover:border-orange-500 hover:text-orange-500 cursor-pointer shadow-sm' 
+                    : 'bg-gray-50 text-gray-300 cursor-not-allowed'
+                }`}
+                aria-label="Scroll right"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
+            </div>
+            <Link href="/activity/all" className="bg-primary hover:bg-emerald-900 text-white px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider transition-all shadow-md shrink-0">
+              Se alle
+            </Link>
+          </div>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
+        <div 
+          ref={scrollRef}
+          className="flex overflow-x-auto gap-6 snap-x snap-mandatory scroll-smooth pb-6 -mx-6 px-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        >
           {activities.map((activity, index) => (
             <motion.div
               key={activity._id}
@@ -52,30 +122,30 @@ export default function FeaturedActivities({ content }) {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="group relative"
+              className="w-[280px] sm:w-[340px] md:w-[380px] shrink-0 snap-start group relative"
             >
               <Link href={`/activity/${activity.slug}`}>
-                <div className="h-[280px] sm:h-[500px] rounded-[2rem] sm:rounded-[3rem] overflow-hidden relative border-2 border-transparent group-hover:border-orange-500/20 transition-all shadow-2xl">
+                <div className="h-[380px] sm:h-[460px] rounded-3xl overflow-hidden relative border border-gray-100 group-hover:border-orange-500/20 transition-all hover:shadow-lg">
                   <img 
                     src={activity.image} 
-                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
+                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" 
                     alt={activity.name} 
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/30 to-transparent" />
                   
-                  <div className="absolute inset-0 p-4 sm:p-10 flex flex-col justify-end text-white">
-                    <div className="w-8 h-8 sm:w-12 sm:h-12 bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl flex items-center justify-center mb-3 sm:mb-6 group-hover:scale-110 group-hover:bg-orange-500 transition-all">
-                      <Compass className="w-4 h-4 sm:w-6 sm:h-6" />
+                  <div className="absolute inset-0 p-6 sm:p-8 flex flex-col justify-end text-white">
+                    <div className="w-10 h-10 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center mb-4 group-hover:scale-105 group-hover:bg-orange-500 transition-all">
+                      <Compass className="w-5 h-5" />
                     </div>
-                    <h3 className="text-sm sm:text-3xl font-black uppercase tracking-tight mb-1 sm:mb-4 leading-none">
+                    <h3 className="text-xl sm:text-2xl font-bold font-display text-white tracking-tight mb-2 leading-tight">
                       {activity.name}
                     </h3>
-                    <p className="hidden sm:block text-sm text-white/60 font-medium line-clamp-2 mb-8 group-hover:text-white/100 transition-colors">
+                    <p className="hidden sm:block text-sm text-white/70 font-light line-clamp-2 mb-6 group-hover:text-white transition-colors">
                       {activity.description}
                     </p>
-                    <div className="flex items-center space-x-2 sm:space-x-3 text-[8px] sm:text-[10px] font-black uppercase tracking-widest text-orange-500">
+                    <div className="flex items-center space-x-2 text-xs font-bold uppercase tracking-wider text-orange-400">
                       <span>Utforsk</span>
-                      <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-2 transition-transform" />
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
                     </div>
                   </div>
                 </div>

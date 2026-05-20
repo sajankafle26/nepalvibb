@@ -2,7 +2,7 @@
 
 import { useState, useEffect, use } from 'react';
 import { 
-  Clock, Globe, User, Star, Check, CheckCircle,
+  Clock, Globe, User, Users, Star, Check, CheckCircle,
   MapPin, MessageCircle, ArrowRight, Shield,
   Share2, Heart, Printer, ChevronRight,
   Info, Compass, Home, Tag, Calendar,
@@ -13,7 +13,6 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
 import ReviewSection from '@/components/trips/ReviewSection';
 
 export default function TripDetailPage({ params }) {
@@ -100,36 +99,39 @@ export default function TripDetailPage({ params }) {
   if (!trip) return (
     <div className="min-h-screen bg-white">
       <Navbar />
-      <div className="flex flex-col items-center justify-center pt-60 space-y-6">
-        <Zap className="w-12 h-12 text-red-500" />
-        <h1 className="text-4xl font-black text-primary uppercase tracking-tighter italic">Reise Ikke Funnet</h1>
-        <Link href="/" className="bg-primary text-white px-8 py-4 rounded-2xl font-black uppercase tracking-widest text-[10px]">Tilbake til Hjem</Link>
+      <div className="flex flex-col items-center justify-center pt-44 space-y-6">
+        <Zap className="w-10 h-10 text-red-500" />
+        <h1 className="text-2xl sm:text-3xl font-bold font-display text-primary tracking-tight">Reisen ble ikke funnet</h1>
+        <Link href="/" className="bg-primary text-white px-8 py-4 rounded-xl text-xs font-bold uppercase tracking-wider transition-all hover:bg-orange-500 shadow-md">
+          Tilbake til hjem
+        </Link>
       </div>
     </div>
   );
 
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#FAFAF9] selection:bg-orange-500 selection:text-white">
+      <Navbar />
       
       {/* Cinematic Hero */}
-      <section className="relative h-[70svh] sm:h-[85vh] min-h-[500px] sm:min-h-[600px] overflow-hidden">
+      <section className="relative h-[60vh] md:h-[75vh] min-h-[400px] overflow-hidden">
         <img src={trip.image} className="w-full h-full object-cover" alt={trip.title} />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
         
         <div className="absolute inset-0 flex items-end">
-          <div className="max-w-7xl mx-auto px-6 pb-24 w-full">
-            <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl space-y-8">
-              <span className="inline-block bg-orange-500 text-white px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-[0.3em] shadow-2xl">
+          <div className="max-w-[85rem] mx-auto px-6 pb-12 md:pb-16 w-full">
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl space-y-6">
+              <span className="inline-block bg-orange-500 text-white px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-md">
                 {trip.category}
               </span>
-              <h1 className="text-5xl md:text-[6.5rem] font-black text-white uppercase tracking-tighter leading-[0.8] italic drop-shadow-2xl">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-display text-white tracking-tight leading-tight">
                 {trip.title}
               </h1>
-              <div className="flex flex-wrap gap-10 text-white/90 text-[11px] font-black uppercase tracking-[0.2em]">
-                <span className="flex items-center"><Clock className="w-4 h-4 mr-3 text-orange-500" /> {trip.duration}</span>
-                <span className="flex items-center"><Mountain className="w-4 h-4 mr-3 text-orange-500" /> {trip.difficulty}</span>
-                <span className="flex items-center"><MapPin className="w-4 h-4 mr-3 text-orange-500" /> {trip.destination}</span>
+              <div className="flex flex-wrap gap-x-8 gap-y-3 text-white/90 text-xs font-medium tracking-wide">
+                <span className="flex items-center"><Clock className="w-4 h-4 mr-2 text-orange-500" /> {trip.duration}</span>
+                <span className="flex items-center"><Mountain className="w-4 h-4 mr-2 text-orange-500" /> {trip.difficulty}</span>
+                <span className="flex items-center"><MapPin className="w-4 h-4 mr-2 text-orange-500" /> {trip.destination}</span>
               </div>
             </motion.div>
           </div>
@@ -137,49 +139,53 @@ export default function TripDetailPage({ params }) {
       </section>
 
       {/* Scrollspy Navigation */}
-      <div className="sticky top-[80px] z-40 bg-white/95 backdrop-blur-xl border-b border-gray-100 shadow-sm">
-        <div className="max-w-7xl mx-auto px-6 flex justify-between items-center py-6">
-          <div className="flex space-x-12 overflow-x-auto no-scrollbar">
+      <div className="sticky top-[80px] z-40 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm">
+        <div className="max-w-[85rem] mx-auto px-6 flex justify-between items-center py-4">
+          <div className="flex space-x-8 overflow-x-auto no-scrollbar py-1">
             {tabs.map((tab) => (
               <button 
                 key={tab.id} 
                 onClick={() => scrollToSection(tab.id)}
                 className={cn(
-                  "text-[10px] font-black uppercase tracking-[0.25em] transition-all relative pb-2 whitespace-nowrap",
+                  "text-xs font-semibold uppercase tracking-wider transition-all relative pb-2 whitespace-nowrap",
                   activeSection === tab.id ? "text-primary" : "text-gray-400 hover:text-primary"
                 )}
               >
                 {tab.label}
-                {activeSection === tab.id && <motion.div layoutId="activeSection" className="absolute bottom-0 left-0 right-0 h-1 bg-orange-500 rounded-full" />}
+                {activeSection === tab.id && <motion.div layoutId="activeSection" className="absolute bottom-0 left-0 right-0 h-0.5 bg-orange-500 rounded-full" />}
               </button>
             ))}
           </div>
-          <Link href={`/plan-your-trip?tour=${slug}&dest=${trip.destination}`} className="hidden md:block bg-primary text-white px-10 py-4 rounded-2xl text-[10px] font-black uppercase tracking-widest shadow-xl hover:bg-orange-500 transition-all">Bestill Reisen</Link>
+          <Link href={`/plan-your-trip?tour=${slug}&dest=${trip.destination}`} className="hidden md:block bg-orange-500 text-white px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider shadow-md hover:bg-orange-600 transition-all">Bestill Reisen</Link>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 py-24 flex flex-col lg:flex-row gap-20">
-        <div className="lg:w-2/3 space-y-24">
+      {/* Content Layout Grid */}
+      <div className="max-w-[85rem] mx-auto px-6 py-12 md:py-16 flex flex-col lg:flex-row gap-10 lg:gap-12">
+        <div className="lg:w-2/3 space-y-12 md:space-y-16">
           
           {/* Oversikt Section */}
-          <section id="oversikt" className="scroll-mt-40 space-y-16">
-            <div className="space-y-8">
-              <h2 className="text-4xl font-black text-primary uppercase tracking-tighter italic">Om Reisen</h2>
-              <div className="prose prose-xl prose-primary max-w-none text-gray-500 font-medium leading-relaxed" dangerouslySetInnerHTML={{ __html: trip.overview || trip.summary }} />
+          <section id="oversikt" className="scroll-mt-36 space-y-8">
+            <div className="space-y-4">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-display text-primary tracking-tight leading-tight">Om reisen</h2>
+              <div 
+                className="prose prose-primary max-w-none text-gray-600 font-light leading-relaxed prose-p:text-base md:prose-p:lg prose-p:mb-6 prose-strong:font-semibold" 
+                dangerouslySetInnerHTML={{ __html: trip.overview || trip.summary }} 
+              />
             </div>
 
             {trip.highlights?.length > 0 && (
-              <div className="space-y-10 bg-gray-50 p-12 rounded-[3.5rem] border border-gray-100">
-                <h3 className="text-2xl font-black text-primary uppercase tracking-tight italic flex items-center">
-                  <Star className="w-6 h-6 mr-4 text-orange-500 fill-current" /> Høydepunkter
+              <div className="space-y-6 bg-gray-50 p-8 rounded-3xl border border-gray-100">
+                <h3 className="text-xl font-bold font-display text-primary tracking-tight flex items-center">
+                  <Star className="w-5 h-5 mr-3 text-orange-500 fill-current" /> Høydepunkter
                 </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                   {trip.highlights.map((h, i) => (
-                    <div key={i} className="flex items-start space-x-4 group">
-                      <div className="w-8 h-8 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-all">
-                        <Check className="w-4 h-4" />
+                    <div key={i} className="flex items-start space-x-3 group">
+                      <div className="w-6 h-6 rounded-lg bg-orange-100 flex items-center justify-center flex-shrink-0 text-orange-600">
+                        <Check className="w-3.5 h-3.5" />
                       </div>
-                      <p className="text-sm font-bold text-gray-600 leading-tight">{h}</p>
+                      <p className="text-sm font-medium text-gray-700 leading-tight">{h}</p>
                     </div>
                   ))}
                 </div>
@@ -189,9 +195,9 @@ export default function TripDetailPage({ params }) {
 
           {/* Turdetaljer Section */}
           {trip.tripDetails?.length > 0 && (
-            <section id="turdetaljer" className="scroll-mt-40 space-y-12">
-              <h2 className="text-4xl font-black text-primary uppercase tracking-tighter italic">Turdetaljer</h2>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+            <section id="turdetaljer" className="scroll-mt-36 space-y-6">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-display text-primary tracking-tight leading-tight">Turdetaljer</h2>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
                 {trip.tripDetails.map((detail, i) => {
                   const Icon = ({
                     Clock: Clock,
@@ -208,12 +214,12 @@ export default function TripDetailPage({ params }) {
                   }[detail.icon] || Info);
                   
                   return (
-                    <div key={i} className="p-10 bg-gray-50 rounded-[2.5rem] border border-gray-100 space-y-4 hover:bg-white hover:shadow-xl transition-all group">
-                      <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-sm group-hover:bg-primary group-hover:text-white transition-all">
-                        <Icon className="w-6 h-6 text-orange-500 group-hover:text-white" />
+                    <div key={i} className="p-6 bg-gray-50 rounded-2xl border border-gray-100/50 space-y-3 hover:bg-white hover:shadow-md transition-all group">
+                      <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-sm group-hover:bg-primary group-hover:text-white transition-all">
+                        <Icon className="w-5 h-5 text-orange-500 group-hover:text-white" />
                       </div>
                       <div>
-                        <h4 className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-1">{detail.label}</h4>
+                        <h4 className="text-[10px] font-semibold uppercase tracking-wider text-gray-400 mb-0.5">{detail.label}</h4>
                         <p className="text-sm font-bold text-primary">{detail.value}</p>
                       </div>
                     </div>
@@ -224,16 +230,19 @@ export default function TripDetailPage({ params }) {
           )}
 
           {/* Reiserute Section */}
-          <section id="reiserute" className="scroll-mt-40 space-y-12">
-            <h2 className="text-4xl font-black text-primary uppercase tracking-tighter italic">Detaljert Reiserute</h2>
-            <div className="space-y-10 relative">
-              <div className="absolute left-6 top-10 bottom-10 w-0.5 bg-gray-100 hidden md:block" />
+          <section id="reiserute" className="scroll-mt-36 space-y-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-display text-primary tracking-tight leading-tight">Detaljert reiserute</h2>
+            <div className="space-y-6 relative">
+              <div className="absolute left-6 top-8 bottom-8 w-0.5 bg-gray-100 hidden md:block" />
               {(trip.itinerary || []).map((item, idx) => (
-                <div key={idx} className="relative md:pl-24 group">
-                  <div className="absolute left-0 top-0 w-12 h-12 bg-white border-2 border-gray-100 rounded-2xl flex items-center justify-center font-black text-primary text-sm shadow-sm group-hover:bg-primary group-hover:text-white transition-all hidden md:flex z-10">{item.day}</div>
-                  <div className="bg-white rounded-[2.5rem] border border-gray-100 p-10 hover:shadow-2xl transition-all">
-                    <h3 className="text-xl font-black text-primary uppercase mb-4">{item.title}</h3>
-                    <div className="prose prose-sm max-w-none text-gray-500 font-medium" dangerouslySetInnerHTML={{ __html: item.details }} />
+                <div key={idx} className="relative md:pl-16 group">
+                  <div className="absolute left-0 top-1 w-12 h-12 bg-white border border-gray-200 rounded-xl flex items-center justify-center font-bold text-primary text-sm shadow-sm group-hover:bg-primary group-hover:text-white transition-all hidden md:flex z-10">{item.day}</div>
+                  <div className="bg-white rounded-2xl border border-gray-100 p-6 md:p-8 hover:shadow-md transition-all">
+                    <h3 className="text-lg font-bold font-display text-primary mb-3">{item.title}</h3>
+                    <div 
+                      className="prose prose-primary max-w-none text-gray-600 font-light prose-p:text-sm md:prose-p:base prose-p:leading-relaxed" 
+                      dangerouslySetInnerHTML={{ __html: item.details }} 
+                    />
                   </div>
                 </div>
               ))}
@@ -241,25 +250,25 @@ export default function TripDetailPage({ params }) {
           </section>
 
           {/* Tjenester Section */}
-          <section id="tjenester" className="scroll-mt-40 space-y-12">
-            <h2 className="text-4xl font-black text-primary uppercase tracking-tighter italic">Inkludert & Ekskludert</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-              <div className="bg-emerald-50/50 p-12 rounded-[3.5rem] border border-emerald-100 space-y-8">
-                <h3 className="text-xl font-black text-emerald-600 uppercase tracking-tight flex items-center"><CheckCircle className="w-5 h-5 mr-3" /> Pris Inkluderer</h3>
-                <ul className="space-y-4">
+          <section id="tjenester" className="scroll-mt-36 space-y-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-display text-primary tracking-tight leading-tight">Inkludert & Ekskludert</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+              <div className="bg-emerald-50/30 p-8 rounded-3xl border border-emerald-100/50 space-y-6">
+                <h3 className="text-lg font-bold font-display text-emerald-700 tracking-tight flex items-center"><CheckCircle className="w-5 h-5 mr-2 text-emerald-600" /> Pris inkluderer</h3>
+                <ul className="space-y-3">
                   {trip.priceIncludes?.map((item, i) => (
-                    <li key={i} className="flex items-start space-x-3 text-sm font-bold text-emerald-800/70">
-                      <Check className="w-4 h-4 mt-1 flex-shrink-0" /> <span>{item}</span>
+                    <li key={i} className="flex items-start space-x-3 text-sm font-medium text-emerald-800/80 leading-relaxed">
+                      <Check className="w-4 h-4 mt-0.5 flex-shrink-0 text-emerald-600" /> <span>{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
-              <div className="bg-red-50/50 p-12 rounded-[3.5rem] border border-red-100 space-y-8">
-                <h3 className="text-xl font-black text-red-600 uppercase tracking-tight flex items-center"><XCircle className="w-5 h-5 mr-3" /> Pris Ekskluderer</h3>
-                <ul className="space-y-4">
+              <div className="bg-red-50/30 p-8 rounded-3xl border border-red-100/50 space-y-6">
+                <h3 className="text-lg font-bold font-display text-red-700 tracking-tight flex items-center"><XCircle className="w-5 h-5 mr-2 text-red-600" /> Pris ekskluderer</h3>
+                <ul className="space-y-3">
                   {trip.priceExcludes?.map((item, i) => (
-                    <li key={i} className="flex items-start space-x-3 text-sm font-bold text-red-800/70">
-                      <XCircle className="w-4 h-4 mt-1 flex-shrink-0" /> <span>{item}</span>
+                    <li key={i} className="flex items-start space-x-3 text-sm font-medium text-red-800/80 leading-relaxed">
+                      <XCircle className="w-4 h-4 mt-0.5 flex-shrink-0 text-red-500" /> <span>{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -268,21 +277,21 @@ export default function TripDetailPage({ params }) {
           </section>
 
           {/* Galleri Section */}
-          <section id="galleri" className="scroll-mt-40 space-y-12">
-            <h2 className="text-4xl font-black text-primary uppercase tracking-tighter italic">Bildegalleri</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <section id="galleri" className="scroll-mt-36 space-y-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-display text-primary tracking-tight leading-tight">Bildegalleri</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               {trip.gallery?.map((img, i) => (
-                <div key={i} className="h-80 rounded-[2.5rem] overflow-hidden shadow-xl">
-                  <img src={img} className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" alt="" />
+                <div key={i} className="h-64 md:h-72 rounded-2xl overflow-hidden shadow-sm">
+                  <img src={img} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" alt="" />
                 </div>
               ))}
             </div>
           </section>
 
           {/* Info Section */}
-          <section id="info" className="scroll-mt-40 space-y-12">
-            <h2 className="text-4xl font-black text-primary uppercase tracking-tighter italic">Viktig Informasjon</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <section id="info" className="scroll-mt-36 space-y-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-display text-primary tracking-tight leading-tight">Viktig informasjon</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               {[
                 { label: 'Beste Reisetid', value: trip.usefulInfo?.bestTime, icon: Calendar },
                 { label: 'Overnatting', value: trip.usefulInfo?.accommodation, icon: Bed },
@@ -290,12 +299,12 @@ export default function TripDetailPage({ params }) {
                 { label: 'Visum & Forsikring', value: trip.usefulInfo?.visaInfo, icon: CreditCard },
                 { label: 'Pakkeliste', value: trip.usefulInfo?.packingList, icon: Briefcase },
               ].map((item, i) => item.value && (
-                <div key={i} className="p-10 bg-gray-50 rounded-[2.5rem] border border-gray-100 space-y-4">
-                  <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-sm">
+                <div key={i} className="p-6 bg-gray-50 rounded-2xl border border-gray-100/50 space-y-3">
+                  <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-sm">
                     <item.icon className="w-5 h-5 text-orange-500" />
                   </div>
-                  <h4 className="text-[10px] font-black uppercase tracking-widest text-gray-400">{item.label}</h4>
-                  <p className="text-sm font-bold text-primary leading-relaxed">{item.value}</p>
+                  <h4 className="text-[10px] font-semibold uppercase tracking-wider text-gray-400">{item.label}</h4>
+                  <p className="text-sm font-medium text-primary leading-relaxed">{item.value}</p>
                 </div>
               ))}
             </div>
@@ -307,21 +316,21 @@ export default function TripDetailPage({ params }) {
 
         {/* Sidebar */}
         <aside className="lg:w-1/3">
-          <div className="sticky top-40 space-y-10">
-            <div className="bg-white border-2 border-gray-100 rounded-[3.5rem] p-12 shadow-2xl shadow-primary/5 text-center space-y-10">
+          <div className="sticky top-36 space-y-6">
+            <div className="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm text-center space-y-6">
               <div>
-                <p className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-300 mb-4">Fra kun</p>
-                <p className="text-6xl font-black text-primary tracking-tighter">NOK {trip.price?.toLocaleString()}</p>
+                <p className="text-[10px] font-bold uppercase tracking-wider text-gray-400 mb-1">Fra kun</p>
+                <p className="text-4xl font-bold font-display text-primary tracking-tight">NOK {trip.price?.toLocaleString()}</p>
               </div>
-              <div className="space-y-4">
-                <Link href={`/plan-your-trip?tour=${slug}&dest=${trip.destination}`} className="block bg-emerald-500 text-white py-6 rounded-[2rem] font-black uppercase tracking-widest text-[11px] shadow-xl shadow-emerald-500/20 hover:scale-105 transition-all">Bestill nå</Link>
-                <Link href={`/plan-your-trip?tour=${slug}&dest=${trip.destination}`} className="block border-2 border-gray-100 py-6 rounded-[2rem] font-black uppercase tracking-widest text-[11px] hover:border-primary transition-all">Snakk med ekspert</Link>
+              <div className="space-y-3">
+                <Link href={`/plan-your-trip?tour=${slug}&dest=${trip.destination}`} className="block bg-orange-500 text-white py-4 rounded-xl font-bold uppercase tracking-wider text-xs shadow-sm hover:bg-orange-600 transition-all text-center">Bestill nå</Link>
+                <Link href={`/plan-your-trip?tour=${slug}&dest=${trip.destination}`} className="block border border-gray-200 py-4 rounded-xl font-bold uppercase tracking-wider text-xs hover:border-primary transition-all text-center text-primary">Snakk med ekspert</Link>
               </div>
-              <div className="pt-8 border-t border-gray-50 space-y-4">
-                <div className="flex items-center justify-center space-x-3 text-[9px] font-black uppercase tracking-widest text-gray-400">
+              <div className="pt-6 border-t border-gray-100 space-y-3">
+                <div className="flex items-center justify-center space-x-2.5 text-[9px] font-bold uppercase tracking-wider text-gray-400">
                   <ShieldCheck className="w-4 h-4 text-orange-500" /> <span>Sikker Betaling</span>
                 </div>
-                <div className="flex items-center justify-center space-x-3 text-[9px] font-black uppercase tracking-widest text-gray-400">
+                <div className="flex items-center justify-center space-x-2.5 text-[9px] font-bold uppercase tracking-wider text-gray-400">
                   <Globe className="w-4 h-4 text-orange-500" /> <span>Lokale Eksperter</span>
                 </div>
               </div>

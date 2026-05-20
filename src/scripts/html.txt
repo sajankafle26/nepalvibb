@@ -1,0 +1,1670 @@
+  <!DOCTYPE html>
+<html lang="nb-NO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v26.5 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Everest Base Camp Trek – En Livsforvandlende Reise - Nepalvibb</title>
+	<meta name="description" content="Oppfyll drømmen om Everest i 14 dager everest Base Camp trek. Både nybegynnere og erfarne kan gå til den høyeste fjellet i verden med guide." />
+	<link rel="canonical" href="https://nepalvibb.com/tour/everest-base-camp-trek/" />
+	<meta property="og:locale" content="nb_NO" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Everest Base Camp Trek – En Livsforvandlende Reise - Nepalvibb" />
+	<meta property="og:description" content="Oppfyll drømmen om Everest i 14 dager everest Base Camp trek. Både nybegynnere og erfarne kan gå til den høyeste fjellet i verden med guide." />
+	<meta property="og:url" content="https://nepalvibb.com/tour/everest-base-camp-trek/" />
+	<meta property="og:site_name" content="Nepalvibb" />
+	<meta property="article:modified_time" content="2025-12-29T18:08:22+00:00" />
+	<meta property="og:image" content="https://nepalvibb.com/wp-content/uploads/2022/01/IMG_3349-scaled.jpg" />
+	<meta property="og:image:width" content="2560" />
+	<meta property="og:image:height" content="1920" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Ansl. lesetid" />
+	<meta name="twitter:data1" content="1 minutt" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://nepalvibb.com/tour/everest-base-camp-trek/","url":"https://nepalvibb.com/tour/everest-base-camp-trek/","name":"Everest Base Camp Trek – En Livsforvandlende Reise - Nepalvibb","isPartOf":{"@id":"https://nepalvibb.com/#website"},"primaryImageOfPage":{"@id":"https://nepalvibb.com/tour/everest-base-camp-trek/#primaryimage"},"image":{"@id":"https://nepalvibb.com/tour/everest-base-camp-trek/#primaryimage"},"thumbnailUrl":"https://nepalvibb.com/wp-content/uploads/2022/01/IMG_3349-scaled.jpg","datePublished":"2019-11-03T10:14:56+00:00","dateModified":"2025-12-29T18:08:22+00:00","description":"Oppfyll drømmen om Everest i 14 dager everest Base Camp trek. Både nybegynnere og erfarne kan gå til den høyeste fjellet i verden med guide.","breadcrumb":{"@id":"https://nepalvibb.com/tour/everest-base-camp-trek/#breadcrumb"},"inLanguage":"nb-NO","potentialAction":[{"@type":"ReadAction","target":["https://nepalvibb.com/tour/everest-base-camp-trek/"]}]},{"@type":"ImageObject","inLanguage":"nb-NO","@id":"https://nepalvibb.com/tour/everest-base-camp-trek/#primaryimage","url":"https://nepalvibb.com/wp-content/uploads/2022/01/IMG_3349-scaled.jpg","contentUrl":"https://nepalvibb.com/wp-content/uploads/2022/01/IMG_3349-scaled.jpg","width":2560,"height":1920,"caption":"Everst base camp trek"},{"@type":"BreadcrumbList","@id":"https://nepalvibb.com/tour/everest-base-camp-trek/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Hjem","item":"https://nepalvibb.com/"},{"@type":"ListItem","position":2,"name":"Tours","item":"https://nepalvibb.com/tour/"},{"@type":"ListItem","position":3,"name":"Everest Base Camp Trek – En Livsforvandlende Reise"}]},{"@type":"WebSite","@id":"https://nepalvibb.com/#website","url":"https://nepalvibb.com/","name":"Nepalvibb","description":"Trekking og eventyr i Nepal for skandinaver","publisher":{"@id":"https://nepalvibb.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://nepalvibb.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"nb-NO"},{"@type":"Organization","@id":"https://nepalvibb.com/#organization","name":"Nepalvibb","url":"https://nepalvibb.com/","logo":{"@type":"ImageObject","inLanguage":"nb-NO","@id":"https://nepalvibb.com/#/schema/logo/image/","url":"https://nepalvibb.com/wp-content/uploads/2025/05/logo-d.svg","contentUrl":"https://nepalvibb.com/wp-content/uploads/2025/05/logo-d.svg","caption":"Nepalvibb"},"image":{"@id":"https://nepalvibb.com/#/schema/logo/image/"}}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//ajax.googleapis.com' />
+<link rel='dns-prefetch' href='//use.fontawesome.com' />
+<link rel="alternate" type="application/rss+xml" title="Nepalvibb &raquo; strøm" href="https://nepalvibb.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Nepalvibb &raquo; kommentarstrøm" href="https://nepalvibb.com/comments/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://nepalvibb.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnepalvibb.com%2Ftour%2Feverest-base-camp-trek%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://nepalvibb.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnepalvibb.com%2Ftour%2Feverest-base-camp-trek%2F&#038;format=xml" />
+<style id='wp-img-auto-sizes-contain-inline-css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id='wp-emoji-styles-inline-css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id='wp-block-library-inline-css'>
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=wp-block-library-inline-css */
+</style>
+<style id='classic-theme-styles-inline-css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<style id='global-styles-inline-css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='yatra-font-awesome-css' href='https://nepalvibb.com/wp-content/plugins/yatra/assets/lib/font-awesome/css/fontawesome.min.css?ver=6.2.0' media='all' />
+<link rel='stylesheet' id='lightbox-css' href='https://nepalvibb.com/wp-content/plugins/yatra/assets/lib/lightbox2/css/lightbox.css?ver=2.11.0' media='all' />
+<link rel='stylesheet' id='yatra-jquery-ui-css' href='https://nepalvibb.com/wp-content/plugins/yatra/assets/lib/jquery-ui/jquery-ui.css?ver=1.12.1' media='all' />
+<link rel='stylesheet' id='yatra-mini-cart-css' href='https://nepalvibb.com/wp-content/plugins/yatra/assets/css/yatra-mini-cart.css?ver=2.2.10' media='all' />
+<link rel='stylesheet' id='yatra-calendarcss-css' href='https://nepalvibb.com/wp-content/plugins/yatra/assets/lib/yatra-calendar/css/yatra-calendar.css?ver=2.2.10' media='all' />
+<link rel='stylesheet' id='yatra-style-css' href='https://nepalvibb.com/wp-content/plugins/yatra/assets/css/yatra.css?ver=2.2.10' media='all' />
+<link rel='stylesheet' id='yatra-select2css-css' href='https://nepalvibb.com/wp-content/plugins/yatra/assets/lib/select2/css/select2.min.css?ver=2.2.10' media='all' />
+<link rel='stylesheet' id='yatra-lightslider-css' href='https://nepalvibb.com/wp-content/plugins/yatra/assets/lib/lightslider/css/lightslider.css?ver=1.1.3' media='all' />
+<link rel='stylesheet' id='nepaltravel-style-css' href='https://nepalvibb.com/wp-content/themes/nepaltravel/style.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='bootstrap-css-css' href='https://nepalvibb.com/wp-content/themes/nepaltravel/assets/css/bootstrap.min.css?ver=6.9.4' media='all' />
+<link rel='stylesheet' id='animate-css-css' href='https://nepalvibb.com/wp-content/themes/nepaltravel/assets/css/animate.min.css?ver=6.9.4' media='all' />
+<link rel='stylesheet' id='magnific-popup-css-css' href='https://nepalvibb.com/wp-content/themes/nepaltravel/assets/css/magnific-popup.css?ver=6.9.4' media='all' />
+<link rel='stylesheet' id='fontawesome-css-css' href='https://nepalvibb.com/wp-content/themes/nepaltravel/assets/css/fontawesome-all.min.css?ver=6.9.4' media='all' />
+<link rel='stylesheet' id='swiper-css-css' href='https://nepalvibb.com/wp-content/themes/nepaltravel/assets/css/swiper-bundle.min.css?ver=6.9.4' media='all' />
+<link rel='stylesheet' id='flatpicker-css-css' href='https://nepalvibb.com/wp-content/themes/nepaltravel/assets/css/flatpicker.css?ver=6.9.4' media='all' />
+<link rel='stylesheet' id='odometer-css-css' href='https://nepalvibb.com/wp-content/themes/nepaltravel/assets/css/odometer.css?ver=6.9.4' media='all' />
+<link rel='stylesheet' id='default-css-css' href='https://nepalvibb.com/wp-content/themes/nepaltravel/assets/css/default.css?ver=6.9.4' media='all' />
+<link rel='stylesheet' id='trip-planner-css' href='https://nepalvibb.com/wp-content/themes/nepaltravel/assets/css/trip-planner.css?ver=6.9.4' media='all' />
+<link rel='stylesheet' id='main-css-css' href='https://nepalvibb.com/wp-content/themes/nepaltravel/assets/css/main.css?ver=6.9.4' media='all' />
+<link rel='stylesheet' id='bfa-font-awesome-css' href='https://use.fontawesome.com/releases/v5.15.4/css/all.css?ver=2.0.3' media='all' />
+<link rel='stylesheet' id='bfa-font-awesome-v4-shim-css' href='https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css?ver=2.0.3' media='all' />
+<style id='bfa-font-awesome-v4-shim-inline-css'>
+
+			@font-face {
+				font-family: 'FontAwesome';
+				src: url('https://use.fontawesome.com/releases/v5.15.4/webfonts/fa-brands-400.eot'),
+				url('https://use.fontawesome.com/releases/v5.15.4/webfonts/fa-brands-400.eot?#iefix') format('embedded-opentype'),
+				url('https://use.fontawesome.com/releases/v5.15.4/webfonts/fa-brands-400.woff2') format('woff2'),
+				url('https://use.fontawesome.com/releases/v5.15.4/webfonts/fa-brands-400.woff') format('woff'),
+				url('https://use.fontawesome.com/releases/v5.15.4/webfonts/fa-brands-400.ttf') format('truetype'),
+				url('https://use.fontawesome.com/releases/v5.15.4/webfonts/fa-brands-400.svg#fontawesome') format('svg');
+			}
+
+			@font-face {
+				font-family: 'FontAwesome';
+				src: url('https://use.fontawesome.com/releases/v5.15.4/webfonts/fa-solid-900.eot'),
+				url('https://use.fontawesome.com/releases/v5.15.4/webfonts/fa-solid-900.eot?#iefix') format('embedded-opentype'),
+				url('https://use.fontawesome.com/releases/v5.15.4/webfonts/fa-solid-900.woff2') format('woff2'),
+				url('https://use.fontawesome.com/releases/v5.15.4/webfonts/fa-solid-900.woff') format('woff'),
+				url('https://use.fontawesome.com/releases/v5.15.4/webfonts/fa-solid-900.ttf') format('truetype'),
+				url('https://use.fontawesome.com/releases/v5.15.4/webfonts/fa-solid-900.svg#fontawesome') format('svg');
+			}
+
+			@font-face {
+				font-family: 'FontAwesome';
+				src: url('https://use.fontawesome.com/releases/v5.15.4/webfonts/fa-regular-400.eot'),
+				url('https://use.fontawesome.com/releases/v5.15.4/webfonts/fa-regular-400.eot?#iefix') format('embedded-opentype'),
+				url('https://use.fontawesome.com/releases/v5.15.4/webfonts/fa-regular-400.woff2') format('woff2'),
+				url('https://use.fontawesome.com/releases/v5.15.4/webfonts/fa-regular-400.woff') format('woff'),
+				url('https://use.fontawesome.com/releases/v5.15.4/webfonts/fa-regular-400.ttf') format('truetype'),
+				url('https://use.fontawesome.com/releases/v5.15.4/webfonts/fa-regular-400.svg#fontawesome') format('svg');
+				unicode-range: U+F004-F005,U+F007,U+F017,U+F022,U+F024,U+F02E,U+F03E,U+F044,U+F057-F059,U+F06E,U+F070,U+F075,U+F07B-F07C,U+F080,U+F086,U+F089,U+F094,U+F09D,U+F0A0,U+F0A4-F0A7,U+F0C5,U+F0C7-F0C8,U+F0E0,U+F0EB,U+F0F3,U+F0F8,U+F0FE,U+F111,U+F118-F11A,U+F11C,U+F133,U+F144,U+F146,U+F14A,U+F14D-F14E,U+F150-F152,U+F15B-F15C,U+F164-F165,U+F185-F186,U+F191-F192,U+F1AD,U+F1C1-F1C9,U+F1CD,U+F1D8,U+F1E3,U+F1EA,U+F1F6,U+F1F9,U+F20A,U+F247-F249,U+F24D,U+F254-F25B,U+F25D,U+F267,U+F271-F274,U+F279,U+F28B,U+F28D,U+F2B5-F2B6,U+F2B9,U+F2BB,U+F2BD,U+F2C1-F2C2,U+F2D0,U+F2D2,U+F2DC,U+F2ED,U+F328,U+F358-F35B,U+F3A5,U+F3D1,U+F410,U+F4AD;
+			}
+		
+/*# sourceURL=bfa-font-awesome-v4-shim-inline-css */
+</style>
+<link rel='stylesheet' id='qlwapp-frontend-css' href='https://nepalvibb.com/wp-content/plugins/wp-whatsapp-chat/build/frontend/css/style.css?ver=8.3.8' media='all' />
+<script type="text/javascript">
+            window._nslDOMReady = (function () {
+                const executedCallbacks = new Set();
+            
+                return function (callback) {
+                    /**
+                    * Third parties might dispatch DOMContentLoaded events, so we need to ensure that we only run our callback once!
+                    */
+                    if (executedCallbacks.has(callback)) return;
+            
+                    const wrappedCallback = function () {
+                        if (executedCallbacks.has(callback)) return;
+                        executedCallbacks.add(callback);
+                        callback();
+                    };
+            
+                    if (document.readyState === "complete" || document.readyState === "interactive") {
+                        wrappedCallback();
+                    } else {
+                        document.addEventListener("DOMContentLoaded", wrappedCallback);
+                    }
+                };
+            })();
+        </script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" id="jquery-js"></script>
+<script src="https://nepalvibb.com/wp-content/plugins/yatra/assets/lib/select2/js/select2.min.js?ver=2.2.10" id="yatra-select2js-js"></script>
+<script src="https://nepalvibb.com/wp-content/plugins/yatra/assets/lib/lightbox2/js/lightbox.js?ver=2.11.0" id="lightbox-script-js"></script>
+<script src="https://nepalvibb.com/wp-content/plugins/yatra/assets/lib/moment/js/moment.min.js?ver=2.2.10" id="yatra-moment-js"></script>
+<script src="https://nepalvibb.com/wp-content/plugins/yatra/assets/lib/popperjs/popper.js?ver=2.2.10" id="yatra-popper-js"></script>
+<script src="https://nepalvibb.com/wp-content/plugins/yatra/assets/lib/tippyjs/tippy.js?ver=2.2.10" id="yatra-tippy-js"></script>
+<script src="https://nepalvibb.com/wp-content/plugins/yatra/assets/lib/yatra-calendar/js/yatra-calendar.js?ver=2.2.10" id="yatra-calendarjs-js"></script>
+<script id="yatra-script-js-extra">
+var yatra_params = {"ajax_url":"https://nepalvibb.com/wp-admin/admin-ajax.php","booking_params":{"booking_action":"yatra_tour_add_to_cart","booking_nonce":"8bfe774a4f"},"single_tour":{"enabled_dates":["2026-05-20","2026-05-21","2026-05-22","2026-05-23","2026-05-24","2026-05-25","2026-05-26","2026-05-27","2026-05-28","2026-05-29","2026-05-30","2026-05-31","2026-06-01","2026-06-02","2026-06-03","2026-06-04","2026-06-05"],"all_available_date_data":{"2026-05-20":{"title":"Guest: NOK14,000.00","start":"2026-05-20","description":"\u003Cstrong\u003ETilgjengelig for bestilling\u003C/strong\u003E\u003Chr style='border-color:#fff;margin:5px 0;padding:0;'/\u003EGuest: NOK14,000.00\u003Chr style='border-color:#fff;margin:5px 0;padding:0;'/\u003ETilgjengelige reisende: 30","is_active":false,"availability":"booking","is_full":false,"is_expired":false,"remaining_travellers":30},"2026-05-21":{"title":"Guest: NOK14,000.00","start":"2026-05-21","description":"\u003Cstrong\u003ETilgjengelig for bestilling\u003C/strong\u003E\u003Chr style='border-color:#fff;margin:5px 0;padding:0;'/\u003EGuest: NOK14,000.00\u003Chr style='border-color:#fff;margin:5px 0;padding:0;'/\u003ETilgjengelige reisende: 30","is_active":false,"availability":"booking","is_full":false,"is_expired":false,"remaining_travellers":30},"2026-05-22":{"title":"Guest: NOK14,000.00","start":"2026-05-22","description":"\u003Cstrong\u003ETilgjengelig for bestilling\u003C/strong\u003E\u003Chr style='border-color:#fff;margin:5px 0;padding:0;'/\u003EGuest: NOK14,000.00\u003Chr style='border-color:#fff;margin:5px 0;padding:0;'/\u003ETilgjengelige reisende: 30","is_active":false,"availability":"booking","is_full":false,"is_expired":false,"remaining_travellers":30},"2026-05-23":{"title":"Guest: NOK14,000.00","start":"2026-05-23","description":"\u003Cstrong\u003ETilgjengelig for bestilling\u003C/strong\u003E\u003Chr style='border-color:#fff;margin:5px 0;padding:0;'/\u003EGuest: NOK14,000.00\u003Chr style='border-color:#fff;margin:5px 0;padding:0;'/\u003ETilgjengelige reisende: 30","is_active":false,"availability":"booking","is_full":false,"is_expired":false,"remaining_travellers":30},"2026-05-24":{"title":"Guest: NOK14,000.00","start":"2026-05-24","description":"\u003Cstrong\u003ETilgjengelig for bestilling\u003C/strong\u003E\u003Chr style='border-color:#fff;margin:5px 0;padding:0;'/\u003EGuest: NOK14,000.00\u003Chr style='border-color:#fff;margin:5px 0;padding:0;'/\u003ETilgjengelige reisende: 30","is_active":false,"availability":"booking","is_full":false,"is_expired":false,"remaining_travellers":30},"2026-05-25":{"title":"Guest: NOK14,000.00","start":"2026-05-25","description":"\u003Cstrong\u003ETilgjengelig for bestilling\u003C/strong\u003E\u003Chr style='border-color:#fff;margin:5px 0;padding:0;'/\u003EGuest: NOK14,000.00\u003Chr style='border-color:#fff;margin:5px 0;padding:0;'/\u003ETilgjengelige reisende: 30","is_active":false,"availability":"booking","is_full":false,"is_expired":false,"remaining_travellers":30},"2026-05-26":{"title":"Guest: NOK14,000.00","start":"2026-05-26","description":"\u003Cstrong\u003ETilgjengelig for bestilling\u003C/strong\u003E\u003Chr style='border-color:#fff;margin:5px 0;padding:0;'/\u003EGuest: NOK14,000.00\u003Chr style='border-color:#fff;margin:5px 0;padding:0;'/\u003ETilgjengelige reisende: 30","is_active":false,"availability":"booking","is_full":false,"is_expired":false,"remaining_travellers":30},"2026-05-27":{"title":"Guest: NOK14,000.00","start":"2026-05-27","description":"\u003Cstrong\u003ETilgjengelig for bestilling\u003C/strong\u003E\u003Chr style='border-color:#fff;margin:5px 0;padding:0;'/\u003EGuest: NOK14,000.00\u003Chr style='border-color:#fff;margin:5px 0;padding:0;'/\u003ETilgjengelige reisende: 30","is_active":false,"availability":"booking","is_full":false,"is_expired":false,"remaining_travellers":30},"2026-05-28":{"title":"Guest: NOK14,000.00","start":"2026-05-28","description":"\u003Cstrong\u003ETilgjengelig for bestilling\u003C/strong\u003E\u003Chr style='border-color:#fff;margin:5px 0;padding:0;'/\u003EGuest: NOK14,000.00\u003Chr style='border-color:#fff;margin:5px 0;padding:0;'/\u003ETilgjengelige reisende: 30","is_active":false,"availability":"booking","is_full":false,"is_expired":false,"remaining_travellers":30},"2026-05-29":{"title":"Guest: NOK14,000.00","start":"2026-05-29","description":"\u003Cstrong\u003ETilgjengelig for bestilling\u003C/strong\u003E\u003Chr style='border-color:#fff;margin:5px 0;padding:0;'/\u003EGuest: NOK14,000.00\u003Chr style='border-color:#fff;margin:5px 0;padding:0;'/\u003ETilgjengelige reisende: 30","is_active":false,"availability":"booking","is_full":false,"is_expired":false,"remaining_travellers":30},"2026-05-30":{"title":"Guest: NOK14,000.00","start":"2026-05-30","description":"\u003Cstrong\u003ETilgjengelig for bestilling\u003C/strong\u003E\u003Chr style='border-color:#fff;margin:5px 0;padding:0;'/\u003EGuest: NOK14,000.00\u003Chr style='border-color:#fff;margin:5px 0;padding:0;'/\u003ETilgjengelige reisende: 30","is_active":false,"availability":"booking","is_full":false,"is_expired":false,"remaining_travellers":30},"2026-05-31":{"title":"Guest: NOK14,000.00","start":"2026-05-31","description":"\u003Cstrong\u003ETilgjengelig for bestilling\u003C/strong\u003E\u003Chr style='border-color:#fff;margin:5px 0;padding:0;'/\u003EGuest: NOK14,000.00\u003Chr style='border-color:#fff;margin:5px 0;padding:0;'/\u003ETilgjengelige reisende: 30","is_active":false,"availability":"booking","is_full":false,"is_expired":false,"remaining_travellers":30},"2026-06-01":{"title":"Guest: NOK14,000.00","start":"2026-06-01","description":"\u003Cstrong\u003ETilgjengelig for bestilling\u003C/strong\u003E\u003Chr style='border-color:#fff;margin:5px 0;padding:0;'/\u003EGuest: NOK14,000.00\u003Chr style='border-color:#fff;margin:5px 0;padding:0;'/\u003ETilgjengelige reisende: 30","is_active":false,"availability":"booking","is_full":false,"is_expired":false,"remaining_travellers":30},"2026-06-02":{"title":"Guest: NOK14,000.00","start":"2026-06-02","description":"\u003Cstrong\u003ETilgjengelig for bestilling\u003C/strong\u003E\u003Chr style='border-color:#fff;margin:5px 0;padding:0;'/\u003EGuest: NOK14,000.00\u003Chr style='border-color:#fff;margin:5px 0;padding:0;'/\u003ETilgjengelige reisende: 30","is_active":false,"availability":"booking","is_full":false,"is_expired":false,"remaining_travellers":30},"2026-06-03":{"title":"Guest: NOK14,000.00","start":"2026-06-03","description":"\u003Cstrong\u003ETilgjengelig for bestilling\u003C/strong\u003E\u003Chr style='border-color:#fff;margin:5px 0;padding:0;'/\u003EGuest: NOK14,000.00\u003Chr style='border-color:#fff;margin:5px 0;padding:0;'/\u003ETilgjengelige reisende: 30","is_active":false,"availability":"booking","is_full":false,"is_expired":false,"remaining_travellers":30},"2026-06-04":{"title":"Guest: NOK14,000.00","start":"2026-06-04","description":"\u003Cstrong\u003ETilgjengelig for bestilling\u003C/strong\u003E\u003Chr style='border-color:#fff;margin:5px 0;padding:0;'/\u003EGuest: NOK14,000.00\u003Chr style='border-color:#fff;margin:5px 0;padding:0;'/\u003ETilgjengelige reisende: 30","is_active":false,"availability":"booking","is_full":false,"is_expired":false,"remaining_travellers":30},"2026-06-05":{"title":"Guest: NOK14,000.00","start":"2026-06-05","description":"\u003Cstrong\u003ETilgjengelig for bestilling\u003C/strong\u003E\u003Chr style='border-color:#fff;margin:5px 0;padding:0;'/\u003EGuest: NOK14,000.00\u003Chr style='border-color:#fff;margin:5px 0;padding:0;'/\u003ETilgjengelige reisende: 30","is_active":false,"availability":"booking","is_full":false,"is_expired":false,"remaining_travellers":30}},"availability_action":"yatra_tour_frontend_availability","availability_nonce":"9994ba766f","availability_month_action":"yatra_tour_frontend_availability_month","availability_month_nonce":"2f4ed2cef8"},"pagination":{"pagination_nonce":"e1295cd7e4","pagination_action":"yatra_parts_pagination"},"currency_symbol":"NOK","decimals":"2","decimal_separator":".","thousand_separator":",","currency_position":"left","show_enquiry_form":"yes","week_days":["s\u00f8ndag","mandag","tirsdag","onsdag","torsdag","fredag","l\u00f8rdag"],"months":["januar","februar","mars","april","mai","juni","juli","august","september","oktober","november","desember"],"fixedStartDay":"1","filter_options":{"price_range_min":999,"price_range_max":30000,"price_range_min_value":999,"price_range_max_value":30000,"days_range_min":5,"days_range_max":19,"days_range_min_value":5,"days_range_max_value":19,"days":"Days","current_url":"https://nepalvibb.com/tour/?page&tour=everest-base-camp-trek&post_type=tour&name=everest-base-camp-trek"}};
+//# sourceURL=yatra-script-js-extra
+</script>
+<script src="https://nepalvibb.com/wp-content/plugins/yatra/assets/js/yatra.js?ver=2.2.10" id="yatra-script-js"></script>
+<script src="https://nepalvibb.com/wp-content/plugins/yatra/assets/js/yatra-single-tour.js?ver=2.2.10" id="yatra-single-tour-js"></script>
+<script src="https://nepalvibb.com/wp-content/plugins/yatra/assets/lib/lightslider/js/lightslider.min.js?ver=1.1.3" id="yatra-lightslider-js"></script>
+<link rel="https://api.w.org/" href="https://nepalvibb.com/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://nepalvibb.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.9.4" />
+<link rel='shortlink' href='https://nepalvibb.com/?p=38' />
+
+            <style type="text/css" class="yatra-dynamic-css">
+
+                .yatra-tour-booking-form-section .yatra-calendar-booking-indicator-lists li.enquery:before,.yatra-calendar-date-listing ul.yatra-calendar-listing li span.yatra-availability-enquiry:after{background-color:#008bb5}.day.yatra-availability-enquiry,.yatra-calendar-date-listing ul.yatra-calendar-listing li span.yatra-availability-enquiry{border-bottom-color:#008bb5!important}
+            </style>
+
+                <style>
+    .trip-facts-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 25px;
+        margin-bottom: 35px;
+        background: #fff;
+        padding: 25px;
+        border: 1px solid #e1e1e1;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        border-radius: 12px;
+    }
+    .fact-item { display: flex; align-items: flex-start; gap: 18px; transition: 0.3s; }
+    .fact-icon { font-size: 24px; color: #f36b21; padding-top: 5px; }
+    .fact-data strong { display: block; font-size: 13px; color: #777; font-weight: 500; }
+    .fact-data span { font-size: 16px; font-weight: 700; color: #222; }
+    .useful-info-content { background: #fff; padding: 20px; border-left: 4px solid #f36b21; margin-top: 20px; }
+    @media (max-width: 768px) { .trip-facts-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 480px) { .trip-facts-grid { grid-template-columns: 1fr; } }
+    </style>
+    <style type="text/css">div.nsl-container[data-align="left"] {
+    text-align: left;
+}
+
+div.nsl-container[data-align="center"] {
+    text-align: center;
+}
+
+div.nsl-container[data-align="right"] {
+    text-align: right;
+}
+
+
+div.nsl-container div.nsl-container-buttons a[data-plugin="nsl"] {
+    text-decoration: none;
+    box-shadow: none;
+    border: 0;
+}
+
+div.nsl-container .nsl-container-buttons {
+    display: flex;
+    padding: 5px 0;
+}
+
+div.nsl-container.nsl-container-block .nsl-container-buttons {
+    display: inline-grid;
+    grid-template-columns: minmax(145px, auto);
+}
+
+div.nsl-container-block-fullwidth .nsl-container-buttons {
+    flex-flow: column;
+    align-items: center;
+}
+
+div.nsl-container-block-fullwidth .nsl-container-buttons a,
+div.nsl-container-block .nsl-container-buttons a {
+    flex: 1 1 auto;
+    display: block;
+    margin: 5px 0;
+    width: 100%;
+}
+
+div.nsl-container-inline {
+    margin: -5px;
+    text-align: left;
+}
+
+div.nsl-container-inline .nsl-container-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+div.nsl-container-inline .nsl-container-buttons a {
+    margin: 5px;
+    display: inline-block;
+}
+
+div.nsl-container-grid .nsl-container-buttons {
+    flex-flow: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+div.nsl-container-grid .nsl-container-buttons a {
+    flex: 1 1 auto;
+    display: block;
+    margin: 5px;
+    max-width: 280px;
+    width: 100%;
+}
+
+@media only screen and (min-width: 650px) {
+    div.nsl-container-grid .nsl-container-buttons a {
+        width: auto;
+    }
+}
+
+div.nsl-container .nsl-button {
+    cursor: pointer;
+    vertical-align: top;
+    border-radius: 4px;
+}
+
+div.nsl-container .nsl-button-default {
+    color: #fff;
+    display: flex;
+}
+
+div.nsl-container .nsl-button-icon {
+    display: inline-block;
+}
+
+div.nsl-container .nsl-button-svg-container {
+    flex: 0 0 auto;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+}
+
+div.nsl-container svg {
+    height: 24px;
+    width: 24px;
+    vertical-align: top;
+}
+
+div.nsl-container .nsl-button-default div.nsl-button-label-container {
+    margin: 0 24px 0 12px;
+    padding: 10px 0;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: .25px;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: clip;
+    white-space: nowrap;
+    flex: 1 1 auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-transform: none;
+    display: inline-block;
+}
+
+div.nsl-container .nsl-button-google[data-skin="light"] {
+    box-shadow: inset 0 0 0 1px #747775;
+    color: #1f1f1f;
+}
+
+div.nsl-container .nsl-button-google[data-skin="dark"] {
+    box-shadow: inset 0 0 0 1px #8E918F;
+    color: #E3E3E3;
+}
+
+div.nsl-container .nsl-button-google[data-skin="neutral"] {
+    color: #1F1F1F;
+}
+
+div.nsl-container .nsl-button-google div.nsl-button-label-container {
+    font-family: "Roboto Medium", Roboto, Helvetica, Arial, sans-serif;
+}
+
+div.nsl-container .nsl-button-apple .nsl-button-svg-container {
+    padding: 0 6px;
+}
+
+div.nsl-container .nsl-button-apple .nsl-button-svg-container svg {
+    height: 40px;
+    width: auto;
+}
+
+div.nsl-container .nsl-button-apple[data-skin="light"] {
+    color: #000;
+    box-shadow: 0 0 0 1px #000;
+}
+
+div.nsl-container .nsl-button-facebook[data-skin="white"] {
+    color: #000;
+    box-shadow: inset 0 0 0 1px #000;
+}
+
+div.nsl-container .nsl-button-facebook[data-skin="light"] {
+    color: #1877F2;
+    box-shadow: inset 0 0 0 1px #1877F2;
+}
+
+div.nsl-container .nsl-button-spotify[data-skin="white"] {
+    color: #191414;
+    box-shadow: inset 0 0 0 1px #191414;
+}
+
+div.nsl-container .nsl-button-apple div.nsl-button-label-container {
+    font-size: 17px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+div.nsl-container .nsl-button-slack div.nsl-button-label-container {
+    font-size: 17px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+div.nsl-container .nsl-button-slack[data-skin="light"] {
+    color: #000000;
+    box-shadow: inset 0 0 0 1px #DDDDDD;
+}
+
+div.nsl-container .nsl-button-tiktok[data-skin="light"] {
+    color: #161823;
+    box-shadow: 0 0 0 1px rgba(22, 24, 35, 0.12);
+}
+
+
+div.nsl-container .nsl-button-kakao {
+    color: rgba(0, 0, 0, 0.85);
+}
+
+.nsl-clear {
+    clear: both;
+}
+
+.nsl-container {
+    clear: both;
+}
+
+.nsl-disabled-provider .nsl-button {
+    filter: grayscale(1);
+    opacity: 0.8;
+}
+
+/*Button align start*/
+
+div.nsl-container-inline[data-align="left"] .nsl-container-buttons {
+    justify-content: flex-start;
+}
+
+div.nsl-container-inline[data-align="center"] .nsl-container-buttons {
+    justify-content: center;
+}
+
+div.nsl-container-inline[data-align="right"] .nsl-container-buttons {
+    justify-content: flex-end;
+}
+
+
+div.nsl-container-grid[data-align="left"] .nsl-container-buttons {
+    justify-content: flex-start;
+}
+
+div.nsl-container-grid[data-align="center"] .nsl-container-buttons {
+    justify-content: center;
+}
+
+div.nsl-container-grid[data-align="right"] .nsl-container-buttons {
+    justify-content: flex-end;
+}
+
+div.nsl-container-grid[data-align="space-around"] .nsl-container-buttons {
+    justify-content: space-around;
+}
+
+div.nsl-container-grid[data-align="space-between"] .nsl-container-buttons {
+    justify-content: space-between;
+}
+
+/* Button align end*/
+
+/* Redirect */
+
+#nsl-redirect-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(1px);
+    background-color: RGBA(0, 0, 0, .32);;
+}
+
+#nsl-redirect-overlay-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+#nsl-redirect-overlay-spinner {
+    content: '';
+    display: block;
+    margin: 20px;
+    border: 9px solid RGBA(0, 0, 0, .6);
+    border-top: 9px solid #fff;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 1px RGBA(0, 0, 0, .6), 0 0 0 1px RGBA(0, 0, 0, .6);
+    width: 40px;
+    height: 40px;
+    animation: nsl-loader-spin 2s linear infinite;
+}
+
+@keyframes nsl-loader-spin {
+    0% {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+#nsl-redirect-overlay-title {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #3C434A;
+}
+
+#nsl-redirect-overlay-text {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    text-align: center;
+    font-size: 14px;
+    color: #3C434A;
+}
+
+/* Redirect END*/</style><style type="text/css">/* Notice fallback */
+#nsl-notices-fallback {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    z-index: 10000;
+}
+
+.admin-bar #nsl-notices-fallback {
+    top: 42px;
+}
+
+#nsl-notices-fallback > div {
+    position: relative;
+    background: #fff;
+    border-left: 4px solid #fff;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
+    margin: 5px 15px 2px;
+    padding: 1px 20px;
+}
+
+#nsl-notices-fallback > div.error {
+    display: block;
+    border-left-color: #dc3232;
+}
+
+#nsl-notices-fallback > div.updated {
+    display: block;
+    border-left-color: #46b450;
+}
+
+#nsl-notices-fallback p {
+    margin: .5em 0;
+    padding: 2px;
+}
+
+#nsl-notices-fallback > div:after {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    content: '\00d7';
+    display: block;
+    height: 16px;
+    width: 16px;
+    line-height: 16px;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+}</style>		<style id="wp-custom-css">
+			.tg-hero-slider-active .swiper-slide .tg-hero-title{ transition: none !important; opacity:1 !important; }
+.tg-hero-slider-active .swiper-slide:not(.swiper-slide-active) .tg-hero-title{ transition: opacity .6s ease !important; opacity:0 !important; }
+		</style>
+		</head>
+<body class="wp-singular tour-template-default single single-tour postid-38 wp-custom-logo wp-theme-nepaltravel" >
+
+<button class="scroll__top scroll-to-target" data-target="html">
+    <i class="fa-sharp fa-regular fa-arrow-up"></i>
+</button>
+
+<header class="tg-header-height">
+    <div class="tg-header__area tg-header-tu-menu tg-header-lg-space z-index-999 tg-transparent" id="header-sticky">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xxl-12 col-xl-12 col-lg-12 col-12">
+                    <div class="tgmenu__wrap d-flex align-items-center justify-content-between">
+                        <div class="logo mr-25">
+                            <a class="logo-1" href="https://nepalvibb.com/">
+								                                <img src="https://nepalvibb.com/wp-content/uploads/2025/05/logo-w.svg" alt="">
+                            </a>
+                            <a class="logo-2 d-none" href="https://nepalvibb.com/">
+								                                <img src="https://nepalvibb.com/wp-content/uploads/2025/05/logo-d.svg" alt="">
+                            </a>
+                        </div>
+
+                        <nav class="tgmenu__nav tgmenu-1-space d-flex align-items-center">
+                            <div class="tgmenu__navbar-wrap tgmenu__main-menu d-none d-xl-flex"><ul id="menu-main-menu" class="navigation"><li id="menu-item-73" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-73"><a href="https://nepalvibb.com/">Hjem</a></li>
+<li id="menu-item-74" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-74"><a href="#">Destinasjon</a>
+<ul class="sub-menu">
+	<li id="menu-item-75" class="menu-item menu-item-type-taxonomy menu-item-object-destination current-tour-ancestor current-menu-parent current-tour-parent menu-item-75"><a href="https://nepalvibb.com/destination/nepal/">Nepal</a></li>
+	<li id="menu-item-76" class="menu-item menu-item-type-taxonomy menu-item-object-destination menu-item-76"><a href="https://nepalvibb.com/destination/india/">India</a></li>
+	<li id="menu-item-80" class="menu-item menu-item-type-taxonomy menu-item-object-destination menu-item-80"><a href="https://nepalvibb.com/destination/bhutan/">Bhutan</a></li>
+</ul>
+</li>
+<li id="menu-item-82" class="menu-item menu-item-type-taxonomy menu-item-object-activity menu-item-82"><a href="https://nepalvibb.com/activity/turer/">Turer</a></li>
+<li id="menu-item-83" class="menu-item menu-item-type-taxonomy menu-item-object-activity current-tour-ancestor current-menu-parent current-tour-parent menu-item-83"><a href="https://nepalvibb.com/activity/trekking/">Fotturer</a></li>
+<li id="menu-item-114" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-114"><a href="https://nepalvibb.com/company/">Bedrift</a>
+<ul class="sub-menu">
+	<li id="menu-item-393" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-393"><a href="https://nepalvibb.com/company/">Om Oss</a></li>
+	<li id="menu-item-120" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-120"><a href="https://nepalvibb.com/our-legal-document/">Dokumente</a></li>
+	<li id="menu-item-119" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-119"><a href="https://nepalvibb.com/terms-conditions/">Vilkår og betingelser</a></li>
+</ul>
+</li>
+<li id="menu-item-84" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-84"><a href="https://nepalvibb.com/category/blog/">Blogg</a></li>
+<li id="menu-item-88" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-88"><a href="https://nepalvibb.com/contact-us/">Kontakt oss</a></li>
+</ul></div>							<div class="gtranslate_wrapper" id="gt-wrapper-66404386"></div>                        </nav>
+
+                        <div class="tg-menu-right-action d-flex align-items-center justify-content-end">
+                            <div class="tg-header-contact-info d-flex align-items-center gap-2">
+                                <img class="d-none d-lg-block" width="50" class="me-2" src="https://nepalvibb.com/wp-content/uploads/2025/05/support.svg" alt="">
+                                <div class="tg-header-contact-number d-none d-xl-block">
+                                    <span>
+                                        <div class="d-flex mb-1" style="gap: 5px">
+                                            <a href="viber://chat/?number=+4748672979">
+                                                <img alt="Viber" width="17" height="17" src="https://nepalvibb.com/wp-content/themes/nepaltravel/assets/img/connect-viber.svg">
+                                            </a>
+                                            <a href="https://wa.me/+4748672979" target="_blank" aria-label="WhatsApp">
+                                                <img alt="Whatsapp" width="17" height="17" src="https://nepalvibb.com/wp-content/themes/nepaltravel/assets/img/connect-whatsapp.svg">
+                                            </a>
+                                        </div>
+                                        <a href="mailto:info@nepalvibb.com">info@nepalvibb.com</a>
+                                    </span>
+                                    <a href="tel:+4748672979">+47 48672979</a>
+                                </div>
+                            </div>
+
+                            <div class="tg-header-menu-bar p-relative">
+                                <button class="tgmenu-offcanvas-open-btn mobile-nav-toggler d-block d-xl-none ml-10">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tgmobile__menu">
+        <nav class="tgmobile__menu-box">
+            <div class="close-btn"><i class="fa-solid fa-xmark"></i></div>
+            <div class="nav-logo">
+                <a href="https://nepalvibb.com/">
+                    <img src="https://nepalvibb.com/wp-content/themes/nepaltravel/assets/img/logo/dark_logo.svg" alt="logo">
+                </a>
+            </div>
+             
+            <div class="tgmobile__menu-outer">
+               
+            </div>
+            <div class="social-links">
+                <ul class="list-wrap">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="tgmobile__menu-backdrop"></div>
+</header>
+
+
+
+<!-- tg-breadcrumb-area-start -->
+<div class="tg-breadcrumb-spacing-3 include-bg p-relative fix" data-background="https://nepalvibb.com/wp-content/uploads/2022/01/IMG_3349-scaled.jpg" style="background-image: url(https://nepalvibb.com/wp-content/uploads/2022/01/IMG_3349-scaled.jpg);">
+	<div class="tg-hero-top-shadow"></div>
+ 
+	<div class="container" style="position: relative;z-index: 99;">
+		<div class="row">
+			<div class="col-12">
+				<div class="tg-breadcrumb-content text-center pb-50">
+					 
+					<h2 class="tg-breadcrumb-title mb-15">Everest Base Camp Trek – En Livsforvandlende Reise</h2>					 
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tg-hero-bottom-shape d-none d-md-block">
+		<span>
+			<svg width="432" height="187" viewBox="0 0 432 187" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path class="line-1" opacity="0.4" d="M39.6042 428.345C4.41235 355.065 -24.3018 203.867 142.377 185.309C350.725 162.111 488.893 393.541 289.169 313.515C129.389 249.494 458.202 85.4772 642.58 11.4713" stroke="white" stroke-width="24" />
+			</svg>
+		</span>
+	</div>
+	<div class="tg-hero-bottom-shape-2 d-none d-md-block">
+		<span>
+			<svg width="154" height="243" viewBox="0 0 154 243" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path class="line-1" opacity="0.4" d="M144.616 328.905C116.117 300.508 62.5986 230.961 76.5162 179.949C93.9131 116.184 275.231 7.44494 -65.0181 12.8762" stroke="white" stroke-width="24" />
+			</svg>
+		</span>
+	</div>
+</div>
+<!-- tg-breadcrumb-area-end -->
+
+<div id="yatra-page-wrapper" class="yatra-page-wrapper yatra-container">
+    
+<section class="yatra-content-area yatra-single-tour">
+            <main id="yatra-main" class="yatra-site-main yatra-row">
+            <div class="yatra-single-main-content-area yatra-col-md-8 yatra-col-xs-12"><div class="yatra-single-main-content-area-inner">
+   <header class="yatra-tour-header">
+
+            <h1 class="yatra-tour-title">Everest Base Camp Trek – En Livsforvandlende Reise</h1>
+
+            <div class="yatra-tour-meta">
+                <span class="yatra-cat-links destination-links"><span class="screen-reader-text">Destination</span><i class="yatra-icon fas fa-map-marker-alt"></i> <a href="https://nepalvibb.com/destination/nepal/" rel="tag">Nepal</a></span><span class="yatra-cat-links activity-links"><span class="screen-reader-text">Activity</span><i class="yatra-icon fa fa-universal-access"></i> <a href="https://nepalvibb.com/activity/trekking/" rel="tag">Trekking</a></span>            </div><!-- .meta-info -->
+
+        </header>
+
+<div id="tour-38" class="yatra-tour-single-item">
+    <div class="yatra-tour-additional-info">
+    <div class="yatra-tour-additional-info-item">
+        <div class="icon-wrap">
+            <i class="yatra-icon fa fa-clock"></i>
+        </div>
+        <div class="icon-content">
+            <span class="info-title">Varighet</span>
+            <p class="info-content">14 dager</p>
+        </div>
+    </div>
+    <div class="yatra-tour-additional-info-item">
+        <div class="icon-wrap">
+            <i class="yatra-icon fa fa-globe"></i>
+        </div>
+        <div class="icon-content">
+            <span class="info-title">Land</span>
+            <p class="info-content">Nepal</p>
+        </div>
+    </div>
+     <div class="yatra-tour-additional-info-item"
+    >
+        <span class="question yatra-tippy-tooltip fa fa-info-circle"
+              data-tippy-content="Dette kan variere avhengig av bestillingsdatoen din"></span>
+        <div class="icon-wrap">
+            <i class="yatra-icon fa fa-chair"></i>
+        </div>
+        <div class="icon-content">
+            <span class="info-title">Min Pax</span>
+            <p class="info-content">1</p>
+        </div>
+    </div>
+    
+    <div class="yatra-tour-additional-info-item"
+    >
+         
+        <div class="icon-wrap">
+            <i class="yatra-icon fa fa-star"></i>
+        </div>
+        <div class="icon-content">
+             <span class="info-title">Karakter</span>
+             <p class="info-content">Vanskelig</p>           
+            
+        </div>
+    </div>
+   
+
+</div>
+    <div class="yatra-single-meta-content">
+          Oppfyll drømmen om Everest! Å vandre til Everest Base Camp er mer enn en fysisk prestasjon – det er en reise inn i deg selv. Du får utfordret grenser, skapt varige minner og kjent på ekte mestringsfølelse. Enten du reiser alene, som par eller i gruppe, vil denne turen gi deg opplevelser du aldri vil glemme.      <h3 class="tab-title py-3"><span class="tab-icon fas fa-atom"></span> Høydepunkter</h3>
+
+        <div class="yatra-tour-content">
+
+            <ul data-spread="false">
+<li>Utsikt til fire av verdens høyeste fjell: Everest, Lhotse, Makalu og Cho Oyu</li>
+<li>Soloppgang fra Kala Patthar (5 545 moh) med spektakulær panoramautsikt over Everest</li>
+<li>Besøk i Namche Bazaar – Sherpaenes hovedstad</li>
+<li>Overnatting i autentiske tehus og møte med lokale familier</li>
+<li>Besøk klosteret i Tengboche, ett av de mest spirituelle stedene i regionen</li>
+</ul>
+        </div><!-- .yatra-tour-content -->
+        <div class="entry-footer">
+                    </div>
+    </div>
+    <div class="yatra-tour-content entry-tabs">
+         <aside class="aside--box my-3 rounded-none tg-tour-about-sidebar bg-primary text-white text-center">
+                    <div class="d-flex gap-3 align-items-center">
+                        <p class="text-light pb-0 mb-0">Våre ekspertreiseplanleggere hjelper deg med å designe den perfekte reisen, bare for deg</p>
+                    
+                     <a href="../../plan-your-trips/" class="btn btn-light">Planlegg turene dine</a>
+                    </div>
+                    
+
+
+                  
+
+                </aside><div class="yatra-tabs heading-and-content" id="yatra-tour-tabs"><div class="yatra-tab-item overview"><div class="yatra-tab-content"><h3 class="tab-title"><span class="tab-icon fas fa-atom"></span> Oversikt</h3>
+<div class="overview-section">
+    <div class="yatra-tab-section-inner">
+        <p>Everest Base Camp Trek (EBC) er en av verdens mest ikoniske fotturer – en reise som tar deg til foten av det majestetiske Mount Everest (8 848 m), verdens høyeste fjell. Denne klassiske turen kombinerer dramatisk natur, rike kulturelle opplevelser og personlig mestring i en uforglemmelig fjellekspedisjon. Perfekt for eventyrlystne vandrere som ønsker å komme nært på legendariske fjell og lokale tradisjoner i hjertet av Khumbu-regionen.</p>
+<p><strong>Hvorfor velge Everest Base Camp Trek?</strong></p>
+<p>Denne turen tar deg gjennom Sherpaenes hjemland, langs vakre daler, isbreer og stupbratte fjellvegger. Du får oppleve gamle buddhistiske klostre, fargerike bønneflagg og yrende fjellandsbyer, alt mens snødekte kjemper ruver over deg. Turens høydepunkt er ankomsten til Everest Base Camp (5 364 moh) – utgangspunktet for mange store ekspedisjoner.</p>
+<p><strong>Beste tid for Everest Base Camp Trek</strong></p>
+<ul>
+<li><strong>Vår (mars–mai):</strong> Mildt vær, blomstring og klar sikt</li>
+<li><strong>Høst (september–november):</strong> Klare dager og gode stiforhold</li>
+</ul>
+<p><strong>Hvordan kan man forberede seg og ta med utstyr</strong></p>
+<ul>
+<li><em>Tren kondisjon og styrke før reisen</em></li>
+<li><em>Ta med lett og varmt turtøy, fjellstøvler, lue og hansker</em></li>
+<li><em>Hodelykt, solbriller, solkrem og personlig hygieneartikler</em></li>
+<li><em>Vannrensetabletter eller -filter</em></li>
+<li><em>Reisesekk og dagstursekk</em></li>
+</ul>
+    </div><!-- .yatra-tab-section-inner -->
+</div>
+</div></div><div class="yatra-tab-item itinerary"><div class="yatra-tab-content"><h3 class="tab-title"><span class="tab-icon fas fa-gopuram"></span> Reiseplan   <span class="yatra-expand-collapse" data-expand-text="Utvid alle" data-collapse-text="Skjul alle">Utvid alle</span>
+</h3>
+<div class="itinerary-section">
+    <div class="yatra-tab-section-inner">
+        <ul class="yatra-list yatra-itinerary-list">
+            <li class="yatra-list-item"><div class="yatra-itinerary-list-item"><h4 class="yatra-heading itinerary-heading">Dag 1: Ankomst i Kathmandu<span class="yatra-icon fa fa-angle-down"></span></h4><div class="yatra-content itinerary-content" style="display: none"><div class="itinerary-details"><p>Du blir møtt på flyplassen og kjørt til hotellet. Kvelden fri til å utforske Thamel.</p>
+</div></div></div></li><li class="yatra-list-item"><div class="yatra-itinerary-list-item"><h4 class="yatra-heading itinerary-heading">Dag 2: Fly til Lukla – Fottur til Phakding (2 610 m)<span class="yatra-icon fa fa-angle-down"></span></h4><div class="yatra-content itinerary-content" style="display: none"><div class="itinerary-details"><p>Et kort og spennende fjellfly til Lukla (2 840 m), hvor turen starter. En lett vandring til Phakding langs Dudh Koshi-elven.</p>
+</div></div></div></li><li class="yatra-list-item"><div class="yatra-itinerary-list-item"><h4 class="yatra-heading itinerary-heading">Dag 3: Phakding – Namche Bazaar (3 440 m)<span class="yatra-icon fa fa-angle-down"></span></h4><div class="yatra-content itinerary-content" style="display: none"><div class="itinerary-details"><p>Dagen starter med kryssing av hengebroer og går inn i Sagarmatha nasjonalpark. Bratt oppstigning til den livlige byen Namche Bazaar.</p>
+</div></div></div></li><li class="yatra-list-item"><div class="yatra-itinerary-list-item"><h4 class="yatra-heading itinerary-heading">Dag 4: Akklimatiseringsdag i Namche<span class="yatra-icon fa fa-angle-down"></span></h4><div class="yatra-content itinerary-content" style="display: none"><div class="itinerary-details"><p>Du hviler og utforsker området. Besøk Sherpa-museet, Everest View Hotel eller ta en kort fottur til Khumjung Village.</p>
+</div></div></div></li><li class="yatra-list-item"><div class="yatra-itinerary-list-item"><h4 class="yatra-heading itinerary-heading">Dag 5: Namche – Tengboche (3 860 m)<span class="yatra-icon fa fa-angle-down"></span></h4><div class="yatra-content itinerary-content" style="display: none"><div class="itinerary-details"><p>En vakker dagsetappe med storslagen utsikt til Everest, Ama Dablam og Thamserku. Ankomst til Tengboche-klosteret, et fredelig og spirituelt høydepunkt.</p>
+</div></div></div></li><li class="yatra-list-item"><div class="yatra-itinerary-list-item"><h4 class="yatra-heading itinerary-heading">Dag 6: Tengboche – Dingboche (4 410 m)<span class="yatra-icon fa fa-angle-down"></span></h4><div class="yatra-content itinerary-content" style="display: none"><div class="itinerary-details"><p>Turen fortsetter gjennom skoger og åpne daler til Dingboche. Utsikten til Ama Dablam og Island Peak er spektakulær.</p>
+<p>.</p>
+</div></div></div></li><li class="yatra-list-item"><div class="yatra-itinerary-list-item"><h4 class="yatra-heading itinerary-heading">Dag 7: Akklimatiseringsdag i Dingboche<span class="yatra-icon fa fa-angle-down"></span></h4><div class="yatra-content itinerary-content" style="display: none"><div class="itinerary-details"><p>Valgfri topptur til Nangkartshang Peak (5 100 m) for utsikt og akklimatisering.</p>
+</div></div></div></li><li class="yatra-list-item"><div class="yatra-itinerary-list-item"><h4 class="yatra-heading itinerary-heading">Dag 8: Dingboche – Lobuche (4 910 m)<span class="yatra-icon fa fa-angle-down"></span></h4><div class="yatra-content itinerary-content" style="display: none"><div class="itinerary-details"><p>Terrenget blir mer alpint. Du passerer minnemerker over klatrere som har mistet livet på Everest, før du ankommer Lobuche.</p>
+</div></div></div></li><li class="yatra-list-item"><div class="yatra-itinerary-list-item"><h4 class="yatra-heading itinerary-heading">Dag 9: Lobuche – Gorak Shep – Everest Base Camp (5 364 m)<span class="yatra-icon fa fa-angle-down"></span></h4><div class="yatra-content itinerary-content" style="display: none"><div class="itinerary-details"><p>En stor dag! Du går til Gorak Shep, spiser lunsj og går videre til det legendariske Everest Base Camp. Tilbake til Gorak Shep for overnatting.</p>
+</div></div></div></li><li class="yatra-list-item"><div class="yatra-itinerary-list-item"><h4 class="yatra-heading itinerary-heading">Dag 10: Gorak Shep – Kala Patthar – Pheriche (4 280 m)<span class="yatra-icon fa fa-angle-down"></span></h4><div class="yatra-content itinerary-content" style="display: none"><div class="itinerary-details"><p>Tidlig opp for å nå Kala Patthar og få det beste synet av Mount Everest i soloppgang. Nedstigning til Pheriche.</p>
+</div></div></div></li><li class="yatra-list-item"><div class="yatra-itinerary-list-item"><h4 class="yatra-heading itinerary-heading">Dag 11: Pheriche – Namche Bazaar<span class="yatra-icon fa fa-angle-down"></span></h4><div class="yatra-content itinerary-content" style="display: none"><div class="itinerary-details"><p>Du følger elven ned igjen og kjenner hvordan luften blir lettere. En lang, men vakker dag tilbake til Namche.</p>
+</div></div></div></li><li class="yatra-list-item"><div class="yatra-itinerary-list-item"><h4 class="yatra-heading itinerary-heading">Dag 12: Namche – Lukla<span class="yatra-icon fa fa-angle-down"></span></h4><div class="yatra-content itinerary-content" style="display: none"><div class="itinerary-details"><p>Siste vandredag – du returnerer til utgangspunktet i Lukla og feirer turens suksess.</p>
+</div></div></div></li><li class="yatra-list-item"><div class="yatra-itinerary-list-item"><h4 class="yatra-heading itinerary-heading">Dag 13: Fly tilbake til Kathmandu<span class="yatra-icon fa fa-angle-down"></span></h4><div class="yatra-content itinerary-content" style="display: none"><div class="itinerary-details"><p>Tidlig morgenfly tilbake til Kathmandu. Resten av dagen fri til avslapping eller sightseeing.</p>
+</div></div></div></li><li class="yatra-list-item"><div class="yatra-itinerary-list-item"><h4 class="yatra-heading itinerary-heading">Dag 14: Avreise<span class="yatra-icon fa fa-angle-down"></span></h4><div class="yatra-content itinerary-content" style="display: none"><div class="itinerary-details"><p>Transport til flyplassen. Du tar med deg minner for livet.</p>
+<p>&nbsp;</p>
+</div></div></div></li>        </ul>
+    </div>
+</div>
+</div></div><div class="yatra-tab-item cost_info"><div class="yatra-tab-content"><h3 class="tab-title"><span class="tab-icon fa fa-dollar-sign"></span> Cost Info</h3>
+<div class="cost-info-section">
+    <div class="yatra-tab-section-inner">
+        <div class="cost-info-half cost_included">
+            <h4>Pris inkluderer</h4>
+            <ul>
+	<li>Rene gjestehus og tehus underveis i trek.</li>
+	<li>Engelskspråklige lisensiert lokal guide</li>
+	<li>Nødvendig antall lokale bærere og hjelpere for bagasjen.</li>
+	<li>Alle måltider under trek</li>
+	<li>Mat, overnatting, lønn, forsikring, utstyr og medisiner for alle ansatte.</li>
+	<li>All transport i privat kjøretøy.</li>
+	<li>Velkomst- eller avskjedsmiddag på tradisjonell nepalesisk restaurant med kulturprogram.</li>
+	<li>Alle offentlige skatter, tillatelser og turistavgifter.</li>
+</ul>        </div>
+
+        <div class="cost-info-half cost_excluded">
+            <h4>Pris ekskluderer</h4>
+            <ul>
+	<li>Internasjonale flybilletter</li>
+	<li>Visumkostnader</li>
+	<li>Reise- og helseforsikring</li>
+	<li>Personlige utgifter som shopping, barregninger, varmt dusj, telefon, vask, snacks osv.</li>
+	<li>Mat og overnatting i Kathmandu</li>
+	<li>Tjenester som ikke er nevnt eller lovet av reisebyrået</li>
+	<li>Nødutgifter som for eksempel helikoptertransport ved evakuering</li>
+	<li>Tips til guide og hjelpere</li>
+</ul>        </div>
+
+    </div>
+</div>
+
+</div></div><div class="yatra-tab-item faq"><div class="yatra-tab-content"><h3 class="tab-title"><span class="tab-icon fas fa-comment-dots"></span> FAQ    <span class="yatra-expand-collapse" data-expand-text="Utvid alle" data-collapse-text="Skjul alle">Utvid alle</span>
+</h3>
+<div class="faq-section">
+    <div class="yatra-tab-section-inner">
+        <ul class="yatra-list yatra-faq-list">
+            <li class="yatra-list-item"><div class="yatra-faq-list-item"><h4 class="yatra-heading faq-heading">Hvor går Everest Base Camp-trekken?<span class="yatra-icon fa fa-angle-down"></span></h4><div class="yatra-content faq-content" style="display:none"><div class="faq-details"><p>Trekken går i Khumbu-regionen i Nepal og starter vanligvis med fly til Lukla.</p>
+</div></div></div></li><li class="yatra-list-item"><div class="yatra-faq-list-item"><h4 class="yatra-heading faq-heading">Hvor lang tid tar trekken?<span class="yatra-icon fa fa-angle-down"></span></h4><div class="yatra-content faq-content" style="display:none"><div class="faq-details"><p>Turen tar normalt 12–16 dager, inkludert akklimatiseringsdager.</p>
+</div></div></div></li><li class="yatra-list-item"><div class="yatra-faq-list-item"><h4 class="yatra-heading faq-heading">Hvor høyt går man?<span class="yatra-icon fa fa-angle-down"></span></h4><div class="yatra-content faq-content" style="display:none"><div class="faq-details"><p>Everest Base Camp ligger på ca. 5 364 meter over havet. Kalapathar, som ofte besøkes, ligger på ca. 5 545 meter.</p>
+</div></div></div></li><li class="yatra-list-item"><div class="yatra-faq-list-item"><h4 class="yatra-heading faq-heading">Hvor krevende er trekken?<span class="yatra-icon fa fa-angle-down"></span></h4><div class="yatra-content faq-content" style="display:none"><div class="faq-details"><p>Trekken er krevende, men teknisk enkel. Den passer for personer i god fysisk form med riktig forberedelse.</p>
+</div></div></div></li><li class="yatra-list-item"><div class="yatra-faq-list-item"><h4 class="yatra-heading faq-heading">Trenger jeg guide?<span class="yatra-icon fa fa-angle-down"></span></h4><div class="yatra-content faq-content" style="display:none"><div class="faq-details"><p>Ja, guide er påkrevd i Nepal for denne trekken.</p>
+</div></div></div></li><li class="yatra-list-item"><div class="yatra-faq-list-item"><h4 class="yatra-heading faq-heading">Når er beste tidspunkt å dra?<span class="yatra-icon fa fa-angle-down"></span></h4><div class="yatra-content faq-content" style="display:none"><div class="faq-details"><p>Beste perioder er vår (mars–mai) og høst (september–november), med stabilt vær og god sikt.</p>
+</div></div></div></li><li class="yatra-list-item"><div class="yatra-faq-list-item"><h4 class="yatra-heading faq-heading">Hvor bor man underveis?<span class="yatra-icon fa fa-angle-down"></span></h4><div class="yatra-content faq-content" style="display:none"><div class="faq-details"><p>Man bor i enkle tehus/lodger med seng og måltider langs ruten.</p>
+</div></div></div></li><li class="yatra-list-item"><div class="yatra-faq-list-item"><h4 class="yatra-heading faq-heading">Er det fare for høydesyke?<span class="yatra-icon fa fa-angle-down"></span></h4><div class="yatra-content faq-content" style="display:none"><div class="faq-details"><p>Ja, risikoen er reell. God akklimatisering, rolig tempo og erfarne guider er viktig.</p>
+</div></div></div></li><li class="yatra-list-item"><div class="yatra-faq-list-item"><h4 class="yatra-heading faq-heading">Hva er høydepunktene på turen?<span class="yatra-icon fa fa-angle-down"></span></h4><div class="yatra-content faq-content" style="display:none"><div class="faq-details"><p>Everest Base Camp, utsikt mot Mount Everest, Kalapathar, Sherpa-kulturen og buddhistiske klostre.</p>
+</div></div></div></li><li class="yatra-list-item"><div class="yatra-faq-list-item"><h4 class="yatra-heading faq-heading">Hva bør jeg pakke?<span class="yatra-icon fa fa-angle-down"></span></h4><div class="yatra-content faq-content" style="display:none"><div class="faq-details"><p>Gode fjellsko, varme klær, dunjakke, sovepose, regntøy, solbeskyttelse og personlig utstyr.</p>
+</div></div></div></li><li class="yatra-list-item"><div class="yatra-faq-list-item"><h4 class="yatra-heading faq-heading">Trenger jeg tillatelser?<span class="yatra-icon fa fa-angle-down"></span></h4><div class="yatra-content faq-content" style="display:none"><div class="faq-details"><p>Ja, du trenger Sagarmatha National Park Permit og lokal trekkertillatelse.</p>
+</div></div></div></li><li class="yatra-list-item"><div class="yatra-faq-list-item"><h4 class="yatra-heading faq-heading">Er det internett og strøm underveis?<span class="yatra-icon fa fa-angle-down"></span></h4><div class="yatra-content faq-content" style="display:none"><div class="faq-details"><p>Ja, de fleste lodger tilbyr Wi-Fi og lading mot betaling, men dekningen kan variere.</p>
+</div></div></div></li>        </ul>
+    </div>
+</div>
+</div></div><div class="yatra-tab-item map"><div class="yatra-tab-content"><h3 class="tab-title"><span class="tab-icon fa fa-map"></span> Kart</h3>
+
+<div class="map-section">
+    <div class="yatra-tab-section-inner">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3166.0435849520436!2d-122.14904938516722!3d37.48329783664938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fbd2036d622bd%3A0x107007c5c342bb88!2sFacebook's%20World%20-Trade%20Headquarters!5e0!3m2!1sen!2snp!4v1572768346209!5m2!1sen!2snp" width="100%" height="450" frameborder="0" allowfullscreen="allowfullscreen"></iframe>    </div><!-- .yatra-tab-section-inner -->
+</div></div></div><div class="yatra-tab-item gallery"><div class="yatra-tab-content"><h3 class="tab-title"><span class="tab-icon fas fa-images"></span> Galleri</h3>
+
+<div class="gallery-section">
+    <div class="yatra-tab-section-inner">
+        <ul class="yatra-tour-gallery">
+            <li class="yatra-gallery-item"><a href="https://nepalvibb.com/wp-content/uploads/2025/06/lower-pangboche-village-nepal-sagarmatha-novembe-2024-11-18-18-21-52-utc-scaled.jpg" data-lightbox="yatra-tour-gallery-1" data-title="Lower Pangboche village Nepal, Sagarmatha, November 2014" title="Lower Pangboche village Nepal, Sagarmatha, November 2017"><img src="https://nepalvibb.com/wp-content/uploads/2025/06/lower-pangboche-village-nepal-sagarmatha-novembe-2024-11-18-18-21-52-utc-scaled.jpg" alt="everest region" title="Lower Pangboche village Nepal, Sagarmatha, November 2017"/></a></li><li class="yatra-gallery-item"><a href="https://nepalvibb.com/wp-content/uploads/2025/06/Image2.jpg" data-lightbox="yatra-tour-gallery-1" data-title="" title="Image2"><img src="https://nepalvibb.com/wp-content/uploads/2025/06/Image2.jpg" alt="yaks i everest" title="Image2"/></a></li><li class="yatra-gallery-item"><a href="https://nepalvibb.com/wp-content/uploads/2025/06/group-of-yaks-carrying-goods-along-the-route-to-ev-2025-01-09-04-59-00-utc-1-scaled.jpg" data-lightbox="yatra-tour-gallery-1" data-title="Yaks bærer ting" title="Everest base Camp trek"><img src="https://nepalvibb.com/wp-content/uploads/2025/06/group-of-yaks-carrying-goods-along-the-route-to-ev-2025-01-09-04-59-00-utc-1-scaled.jpg" alt="" title="Everest base Camp trek"/></a></li><li class="yatra-gallery-item"><a href="https://nepalvibb.com/wp-content/uploads/2019/11/edmund-hillary-monastery-in-khumjung-village-nepa-2025-03-08-04-35-01-utc-scaled.jpg" data-lightbox="yatra-tour-gallery-1" data-title="Edmund Hillary Monastery in Khumjung village, trek to Everest base camp, Sagarmatha national park, Solukhumbu, Nepal Himalayas" title="Edmund Hillary Monastery in Khumjung village, Nepal Himalayas"><img src="https://nepalvibb.com/wp-content/uploads/2019/11/edmund-hillary-monastery-in-khumjung-village-nepa-2025-03-08-04-35-01-utc-scaled.jpg" alt="" title="Edmund Hillary Monastery in Khumjung village, Nepal Himalayas"/></a></li><li class="yatra-gallery-item"><a href="https://nepalvibb.com/wp-content/uploads/2025/12/Trekking-i-Nepal.jpg" data-lightbox="yatra-tour-gallery-1" data-title="" title="Trekking i Nepal"><img src="https://nepalvibb.com/wp-content/uploads/2025/12/Trekking-i-Nepal.jpg" alt="Nepalvibb" title="Trekking i Nepal"/></a></li><li class="yatra-gallery-item"><a href="https://nepalvibb.com/wp-content/uploads/2022/01/IMG_3356-scaled.jpg" data-lightbox="yatra-tour-gallery-1" data-title="" title="IMG_3356"><img src="https://nepalvibb.com/wp-content/uploads/2022/01/IMG_3356-scaled.jpg" alt="everest" title="IMG_3356"/></a></li><li class="yatra-gallery-item"><a href="https://nepalvibb.com/wp-content/uploads/2025/12/everest-region-scaled.jpg" data-lightbox="yatra-tour-gallery-1" data-title="Prayer wheels in high Himalaya Mountains, Nepal village. Annapurna Two range region in Nepal, located at Annapurna Circuit Trekking Hiking Trail" title="Prayer wheels in high Himalaya Mountains, Nepal village"><img src="https://nepalvibb.com/wp-content/uploads/2025/12/everest-region-scaled.jpg" alt="" title="Prayer wheels in high Himalaya Mountains, Nepal village"/></a></li><li class="yatra-gallery-item"><a href="https://nepalvibb.com/wp-content/uploads/2019/11/A-essential-transport-in-Himalaya.jpg" data-lightbox="yatra-tour-gallery-1" data-title="" title="A essential transport in Himalaya"><img src="https://nepalvibb.com/wp-content/uploads/2019/11/A-essential-transport-in-Himalaya.jpg" alt="" title="A essential transport in Himalaya"/></a></li>        </ul>
+    </div>
+</div>
+</div></div><div class="yatra-tab-item useful_information"><div class="yatra-tab-content">
+    <h3 class="tab-title">
+        <span class="tab-icon fas fa-info-circle"></span>         Useful Information    </h3>
+
+    <div class="useful-information-section">
+        <div class="yatra-tab-section-inner">
+            
+            <!-- Trip Facts Grid -->
+            <div class="trip-facts-grid">
+                                    <div class="fact-item">
+                        <span class="fact-icon fas fa-clock"></span>
+                        <div class="fact-data">
+                            <strong>Duration</strong>
+                            <span>14 dager</span>
+                        </div>
+                    </div>
+                                    <div class="fact-item">
+                        <span class="fact-icon fas fa-map-marker-alt"></span>
+                        <div class="fact-data">
+                            <strong>Location</strong>
+                            <span>Nepal</span>
+                        </div>
+                    </div>
+                                    <div class="fact-item">
+                        <span class="fact-icon fas fa-users"></span>
+                        <div class="fact-data">
+                            <strong>Group Size</strong>
+                            <span>4</span>
+                        </div>
+                    </div>
+                                    <div class="fact-item">
+                        <span class="fact-icon fas fa-user-friends"></span>
+                        <div class="fact-data">
+                            <strong>Max Pax</strong>
+                            <span>30</span>
+                        </div>
+                    </div>
+                                    <div class="fact-item">
+                        <span class="fact-icon fas fa-tag"></span>
+                        <div class="fact-data">
+                            <strong>Price</strong>
+                            <span>&#107;&#114;14000</span>
+                        </div>
+                    </div>
+                            </div>
+
+            <!-- Custom Content -->
+                    </div>
+    </div>
+    <h3 class="tab-title"><span class="tab-icon fas fa-info-circle"></span> Useful Information</h3>
+<div class="text-section">
+    <div class="yatra-tab-section-inner">
+            </div><!-- .yatra-tab-section-inner -->
+</div>
+</div></div> </div>    </div>
+    </div><!-- #tour-${ID} -->
+</div><!-- end of .yatra-single-main-content-area-inner--></div><!-- end of .yatra-single-main-content-area --><div class="yatra-single-tour-sidebar yatra-col-md-4 yatra-col-xs-12">
+
+
+
+ <div class="">
+                        <div class="tg-blog-sidebar mb-10">
+                            <div class="tg-blog-sidebar-search tg-blog-sidebar-box mb-10 text-center">
+                                 <p class="text-muted">Våre ekspertreiseplanleggere hjelper deg med å designe den perfekte reisen, bare for deg</p>
+
+                   <a href="../../plan-your-trips?slug=everest-base-camp-trek" class="btn btn-primary">Planlegg turene dine</a>
+                            </div>
+                            
+                            <div class="tg-blog-post tg-blog-sidebar-box border-bottom mb-5 pt-10 pb-10">
+                                <h5 class="tg-blog-sidebar-title">Relaterte pakker </h5>
+                                	                                    <div class="tg-blog-post-item d-flex   mb-10">
+                                    <div class="tg-blog-post-thumb mr-15">
+                                        <img src="https://nepalvibb.com/wp-content/uploads/2026/04/IMG_5233-scaled.jpg" alt="post">
+                                    </div>
+                                    <div class="tg-blog-post-content w-100">
+                                        <h4 class="tg-blog-post-title mb-5"><a title="How to Get to Lofoten" href="https://nepalvibb.com/tour/ama-yangri-trek/">Fantastisk 5-dagers tur til Aama Yangri fra Kathmandu</a></h4>
+                                        
+                                   
+                               	
+			</div> </div>                                <div class="tg-blog-post-item d-flex   mb-10">
+                                    <div class="tg-blog-post-thumb mr-15">
+                                        <img src="https://nepalvibb.com/wp-content/uploads/2022/01/annapurna-scaled.jpg" alt="post">
+                                    </div>
+                                    <div class="tg-blog-post-content w-100">
+                                        <h4 class="tg-blog-post-title mb-5"><a title="How to Get to Lofoten" href="https://nepalvibb.com/tour/annapurna-circuit-trek/">Oppdag Magien ved Annapurna Circuit Trek</a></h4>
+                                        
+                                   
+                               	
+			</div> </div>                                <div class="tg-blog-post-item d-flex   mb-10">
+                                    <div class="tg-blog-post-thumb mr-15">
+                                        <img src="https://nepalvibb.com/wp-content/uploads/2019/11/langtang-trek-2.webp" alt="post">
+                                    </div>
+                                    <div class="tg-blog-post-content w-100">
+                                        <h4 class="tg-blog-post-title mb-5"><a title="How to Get to Lofoten" href="https://nepalvibb.com/tour/langtang-valley-trek/">Oppdag Skjønnheten i Himalaya: Langtang Valley Trek</a></h4>
+                                        
+                                   
+                               	
+			</div> </div>                                <div class="tg-blog-post-item d-flex   mb-10">
+                                    <div class="tg-blog-post-thumb mr-15">
+                                        <img src="https://nepalvibb.com/wp-content/uploads/2019/11/yoga.webp" alt="post">
+                                    </div>
+                                    <div class="tg-blog-post-content w-100">
+                                        <h4 class="tg-blog-post-title mb-5"><a title="How to Get to Lofoten" href="https://nepalvibb.com/tour/yoga-trek/">Yoga og Meditasjonsretrett i Nepal</a></h4>
+                                        
+                                   
+                               	
+			</div> </div>                                <div class="tg-blog-post-item d-flex   mb-10">
+                                    <div class="tg-blog-post-thumb mr-15">
+                                        <img src="https://nepalvibb.com/wp-content/uploads/2019/11/Annapurna-Base-Camp-Trek.jpg" alt="post">
+                                    </div>
+                                    <div class="tg-blog-post-content w-100">
+                                        <h4 class="tg-blog-post-title mb-5"><a title="How to Get to Lofoten" href="https://nepalvibb.com/tour/poon-hill-annapurna-base-camp-trek/">Poon Hill og Annapurna Base Camp Trek</a></h4>
+                                        
+                                   
+                               	
+			</div> </div>			                 </div>
+                            
+                            <div class="tg-blog-sidebar-box">               
+    <h5 class="tg-blog-sidebar-title">Relaterte innlegg</h5>
+
+    <p>Fant ikke noe relatert innhold.</p></div>
+
+                                
+                            </div>
+ <div class="tg-blog-sidebar-box" style="font-size: 14px;">
+								
+					
+</ul>
+								</div>
+								
+ 
+</div>        </main><!-- #main -->
+        </section>
+<div class="yatra-single-main-content-area yatra-col-md-8 yatra-col-xs-12">
+
+<aside class="aside--box my-3 rounded-none tg-tour-about-sidebar bg-primary text-white text-center">
+                    <div class="d-flex gap-3 align-items-center">
+                        <p class="text-light pb-0 mb-0">Våre ekspertreiseplanleggere hjelper deg med å designe den perfekte reisen, bare for deg</p>
+                    
+                     <a href="../../plan-your-trips/" class="btn btn-light">Planlegg turene dine</a>
+                    </div>
+                    
+
+
+                  
+
+                </aside>
+                
+   <div class="tg-tour-about-review-form-wrap mb-45">
+                                    <h4 class="tg-tour-about-title mb-5">Legg igjen en anmeldelse</h4>
+                                     
+                                    <div class="tg-tour-about-review-form">
+               <div id="tour-review-form">
+    
+    <form id="submitTourReview">
+         <div class="row">
+                                                <div class="col-lg-6 mb-15">
+        <input class="input my-2" type="text" placeholder="Ditt navn"  name="author" id="tour_name" required>
+        </div> <div class="col-lg-6 mb-15">
+        <input class="input my-2" type="email" name="email" placeholder="Din e-post" id="tour_email" required>
+        </div>
+         <div class="col-lg-12 mb-15">
+        <label for="tour_rating">Vurdering:</label>
+         
+        <select name="rating " class="form-select " style="background: #f5f5f5; padding:10px" id="tour_rating" required>
+            <option value="">Velg vurdering</option>
+            <option value="5">★★★★★</option>
+            <option value="4">★★★★</option>
+            <option value="3">★★★</option>
+            <option value="2">★★</option>
+            <option value="1">★</option>
+        </select>
+        </div>
+         <div class="col-lg-12 mb-15">
+        <textarea class="textarea  mb-5" placeholder="Skriv anmeldelse" ne="comment" id="tour_comment" required></textarea>
+
+        <input type="hidden" name="post_id" value="38">
+        </div>
+        </div>
+        <button type="submit" class="tg-btn tg-btn-switch-animation">Send inn anmeldelse</button>
+    </form>
+    <div id="review-message"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+       </div>
+
+<img src="https://nepalvibb.com/wp-content/themes/nepaltravel/assets/img/footer/footer-bg.svg" class="fot" alt="">
+
+<footer>
+    <div class="tg-footer-area tg-footer-su-wrapper tg-footer-space include-bg" style="background: #3a582f;">
+        <div class="container">
+            <div class="tg-footer-top">
+                <div class="row">
+                    <div class="col-lg-6 mx-auto text-center text-light p-3">
+                        
+                         
+                            
+                                             <div class="footer-widget"><h3 class="tg-footer-widget-title mb-25">Vi er tilknyttet</h3><img width="527" height="82" src="https://nepalvibb.com/wp-content/uploads/2025/05/gov.png" class="image wp-image-94  attachment-full size-full" alt="" style="max-width: 100%; height: auto;" title="We’re associated with" decoding="async" loading="lazy" srcset="https://nepalvibb.com/wp-content/uploads/2025/05/gov.png 527w, https://nepalvibb.com/wp-content/uploads/2025/05/gov-300x47.png 300w" sizes="auto, (max-width: 527px) 100vw, 527px" /></div>                        
+                             
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <div class="tg-footer-widget mb-40">
+                             
+                                            <div class="footer-widget"><h3 class="tg-footer-widget-title mb-25">Om oss</h3>			<div class="textwidget"><p>Hos Nepalvibb får du oppleve den ultimate reisen – hvor majestetiske fjell, vill natur, rik kultur og den varme gjestfriheten til det nepalske folket forenes i ett uforglemmelig eventyr.</p>
+</div>
+		</div>                                        
+                            <div class="tg-footer-social mt-2">
+                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <div class="tg-footer-widget tg-footer-link ml-80 mb-40">
+                             
+                             
+                                            <div class="footer-widget"><h3 class="tg-footer-widget-title mb-25">Bedrift</h3><div class="menu-company-container"><ul id="menu-company" class="menu"><li id="menu-item-96" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-96"><a href="#">Home</a></li>
+<li id="menu-item-98" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-98"><a href="https://nepalvibb.com/company/">Bedriftsprofil</a></li>
+<li id="menu-item-97" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-97"><a href="https://nepalvibb.com/category/blog/">Blogg</a></li>
+<li id="menu-item-95" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95"><a href="https://nepalvibb.com/contact-us/">Kontakt oss</a></li>
+</ul></div></div>                                        
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <div class="tg-footer-widget tg-footer-link mb-40">
+                                             <div class="footer-widget"><h3 class="tg-footer-widget-title mb-25">Vår aktivitet</h3><div class="menu-activity-container"><ul id="menu-activity" class="menu"><li id="menu-item-99" class="menu-item menu-item-type-taxonomy menu-item-object-activity menu-item-99"><a href="https://nepalvibb.com/activity/turer/">Turer</a></li>
+<li id="menu-item-101" class="menu-item menu-item-type-taxonomy menu-item-object-activity current-tour-ancestor current-menu-parent current-tour-parent menu-item-101"><a href="https://nepalvibb.com/activity/trekking/">Trekking</a></li>
+<li id="menu-item-102" class="menu-item menu-item-type-taxonomy menu-item-object-activity menu-item-102"><a href="https://nepalvibb.com/activity/paragliding/">Paragliding</a></li>
+</ul></div></div>                                         
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <div class="tg-footer-widget tg-footer-info mb-40">
+                                             <div class="widget_text footer-widget"><h3 class="tg-footer-widget-title mb-25">Informasjon</h3><div class="textwidget custom-html-widget"><ul>
+                                <li>
+                                    <a class="d-flex" href="https://maps.google.com/?q=Thamel+Marg,+Kathmandu+Nepal">
+                                        <span class="mr-15"><i class="fa-solid fa-map-marker-alt"></i></span>
+                                        Thamel Marg, Katmandu Nepal
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="d-flex" href="tel:+97714512865">
+                                        <span class="mr-15"><i class="fa-solid fa-phone"></i></span>
+                                        +977 014512865, +977 014512764
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="d-flex" href="mailto:info@nepalvibb.com">
+                                        <span class="mr-15"><i class="fa-solid fa-envelope"></i></span>
+                                        info@nepalvibb.com
+                                    </a>
+                                </li>
+                            </ul></div></div>                                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<section class="bg-dark1 py-3 text-white fs-6">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                Opphavsrett  2026 -  Nepalvibb            </div>
+            <div class="col-lg-4 text-center">
+                Datterselskap av <a href="https://www.actual-adventure.com/" target="_blank"> <img width="70" src="https://www.actual-adventure.com/public/uploads/actual-adventure-logo-np.svg"/></a>
+            </div>
+            <div class="col-lg-4">
+                <ul class="d-flex justify-content-lg-end gap-2">
+                    <li class="me-2">Vi akseptere:</li>
+                    <li class="me-2"><img width="30" src="https://nepalvibb.com/wp-content/themes/nepaltravel/assets/img/destination/tu/payment-visa.svg" alt="Visa"></li><li class="me-2"><img width="30" src="https://nepalvibb.com/wp-content/themes/nepaltravel/assets/img/destination/tu/payment-mastercard.svg" alt="Mastercard"></li><li class="me-2"><img width="30" src="https://nepalvibb.com/wp-content/themes/nepaltravel/assets/img/destination/tu/payment-american-express.svg" alt="American-express"></li><li class="me-2"><img width="30" src="https://nepalvibb.com/wp-content/themes/nepaltravel/assets/img/destination/tu/payment-banktransfer.svg" alt="Banktransfer"></li>                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="trip-sidebar">
+    <a href="/plan-your-trip/" class="text-white text-decoration-none fw-bold">Planlegg turene dine</a>
+</div>
+
+<script type="text/javascript">
+const header = document.querySelector('.header-logo');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+  
+  
+    jQuery(document).ready(function($) {
+        $('#send_message_button').click(function() {
+            var message = $('#message_input').val();
+            var file = $('#file_input')[0].files[0];
+
+            var formData = new FormData();
+            formData.append('action', 'send_private_chat');
+            formData.append('message', message);
+            formData.append('file', file);
+
+            $.ajax({
+                url: ajaxurl, // WordPress AJAX URL
+                type: 'POST',
+                data: formData,
+                processData: false,
+                contentType: false,
+                success: function(response) {
+                    if (response.success) {
+                        alert('Message sent successfully!');
+                    } else {
+                        alert('Error: ' + response.data.error);
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.log('AJAX error: ', error);
+                }
+            });
+        });
+    });
+</script>
+<!--Start of Tawk.to Script-->
+ 
+<!--End of Tawk.to Script-->
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/nepaltravel/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+		<div
+			class="qlwapp"
+			style="--qlwapp-scheme-font-family:inherit;--qlwapp-scheme-font-size:14px;--qlwapp-scheme-icon-size:60px;--qlwapp-scheme-icon-font-size:24px;--qlwapp-scheme-box-max-height:400px;--qlwapp-scheme-box-message-word-break:break-all;--qlwapp-button-notification-bubble-animation:none;"
+			data-contacts="[{&quot;id&quot;:0,&quot;bot_id&quot;:&quot;&quot;,&quot;order&quot;:1,&quot;active&quot;:1,&quot;chat&quot;:1,&quot;avatar&quot;:&quot;https:\/\/www.gravatar.com\/avatar\/00000000000000000000000000000000&quot;,&quot;type&quot;:&quot;phone&quot;,&quot;phone&quot;:&quot;4748672979&quot;,&quot;group&quot;:&quot;https:\/\/chat.whatsapp.com\/EQuPUtcPzEdIZVlT8JyyNw&quot;,&quot;firstname&quot;:&quot;John&quot;,&quot;lastname&quot;:&quot;Doe&quot;,&quot;label&quot;:&quot;Support&quot;,&quot;message&quot;:&quot;Hello! I&#039;m testing the nepalvibb Chat &quot;,&quot;timefrom&quot;:&quot;00:00&quot;,&quot;timeto&quot;:&quot;00:00&quot;,&quot;timezone&quot;:&quot;UTC+0&quot;,&quot;visibility&quot;:&quot;readonly&quot;,&quot;timedays&quot;:[],&quot;display&quot;:{&quot;entries&quot;:{&quot;post&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]},&quot;page&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]},&quot;tour&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]},&quot;yatra-booking&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]},&quot;yatra-customers&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]},&quot;our_teams&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]},&quot;slider&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]}},&quot;taxonomies&quot;:{&quot;category&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]},&quot;post_tag&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]},&quot;activity&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]},&quot;destination&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]},&quot;grade&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]}},&quot;target&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]},&quot;devices&quot;:&quot;all&quot;}}]"
+			data-display="{&quot;devices&quot;:&quot;all&quot;,&quot;entries&quot;:{&quot;post&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]},&quot;page&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]},&quot;tour&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]},&quot;yatra-booking&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]},&quot;yatra-customers&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]},&quot;our_teams&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]},&quot;slider&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]}},&quot;taxonomies&quot;:{&quot;category&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]},&quot;post_tag&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]},&quot;activity&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]},&quot;destination&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]},&quot;grade&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]}},&quot;target&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]}}"
+			data-button="{&quot;layout&quot;:&quot;button&quot;,&quot;box&quot;:&quot;no&quot;,&quot;position&quot;:&quot;bottom-left&quot;,&quot;text&quot;:&quot;chat med en ekspert&quot;,&quot;message&quot;:&quot;Hello! I&#039;m testing the nepalvibb Chat &quot;,&quot;icon&quot;:&quot;qlwapp-whatsapp-icon&quot;,&quot;type&quot;:&quot;phone&quot;,&quot;phone&quot;:&quot;4748672979&quot;,&quot;group&quot;:&quot;https:\/\/chat.whatsapp.com\/EQuPUtcPzEdIZVlT8JyyNw&quot;,&quot;developer&quot;:&quot;no&quot;,&quot;rounded&quot;:&quot;yes&quot;,&quot;timefrom&quot;:&quot;00:00&quot;,&quot;timeto&quot;:&quot;00:00&quot;,&quot;timedays&quot;:[],&quot;timezone&quot;:&quot;UTC+0&quot;,&quot;visibility&quot;:&quot;readonly&quot;,&quot;animation_name&quot;:&quot;&quot;,&quot;animation_delay&quot;:&quot;&quot;,&quot;whatsapp_link_type&quot;:&quot;web&quot;,&quot;notification_bubble&quot;:&quot;none&quot;,&quot;notification_bubble_animation&quot;:&quot;none&quot;}"
+			data-box="{&quot;enable&quot;:&quot;yes&quot;,&quot;auto_open&quot;:&quot;no&quot;,&quot;auto_delay_open&quot;:1000,&quot;lazy_load&quot;:&quot;no&quot;,&quot;allow_outside_close&quot;:&quot;no&quot;,&quot;header&quot;:&quot;\n\t\t\t\t\t\t\t\t&lt;p style=\&quot;line-height: 1;text-align: start\&quot;&gt;&lt;span style=\&quot;font-size: 12px;vertical-align: bottom;letter-spacing: -0.2px;opacity: 0.8;margin: 5px 0 0 1px\&quot;&gt;Powered by&lt;\/span&gt;&lt;\/p&gt;\n\t\t\t\t\t\t\t\t&lt;p style=\&quot;line-height: 1;text-align: start\&quot;&gt;&lt;a style=\&quot;font-size: 24px;line-height: 34px;font-weight: bold;text-decoration: none;color: white\&quot; href=\&quot;https:\/\/quadlayers.com\/products\/whatsapp-chat\/?utm_source=qlwapp_plugin&amp;utm_medium=header&amp;utm_campaign=social-chat\&quot; target=\&quot;_blank\&quot; rel=\&quot;noopener\&quot;&gt;Social Chat&lt;\/a&gt;&lt;\/p&gt;&quot;,&quot;footer&quot;:&quot;&lt;p style=\&quot;text-align: start;\&quot;&gt;Need help? Our team is just a message away&lt;\/p&gt;&quot;,&quot;response&quot;:&quot;Write a response&quot;,&quot;consent_message&quot;:&quot;I accept cookies and privacy policy.&quot;,&quot;consent_enabled&quot;:&quot;no&quot;}"
+			data-scheme="{&quot;font_family&quot;:&quot;inherit&quot;,&quot;font_size&quot;:&quot;14&quot;,&quot;icon_size&quot;:&quot;60&quot;,&quot;icon_font_size&quot;:&quot;24&quot;,&quot;box_max_height&quot;:&quot;400&quot;,&quot;brand&quot;:&quot;&quot;,&quot;text&quot;:&quot;&quot;,&quot;link&quot;:&quot;&quot;,&quot;message&quot;:&quot;&quot;,&quot;label&quot;:&quot;&quot;,&quot;name&quot;:&quot;&quot;,&quot;contact_role_color&quot;:&quot;&quot;,&quot;contact_name_color&quot;:&quot;&quot;,&quot;contact_availability_color&quot;:&quot;&quot;,&quot;box_message_word_break&quot;:&quot;break-all&quot;}"
+		>
+					</div>
+		<script src="https://nepalvibb.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
+<script src="https://nepalvibb.com/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.13.3" id="jquery-ui-datepicker-js"></script>
+<script id="jquery-ui-datepicker-js-after">
+jQuery(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Lukk","currentText":"I dag","monthNames":["januar","februar","mars","april","mai","juni","juli","august","september","oktober","november","desember"],"monthNamesShort":["jan","feb","mar","apr","mai","jun","jul","aug","sep","okt","nov","des"],"nextText":"Neste","prevText":"Forrige","dayNames":["s\u00f8ndag","mandag","tirsdag","onsdag","torsdag","fredag","l\u00f8rdag"],"dayNamesShort":["s\u00f8n","man","tir","ons","tor","fre","l\u00f8r"],"dayNamesMin":["S","M","T","O","T","F","L"],"dateFormat":"MM d, yy","firstDay":1,"isRTL":false});});
+//# sourceURL=jquery-ui-datepicker-js-after
+</script>
+<script id="ajax-login-script-js-extra">
+var ajax_login_params = {"ajax_url":"https://nepalvibb.com/wp-admin/admin-ajax.php"};
+//# sourceURL=ajax-login-script-js-extra
+</script>
+<script src="https://nepalvibb.com/wp-content/themes/nepaltravel/js/ajax-login.js" id="ajax-login-script-js"></script>
+<script src="https://nepalvibb.com/wp-content/themes/nepaltravel/assets/js/bootstrap.min.js" id="bootstrap-js-js"></script>
+<script src="https://nepalvibb.com/wp-content/themes/nepaltravel/assets/js/isotope.pkgd.min.js" id="isotope-js-js"></script>
+<script src="https://nepalvibb.com/wp-content/themes/nepaltravel/assets/js/imagesloaded.pkgd.min.js" id="imagesloaded-js-js"></script>
+<script src="https://nepalvibb.com/wp-content/themes/nepaltravel/assets/js/jquery.magnific-popup.min.js" id="magnific-popup-js-js"></script>
+<script src="https://nepalvibb.com/wp-content/themes/nepaltravel/assets/js/jquery.odometer.min.js" id="odometer-js-js"></script>
+<script src="https://nepalvibb.com/wp-content/themes/nepaltravel/assets/js/jquery.appear.js" id="appear-js-js"></script>
+<script src="https://nepalvibb.com/wp-content/themes/nepaltravel/assets/js/swiper-bundle.min.js" id="swiper-js-js"></script>
+<script src="https://nepalvibb.com/wp-content/themes/nepaltravel/assets/js/flatpickr.js" id="flatpickr-js-js"></script>
+<script src="https://nepalvibb.com/wp-content/themes/nepaltravel/assets/js/nice-select.js" id="nice-select-js-js"></script>
+<script src="https://nepalvibb.com/wp-content/themes/nepaltravel/assets/js/ajax-form.js" id="ajax-form-js-js"></script>
+<script src="https://nepalvibb.com/wp-content/themes/nepaltravel/assets/js/wow.min.js" id="wow-js-js"></script>
+<script src="https://nepalvibb.com/wp-content/themes/nepaltravel/assets/js/main.js" id="main-js-js"></script>
+<script src="https://nepalvibb.com/wp-content/themes/nepaltravel/js/navigation.js?ver=1.0.0" id="nepaltravel-navigation-js"></script>
+<script id="custom-script-js-extra">
+var ajax_object = {"ajax_url":"https://nepalvibb.com/wp-admin/admin-ajax.php"};
+//# sourceURL=custom-script-js-extra
+</script>
+<script src="https://nepalvibb.com/wp-content/themes/nepaltravel/assets/js/custom.js" id="custom-script-js"></script>
+<script id="tour-review-ajax-js-extra">
+var tourReviewAjax = {"ajaxurl":"https://nepalvibb.com/wp-admin/admin-ajax.php","nonce":"566f4956df"};
+//# sourceURL=tour-review-ajax-js-extra
+</script>
+<script src="https://nepalvibb.com/wp-content/themes/nepaltravel/assets/js/tour-review.js" id="tour-review-ajax-js"></script>
+<script id="trip-message-system-js-extra">
+var tripMsg = {"ajaxurl":"https://nepalvibb.com/wp-admin/admin-ajax.php","nonce":"d364754448"};
+//# sourceURL=trip-message-system-js-extra
+</script>
+<script src="https://nepalvibb.com/wp-content/themes/nepaltravel/js/trip-message-system.js" id="trip-message-system-js"></script>
+<script src="https://nepalvibb.com/wp-content/plugins/wp-whatsapp-chat/build/frontend/js/index.js?ver=b3ee53ad15beacf47fdc" id="qlwapp-frontend-js"></script>
+<script id="gt_widget_script_66404386-js-before">
+window.gtranslateSettings = /* document.write */ window.gtranslateSettings || {};window.gtranslateSettings['66404386'] = {"default_language":"no","languages":["en","no"],"url_structure":"none","native_language_names":1,"flag_style":"2d","flag_size":24,"wrapper_selector":"#gt-wrapper-66404386","alt_flags":[],"custom_css":".gt_float_switcher .gt-selected .gt-current-lang{\r\ncolor: #fff;\r\n}\r\n.gt_float_switcher\r\n{\r\nbackground: transparent !important;\r\nfont-size: 14px !important;\r\nmargin-top: 30px;\r\n}\r\n.header-sticky .gt_float_switcher\r\n{\r\nmargin-top: 17px;\r\n}\r\n.header-sticky .gt_float_switcher .gt-selected .gt-current-lang\r\n{\r\ncolor: #000 !important;\r\n}\r\n.gt_float_switcher img\r\n{\r\nwidth: 21px  !important;\r\n}\r\n\r\n.gt_float_switcher .gt-selected\r\n{\r\nbackground: transparent !important;\r\n}\r\n.gt_float_switcher .gt-selected .gt-current-lang\r\n{\r\ncolor: #fff !important;\r\n}\r\n.gt_float_switcher .gt_options a\r\n{\r\ncolor: #fff !important;\r\npadding: 6px 9px !important;\r\n}\r\n#gt-wrapper-47842581\r\n{\r\npadding-top:32px  !important;\r\n}","horizontal_position":"inline"};
+//# sourceURL=gt_widget_script_66404386-js-before
+</script><script src="https://cdn.gtranslate.net/widgets/latest/flags.js?ver=6.9.4" data-no-optimize="1" data-no-minify="1" data-gt-orig-url="/tour/everest-base-camp-trek/" data-gt-orig-domain="nepalvibb.com" data-gt-widget-id="66404386" defer></script><script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://nepalvibb.com/wp-includes/js/wp-emoji-release.min.js?ver=6.9.4"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://nepalvibb.com/wp-includes/js/wp-emoji-loader.min.js
+</script>
+<script type="text/javascript">(function (undefined) {let scriptOptions={"_localizedStrings":{"redirect_overlay_title":"Hold On","redirect_overlay_text":"You are being redirected to another page,<br>it may take a few seconds.","webview_notification_text":"The selected provider doesn't support embedded browsers!"},"_targetWindow":"prefer-popup","_redirectOverlay":"overlay-with-spinner-and-message","_unsupportedWebviewBehavior":""};
+/**
+ * Used when Cross-Origin-Opener-Policy blocked the access to the opener. We can't have a reference of the opened windows, so we should attempt to refresh only the windows that has opened popups.
+ */
+window._nslHasOpenedPopup = false;
+window._nslWebViewNoticeElement = null;
+
+window.NSLPopup = function (url, title, w, h) {
+
+    /**
+     * Cross-Origin-Opener-Policy blocked the access to the opener
+     */
+    if (typeof BroadcastChannel === "function") {
+        const _nslLoginBroadCastChannel = new BroadcastChannel('nsl_login_broadcast_channel');
+        _nslLoginBroadCastChannel.onmessage = (event) => {
+            if (window?._nslHasOpenedPopup && event.data?.action === 'redirect') {
+                window._nslHasOpenedPopup = false;
+
+                const url = event.data?.href;
+                _nslLoginBroadCastChannel.close();
+                if (typeof window.nslRedirect === 'function') {
+                    window.nslRedirect(url);
+                } else {
+                    window.opener.location = url;
+                }
+            }
+        };
+    }
+
+    const userAgent = navigator.userAgent,
+        mobile = function () {
+            return /\b(iPhone|iP[ao]d)/.test(userAgent) ||
+                /\b(iP[ao]d)/.test(userAgent) ||
+                /Android/i.test(userAgent) ||
+                /Mobile/i.test(userAgent);
+        },
+        screenX = window.screenX !== undefined ? window.screenX : window.screenLeft,
+        screenY = window.screenY !== undefined ? window.screenY : window.screenTop,
+        outerWidth = window.outerWidth !== undefined ? window.outerWidth : document.documentElement.clientWidth,
+        outerHeight = window.outerHeight !== undefined ? window.outerHeight : document.documentElement.clientHeight - 22,
+        targetWidth = mobile() ? null : w,
+        targetHeight = mobile() ? null : h,
+        left = parseInt(screenX + (outerWidth - targetWidth) / 2, 10),
+        right = parseInt(screenY + (outerHeight - targetHeight) / 2.5, 10),
+        features = [];
+    if (targetWidth !== null) {
+        features.push('width=' + targetWidth);
+    }
+    if (targetHeight !== null) {
+        features.push('height=' + targetHeight);
+    }
+    features.push('left=' + left);
+    features.push('top=' + right);
+    features.push('scrollbars=1');
+
+    const newWindow = window.open(url, title, features.join(','));
+
+    if (window.focus) {
+        newWindow.focus();
+    }
+
+    window._nslHasOpenedPopup = true;
+
+    return newWindow;
+};
+
+let isWebView = null;
+
+function checkWebView() {
+    if (isWebView === null) {
+        function _detectOS(ua) {
+            if (/Android/.test(ua)) {
+                return "Android";
+            } else if (/iPhone|iPad|iPod/.test(ua)) {
+                return "iOS";
+            } else if (/Windows/.test(ua)) {
+                return "Windows";
+            } else if (/Mac OS X/.test(ua)) {
+                return "Mac";
+            } else if (/CrOS/.test(ua)) {
+                return "Chrome OS";
+            } else if (/Firefox/.test(ua)) {
+                return "Firefox OS";
+            }
+            return "";
+        }
+
+        function _detectBrowser(ua) {
+            let android = /Android/.test(ua);
+
+            if (/Opera Mini/.test(ua) || / OPR/.test(ua) || / OPT/.test(ua)) {
+                return "Opera";
+            } else if (/CriOS/.test(ua)) {
+                return "Chrome for iOS";
+            } else if (/Edge/.test(ua)) {
+                return "Edge";
+            } else if (android && /Silk\//.test(ua)) {
+                return "Silk";
+            } else if (/Chrome/.test(ua)) {
+                return "Chrome";
+            } else if (/Firefox/.test(ua)) {
+                return "Firefox";
+            } else if (android) {
+                return "AOSP";
+            } else if (/MSIE|Trident/.test(ua)) {
+                return "IE";
+            } else if (/Safari\//.test(ua)) {
+                return "Safari";
+            } else if (/AppleWebKit/.test(ua)) {
+                return "WebKit";
+            }
+            return "";
+        }
+
+        function _detectBrowserVersion(ua, browser) {
+            if (browser === "Opera") {
+                return /Opera Mini/.test(ua) ? _getVersion(ua, "Opera Mini/") :
+                    / OPR/.test(ua) ? _getVersion(ua, " OPR/") :
+                        _getVersion(ua, " OPT/");
+            } else if (browser === "Chrome for iOS") {
+                return _getVersion(ua, "CriOS/");
+            } else if (browser === "Edge") {
+                return _getVersion(ua, "Edge/");
+            } else if (browser === "Chrome") {
+                return _getVersion(ua, "Chrome/");
+            } else if (browser === "Firefox") {
+                return _getVersion(ua, "Firefox/");
+            } else if (browser === "Silk") {
+                return _getVersion(ua, "Silk/");
+            } else if (browser === "AOSP") {
+                return _getVersion(ua, "Version/");
+            } else if (browser === "IE") {
+                return /IEMobile/.test(ua) ? _getVersion(ua, "IEMobile/") :
+                    /MSIE/.test(ua) ? _getVersion(ua, "MSIE ")
+                        :
+                        _getVersion(ua, "rv:");
+            } else if (browser === "Safari") {
+                return _getVersion(ua, "Version/");
+            } else if (browser === "WebKit") {
+                return _getVersion(ua, "WebKit/");
+            }
+            return "0.0.0";
+        }
+
+        function _getVersion(ua, token) {
+            try {
+                return _normalizeSemverString(ua.split(token)[1].trim().split(/[^\w\.]/)[0]);
+            } catch (o_O) {
+            }
+            return "0.0.0";
+        }
+
+        function _normalizeSemverString(version) {
+            const ary = version.split(/[\._]/);
+            return (parseInt(ary[0], 10) || 0) + "." +
+                (parseInt(ary[1], 10) || 0) + "." +
+                (parseInt(ary[2], 10) || 0);
+        }
+
+        function _isWebView(ua, os, browser, version, options) {
+            switch (os + browser) {
+                case "iOSSafari":
+                    return false;
+                case "iOSWebKit":
+                    return _isWebView_iOS(options);
+                case "AndroidAOSP":
+                    return false;
+                case "AndroidChrome":
+                    return parseFloat(version) >= 42 ? /; wv/.test(ua) : /\d{2}\.0\.0/.test(version) ? true : _isWebView_Android(options);
+            }
+            return false;
+        }
+
+        function _isWebView_iOS(options) {
+            const document = (window["document"] || {});
+
+            if ("WEB_VIEW" in options) {
+                return options["WEB_VIEW"];
+            }
+            return !("fullscreenEnabled" in document || "webkitFullscreenEnabled" in document || false);
+        }
+
+        function _isWebView_Android(options) {
+            if ("WEB_VIEW" in options) {
+                return options["WEB_VIEW"];
+            }
+            return !("requestFileSystem" in window || "webkitRequestFileSystem" in window || false);
+        }
+
+        const options = {},
+            nav = window.navigator || {},
+            ua = nav.userAgent || "",
+            os = _detectOS(ua),
+            browser = _detectBrowser(ua),
+            browserVersion = _detectBrowserVersion(ua, browser);
+
+        isWebView = _isWebView(ua, os, browser, browserVersion, options);
+    }
+
+    return isWebView;
+}
+
+function isAllowedWebViewForUserAgent(provider) {
+    const facebookAllowedWebViews = [
+        'Instagram',
+        'FBAV',
+        'FBAN'
+    ];
+    let whitelist = [];
+
+    if (provider && provider === 'facebook') {
+        whitelist = facebookAllowedWebViews;
+    }
+
+    const nav = window.navigator || {},
+        ua = nav.userAgent || "";
+
+    if (whitelist.length && ua.match(new RegExp(whitelist.join('|')))) {
+        return true;
+    }
+
+    return false;
+}
+
+function disableButtonInWebView(providerButtonElement) {
+    if (providerButtonElement) {
+        providerButtonElement.classList.add('nsl-disabled-provider');
+        providerButtonElement.setAttribute('href', '#');
+
+        providerButtonElement.addEventListener('pointerdown', (e) => {
+            if (!window._nslWebViewNoticeElement) {
+                window._nslWebViewNoticeElement = document.createElement('div');
+                window._nslWebViewNoticeElement.id = "nsl-notices-fallback";
+                window._nslWebViewNoticeElement.addEventListener('pointerdown', function (e) {
+                    this.parentNode.removeChild(this);
+                    window._nslWebViewNoticeElement = null;
+                });
+                const webviewNoticeHTML = '<div class="error"><p>' + scriptOptions._localizedStrings.webview_notification_text + '</p></div>';
+
+                window._nslWebViewNoticeElement.insertAdjacentHTML("afterbegin", webviewNoticeHTML);
+                document.body.appendChild(window._nslWebViewNoticeElement);
+            }
+        });
+    }
+
+}
+
+window._nslDOMReady(function () {
+
+    window.nslRedirect = function (url) {
+        if (scriptOptions._redirectOverlay) {
+            const overlay = document.createElement('div');
+            overlay.id = "nsl-redirect-overlay";
+            let overlayHTML = '';
+            const overlayContainer = "<div id='nsl-redirect-overlay-container'>",
+                overlayContainerClose = "</div>",
+                overlaySpinner = "<div id='nsl-redirect-overlay-spinner'></div>",
+                overlayTitle = "<p id='nsl-redirect-overlay-title'>" + scriptOptions._localizedStrings.redirect_overlay_title + "</p>",
+                overlayText = "<p id='nsl-redirect-overlay-text'>" + scriptOptions._localizedStrings.redirect_overlay_text + "</p>";
+
+            switch (scriptOptions._redirectOverlay) {
+                case "overlay-only":
+                    break;
+                case "overlay-with-spinner":
+                    overlayHTML = overlayContainer + overlaySpinner + overlayContainerClose;
+                    break;
+                default:
+                    overlayHTML = overlayContainer + overlaySpinner + overlayTitle + overlayText + overlayContainerClose;
+                    break;
+            }
+
+            overlay.insertAdjacentHTML("afterbegin", overlayHTML);
+            document.body.appendChild(overlay);
+        }
+
+        window.location = url;
+    };
+
+    let targetWindow = scriptOptions._targetWindow || 'prefer-popup',
+        lastPopup = false;
+
+
+    document.addEventListener('click', function (e) {
+        if (e.target) {
+            const buttonLinkElement = e.target.closest('a[data-plugin="nsl"][data-action="connect"]') || e.target.closest('a[data-plugin="nsl"][data-action="link"]');
+            if (buttonLinkElement) {
+                if (lastPopup && !lastPopup.closed) {
+                    e.preventDefault();
+                    lastPopup.focus();
+                } else {
+
+                    let href = buttonLinkElement.href,
+                        success = false;
+                    if (href.indexOf('?') !== -1) {
+                        href += '&';
+                    } else {
+                        href += '?';
+                    }
+
+                    const redirectTo = buttonLinkElement.dataset.redirect;
+                    if (redirectTo === 'current') {
+                        href += 'redirect=' + encodeURIComponent(window.location.href) + '&';
+                    } else if (redirectTo && redirectTo !== '') {
+                        href += 'redirect=' + encodeURIComponent(redirectTo) + '&';
+                    }
+
+                    if (targetWindow !== 'prefer-same-window' && checkWebView()) {
+                        targetWindow = 'prefer-same-window';
+                    }
+
+                    if (targetWindow === 'prefer-popup') {
+                        lastPopup = NSLPopup(href + 'display=popup', 'nsl-social-connect', buttonLinkElement.dataset.popupwidth, buttonLinkElement.dataset.popupheight);
+                        if (lastPopup) {
+                            success = true;
+                            e.preventDefault();
+                        }
+                    } else if (targetWindow === 'prefer-new-tab') {
+                        const newTab = window.open(href + 'display=popup', '_blank');
+                        if (newTab) {
+                            if (window.focus) {
+                                newTab.focus();
+                            }
+                            success = true;
+                            window._nslHasOpenedPopup = true;
+                            e.preventDefault();
+                        }
+                    }
+
+                    if (!success) {
+                        window.location = href;
+                        e.preventDefault();
+                    }
+                }
+            }
+        }
+    });
+
+    let buttonCountChanged = false;
+
+    const googleLoginButtons = document.querySelectorAll(' a[data-plugin="nsl"][data-provider="google"]');
+    if (googleLoginButtons.length && checkWebView()) {
+        googleLoginButtons.forEach(function (googleLoginButton) {
+            if (scriptOptions._unsupportedWebviewBehavior === 'disable-button') {
+                disableButtonInWebView(googleLoginButton);
+            } else {
+                googleLoginButton.remove();
+                buttonCountChanged = true;
+            }
+        });
+    }
+
+    const facebookLoginButtons = document.querySelectorAll(' a[data-plugin="nsl"][data-provider="facebook"]');
+    if (facebookLoginButtons.length && checkWebView() && /Android/.test(window.navigator.userAgent) && !isAllowedWebViewForUserAgent('facebook')) {
+        facebookLoginButtons.forEach(function (facebookLoginButton) {
+            if (scriptOptions._unsupportedWebviewBehavior === 'disable-button') {
+                disableButtonInWebView(facebookLoginButton);
+            } else {
+                facebookLoginButton.remove();
+                buttonCountChanged = true;
+            }
+        });
+    }
+
+    const separators = document.querySelectorAll('div.nsl-separator');
+    if (buttonCountChanged && separators.length) {
+        separators.forEach(function (separator) {
+            const separatorParentNode = separator.parentNode;
+            if (separatorParentNode) {
+                const separatorButtonContainer = separatorParentNode.querySelector('div.nsl-container-buttons');
+                if (separatorButtonContainer && !separatorButtonContainer.hasChildNodes()) {
+                    separator.remove();
+                }
+            }
+        })
+    }
+});})();</script>
+
+

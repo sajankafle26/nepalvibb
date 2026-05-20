@@ -1,7 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from 'react';
-import { useParams } from 'next/navigation';
+import { useState, useEffect, useRef, use } from 'react';
 import Link from 'next/link';
 import { motion, useScroll, useSpring, useTransform, AnimatePresence } from 'framer-motion';
 import {
@@ -9,14 +8,14 @@ import {
   ArrowRight, Clock, MessageSquare, Heart,
   ChevronRight, Facebook, Twitter, Linkedin,
   Mail, Bookmark, CheckCircle2, Layout,
-  MapPin, Coffee, Eye
+  MapPin, Coffee, Eye, Mountain
 } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import { cn } from '@/lib/utils';
 
-export default function BlogDetailPage() {
-  const { slug } = useParams();
+export default function BlogDetailPage({ params }) {
+  const { slug } = use(params);
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [toc, setToc] = useState([]);
@@ -86,22 +85,22 @@ export default function BlogDetailPage() {
 
   if (loading) return (
     <div className="min-h-screen bg-white flex flex-col items-center justify-center">
-      <motion.div 
+      <motion.div
         animate={{ rotate: 360 }}
         transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
         className="w-16 h-16 border-[3px] border-primary/5 border-t-orange-500 rounded-full"
       />
-      <p className="mt-8 text-[11px] font-black uppercase tracking-[0.4em] text-primary/40 animate-pulse">Navigerer til eventyret...</p>
+      <p className="mt-6 text-[10px] font-bold uppercase tracking-wider text-primary/40 animate-pulse">Navigerer til eventyret...</p>
     </div>
   );
 
   if (!data?.blog) return (
     <div className="min-h-screen bg-white flex flex-col items-center justify-center p-8 text-center">
-      <h1 className="text-8xl font-black text-primary/5 absolute select-none">404</h1>
-      <div className="relative space-y-6">
-        <h2 className="text-4xl font-black text-primary uppercase italic tracking-tighter">Artikkelen ble ikke funnet</h2>
-        <p className="text-gray-400 font-medium max-w-xs mx-auto">Vinden har kanskje blåst denne siden bort over Himalaya...</p>
-        <Link href="/blogg" className="inline-flex items-center space-x-3 bg-primary text-white px-10 py-5 rounded-2xl text-xs font-black uppercase tracking-widest shadow-2xl hover:bg-orange-500 transition-all">
+      <h1 className="text-8xl font-bold text-primary/5 absolute select-none">404</h1>
+      <div className="relative space-y-4">
+        <h2 className="text-2xl sm:text-3xl font-bold font-display text-primary tracking-tight">Artikkelen ble ikke funnet</h2>
+        <p className="text-gray-400 font-light max-w-xs mx-auto text-sm">Vinden har kanskje blåst denne siden bort over Himalaya...</p>
+        <Link href="/blogg" className="inline-flex items-center space-x-2 bg-primary text-white px-8 py-4 rounded-xl text-xs font-bold uppercase tracking-wider shadow-md hover:bg-orange-500 transition-all">
           <ArrowLeft className="w-4 h-4" /> <span>Tilbake til bloggen</span>
         </Link>
       </div>
@@ -110,121 +109,100 @@ export default function BlogDetailPage() {
 
   const { blog, related } = data;
   const readingTime = Math.ceil((blog.content || "").split(' ').length / 200);
-
   return (
-    <div className="min-h-screen bg-[#FAFAFA] selection:bg-orange-500 selection:text-white overflow-x-hidden">
+    <div className="min-h-screen bg-[#FAFAF9] selection:bg-orange-500 selection:text-white overflow-x-hidden">
       <motion.div className="fixed top-0 left-0 right-0 h-1 bg-orange-500 z-[200] origin-left" style={{ scaleX }} />
       <Navbar />
 
-      {/* Cinematic Hero */}
-      <section className="relative h-screen min-h-[800px] w-full flex items-center justify-center overflow-hidden bg-primary">
-        <motion.div className="absolute inset-0 z-0" style={{ y: y1, filter: `blur(${blurHero}px)` }}>
-          <img src={blog.image} className="w-full h-full object-cover scale-110 brightness-75" alt="" />
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-transparent to-[#FAFAFA]" />
-        </motion.div>
-
-        <div className="max-w-6xl mx-auto px-6 relative z-10 w-full pt-20">
-          <motion.div 
-            style={{ opacity: opacityHero }}
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center space-y-10"
-          >
-            <div className="flex flex-wrap items-center justify-center gap-6">
-              <span className="bg-orange-500 text-white px-8 py-2.5 rounded-full text-[11px] font-black uppercase tracking-[0.2em] shadow-2xl shadow-orange-500/40">
-                {blog.category}
-              </span>
-              <span className="flex items-center space-x-2 text-white/60 text-[11px] font-black uppercase tracking-widest">
-                <Clock className="w-4 h-4 text-orange-500" />
-                <span>{readingTime} minutter lesing</span>
-              </span>
-            </div>
-
-            <h1 className="text-6xl md:text-8xl font-black text-white uppercase tracking-tighter leading-[0.9] italic drop-shadow-2xl max-w-5xl mx-auto">
-              {blog.title}
-            </h1>
-
-            <div className="flex items-center justify-center space-x-12 pt-12">
-              <div className="flex items-center space-x-5 text-left group">
-                <div className="w-16 h-16 rounded-[2rem] bg-white p-1 shadow-2xl group-hover:rotate-6 transition-transform duration-500">
-                  <div className="w-full h-full rounded-[1.8rem] bg-orange-500 flex items-center justify-center text-white font-black text-2xl uppercase tracking-tighter italic">
-                    {blog.author[0]}
-                  </div>
-                </div>
-                <div>
-                  <p className="text-white font-black text-sm uppercase tracking-[0.1em]">{blog.author}</p>
-                  <p className="text-white/40 text-[10px] font-black uppercase tracking-widest">Reiseekspert</p>
-                </div>
-              </div>
-              <div className="h-12 w-[1px] bg-white/10 hidden md:block" />
-              <div className="hidden md:flex flex-col items-start text-left">
-                <p className="text-white font-black text-sm uppercase tracking-[0.1em]">
-                  {new Date(blog.createdAt).toLocaleDateString('no-NO', { day: 'numeric', month: 'long', year: 'numeric' })}
-                </p>
-                <p className="text-white/40 text-[10px] font-black uppercase tracking-widest">Publisert</p>
-              </div>
-            </div>
-          </motion.div>
+      {/* Editorial Header Section */}
+      <header className="pt-32 pb-12 md:pt-40 md:pb-20 max-w-4xl mx-auto px-6 text-center">
+        <div className="flex items-center justify-center space-x-2 text-[11px] font-bold uppercase tracking-[0.2em] text-orange-600 mb-6">
+          <span>Blogg</span>
+          <span>•</span>
+          <span>{blog.category || 'Reisetips'}</span>
         </div>
 
-        <motion.div 
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="absolute bottom-12 left-1/2 -translate-x-1/2 z-10 hidden md:flex flex-col items-center space-y-3"
-        >
-          <span className="text-[10px] font-black uppercase tracking-[0.5em] text-white/30 italic">Oppdag</span>
-          <div className="w-[1px] h-16 bg-gradient-to-b from-orange-500/50 to-transparent" />
-        </motion.div>
-      </section>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary tracking-tight leading-tight max-w-4xl mx-auto font-display">
+          {blog.title}
+        </h1>
+
+        <div className="flex flex-wrap items-center justify-center gap-y-4 gap-x-6 mt-8 text-gray-500 text-xs font-medium">
+          <div className="flex items-center space-x-2">
+            <div className="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center text-white font-bold text-xs uppercase">
+              {blog.author ? blog.author[0] : 'N'}
+            </div>
+            <span className="font-semibold text-primary">{blog.author || 'Nepalvibb Editor'}</span>
+          </div>
+          <div className="w-[1px] h-4 bg-gray-200 hidden sm:block" />
+          <div className="flex items-center space-x-1">
+            <Calendar className="w-3.5 h-3.5 text-gray-400" />
+            <span>{new Date(blog.createdAt).toLocaleDateString('no-NO', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
+          </div>
+          <div className="w-[1px] h-4 bg-gray-200 hidden sm:block" />
+          <div className="flex items-center space-x-1">
+            <Clock className="w-3.5 h-3.5 text-gray-400" />
+            <span>{readingTime} min lesetid</span>
+          </div>
+        </div>
+      </header>
+
+      {/* Feature Image */}
+      <div className="max-w-9xl mx-auto px-6 mb-16">
+        <div className="relative aspect-[16/9] md:aspect-[21/9] rounded-[2rem] overflow-hidden shadow-md border border-gray-100 bg-gray-50">
+          <img src={blog.image} className="w-full h-full object-cover" alt={blog.title} />
+        </div>
+      </div>
 
       {/* Content Layout */}
-      <section className="relative z-20 -mt-32 pb-40">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="pb-24">
+        <div className="max-w-9xl mx-auto px-6">
           <div className="flex flex-col lg:flex-row gap-16">
-            
-            {/* Left Rail: TOC */}
-            <aside className="hidden lg:block w-72 shrink-0">
-              <div className="sticky top-40 space-y-16">
-                <div className="space-y-8">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-8 h-[2px] bg-orange-500" />
-                    <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-primary/40">Innhold</h4>
-                  </div>
-                  <nav className="flex flex-col space-y-5">
-                    {toc.map((item) => (
-                      <a
-                        key={item.id}
-                        href={`#${item.id}`}
-                        className={cn(
-                          "group flex items-center space-x-4 transition-all duration-500",
-                          activeId === item.id ? "translate-x-3" : "opacity-40 hover:opacity-100"
-                        )}
-                      >
-                        <div className={cn(
-                          "w-1.5 h-1.5 rounded-full transition-all duration-500",
-                          activeId === item.id ? "bg-orange-500 scale-150" : "bg-gray-300 group-hover:bg-orange-500"
-                        )} />
-                        <span className={cn(
-                          "text-[10px] font-black uppercase tracking-widest transition-colors",
-                          activeId === item.id ? "text-primary" : "text-gray-400 group-hover:text-primary"
-                        )}>
-                          {item.text}
-                        </span>
-                      </a>
-                    ))}
-                  </nav>
-                </div>
 
-                <div className="pt-12 border-t border-gray-100 space-y-8">
-                  <div className="flex items-center space-x-3 text-primary/40">
-                    <Share2 className="w-4 h-4" />
-                    <span className="text-[10px] font-black uppercase tracking-[0.4em]">Del Artikkelen</span>
+            {/* Left Rail: TOC */}
+            <aside className="hidden lg:block w-64 shrink-0">
+              <div className="sticky top-40 space-y-12">
+                {toc.length > 0 && (
+                  <div className="space-y-6">
+                    <h4 className="text-[10px] font-bold uppercase tracking-widest text-primary/40">I denne artikkelen</h4>
+                    <nav className="flex flex-col space-y-3">
+                      {toc.map((item) => (
+                        <a
+                          key={item.id}
+                          href={`#${item.id}`}
+                          className={cn(
+                            "text-xs leading-relaxed transition-all duration-300 font-medium py-1 border-l-2 pl-4 block",
+                            activeId === item.id
+                              ? "border-orange-500 text-orange-600 font-semibold"
+                              : "border-transparent text-gray-400 hover:text-primary hover:border-gray-300"
+                          )}
+                        >
+                          {item.text}
+                        </a>
+                      ))}
+                    </nav>
                   </div>
-                  <div className="flex items-center gap-3">
-                    {[Facebook, Twitter, Linkedin, Mail].map((Icon, i) => (
-                      <button key={i} className="w-12 h-12 rounded-2xl bg-white border border-gray-100 flex items-center justify-center text-primary/40 hover:text-orange-500 hover:border-orange-200 hover:shadow-xl hover:shadow-orange-500/10 transition-all group">
-                        <Icon className="w-5 h-5 transition-transform group-hover:scale-110" />
-                      </button>
+                )}
+
+                <div className="pt-8 border-t border-gray-100 space-y-4">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-primary/40 flex items-center gap-2">
+                    <Share2 className="w-3.5 h-3.5" /> Del denne saken
+                  </span>
+                  <div className="flex items-center gap-2">
+                    {[
+                      { Icon: Facebook, link: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(typeof window !== 'undefined' ? window.location.href : '')}` },
+                      { Icon: Twitter, link: `https://twitter.com/intent/tweet?url=${encodeURIComponent(typeof window !== 'undefined' ? window.location.href : '')}` },
+                      { Icon: Linkedin, link: `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(typeof window !== 'undefined' ? window.location.href : '')}` },
+                      { Icon: Mail, link: `mailto:?subject=${encodeURIComponent(blog.title)}&body=${encodeURIComponent(typeof window !== 'undefined' ? window.location.href : '')}` }
+                    ].map(({ Icon, link }, i) => (
+                      <a
+                        key={i}
+                        href={link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-10 h-10 rounded-xl bg-white border border-gray-200 flex items-center justify-center text-gray-400 hover:text-orange-500 hover:border-orange-300 hover:bg-orange-50/30 transition-all cursor-pointer"
+                      >
+                        <Icon className="w-4 h-4" />
+                      </a>
                     ))}
                   </div>
                 </div>
@@ -232,45 +210,37 @@ export default function BlogDetailPage() {
             </aside>
 
             {/* Center: The Article */}
-            <main className="flex-1 max-w-4xl mx-auto">
-              <motion.div 
-                initial={{ opacity: 0, y: 40 }}
+            <main className="flex-1 max-w-9xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="bg-white rounded-[4rem] p-10 md:p-20 shadow-[0_40px_100px_rgba(0,0,0,0.03)] border border-gray-50 relative"
+                className="bg-white rounded-3xl p-6 md:p-12 border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.015)] relative"
               >
-                {/* Floating Meta */}
-                <div className="absolute -top-12 right-12 md:right-20 flex space-x-3">
-                  <button className="w-24 h-24 bg-primary rounded-[2.5rem] shadow-2xl flex flex-col items-center justify-center text-white space-y-2 group hover:bg-orange-500 transition-all">
-                    <Heart className="w-6 h-6 group-hover:fill-white transition-all" />
-                    <span className="text-[9px] font-black uppercase tracking-widest">Favoritt</span>
-                  </button>
-                </div>
-
-                <article 
+                <article
                   ref={contentRef}
-                  className="prose prose-2xl prose-primary max-w-none 
-                    prose-headings:text-primary prose-headings:font-black prose-headings:uppercase prose-headings:tracking-tighter prose-headings:italic
-                    prose-h2:text-4xl md:prose-h2:text-5xl prose-h2:mt-24 prose-h2:mb-10 prose-h2:leading-[1]
-                    prose-h3:text-2xl prose-h3:mt-16 prose-h3:mb-6
-                    prose-p:text-gray-600 prose-p:leading-[1.8] prose-p:font-medium prose-p:text-lg md:prose-p:xl prose-p:mb-10
-                    prose-strong:text-primary prose-strong:font-black
-                    prose-blockquote:border-l-[10px] prose-blockquote:border-orange-500 prose-blockquote:bg-[#FAFAFA] prose-blockquote:p-12 prose-blockquote:rounded-[3rem] prose-blockquote:italic prose-blockquote:font-black prose-blockquote:text-primary prose-blockquote:text-3xl prose-blockquote:shadow-sm
-                    prose-img:rounded-[4rem] prose-img:shadow-2xl prose-img:my-20 prose-img:border-8 prose-img:border-white
+                  className="prose prose-primary max-w-none font-sans
+                    prose-headings:text-primary prose-headings:font-bold prose-headings:tracking-tight prose-headings:font-display
+                    prose-h2:text-2xl md:prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6
+                    prose-h3:text-xl md:prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4
+                    prose-p:text-gray-700 prose-p:font-light prose-p:leading-[1.8] prose-p:text-base md:prose-p:lg prose-p:mb-8
+                    prose-strong:text-primary prose-strong:font-bold
+                    prose-blockquote:border-l-4 prose-blockquote:border-orange-500 prose-blockquote:bg-orange-50/20 prose-blockquote:py-6 prose-blockquote:px-8 prose-blockquote:rounded-r-2xl prose-blockquote:italic prose-blockquote:text-gray-800 prose-blockquote:text-lg md:prose-blockquote:text-xl prose-blockquote:my-10 prose-blockquote:font-normal prose-blockquote:shadow-none
+                    prose-img:rounded-2xl prose-img:shadow-md prose-img:my-12 prose-img:border-0
                     prose-a:text-orange-500 prose-a:no-underline hover:prose-a:underline
-                    prose-li:text-gray-600 prose-li:font-medium prose-li:text-lg md:prose-li:text-xl
+                    prose-li:text-gray-700 prose-li:font-light prose-li:text-base md:prose-li:text-lg prose-li:leading-relaxed prose-li:mb-2
                     marker:text-orange-500"
                   dangerouslySetInnerHTML={{ __html: blog.content }}
                 />
 
                 {/* Tags & Footer Meta */}
-                <div className="mt-24 pt-12 border-t border-gray-50 flex flex-wrap gap-4">
+                <div className="mt-16 pt-8 border-t border-gray-100 flex flex-wrap gap-3">
                   {blog.category && (
-                    <div className="bg-gray-50 px-6 py-3 rounded-2xl text-[10px] font-black uppercase tracking-widest text-primary/40 flex items-center space-x-2">
+                    <div className="bg-gray-50 px-4 py-2 rounded-xl text-[10px] font-bold uppercase tracking-wider text-primary/60 flex items-center space-x-1.5">
                       <Tag className="w-3.5 h-3.5 text-orange-500" />
                       <span>{blog.category}</span>
                     </div>
                   )}
-                  <div className="bg-gray-50 px-6 py-3 rounded-2xl text-[10px] font-black uppercase tracking-widest text-primary/40 flex items-center space-x-2">
+                  <div className="bg-gray-50 px-4 py-2 rounded-xl text-[10px] font-bold uppercase tracking-wider text-primary/60 flex items-center space-x-1.5">
                     <MapPin className="w-3.5 h-3.5 text-orange-500" />
                     <span>Nepalvibb Insider</span>
                   </div>
@@ -278,101 +248,87 @@ export default function BlogDetailPage() {
               </motion.div>
 
               {/* Author Section */}
-              <div className="mt-20 p-12 bg-primary rounded-[4rem] text-white flex flex-col md:flex-row items-center gap-12 shadow-2xl relative overflow-hidden group">
-                <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl group-hover:scale-150 transition-transform duration-1000" />
+              <div className="mt-12 p-8 md:p-12 bg-primary rounded-3xl text-white flex flex-col md:flex-row items-center gap-8 shadow-sm border border-emerald-950 relative overflow-hidden group">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl group-hover:scale-125 transition-transform duration-1000" />
                 <div className="relative z-10 shrink-0">
-                  <div className="w-32 h-32 rounded-[3rem] bg-orange-500 p-1 shadow-2xl rotate-6 group-hover:rotate-0 transition-transform duration-700">
-                    <div className="w-full h-full rounded-[2.8rem] bg-primary flex items-center justify-center text-orange-500 font-black text-5xl italic tracking-tighter border-2 border-orange-500/20">
-                      {blog.author[0]}
+                  <div className="w-20 h-20 rounded-2xl bg-orange-500 p-0.5 shadow-xl rotate-3 group-hover:rotate-0 transition-transform duration-500">
+                    <div className="w-full h-full rounded-2xl bg-primary flex items-center justify-center text-orange-500 font-bold text-3xl font-display uppercase">
+                      {blog.author ? blog.author[0] : 'N'}
                     </div>
                   </div>
                 </div>
-                <div className="relative z-10 flex-1 text-center md:text-left space-y-6">
-                  <div className="space-y-2">
-                    <p className="text-[10px] font-black uppercase tracking-[0.5em] text-orange-400">Signert av</p>
-                    <h3 className="text-4xl font-black uppercase tracking-tighter italic leading-none">{blog.author}</h3>
-                  </div>
-                  <p className="text-emerald-100/60 text-lg font-medium leading-relaxed max-w-xl italic">
-                    "Min lidenskap er å vise frem den ufortalte skjønnheten i Himalaya. Gjennom mine reiser i Nepal har jeg lært at de største eventyrene ofte finnes i de minste detaljene."
+                <div className="relative z-10 flex-1 text-center md:text-left space-y-3">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-orange-400">Skrevet av</p>
+                  <h3 className="text-2xl font-bold font-display text-white">{blog.author || 'Nepalvibb Editor'}</h3>
+                  <p className="text-emerald-100/75 text-sm leading-relaxed max-w-xl">
+                    Vår faste reiseekspert som brenner for å formidle unike reiseskildringer og praktiske tips fra Nepals mest spektakulære turområder.
                   </p>
-                  <div className="flex items-center justify-center md:justify-start space-x-6 pt-4">
-                    <button className="flex items-center space-x-2 text-[10px] font-black uppercase tracking-widest text-white group/btn">
-                      <span>Alle artikler</span>
-                      <ChevronRight className="w-4 h-4 text-orange-500 group-hover/btn:translate-x-1 transition-transform" />
-                    </button>
-                    <div className="w-[1px] h-4 bg-white/10" />
-                    <div className="flex space-x-4">
-                      <Twitter className="w-4 h-4 text-white/40 hover:text-orange-500 transition-colors cursor-pointer" />
-                      <Linkedin className="w-4 h-4 text-white/40 hover:text-orange-500 transition-colors cursor-pointer" />
-                    </div>
-                  </div>
                 </div>
               </div>
 
               {/* Enhanced CTA */}
-              <div className="mt-12 bg-white rounded-[4rem] p-12 md:p-20 border border-orange-100 shadow-2xl shadow-orange-500/5 text-center space-y-12 relative overflow-hidden">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent" />
-                <div className="space-y-6 max-w-2xl mx-auto">
-                   <div className="w-20 h-20 bg-orange-50 rounded-[2rem] flex items-center justify-center mx-auto mb-8">
-                     <Mountain className="w-10 h-10 text-orange-500" />
-                   </div>
-                   <h3 className="text-4xl md:text-5xl font-black text-primary uppercase italic tracking-tighter leading-none">Inspirert til å reise?</h3>
-                   <p className="text-gray-400 text-lg font-medium">Vi kan hjelpe deg med å planlegge en tur som ligner på det du nettopp leste om.</p>
+              <div className="mt-8 bg-emerald-50/50 rounded-3xl p-8 md:p-12 border border-emerald-100/80 text-center space-y-6 relative overflow-hidden">
+                <div className="max-w-xl mx-auto space-y-4">
+                  <div className="w-12 h-12 bg-orange-100 rounded-2xl flex items-center justify-center mx-auto">
+                    <Mountain className="w-6 h-6 text-orange-600" />
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold font-display text-primary tracking-tight">Klar for ditt eget eventyr?</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">Vi skreddersyr uforglemmelige reiser i Himalaya tilpasset dine ønsker og behov. La oss ta en prat om dine drømmer.</p>
                 </div>
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                  <Link href="/plan-your-trip" className="w-full sm:w-auto bg-primary text-white px-12 py-6 rounded-[2rem] text-xs font-black uppercase tracking-widest shadow-2xl hover:bg-orange-500 hover:scale-105 active:scale-95 transition-all flex items-center justify-center space-x-4">
-                    <span>Start planleggingen</span>
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+                  <Link href="/plan-your-trip" className="w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-xl text-xs font-bold uppercase tracking-wider transition-all shadow-md flex items-center justify-center space-x-2">
+                    <span>Planlegg din reise</span>
                     <ArrowRight className="w-4 h-4" />
                   </Link>
-                  <button className="w-full sm:w-auto border-2 border-gray-100 text-primary px-10 py-6 rounded-[2rem] text-xs font-black uppercase tracking-widest hover:border-primary transition-all">
-                    Se turer i Nepal
-                  </button>
+                  <Link href="/trips" className="w-full sm:w-auto border border-gray-200 bg-white text-primary px-8 py-4 rounded-xl text-xs font-bold uppercase tracking-wider hover:border-primary transition-all">
+                    Utforsk våre turer
+                  </Link>
                 </div>
               </div>
             </main>
 
             {/* Right Rail: Floating Features */}
-            <aside className="hidden xl:block w-80 shrink-0 pt-32">
-              <div className="sticky top-40 space-y-10">
+            <aside className="hidden xl:block w-80 shrink-0">
+              <div className="sticky top-40 space-y-8">
                 {/* Newsletter Box */}
-                <div className="bg-[#1A1A1A] rounded-[3rem] p-10 text-white space-y-8 shadow-2xl">
-                   <div className="w-12 h-12 bg-orange-500 rounded-2xl flex items-center justify-center shadow-xl shadow-orange-500/20">
-                     <Mail className="w-6 h-6 text-white" />
-                   </div>
-                   <div className="space-y-2">
-                     <h4 className="text-xl font-black uppercase tracking-tight leading-none italic">Innsikt rett i innboksen</h4>
-                     <p className="text-white/40 text-[11px] font-medium leading-relaxed">Månedlige tips fra våre guider i Himalaya.</p>
-                   </div>
-                   <form className="space-y-3">
-                     <input 
-                      type="email" 
-                      placeholder="Din e-post..."
-                      className="w-full bg-white/5 border-none rounded-2xl px-6 py-4 text-sm font-medium focus:ring-2 focus:ring-orange-500 transition-all text-white placeholder-white/20"
-                     />
-                     <button className="w-full bg-white text-primary py-4 rounded-2xl text-[10px] font-black uppercase tracking-widest hover:bg-orange-500 hover:text-white transition-all">
-                       Abonner
-                     </button>
-                   </form>
+                <div className="bg-[#1C2C1C] rounded-3xl p-8 text-white space-y-6 shadow-sm border border-emerald-900/50">
+                  <div className="w-10 h-10 bg-orange-500 rounded-xl flex items-center justify-center">
+                    <Mail className="w-5 h-5 text-white" />
+                  </div>
+                  <div className="space-y-2">
+                    <h4 className="text-lg font-bold font-display tracking-tight text-white">Innsikt fra Himalaya</h4>
+                    <p className="text-emerald-100/60 text-xs leading-relaxed font-light">Månedlige reisebrev, pakketips og eksklusive tilbud direkte til deg.</p>
+                  </div>
+                  <form className="space-y-3" onSubmit={(e) => e.preventDefault()}>
+                    <input
+                      type="email"
+                      placeholder="Din e-postadresse"
+                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-xs text-white placeholder-white/30 focus:ring-1 focus:ring-orange-500 focus:border-orange-500 transition-all outline-none"
+                    />
+                    <button className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all shadow-lg shadow-orange-500/20">
+                      Abonner nå
+                    </button>
+                  </form>
                 </div>
 
                 {/* Popular Destinations Card */}
-                <div className="bg-white rounded-[3rem] p-10 border border-gray-100 shadow-sm space-y-8">
-                   <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-primary/40">Populært Nå</h4>
-                   <div className="space-y-6">
-                      {[
-                        { name: "Everest Base Camp", price: "2,400", img: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=100&q=80" },
-                        { name: "Annapurna Circuit", price: "1,800", img: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=100&q=80" },
-                        { name: "Poon Hill Trek", price: "950", img: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=100&q=80" }
-                      ].map((item, i) => (
-                        <div key={i} className="flex items-center space-x-4 group cursor-pointer">
-                          <img src={item.img} className="w-14 h-14 rounded-2xl object-cover grayscale group-hover:grayscale-0 transition-all duration-500" alt="" />
-                          <div className="space-y-1">
-                            <p className="text-[11px] font-black uppercase tracking-tight text-primary group-hover:text-orange-500 transition-colors">{item.name}</p>
-                            <p className="text-[10px] font-bold text-gray-400">Fra ${item.price}</p>
-                          </div>
+                <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm space-y-6">
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-primary/40">Mest populære turer</h4>
+                  <div className="space-y-5">
+                    {[
+                      { name: "Everest Base Camp Trek", price: "24 900 kr", img: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=100&q=80" },
+                      { name: "Annapurna Circuit", price: "18 500 kr", img: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=100&q=80" },
+                      { name: "Poon Hill Trek", price: "9 900 kr", img: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=100&q=80" }
+                    ].map((item, i) => (
+                      <div key={i} className="flex items-center space-x-3 group cursor-pointer">
+                        <img src={item.img} className="w-12 h-12 rounded-xl object-cover grayscale group-hover:grayscale-0 transition-all duration-300" alt="" />
+                        <div className="space-y-0.5">
+                          <p className="text-xs font-bold text-primary group-hover:text-orange-500 transition-colors leading-tight">{item.name}</p>
+                          <p className="text-[11px] font-semibold text-gray-400">Fra {item.price}</p>
                         </div>
-                      ))}
-                   </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </aside>
@@ -382,50 +338,39 @@ export default function BlogDetailPage() {
 
       {/* Recommended for reading */}
       {related?.length > 0 && (
-        <section className="py-40 bg-white border-t border-gray-50">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20 text-center md:text-left">
-              <div className="space-y-4">
-                <p className="text-orange-500 font-black uppercase tracking-[0.5em] text-[11px]">Neste eventyr</p>
-                <h2 className="text-5xl md:text-7xl font-black text-primary uppercase tracking-tighter italic leading-none">Relaterte Historier</h2>
+        <section className="py-24 bg-white border-t border-gray-100">
+          <div className="max-w-9xl mx-auto px-6">
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+              <div className="space-y-2">
+                <p className="text-orange-500 font-bold uppercase tracking-widest text-xs">Inspirasjon</p>
+                <h2 className="text-3xl md:text-4xl font-bold font-display text-primary tracking-tight">Flere spennende reiseskildringer</h2>
               </div>
-              <Link href="/blogg" className="inline-flex items-center space-x-4 text-xs font-black uppercase tracking-widest text-primary/40 hover:text-orange-500 transition-colors group">
-                <span>Utforsk Alle</span>
-                <div className="w-14 h-14 rounded-full border border-gray-100 flex items-center justify-center group-hover:border-orange-500 transition-all">
-                   <ArrowRight className="w-5 h-5" />
-                </div>
+              <Link href="/blogg" className="inline-flex items-center space-x-2 text-xs font-bold uppercase tracking-wider text-gray-400 hover:text-orange-500 transition-colors">
+                <span>Se alle artikler</span>
+                <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-              {related.map((post, idx) => (
-                <motion.div
-                  key={post._id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: idx * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <Link href={`/blogg/${post.slug}`} className="group block space-y-8">
-                    <div className="h-96 rounded-[4rem] overflow-hidden relative shadow-2xl group-hover:-translate-y-4 transition-all duration-700">
-                      <img src={post.image} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition-opacity" />
-                      <div className="absolute bottom-10 left-10 right-10">
-                        <p className="text-orange-400 text-[10px] font-black uppercase tracking-widest mb-3">{post.category}</p>
-                        <h4 className="text-2xl font-black text-white uppercase tracking-tighter italic leading-tight group-hover:text-orange-400 transition-colors">
-                          {post.title}
-                        </h4>
-                      </div>
-                    </div>
-                  </Link>
-                </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {related.map((post) => (
+                <Link key={post._id} href={`/blogg/${post.slug}`} className="group block space-y-4">
+                  <div className="aspect-[4/3] rounded-2xl overflow-hidden relative shadow-sm bg-gray-50">
+                    <img src={post.image} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
+                  </div>
+                  <div className="space-y-2">
+                    <p className="text-orange-600 text-[10px] font-bold uppercase tracking-widest">{post.category}</p>
+                    <h4 className="text-lg font-bold font-display text-primary group-hover:text-orange-500 transition-colors leading-snug">
+                      {post.title}
+                    </h4>
+                  </div>
+                </Link>
               ))}
             </div>
           </div>
         </section>
       )}
 
-      <Footer />
     </div>
   );
 }

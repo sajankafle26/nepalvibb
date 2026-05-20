@@ -59,22 +59,22 @@ export default function ReviewSection({ tripId }) {
   };
 
   return (
-    <section id="omtaler" className="scroll-mt-40 space-y-16">
-      <div className="flex items-end justify-between border-b border-gray-100 pb-10">
-        <div className="space-y-4">
-          <h2 className="text-4xl font-black text-primary uppercase tracking-tighter italic">Gjestevurderinger</h2>
+    <section id="omtaler" className="scroll-mt-40 space-y-12">
+      <div className="flex flex-col sm:flex-row sm:items-end justify-between border-b border-gray-100 pb-8 gap-6">
+        <div className="space-y-3">
+          <h2 className="text-2xl sm:text-3xl font-bold font-display text-primary tracking-tight">Gjestevurderinger</h2>
           <div className="flex items-center space-x-4">
             <div className="flex text-orange-500">
               {[1, 2, 3, 4, 5].map((star) => (
-                <Star key={star} className="w-5 h-5 fill-current" />
+                <Star key={star} className="w-4 h-4 fill-current" />
               ))}
             </div>
-            <span className="text-sm font-bold text-gray-400 uppercase tracking-widest">{reviews.length} Omtaler</span>
+            <span className="text-xs font-light text-gray-500 tracking-wide">{reviews.length} Omtaler</span>
           </div>
         </div>
         <button 
           onClick={() => setShowForm(!showForm)}
-          className="bg-primary text-white px-8 py-4 rounded-2xl text-[10px] font-black uppercase tracking-widest shadow-xl hover:bg-orange-500 transition-all"
+          className="bg-primary text-white px-6 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider hover:bg-orange-500 transition-all self-start sm:self-auto"
         >
           {showForm ? 'Avbryt' : 'Skriv en omtale'}
         </button>
@@ -88,45 +88,45 @@ export default function ReviewSection({ tripId }) {
             exit={{ opacity: 0, height: 0 }}
             className="overflow-hidden"
           >
-            <div className="bg-gray-50 p-10 md:p-16 rounded-[3.5rem] border border-gray-100 space-y-10">
+            <div className="bg-gray-50/50 p-8 md:p-12 rounded-3xl border border-gray-100/55 space-y-8">
               {submitted ? (
-                <div className="text-center space-y-6 py-10">
-                  <div className="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto text-emerald-500">
-                    <CheckCircle2 className="w-10 h-10" />
+                <div className="text-center space-y-4 py-8">
+                  <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto text-emerald-500">
+                    <CheckCircle2 className="w-8 h-8" />
                   </div>
-                  <h3 className="text-2xl font-black text-primary uppercase italic">Takk for din omtale!</h3>
-                  <p className="text-gray-500 font-medium">Din vurdering er sendt til moderering og vil bli synlig så snart den er godkjent av en administrator.</p>
+                  <h3 className="text-xl font-bold font-display text-primary tracking-tight">Takk for din omtale!</h3>
+                  <p className="text-gray-500 font-light text-sm">Din vurdering er sendt til moderering og vil bli synlig så snart den er godkjent av en administrator.</p>
                 </div>
               ) : (
                 <>
-                  <div className="text-center space-y-4">
-                    <h3 className="text-2xl font-black text-primary uppercase italic">Del din opplevelse</h3>
-                    <p className="text-gray-400 text-sm font-medium">Din tilbakemelding hjelper oss å bli bedre og andre reisende å velge riktig.</p>
+                  <div className="text-center space-y-2">
+                    <h3 className="text-xl font-bold font-display text-primary tracking-tight">Del din opplevelse</h3>
+                    <p className="text-gray-500 text-sm font-light">Din tilbakemelding hjelper oss å bli bedre og andre reisende å velge riktig.</p>
                   </div>
-                  <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div className="space-y-3">
-                      <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 px-2">Navn</label>
+                  <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <label className="text-[10px] font-bold uppercase tracking-wider text-gray-400 px-2">Navn</label>
                       <input 
                         type="text" 
                         required
                         value={formData.userName}
                         onChange={(e) => setFormData({...formData, userName: e.target.value})}
-                        className="w-full bg-white border-none rounded-2xl px-6 py-5 text-sm font-bold focus:ring-2 focus:ring-primary shadow-sm" 
+                        className="w-full bg-white border-2 border-gray-50 rounded-xl px-5 py-4 text-sm font-medium focus:outline-none focus:border-primary shadow-sm" 
                       />
                     </div>
-                    <div className="space-y-3">
-                      <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 px-2">E-post</label>
+                    <div className="space-y-2">
+                      <label className="text-[10px] font-bold uppercase tracking-wider text-gray-400 px-2">E-post</label>
                       <input 
                         type="email" 
                         required
                         value={formData.userEmail}
                         onChange={(e) => setFormData({...formData, userEmail: e.target.value})}
-                        className="w-full bg-white border-none rounded-2xl px-6 py-5 text-sm font-bold focus:ring-2 focus:ring-primary shadow-sm" 
+                        className="w-full bg-white border-2 border-gray-50 rounded-xl px-5 py-4 text-sm font-medium focus:outline-none focus:border-primary shadow-sm" 
                       />
                     </div>
-                    <div className="md:col-span-2 space-y-3 text-center">
-                      <label className="text-[10px] font-black uppercase tracking-widest text-gray-400">Din Vurdering</label>
-                      <div className="flex justify-center space-x-4 pt-2">
+                    <div className="md:col-span-2 space-y-2 text-center">
+                      <label className="text-[10px] font-bold uppercase tracking-wider text-gray-400">Din Vurdering</label>
+                      <div className="flex justify-center space-x-3 pt-1">
                         {[1, 2, 3, 4, 5].map((star) => (
                           <button 
                             key={star}
@@ -134,25 +134,25 @@ export default function ReviewSection({ tripId }) {
                             onClick={() => setFormData({...formData, rating: star})}
                             className="transition-transform active:scale-90"
                           >
-                            <Star className={cn("w-8 h-8", formData.rating >= star ? "text-orange-500 fill-current" : "text-gray-200")} />
+                            <Star className={cn("w-7 h-7", formData.rating >= star ? "text-orange-500 fill-current" : "text-gray-200")} />
                           </button>
                         ))}
                       </div>
                     </div>
-                    <div className="md:col-span-2 space-y-3">
-                      <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 px-2">Din Tilbakemelding</label>
+                    <div className="md:col-span-2 space-y-2">
+                      <label className="text-[10px] font-bold uppercase tracking-wider text-gray-400 px-2">Din Tilbakemelding</label>
                       <textarea 
                         rows={5} 
                         required
                         value={formData.comment}
                         onChange={(e) => setFormData({...formData, comment: e.target.value})}
-                        className="w-full bg-white border-none rounded-[2rem] px-8 py-6 text-sm font-medium focus:ring-2 focus:ring-primary shadow-sm resize-none" 
+                        className="w-full bg-white border-2 border-gray-50 rounded-2xl px-6 py-5 text-sm font-light focus:outline-none focus:border-primary shadow-sm resize-none" 
                       />
                     </div>
                     <div className="md:col-span-2">
                       <button 
                         disabled={submitting}
-                        className="w-full bg-primary text-white py-6 rounded-2xl text-[11px] font-black uppercase tracking-widest shadow-xl shadow-primary/20 hover:bg-orange-500 transition-all flex items-center justify-center space-x-4"
+                        className="w-full bg-primary text-white py-4.5 rounded-xl text-xs font-bold uppercase tracking-wider shadow-md hover:bg-orange-500 transition-all flex items-center justify-center space-x-3"
                       >
                         {submitting ? (
                           <div className="w-5 h-5 border-2 border-white/20 border-t-white rounded-full animate-spin" />
@@ -172,49 +172,49 @@ export default function ReviewSection({ tripId }) {
         )}
       </AnimatePresence>
 
-      <div className="space-y-10">
+      <div className="space-y-8">
         {loading ? (
-          <div className="flex justify-center py-20">
+          <div className="flex justify-center py-16">
             <div className="w-10 h-10 border-4 border-primary/10 border-t-primary rounded-full animate-spin" />
           </div>
         ) : reviews.length === 0 ? (
-          <div className="bg-gray-50 rounded-[3.5rem] p-20 text-center space-y-6">
-            <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto text-gray-200">
-              <MessageSquare className="w-8 h-8" />
+          <div className="bg-gray-50/50 rounded-3xl p-12 text-center space-y-4">
+            <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mx-auto text-gray-300 shadow-sm">
+              <MessageSquare className="w-6 h-6" />
             </div>
-            <p className="text-xl font-black text-primary uppercase tracking-tight italic">Ingen omtaler ennå</p>
-            <p className="text-gray-400 text-sm font-medium italic">Bli den første til å dele din erfaring fra denne reisen!</p>
+            <p className="text-lg font-bold font-display text-primary tracking-tight">Ingen omtaler ennå</p>
+            <p className="text-gray-500 text-sm font-light">Bli den første til å dele din erfaring fra denne reisen!</p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 gap-10">
+          <div className="grid grid-cols-1 gap-8">
             {reviews.map((review) => (
               <motion.div 
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 key={review._id} 
-                className="bg-white rounded-[3.5rem] p-10 md:p-12 border border-gray-100 hover:shadow-2xl transition-all group"
+                className="bg-white rounded-3xl p-8 md:p-10 border border-gray-100 hover:shadow-md transition-all group"
               >
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
-                  <div className="flex items-center space-x-6">
-                    <div className="w-16 h-16 rounded-2xl bg-primary text-white flex items-center justify-center font-black text-2xl shadow-xl shadow-primary/10 rotate-3 group-hover:rotate-0 transition-transform">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 rounded-xl bg-primary text-white flex items-center justify-center font-bold text-lg shadow-sm">
                       {review.userName[0]}
                     </div>
-                    <div className="space-y-1">
-                      <h4 className="text-xl font-black text-primary uppercase tracking-tighter italic">{review.userName}</h4>
-                      <div className="flex items-center space-x-3 text-[9px] font-black uppercase tracking-widest text-gray-300">
-                        <Calendar className="w-3 h-3 text-orange-500" />
+                    <div className="space-y-0.5">
+                      <h4 className="text-base font-bold text-primary tracking-tight">{review.userName}</h4>
+                      <div className="flex items-center space-x-2 text-[10px] font-light text-gray-400">
+                        <Calendar className="w-3.5 h-3.5 text-orange-500" />
                         <span>{new Date(review.createdAt).toLocaleDateString('no-NO')}</span>
                       </div>
                     </div>
                   </div>
-                  <div className="flex text-orange-500 bg-orange-50 px-6 py-2 rounded-full">
+                  <div className="flex text-orange-500 bg-orange-50/70 px-4 py-1.5 rounded-full self-start sm:self-auto">
                     {[1, 2, 3, 4, 5].map((star) => (
-                      <Star key={star} className={cn("w-4 h-4", review.rating >= star ? "fill-current" : "opacity-20")} />
+                      <Star key={star} className={cn("w-3.5 h-3.5", review.rating >= star ? "fill-current" : "opacity-20")} />
                     ))}
                   </div>
                 </div>
-                <p className="text-gray-600 font-medium leading-relaxed italic text-lg border-l-4 border-orange-500 pl-8 ml-2">
+                <p className="text-gray-600 font-light leading-relaxed text-base border-l-4 border-orange-500 pl-6 ml-1">
                   "{review.comment}"
                 </p>
               </motion.div>

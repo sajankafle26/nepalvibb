@@ -447,28 +447,27 @@ function PlanYourTripContent() {
                           </div>
                         </div>
                       ) : (
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                           {currentQuestion.type === 'text' ? (
                             <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="col-span-2">
-                              <textarea rows={8} value={responses[currentQuestion._id]?.[0] || ''} onChange={e => setResponses({ ...responses, [currentQuestion._id]: [e.target.value] })} className="w-full bg-white border-2 border-gray-100 rounded-[3rem] px-10 py-8 text-lg font-medium text-gray-800 focus:outline-none focus:border-primary focus:bg-white transition-all shadow-xl shadow-gray-100/50 resize-none" placeholder="Fortell oss litt mer om hva du tenker..." />
+                              <textarea rows={6} value={responses[currentQuestion._id]?.[0] || ''} onChange={e => setResponses({ ...responses, [currentQuestion._id]: [e.target.value] })} className="w-full bg-white border-2 border-gray-100 rounded-3xl px-6 py-5 text-sm font-light text-gray-800 focus:outline-none focus:border-primary focus:bg-white transition-all shadow-sm resize-none" placeholder="Fortell oss litt mer om hva du tenker..." />
                             </motion.div>
                           ) : (
                             currentQuestion.options.map((opt, i) => { 
                               const Icon = IconMap[opt.icon] || Layout; 
                               const isSelected = (responses[currentQuestion._id] || []).includes(opt.value); 
                               return (
-                                <motion.button key={opt.value} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.05 }} whileHover={{ y: -8, shadow: "0 30px 40px -10px rgba(0,0,0,0.08)" }} whileTap={{ scale: 0.96 }} onClick={() => handleOptionToggle(currentQuestion._id, opt.value, currentQuestion.type === 'multi-select')} className={cn("p-10 rounded-[3.5rem] border-2 transition-all flex flex-col items-start space-y-8 text-left relative group overflow-hidden", isSelected ? "border-primary bg-emerald-50/20 shadow-2xl shadow-primary/10" : "border-gray-50 bg-white hover:border-primary/20")}>
-                                  <div className={cn("absolute -bottom-6 -right-6 w-32 h-32 rounded-full transition-all duration-700 opacity-10", isSelected ? "bg-primary scale-150" : "bg-gray-100 scale-100 group-hover:scale-110")} />
-                                  <div className={cn("w-16 h-16 rounded-[1.5rem] flex items-center justify-center transition-all duration-500 relative z-10", isSelected ? "bg-primary text-white rotate-12 scale-110 shadow-lg" : "bg-gray-50 text-gray-400 group-hover:rotate-6 group-hover:bg-primary group-hover:text-white")}>
-                                    <Icon className="w-8 h-8" />
+                                <motion.button key={opt.value} initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.04 }} whileHover={{ y: -4 }} whileTap={{ scale: 0.98 }} onClick={() => handleOptionToggle(currentQuestion._id, opt.value, currentQuestion.type === 'multi-select')} className={cn("p-6 rounded-3xl border-2 transition-all flex flex-col items-start space-y-6 text-left relative group overflow-hidden", isSelected ? "border-primary bg-emerald-50/20 shadow-md" : "border-gray-50 bg-white hover:border-primary/20")}>
+                                  <div className={cn("w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-500 relative z-10", isSelected ? "bg-primary text-white rotate-12 scale-110 shadow-sm" : "bg-gray-50 text-gray-400 group-hover:bg-primary group-hover:text-white")}>
+                                    <Icon className="w-6 h-6" />
                                   </div>
-                                  <div className="space-y-2 relative z-10">
-                                    <p className={cn("text-lg font-black uppercase tracking-tighter transition-colors italic", isSelected ? "text-primary" : "text-gray-400 group-hover:text-primary")}>{opt.label}</p>
-                                    <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest opacity-60">{isSelected ? 'Valgt' : 'Klikk for å velge'}</p>
+                                  <div className="space-y-1 relative z-10">
+                                    <p className={cn("text-base font-bold font-display tracking-tight transition-colors", isSelected ? "text-primary" : "text-gray-700 group-hover:text-primary")}>{opt.label}</p>
+                                    <p className="text-[10px] text-gray-400 font-bold uppercase tracking-wider">{isSelected ? 'Valgt' : 'Klikk for å velge'}</p>
                                   </div>
                                   {isSelected && (
-                                    <motion.div initial={{ scale: 0, rotate: -45 }} animate={{ scale: 1, rotate: 0 }} className="absolute top-8 right-8 bg-primary text-white p-2 rounded-2xl shadow-lg">
-                                      <Check className="w-5 h-5 stroke-[4px]" />
+                                    <motion.div initial={{ scale: 0, rotate: -45 }} animate={{ scale: 1, rotate: 0 }} className="absolute top-6 right-6 bg-primary text-white p-1.5 rounded-xl shadow-sm">
+                                      <Check className="w-4 h-4 stroke-[4px]" />
                                     </motion.div>
                                   )}
                                 </motion.button>
@@ -482,32 +481,32 @@ function PlanYourTripContent() {
                         const showCounter = selected.some(v => v?.toLowerCase().includes('famil') || v?.toLowerCase().includes('group') || v?.toLowerCase().includes('gruppe')); 
                         if (!showCounter) return null; 
                         return (
-                          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="p-10 rounded-[3rem] border-2 border-primary/5 bg-emerald-50/30 space-y-10 shadow-inner">
-                            <div className="flex items-center space-x-3">
-                              <Users className="w-5 h-5 text-primary" />
-                              <h3 className="text-[11px] font-black uppercase tracking-[0.4em] text-primary">Spesifiser din gruppe</h3>
+                          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="p-8 rounded-3xl border-2 border-primary/5 bg-emerald-50/30 space-y-6 shadow-inner">
+                            <div className="flex items-center space-x-2.5">
+                              <Users className="w-4 h-4 text-primary" />
+                              <h3 className="text-[10px] font-bold uppercase tracking-wider text-primary">Spesifiser din gruppe</h3>
                             </div>
-                            <div className="space-y-8">
+                            <div className="space-y-6">
                               <div className="flex items-center justify-between group">
-                                <div className="space-y-1">
-                                  <p className="text-lg font-black text-primary uppercase tracking-tighter italic">Voksne</p>
-                                  <p className="text-[11px] text-gray-400 font-medium">12 år og eldre</p>
+                                <div className="space-y-0.5">
+                                  <p className="text-base font-bold text-primary tracking-tight">Voksne</p>
+                                  <p className="text-[11px] text-gray-400 font-light">12 år og eldre</p>
                                 </div>
-                                <div className="flex items-center space-x-6">
-                                  <button type="button" onClick={() => { const n = Math.max(1, adults - 1); setAdults(n); setResponses(r => ({ ...r, adults: n, children })); }} className="w-12 h-12 rounded-2xl border-2 border-white bg-white shadow-sm flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all font-black text-2xl active:scale-90">−</button>
-                                  <span className="w-10 text-center text-3xl font-black text-primary tabular-nums tracking-tighter">{adults}</span>
-                                  <button type="button" onClick={() => { const n = adults + 1; setAdults(n); setResponses(r => ({ ...r, adults: n, children })); }} className="w-12 h-12 rounded-2xl border-2 border-white bg-white shadow-sm flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all font-black text-2xl active:scale-90">+</button>
+                                <div className="flex items-center space-x-4">
+                                  <button type="button" onClick={() => { const n = Math.max(1, adults - 1); setAdults(n); setResponses(r => ({ ...r, adults: n, children })); }} className="w-10 h-10 rounded-xl border border-gray-200 bg-white shadow-sm flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all font-bold text-lg active:scale-90">−</button>
+                                  <span className="w-8 text-center text-xl font-bold text-primary tabular-nums tracking-tight">{adults}</span>
+                                  <button type="button" onClick={() => { const n = adults + 1; setAdults(n); setResponses(r => ({ ...r, adults: n, children })); }} className="w-10 h-10 rounded-xl border border-gray-200 bg-white shadow-sm flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all font-bold text-lg active:scale-90">+</button>
                                 </div>
                               </div>
-                              <div className="flex items-center justify-between pt-8 border-t border-primary/10 group">
-                                <div className="space-y-1">
-                                  <p className="text-lg font-black text-primary uppercase tracking-tighter italic">Barn</p>
-                                  <p className="text-[11px] text-gray-400 font-medium">Under 12 år</p>
+                              <div className="flex items-center justify-between pt-6 border-t border-primary/10 group">
+                                <div className="space-y-0.5">
+                                  <p className="text-base font-bold text-primary tracking-tight">Barn</p>
+                                  <p className="text-[11px] text-gray-400 font-light">Under 12 år</p>
                                 </div>
-                                <div className="flex items-center space-x-6">
-                                  <button type="button" onClick={() => { const n = Math.max(0, children - 1); setChildren(n); setResponses(r => ({ ...r, adults, children: n })); }} className="w-12 h-12 rounded-2xl border-2 border-white bg-white shadow-sm flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all font-black text-2xl active:scale-90">−</button>
-                                  <span className="w-10 text-center text-3xl font-black text-primary tabular-nums tracking-tighter">{children}</span>
-                                  <button type="button" onClick={() => { const n = children + 1; setChildren(n); setResponses(r => ({ ...r, adults, children: n })); }} className="w-12 h-12 rounded-2xl border-2 border-white bg-white shadow-sm flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all font-black text-2xl active:scale-90">+</button>
+                                <div className="flex items-center space-x-4">
+                                  <button type="button" onClick={() => { const n = Math.max(0, children - 1); setChildren(n); setResponses(r => ({ ...r, adults, children: n })); }} className="w-10 h-10 rounded-xl border border-gray-200 bg-white shadow-sm flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all font-bold text-lg active:scale-90">−</button>
+                                  <span className="w-8 text-center text-xl font-bold text-primary tabular-nums tracking-tight">{children}</span>
+                                  <button type="button" onClick={() => { const n = children + 1; setChildren(n); setResponses(r => ({ ...r, adults, children: n })); }} className="w-10 h-10 rounded-xl border border-gray-200 bg-white shadow-sm flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all font-bold text-lg active:scale-90">+</button>
                                 </div>
                               </div>
                             </div>
@@ -516,11 +515,11 @@ function PlanYourTripContent() {
                       })()}
                     </div>
                   ) : (
-                    <div className="space-y-12">
-                      <div className="space-y-4">
-                        <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="text-[10px] font-black uppercase tracking-[0.5em] text-orange-500">Siste Steg</motion.p>
-                        <motion.h2 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-4xl lg:text-5xl font-black text-primary uppercase tracking-tighter leading-[0.95] italic">Din Reise starter her</motion.h2>
-                        <p className="text-gray-400 font-medium text-sm">Fyll ut dine detaljer eller logg inn for en raskere prosess.</p>
+                    <div className="space-y-8">
+                      <div className="space-y-2">
+                        <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="text-[10px] font-bold uppercase tracking-wider text-orange-500">Siste Steg</motion.p>
+                        <motion.h2 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-2xl sm:text-3xl font-bold font-display text-primary tracking-tight leading-tight">Din reise starter her</motion.h2>
+                        <p className="text-gray-400 font-light text-sm">Fyll ut dine detaljer eller logg inn for en raskere prosess.</p>
                       </div>
                       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                         <div className={cn("space-y-8 order-2 lg:order-1", session?.user ? "col-span-2" : "col-span-1")}>

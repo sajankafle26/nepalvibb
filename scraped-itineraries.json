@@ -1,0 +1,753 @@
+{
+  "mardi-himal-trek": [
+    {
+      "day": 1,
+      "title": "Ankomst i Kathmandu",
+      "details": "Velkomst på flyplassen og transport til hotellet. Introduksjonsmøte og kort orientering om turen."
+    },
+    {
+      "day": 2,
+      "title": "Sightseeing i Kathmandu",
+      "details": "Utforsk historiske templer, UNESCO-verdensarvsteder og livlige markeder i Nepals hovedstad."
+    },
+    {
+      "day": 3,
+      "title": "Reise til Pokhara",
+      "details": "Kjøretur til den sjarmerende innsjøbyen Pokhara (6–7 timer) eller kort flytur. På kvelden kan du spasere langs Phewa-sjøen."
+    },
+    {
+      "day": 4,
+      "title": "Kjør til Phedi og start trekking – Pothana (5–6 t)",
+      "details": "En kort kjøretur til Phedi før fotturen starter. Stien går oppover gjennom landsbyer og skog, frem til Pothana."
+    },
+    {
+      "day": 5,
+      "title": "Pothana til Forest Camp (5–6 t)",
+      "details": "Vi går gjennom tett skog av rhododendron og eik. Området er fredelig og lite besøkt."
+    },
+    {
+      "day": 6,
+      "title": "Forest Camp til Low Camp (4–5 t)",
+      "details": "Stien fortsetter gjennom skogen. Etter hvert åpner utsikten seg mot Machhapuchhare (Fishtail)."
+    },
+    {
+      "day": 7,
+      "title": "Low Camp til High Camp (3–4 t)",
+      "details": "Stien følger fjellryggen. Herfra får du storslått utsikt til Annapurna-massivet. Overnatting med fjellene rett foran deg."
+    },
+    {
+      "day": 8,
+      "title": "High Camp – Mardi Himal Base Camp – tilbake til High Camp (5–6 t)",
+      "details": "Høydepunktet på turen: Vi går opp til base camp på 4 500 m. Herfra ser du Machhapuchhare og Annapurna på nært hold. Etterpå returnerer vi til High Camp."
+    },
+    {
+      "day": 9,
+      "title": "High Camp til Siding landsby (5–6 t)",
+      "details": "Nedstigning til den tradisjonelle landsbyen Siding, der du møter lokal kultur og dagligliv."
+    },
+    {
+      "day": 10,
+      "title": "Siding – Lumre – Pokhara (3–4 t fottur + 2 t kjøring)",
+      "details": "Vi avslutter trekkruten i Lumre og kjører tilbake til Pokhara. Kvelden fri ved innsjøen."
+    },
+    {
+      "day": 11,
+      "title": "Utforsk Pokhara",
+      "details": "Avslappende dag: besøk grotter, fossefall eller nyt båttur på Phewa-sjøen."
+    },
+    {
+      "day": 12,
+      "title": "Fly tilbake til Kathmandu",
+      "details": "Kort flytur tilbake til Kathmandu, tid til siste shopping eller sightseeing."
+    },
+    {
+      "day": 13,
+      "title": "Avreise",
+      "details": "Transport til flyplassen og farvel."
+    }
+  ],
+  "annapurna-circuit-trek": [
+    {
+      "day": 1,
+      "title": "Ankomst i Kathmandu",
+      "details": "Ankomst på Tribhuvan internasjonale lufthavn, Kathmandu.\nTransport til hotellet og velkomstorientering.\nUtforsk det lokale området hvis tiden tillater det."
+    },
+    {
+      "day": 2,
+      "title": "Kathmandu til Besisahar og til Bhulbhule (840m)",
+      "details": "Morgenkjøretur til Besisahar (ca. 6-7 timer).\nKort tur til Bhulbhule for overnatting."
+    },
+    {
+      "day": 3,
+      "title": "Bhulbhule til Jagat (1300m)",
+      "details": "Første trekkingdag langs Marsyangdi-elven.\nOvernatting i landsbyen Jagat."
+    },
+    {
+      "day": 4,
+      "title": "Jagat til Dharapani (1860m)",
+      "details": "Vandring gjennom skoger og landsbyer.\nOvernatte i Dharapani."
+    },
+    {
+      "day": 5,
+      "title": "Dharapani til Chame (2670m)",
+      "details": "Fortsett langs Marsyangdi-elven.\nNyt utsikten over Annapurna II og Lamjung Himal.\nOvernatting i Chame."
+    },
+    {
+      "day": 6,
+      "title": "Chame til Pisang (3300m)",
+      "details": "Vandring gjennom tette skoger.\nFørste syn av Paungda Danda-klippen.\nOvernatte i Pisang."
+    },
+    {
+      "day": 7,
+      "title": "Pisang til Manang (3540m)",
+      "details": "Gå gjennom den øvre delen av Manang-distriktet.\nMulighet for å besøke Barge-klosteret.\nOvernatting i Manang."
+    },
+    {
+      "day": 8,
+      "title": "Akklimatiseringsdag i Manang",
+      "details": "Dag for hvile og akklimatisering.\nKorte turer for å utforske området rundt Manang."
+    },
+    {
+      "day": 9,
+      "title": "Manang til Yak Kharka (4040m)",
+      "details": "Gradvis oppstigning til Yak Kharka.\nObservasjon av lokale dyreliv.\nOvernatting i Yak Kharka."
+    },
+    {
+      "day": 10,
+      "title": "Yak Kharka til Thorong Phedi (4420m)",
+      "details": "Vandring til basen av Thorong La Pass.\nOvernatte i Thorong Phedi for neste dags tidlige start."
+    },
+    {
+      "day": 11,
+      "title": "Dag11: Thorong Phedi til Muktinath (3800m) via Thorong La Pass (5416m)",
+      "details": "Tidlig morgenstart for å krysse passet.\nNedstigning til det hellige Muktinath-tempelet.\nOvernatting i Muktinath."
+    },
+    {
+      "day": 12,
+      "title": "Muktinath til Jomsom (2720m)",
+      "details": "Nedstigning gjennom dramatiske ørkenlignende landskap.\nOvernatte i Jomsom."
+    },
+    {
+      "day": 13,
+      "title": "Jomsom til Pokhara",
+      "details": "Morgenfly til Pokhara.\nUtforsk innsjøbyen Pokhara og avslappe der i byen."
+    },
+    {
+      "day": 14,
+      "title": "Pokhara til Kathmandu",
+      "details": "Fly eller kjøre tilbake til Kathmandu.\nSiste kvelden i Nepal med en avskjedsmiddag."
+    }
+  ],
+  "yoga-trek": [
+    {
+      "day": 1,
+      "title": "Ankomst og Velkomst",
+      "details": "Morgen: Ankomst til Kathmandu, transport til retrettstedet.\nEttermiddag: Velkomstmøte, introduksjon til retrettprogrammet.\nKveld: Lett yoga-økt for å avlaste reisestress, etterfulgt av en velkomstmiddag."
+    },
+    {
+      "day": 2,
+      "title": "Grunnleggende Yoga og Meditasjon",
+      "details": "Morgen: Introduksjonsklasse i yoga og meditasjon.\nEttermiddag: Workshop om yogaens filosofi og praksis.\nKveld: Guidet meditasjon og refleksjonstid."
+    },
+    {
+      "day": 3,
+      "title": "Kulturell Immersjon i Kathmandu",
+      "details": "Morgen: Tidlig morgen yoga.\nEttermiddag: Guidet tur til historiske steder i Kathmandu, inkludert Swayambhunath (Apeklosteret).\nKveld: Gruppeaktivitet eller fritid."
+    },
+    {
+      "day": 4,
+      "title": "Ayurveda og Selvpleie",
+      "details": "Morgen: Yoga og pranayama (pusteøvelser).\nEttermiddag: Workshop om ayurveda og selvpleie.\nKveld: Ayurvedisk middag og samtaler."
+    },
+    {
+      "day": 5,
+      "title": "Utforskning av Natur og Meditasjon",
+      "details": "Morgen: Yoga i naturen.\nEttermiddag: Vandring i nærliggende fjell eller skog for meditasjon i naturen.\nKveld: Dele erfaringer og gruppediskusjon."
+    },
+    {
+      "day": 6,
+      "title": "Dag med Stillhet",
+      "details": "Hele dagen: Praktisering av Mauna (stillhet) med meditasjonsøkter, yoga og selvrefleksjon."
+    },
+    {
+      "day": 7,
+      "title": "Besøk til Spirituelle Steder",
+      "details": "Morgen: Yoga og meditasjon.\nEttermiddag: Besøk til en lokal buddhistisk kloster eller tempel.\nKveld: Gruppeaktivitet, utveksling av tanker."
+    },
+    {
+      "day": 8,
+      "title": "Avansert Yoga og Meditasjon",
+      "details": "Morgen: Avansert yoga-klasse.\nEttermiddag: Dybdegående meditasjonspraksis.\nKveld: Felles måltid og refleksjon."
+    },
+    {
+      "day": 9,
+      "title": "Lokalt Samfunnsengasjement",
+      "details": "Morgen: Yoga.\nEttermiddag: Interaksjon med lokale samfunn, lære om deres livsstil og tradisjoner.\nKveld: Avskjedsmiddag og seremoni."
+    },
+    {
+      "day": 10,
+      "title": "Avreise",
+      "details": "Morgen: Avsluttende yoga-økt og meditasjon.\nEttermiddag: Avreise til flyplassen, farvel og overføring."
+    }
+  ],
+  "poon-hill-annapurna-base-camp-trek": [
+    {
+      "day": 1,
+      "title": "Ankomst i Kathmandu",
+      "details": "Velkommen til Nepal! Du blir møtt på flyplassen og kjørt til hotellet i livlige Thamel."
+    },
+    {
+      "day": 2,
+      "title": "Kathmandu – Pokhara",
+      "details": "Turen går videre med kort besøk til Kathmandu valley og etter lunsj fly til Pokhara, en idyllisk by ved foten av Himalaya."
+    },
+    {
+      "day": 3,
+      "title": "Pokhara – Nayapul – Tikhedhunga",
+      "details": "Start fotturen fra Nayapul. Du går gjennom grønne åssider og landsbyer til Tikhedhunga."
+    },
+    {
+      "day": 4,
+      "title": "Tikhedhunga – Ghorepani",
+      "details": "En bratt, men vakker etappe via Ulleri og gjennom tette rhododendronskoger til Ghorepani."
+    },
+    {
+      "day": 5,
+      "title": "Soloppgang fra Poon Hill – Til Tadapani",
+      "details": "Tidlig morgen til Poon Hill for soloppgang. Deretter ned til Ghorepani og videre til Tadapani."
+    },
+    {
+      "day": 6,
+      "title": "Tadapani – Chhomrong",
+      "details": "Du vandrer gjennom jungelstier og små landsbyer til Chhomrong – inngangsporten til ABC."
+    },
+    {
+      "day": 7,
+      "title": "Chhomrong – Bamboo",
+      "details": "Du fortsetter ned og opp gjennom vakker skog og over elver til Bamboo."
+    },
+    {
+      "day": 8,
+      "title": "Bamboo – Deurali",
+      "details": "Stien tar deg videre gjennom jungel og steinrike passasjer til Deurali."
+    },
+    {
+      "day": 9,
+      "title": "Deurali – Annapurna Base Camp",
+      "details": "En av turens mest spektakulære dager! Du går gjennom Machhapuchhre Base Camp før du ankommer ABC."
+    },
+    {
+      "day": 10,
+      "title": "ABC – Bamboo",
+      "details": "Nyt soloppgangen fra base camp før du vender tilbake samme vei til Bamboo."
+    },
+    {
+      "day": 11,
+      "title": "Bamboo – Jhinu Danda (Varme kilder)",
+      "details": "Du går til Jhinu, hvor du kan slappe av i naturlige varme kilder."
+    },
+    {
+      "day": 12,
+      "title": "Jhinu – Matkiu – Pokhara",
+      "details": "Siste del av turen. Du går til Matkiu og kjører tilbake til Pokhara."
+    },
+    {
+      "day": 13,
+      "title": "Pokhara – Kathmandu",
+      "details": "Tilbake til hovedstaden med buss eller fly. Kvelden fri."
+    },
+    {
+      "day": 14,
+      "title": "Avreise fra Kathmandu",
+      "details": "Transport til flyplassen. Farvel og på gjensyn!"
+    }
+  ],
+  "everest-base-camp-trek": [
+    {
+      "day": 1,
+      "title": "Ankomst i Kathmandu",
+      "details": "Du blir møtt på flyplassen og kjørt til hotellet. Kvelden fri til å utforske Thamel."
+    },
+    {
+      "day": 2,
+      "title": "Fly til Lukla – Fottur til Phakding (2 610 m)",
+      "details": "Et kort og spennende fjellfly til Lukla (2 840 m), hvor turen starter. En lett vandring til Phakding langs Dudh Koshi-elven."
+    },
+    {
+      "day": 3,
+      "title": "Phakding – Namche Bazaar (3 440 m)",
+      "details": "Dagen starter med kryssing av hengebroer og går inn i Sagarmatha nasjonalpark. Bratt oppstigning til den livlige byen Namche Bazaar."
+    },
+    {
+      "day": 4,
+      "title": "Akklimatiseringsdag i Namche",
+      "details": "Du hviler og utforsker området. Besøk Sherpa-museet, Everest View Hotel eller ta en kort fottur til Khumjung Village."
+    },
+    {
+      "day": 5,
+      "title": "Namche – Tengboche (3 860 m)",
+      "details": "En vakker dagsetappe med storslagen utsikt til Everest, Ama Dablam og Thamserku. Ankomst til Tengboche-klosteret, et fredelig og spirituelt høydepunkt."
+    },
+    {
+      "day": 6,
+      "title": "Tengboche – Dingboche (4 410 m)",
+      "details": "Turen fortsetter gjennom skoger og åpne daler til Dingboche. Utsikten til Ama Dablam og Island Peak er spektakulær.\n."
+    },
+    {
+      "day": 7,
+      "title": "Akklimatiseringsdag i Dingboche",
+      "details": "Valgfri topptur til Nangkartshang Peak (5 100 m) for utsikt og akklimatisering."
+    },
+    {
+      "day": 8,
+      "title": "Dingboche – Lobuche (4 910 m)",
+      "details": "Terrenget blir mer alpint. Du passerer minnemerker over klatrere som har mistet livet på Everest, før du ankommer Lobuche."
+    },
+    {
+      "day": 9,
+      "title": "Lobuche – Gorak Shep – Everest Base Camp (5 364 m)",
+      "details": "En stor dag! Du går til Gorak Shep, spiser lunsj og går videre til det legendariske Everest Base Camp. Tilbake til Gorak Shep for overnatting."
+    },
+    {
+      "day": 10,
+      "title": "Gorak Shep – Kala Patthar – Pheriche (4 280 m)",
+      "details": "Tidlig opp for å nå Kala Patthar og få det beste synet av Mount Everest i soloppgang. Nedstigning til Pheriche."
+    },
+    {
+      "day": 11,
+      "title": "Pheriche – Namche Bazaar",
+      "details": "Du følger elven ned igjen og kjenner hvordan luften blir lettere. En lang, men vakker dag tilbake til Namche."
+    },
+    {
+      "day": 12,
+      "title": "Namche – Lukla",
+      "details": "Siste vandredag – du returnerer til utgangspunktet i Lukla og feirer turens suksess."
+    },
+    {
+      "day": 13,
+      "title": "Fly tilbake til Kathmandu",
+      "details": "Tidlig morgenfly tilbake til Kathmandu. Resten av dagen fri til avslapping eller sightseeing."
+    },
+    {
+      "day": 14,
+      "title": "Avreise",
+      "details": "Transport til flyplassen. Du tar med deg minner for livet."
+    }
+  ],
+  "6-dager-poonhill-trek": [
+    {
+      "day": 1,
+      "title": "Pokhara – Nayapul – Tikhedhunga",
+      "details": "Turen starter i den vakre byen Pokhara, kjent for innsjøen Phewa og utsikt til Annapurna-massivet. Etter en kort kjøretur til Nayapul, begynner selve fotturen. Første etappe går gjennom grønne åkrer, små elver og sjarmerende landsbyer som Birethanti og Hile. Du avslutter dagen i Tikhedhunga, hvor du får din første smakebit på hvordan det er å overnatte i et typisk tehus i fjellene."
+    },
+    {
+      "day": 2,
+      "title": "Tikhedhunga – Ghorepani",
+      "details": "Denne dagen starter med en bratt stigning opp til Ulleri – en kjent landsby med vakker utsikt. Det er mange trapper her, så det gjelder å ta det rolig og jevnt. Etter Ulleri flater terrenget ut, og du går gjennom vakre rhododendronskoger (særlig fantastisk i blomstringssesongen mars–april). Du når til slutt Ghorepani, en større fjellandsby på nesten 2 900 meter over havet. Herfra får du de første glimt av de snødekte toppene i Annapurna- og Dhaulagiri-massivene."
+    },
+    {
+      "day": 3,
+      "title": "Ghorepani – Poon Hill – Tadapani",
+      "details": "Dette er turens høydepunkt for mange. Du står opp før soloppgang og går i mørket opp til Poon Hill – en utsiktstopp som ligger på 3 210 moh. Etter ca. 45 minutters rolig stigning er du oppe, og herfra får du en 360-graders panoramautsikt over noen av verdens høyeste fjell: Dhaulagiri (8 167 m), Annapurna I (8 091 m), Machapuchare (Fishtail), og mange flere. Soloppgangen som farger fjellene gyldne er et uforglemmelig øyeblikk.\nEtter frokost i Ghorepani fortsetter du turen videre til Tadapani. Stien går gjennom mystiske skoger, bekker og små høyder. Du ankommer Tadapani om ettermiddagen og overnatter der."
+    },
+    {
+      "day": 4,
+      "title": "Tadapani – Ghandruk – Pokhara",
+      "details": "Dagens etappe går nedover mot Ghandruk, en av de vakreste og mest tradisjonsrike landsbyene i Annapurna-området. Landsbyen er bebodd av Gurung-folket, kjent for sin rike kultur og historie som soldater i britiske Gurkha-regimenter. Her kan du besøke det lokale museet og få innsikt i fjellkulturens levesett.\nEtter lunsj i Ghandruk går du videre ned til veien hvor en bil står klar for å ta deg tilbake til Pokhara. Du er tilbake i byen på ettermiddagen, og kan slappe av med god mat og vakker utsikt over innsjøen."
+    },
+    {
+      "day": 5,
+      "title": "Fritid i Pokhara eller i Kathmandu",
+      "details": "Den siste dagen er satt av til avslapping, shopping eller andre aktiviteter i Pokhara eller i Kathmandu. Ønsker du å forlenge turen, er det mange muligheter for aktiviteter som paragliding, båttur eller sykkelturer rundt innsjøen."
+    },
+    {
+      "day": 6,
+      "title": "Avreise til hjemmeland",
+      "details": ""
+    }
+  ],
+  "dolpo-trek": [
+    {
+      "day": 1,
+      "title": "Ankomst til Kathmandu (1 400 m)",
+      "details": "Velkomst på flyplassen og transport til hotell\nInnsjekking, hvil og velkomstmiddag\nKveldsbriefing med guide"
+    },
+    {
+      "day": 2,
+      "title": "Sightseeing og forberedelser",
+      "details": "Utforsk UNESCO-steder: Swayambhunath, Pashupatinath og Boudhanath\nHent inn spesialtillatelser for Dolpo\nUtstyrskontroll og pakking"
+    },
+    {
+      "day": 3,
+      "title": "Fly til Nepalgunj (150 m)",
+      "details": "1 times flytur til grensebyen i det sørlige Nepal\nOvernatting på hotell\nVarmt og fuktig klima – rolig ettermiddag"
+    },
+    {
+      "day": 4,
+      "title": "Fly til Juphal (2 475 m) – Gå til Dunai (2 140 m)",
+      "details": "Spektakulær fjellflyvning til Juphal\n3–4 timers lett vandring til Dunai, administrasjonssenteret i Dolpo\nFørste natt i telt eller gjestehus"
+    },
+    {
+      "day": 5,
+      "title": "Dunai – Tarakot (2 540 m)",
+      "details": "Ca. 6 timers vandring langs elven Bheri\nGammel befestet landsby med kloster\nKulturelt møte og lokal mat"
+    },
+    {
+      "day": 6,
+      "title": "Tarakot – Laini Odar (3 370 m)",
+      "details": "Bratt stigning opp en smal dal\nCa. 6–7 timer trekking\nOvernatting nær klippehuler brukt som gjemmesteder i tidligere tider"
+    },
+    {
+      "day": 7,
+      "title": "Laini – Nawarpani (3 780 m)",
+      "details": "ti går opp og ned gjennom fjell og elvedaler\nKryssing av små broer og bekker\nOvernatting i telt"
+    },
+    {
+      "day": 8,
+      "title": "Nawarpani – Dho Tarap (4 040 m)",
+      "details": "Lang dag (ca. 7 timer) opp til Dho Tarap – viktig kultursted\nBesøk gamle gompaer, snakk med lokale munker\nHvile og akklimatisering"
+    },
+    {
+      "day": 9,
+      "title": "Akklimatiseringsdag i Dho Tarap",
+      "details": "Kort tur til nærliggende landsbyer\nLær om Bön-tradisjon og lokal urtemedisin\nYoga/meditasjon mulig"
+    },
+    {
+      "day": 10,
+      "title": "Dho Tarap – Numa La Base Camp (4 440 m)",
+      "details": "Ca. 6 timers rolig oppstigning\nForberedelse til passkryssing\nTidlig kveld og varm mat"
+    },
+    {
+      "day": 11,
+      "title": "Kryss Numa La-passet (5 310 m) – Camp ved Pelung Tang (4 460 m)",
+      "details": "En av de mest krevende dagene – tidlig start\nFantastisk utsikt over Dolpo og Dhaulagiri-massivet\nBratt nedstigning til leirplass"
+    },
+    {
+      "day": 12,
+      "title": "Kryss Baga La-passet (5 190 m) – Dagens mål: Dajok Tang (4 080 m)",
+      "details": "Andre store fjellpass\nMagisk utsikt – mulighet for snø\nRo og restitusjon i camp"
+    },
+    {
+      "day": 13,
+      "title": "Dajok Tang – Ringmo (3 640 m) og Phoksundo-innsjøen",
+      "details": "Nedstigning til innsjøens bredder\nFørste glimt av den turkise perlen\nOvernatting nær Ringmo landsby"
+    },
+    {
+      "day": 14,
+      "title": "Hviledag ved Phoksundo-innsjøen",
+      "details": "Utforsk Ringmo og gamle Tshowa-klosteret (over 800 år gammelt)\nMeditativ ro ved innsjøen\nMulighet for lett fottur rundt innsjøens kant"
+    },
+    {
+      "day": 15,
+      "title": "Ringmo – Chhepka (2 670 m)",
+      "details": "Start nedstigningen langs Phoksundo-elven\nVakker og variert vegetasjon\nOvernatting i telt eller tehus"
+    },
+    {
+      "day": 16,
+      "title": "Chhepka – Juphal (2 475 m)",
+      "details": "Siste trekkedag – lett og rolig\nNyt de siste timene i naturen\nKveld i Juphal"
+    },
+    {
+      "day": 17,
+      "title": "Fly Juphal – Nepalgunj – Kathmandu",
+      "details": "Morgenfly til Nepalgunj og videre til Kathmandu\nOvernatting på hotell\nDeltakerdiplom og festmiddag"
+    },
+    {
+      "day": 18,
+      "title": "Dag18: Utforsk Bhaktapur og Patan",
+      "details": "En dag fri til å utforsk Kathmandu Dalen eller kan ta hvil."
+    },
+    {
+      "day": 19,
+      "title": "Avslutning",
+      "details": "Hjemreise fra Kathmandu"
+    }
+  ],
+  "pokhara-chitwan-jungle-safari": [
+    {
+      "day": 1,
+      "title": "Day 1 - International airport to local airport",
+      "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    },
+    {
+      "day": 2,
+      "title": "Day 2 - Local Airport to Bus Station Travel",
+      "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    },
+    {
+      "day": 3,
+      "title": "Day 3 - Bus travel for whole one day",
+      "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    },
+    {
+      "day": 4,
+      "title": "Day 4 - Home stay on village",
+      "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    },
+    {
+      "day": 5,
+      "title": "Day 5 - Cultural program observation",
+      "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    },
+    {
+      "day": 6,
+      "title": "Day 6 - Hiking for one day",
+      "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    },
+    {
+      "day": 7,
+      "title": "Day 7 - Full day sightseeing",
+      "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    },
+    {
+      "day": 8,
+      "title": "Day 8 - Deurali to Phedi",
+      "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    },
+    {
+      "day": 9,
+      "title": "Day 9 - Phedi –Pathibhara",
+      "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    },
+    {
+      "day": 10,
+      "title": "Day 10 - One day night stay on top",
+      "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    },
+    {
+      "day": 11,
+      "title": "Day 11 - Back to phedi from top",
+      "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    },
+    {
+      "day": 12,
+      "title": "Day 12 - Phedi to bus station on city",
+      "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    },
+    {
+      "day": 13,
+      "title": "Day 13 - Bus travel to local airport",
+      "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    },
+    {
+      "day": 14,
+      "title": "Day 14 - Local airport to international airport",
+      "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    },
+    {
+      "day": 15,
+      "title": "Day 15 - Back to home via our bus",
+      "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    }
+  ],
+  "motorsykkeltur-upper-mustang-nepal": [
+    {
+      "day": 1,
+      "title": "Ankomst i Kathmandu",
+      "details": "Velkomst på flyplassen og transport til hotell.\nKveldsmøte og gjennomgang av turen."
+    },
+    {
+      "day": 2,
+      "title": "Forberedelser og sightseeing i Kathmandu",
+      "details": "Henting av tillatelser og sjekk av motorsykler.\nBesøk til UNESCO-steder som Swayambhunath og Boudhanath."
+    },
+    {
+      "day": 3,
+      "title": "Kathmandu – Pokhara (ca. 200 km)",
+      "details": "Kjøring på hovedvei gjennom vakre daler og elver.\nKveld ved Phewa Lake."
+    },
+    {
+      "day": 4,
+      "title": "Pokhara – Kalopani (ca. 125 km)",
+      "details": "tart på stigning mot Himalaya.\nVarierende terreng og første smak på grusveier."
+    },
+    {
+      "day": 5,
+      "title": "Kalopani – Kagbeni (ca. 45 km)",
+      "details": "Kjør gjennom dype daler og gamle landsbyer.\nBesøk til Muktinath-tempelet (valgfritt)."
+    },
+    {
+      "day": 6,
+      "title": "Kagbeni – Lo Manthang (ca. 70 km)",
+      "details": "Inngang til Upper Mustang (permit starter her).\nKjøring gjennom dramatiske landskap til hovedbyen Lo Manthang."
+    },
+    {
+      "day": 7,
+      "title": "Utforskning i Lo Manthang",
+      "details": "Besøk kongelig palass, klostre og lokale landsbyer.\nHvile og akklimatisering."
+    },
+    {
+      "day": 8,
+      "title": "Lo Manthang – Ghami eller Samar (tilbakevei, ca. 50–60 km)",
+      "details": "Avreise fra Lo, kjøring gjennom varierte ruter tilbake."
+    },
+    {
+      "day": 9,
+      "title": "Samar – Jomsom (ca. 60 km)",
+      "details": "Nedstigning gjennom kløfter og broer.\nOvernatting i Jomsom, et lite fjellflyplass-sentrum."
+    },
+    {
+      "day": 10,
+      "title": "Jomsom – Tatopani (ca. 90 km)",
+      "details": "Nyt naturlige varme kilder etter mange dagers kjøring."
+    },
+    {
+      "day": 11,
+      "title": "Tatopani – Pokhara (ca. 100 km)",
+      "details": "Avslutt kjøringen og slapp av ved innsjøen i Pokhara."
+    },
+    {
+      "day": 12,
+      "title": "Pokhara – Kathmandu (ca. 200 km eller fly)",
+      "details": "Kjør eller fly tilbake til hovedstaden. Avslutningsmiddag."
+    }
+  ],
+  "langtang-valley-trek": [
+    {
+      "day": 1,
+      "title": "Ankomst i Kathmandu",
+      "details": "Ankomst og velkomst i Kathmandu.\nTransport til hotellet og orienteringsmøte om turen."
+    },
+    {
+      "day": 2,
+      "title": "Kjøretur fra Kathmandu til Syabrubesi",
+      "details": "Tidlig morgen kjøretur fra Kathmandu til Syabrubesi, startpunktet for trekken.\nNyt den naturskjønne kjøreturen gjennom fjellene.\nOvernatting i Syabrubesi."
+    },
+    {
+      "day": 3,
+      "title": "Trek fra Syabrubesi til Lama Hotel",
+      "details": "Start trekken mot Lama Hotel.\nVandring gjennom vakre skoger og langs elven Bhote Koshi.\nOvernatting på et lokalt tehus i Lama Hotel."
+    },
+    {
+      "day": 4,
+      "title": "Lama Hotel til Langtang Village",
+      "details": "Fortsett trekken mot Langtang Village, med fantastiske utsikter underveis.\nPassere gjennom Ghoda Tabela og beundre den endrende vegetasjonen.\nOvernatting i Langtang Village."
+    },
+    {
+      "day": 5,
+      "title": "Langtang Village til Kyanjin Gompa",
+      "details": "Trek fra Langtang Village til Kyanjin Gompa.\nUtforsk det lokale klosteret og nyt panoramautsikten over fjellene.\nMulighet for korte turer i nærheten.\nOvernatting i Kyanjin Gompa."
+    },
+    {
+      "day": 6,
+      "title": "Akklimatisering og Utforsking",
+      "details": "Bruk dagen til akklimatisering med en valgfri vandring til Tserko Ri for spektakulære utsikter.\nAlternativt, utforsk området rundt Kyanjin Gompa.\nOvernatting i Kyanjin Gompa."
+    },
+    {
+      "day": 7,
+      "title": "Tilbake til Lama Hotel",
+      "details": "Begynn returen og trekk tilbake til Lama Hotel.\nNyt utsikten over Langtang-dalen fra et nytt perspektiv.\nOvernatting i Lama Hotel."
+    },
+    {
+      "day": 8,
+      "title": "Lama Hotel til Syabrubesi",
+      "details": "Siste etappe av trekken tilbake til Syabrubesi.\nFeire avslutningen på trekken med gruppen.\nOvernatting i Syabrubesi."
+    },
+    {
+      "day": 9,
+      "title": "Kjøretur Tilbake til Kathmandu",
+      "details": "Tidlig morgen kjøretur tilbake til Kathmandu.\nAvsluttende middag og feiring i Kathmandu."
+    },
+    {
+      "day": 10,
+      "title": "Avreise fra Kathmandu",
+      "details": "Transport til flyplassen for avreise, eller start på neste del av reisen."
+    }
+  ],
+  "kongelig-reise-til-india": [
+    {
+      "day": 1,
+      "title": "Ankomst Delhi fra Norge, transfer til hotell og hvile.",
+      "details": ""
+    },
+    {
+      "day": 2,
+      "title": "Sightseeing i Old Delhi og New Delh",
+      "details": ""
+    },
+    {
+      "day": 3,
+      "title": "Kjøring fra Delhi til Agra, besøk Agra Fort og utsikt mot Taj Mahal.",
+      "details": ""
+    },
+    {
+      "day": 4,
+      "title": "Taj Mahal ved soloppgang, deretter videre til Jaipur via Fatehpur Sikri.",
+      "details": ""
+    },
+    {
+      "day": 5,
+      "title": "Utforsk Jaipur med Amber Fort, City Palace, Hawa Mahal og lokale markeder.",
+      "details": ""
+    },
+    {
+      "day": 6,
+      "title": "Kjøring fra Jaipur tilbake til Delhi, tid til shopping eller avskjedsmiddag.",
+      "details": ""
+    },
+    {
+      "day": 7,
+      "title": "Transfer til flyplassen og avreise tilbake til Norge.",
+      "details": ""
+    }
+  ],
+  "ama-yangri-trek": [
+    {
+      "day": 1,
+      "title": "Kathmandu → Melamchi → Tarkeghyang",
+      "details": ""
+    },
+    {
+      "day": 2,
+      "title": "Tarkeghyang – kultur, kloster og lett akklimatisering",
+      "details": ""
+    },
+    {
+      "day": 3,
+      "title": "Tarkeghyang → Aama Yangri Peak → Tarkeghyang",
+      "details": ""
+    },
+    {
+      "day": 4,
+      "title": "Tarkeghyang → Sermathang / Melamchi-området",
+      "details": ""
+    },
+    {
+      "day": 5,
+      "title": "Retur til Kathmandu",
+      "details": ""
+    }
+  ],
+  "unik-homestay-opplevelse": [
+    {
+      "day": 1,
+      "title": "Ankomst i Kathmandu",
+      "details": "Ankomst og velkomst i Kathmandu, Nepal.\nTransport til hotellet, hvile og akklimatisering.\nVelkomstmiddag og orienteringsmøte om homestay-opplevelsen."
+    },
+    {
+      "day": 2,
+      "title": "Kathmandu Kulturell Utforskning",
+      "details": "To dager med guidet tur i Kathmandu-dalen, inkludert besøk til historiske steder som Pashupatinath, Boudhanath, og Patan Durbar Square.\nOvernatting i Kathmandu."
+    },
+    {
+      "day": 3,
+      "title": "Kathmandu Kulturell Utforskning",
+      "details": "To dager med guidet tur i Kathmandu-dalen, inkludert besøk til historiske steder som Pashupatinath, Boudhanath, og Patan Durbar Square.\nOvernatting i Kathmandu."
+    },
+    {
+      "day": 4,
+      "title": "Reise til Homestay Destinasjon",
+      "details": "Reise fra Kathmandu til homestay-destinasjonen i et landlig område.\n\nVelkomst av vertsfamilien og introduksjon til hjemmet og lokalsamfunnet."
+    },
+    {
+      "day": 5,
+      "title": "Dag 5-8: Homestay Opplevelse",
+      "details": "Daglige aktiviteter sammen med vertsfamilien, som å hjelpe til med måltider, lære om jordbruk, og delta i lokale håndverksaktiviteter.\nMulighet for korte turer i lokalområdet, besøk til lokale markeder og deltakelse i lokale skikker og seremonier.\nFull immersjon i den nepalske kulturen og dagliglivet."
+    },
+    {
+      "day": 9,
+      "title": "Avreise fra Kathmandu",
+      "details": "Transport til flyplassen for hjemreise eller videre reise."
+    }
+  ]
+}

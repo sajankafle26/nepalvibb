@@ -111,20 +111,24 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-white pt-32 pb-16 border-t border-gray-100">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <footer className="bg-primary pt-32 pb-16 text-white relative overflow-hidden">
+      {/* Decorative blurred background shapes to enhance glassmorphism */}
+      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-emerald-700/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-orange-500/5 rounded-full blur-[100px] pointer-events-none" />
 
-        {/* Top Section: Branding & Newsletter */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 pb-20 border-b border-gray-100">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+
+        {/* Top Section: Branding & Links */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 pb-20 border-b border-white/10">
           <div className="lg:col-span-4 space-y-10">
             <Link href="/" className="inline-block group">
               <img
                 src="https://nepalvibb.com/wp-content/uploads/2025/05/logo-w.svg"
                 alt="Nepalvibb"
-                className="h-14 w-auto brightness-0"
+                className="h-14 w-auto brightness-0 invert"
               />
             </Link>
-            <p className="text-sm text-gray-500 font-medium leading-relaxed max-w-sm">
+            <p className="text-sm text-stone-200/80 font-light leading-relaxed max-w-sm">
               {s.footerAbout}
             </p>
             <div className="flex items-center space-x-4">
@@ -139,7 +143,7 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-11 h-11 rounded-2xl bg-gray-50 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all shadow-sm"
+                  className="w-11 h-11 rounded-2xl bg-white/5 hover:bg-orange-500 border border-white/10 flex items-center justify-center text-white transition-all shadow-sm"
                 >
                   <social.icon className="w-4 h-4" />
                 </a>
@@ -150,15 +154,15 @@ export default function Footer() {
           <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-12">
             {footerLinks.map((column) => (
               <div key={column.title} className="space-y-8">
-                <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-primary">{column.title}</h4>
+                <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-white/90">{column.title}</h4>
                 <ul className="space-y-4">
                   {column.links.map((link) => (
                     <li key={link.label}>
                       <Link
                         href={link.href}
-                        className="text-[11px] font-black text-gray-400 hover:text-orange-500 transition-colors uppercase tracking-widest flex items-center group"
+                        className="text-[11px] font-black text-stone-300 hover:text-orange-400 transition-colors uppercase tracking-widest flex items-center group"
                       >
-                        <span className="w-0 group-hover:w-3 h-[1px] bg-orange-500 mr-0 group-hover:mr-2 transition-all" />
+                        <span className="w-0 group-hover:w-3 h-[1px] bg-orange-400 mr-0 group-hover:mr-2 transition-all" />
                         {link.label}
                       </Link>
                     </li>
@@ -170,23 +174,22 @@ export default function Footer() {
         </div>
 
         {/* Affiliations Section */}
-        <div className="py-16 border-t border-gray-100">
-          <div className="flex flex-col items-center space-y-10">
-            <h5 className="text-[10px] font-black uppercase tracking-[0.4em] text-gray-300">
+        <div className="py-12 border-t border-b border-white/10 bg-white/5 -mx-6 px-6 lg:-mx-8 lg:px-8 my-12">
+          <div className="max-w-7xl mx-auto flex flex-col items-center space-y-8">
+            <h5 className="text-[10px] font-black uppercase tracking-[0.4em] text-stone-300/80">
               {s.affiliatedLabel}
             </h5>
-            <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20">
-
+            <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6">
               {s.affiliations?.map((logo, i) => (
-                <div key={i} className="group flex flex-col items-center">
+                <div 
+                  key={i} 
+                  className="group bg-white border border-transparent rounded-2xl p-4 flex items-center justify-center w-28 h-16 sm:w-36 sm:h-20 shadow-sm hover:shadow-md hover:border-orange-500/20 transition-all duration-300"
+                >
                   <img
                     src={logo.logoUrl}
                     alt={logo.name}
-                    className="h-14 md:h-16 w-auto object-contain grayscale opacity-30 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
+                    className="max-h-10 sm:max-h-12 max-w-full object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
                   />
-                  <div className="hidden h-14 md:h-16 px-6 items-center justify-center border-2 border-dashed border-gray-100 rounded-2xl text-[10px] font-black uppercase tracking-widest text-gray-300 group-hover:border-primary/20 group-hover:text-primary transition-all">
-                    {logo.name}
-                  </div>
                 </div>
               ))}
             </div>
@@ -194,66 +197,66 @@ export default function Footer() {
         </div>
 
         {/* Subsidiary Section */}
-        <div className="py-10 border-t border-gray-100 ">
+        <div className="py-8 border-t border-b border-white/10 bg-white/5 -mx-6 px-6 lg:-mx-8 lg:px-8 my-6">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <span className="text-[10px] font-black uppercase tracking-[0.4em] text-gray-300">
+            <span className="text-[10px] font-black uppercase tracking-[0.4em] text-stone-300/80">
               {s.subsidiaryLabel}
             </span>
             <a
               href={s.subsidiaryUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center space-x-3 px-6 py-3 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-md transition-all duration-300 border border-transparent hover:border-gray-100"
+              className="group flex items-center space-x-3 px-6 py-3 rounded-2xl bg-white hover:shadow-md transition-all duration-300 border border-transparent hover:border-orange-500/20 shadow-sm"
             >
               <img
                 src={s.subsidiaryLogo}
                 alt="Subsidiary"
-                className="h-8 w-auto object-contain grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
+                className="h-8 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
               />
-              <ExternalLink className="w-3 h-3 text-gray-300 group-hover:text-orange-500 transition-colors" />
+              <ExternalLink className="w-3.5 h-3.5 text-emerald-600 group-hover:text-orange-500 transition-colors" />
             </a>
           </div>
         </div>
 
         {/* Support Section */}
-        <div className="py-20 grid grid-cols-1 md:grid-cols-3 gap-16 border-t border-gray-100">
-          <div className="flex space-x-6 items-start">
-            <div className="w-14 h-14 bg-orange-50 rounded-2xl flex items-center justify-center text-orange-500 flex-shrink-0">
+        <div className="py-12 grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-white/10">
+          <div className="flex space-x-6 items-start bg-white/5 border border-white/10 rounded-3xl p-6">
+            <div className="w-14 h-14 bg-orange-500/10 rounded-2xl flex items-center justify-center text-orange-400 flex-shrink-0">
               <MapPin className="w-6 h-6" />
             </div>
             <div>
-              <h5 className="text-[10px] font-black uppercase tracking-widest text-primary mb-3">
+              <h5 className="text-[10px] font-black uppercase tracking-widest text-white/90 mb-3">
                 {s.visitingAddressLabel}
               </h5>
-              <div className="text-sm font-bold text-gray-500 leading-relaxed">
+              <div className="text-sm font-medium text-stone-200/90 leading-relaxed">
                 <p>{s.address}</p>
                 {s.kathmanduAddress && <p className="mt-1 opacity-60">Nepal: {s.kathmanduAddress}</p>}
               </div>
             </div>
           </div>
-          <div className="flex space-x-6 items-start">
-            <div className="w-14 h-14 bg-emerald-50 rounded-2xl flex items-center justify-center text-emerald-500 flex-shrink-0">
+          <div className="flex space-x-6 items-start bg-white/5 border border-white/10 rounded-3xl p-6">
+            <div className="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center text-emerald-400 flex-shrink-0">
               <Phone className="w-6 h-6" />
             </div>
             <div>
-              <h5 className="text-[10px] font-black uppercase tracking-widest text-primary mb-3">
+              <h5 className="text-[10px] font-black uppercase tracking-widest text-white/90 mb-3">
                 {s.callUsLabel}
               </h5>
-              <p className="text-sm font-bold text-gray-500 leading-relaxed">
+              <p className="text-sm font-medium text-stone-200/90 leading-relaxed">
                 {s.contactPhone}<br />
                 <span className="opacity-60">{s.callUsHours}</span>
               </p>
             </div>
           </div>
-          <div className="flex space-x-6 items-start">
-            <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-500 flex-shrink-0">
+          <div className="flex space-x-6 items-start bg-white/5 border border-white/10 rounded-3xl p-6">
+            <div className="w-14 h-14 bg-sky-500/10 rounded-2xl flex items-center justify-center text-sky-400 flex-shrink-0">
               <Mail className="w-6 h-6" />
             </div>
             <div>
-              <h5 className="text-[10px] font-black uppercase tracking-widest text-primary mb-3">
+              <h5 className="text-[10px] font-black uppercase tracking-widest text-white/90 mb-3">
                 {s.sendEmailLabel}
               </h5>
-              <p className="text-sm font-bold text-gray-500 leading-relaxed">
+              <p className="text-sm font-medium text-stone-200/90 leading-relaxed">
                 {s.contactEmail}<br />
                 <span className="opacity-60">{s.replyTimeLabel}</span>
               </p>
@@ -262,26 +265,26 @@ export default function Footer() {
         </div>
 
         {/* Bottom Section: Copyright & Badges */}
-        <div className="pt-16 flex flex-col md:flex-row items-center justify-between gap-10">
+        <div className="pt-16 flex flex-col md:flex-row items-center justify-between gap-10 border-t border-white/10">
           <div className="flex flex-col md:flex-row items-center gap-6">
-            <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">
+            <p className="text-[10px] font-bold text-stone-400 uppercase tracking-widest">
               {s.copyrightText}
             </p>
-            <div className="h-4 w-[1px] bg-gray-100 hidden md:block" />
+            <div className="h-4 w-[1px] bg-white/10 hidden md:block" />
             <div className="flex items-center space-x-6">
-              <Link href="/betingelser" className="text-[10px] font-black text-gray-300 hover:text-primary transition-colors uppercase tracking-widest">Betingelser</Link>
-              <Link href="/personvern" className="text-[10px] font-black text-gray-300 hover:text-primary transition-colors uppercase tracking-widest">Personvern</Link>
+              <Link href="/betingelser" className="text-[10px] font-black text-stone-300 hover:text-white transition-colors uppercase tracking-widest">Betingelser</Link>
+              <Link href="/personvern" className="text-[10px] font-black text-stone-300 hover:text-white transition-colors uppercase tracking-widest">Personvern</Link>
             </div>
           </div>
 
           <div className="flex items-center space-x-6">
-            <div className="flex items-center px-6 py-3 bg-gray-50 rounded-2xl space-x-3 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all">
-              <ShieldCheck className="w-4 h-4 text-emerald-500" />
-              <span className="text-[9px] font-black uppercase tracking-widest text-primary">Sikker Betaling</span>
+            <div className="flex items-center px-6 py-3 bg-white/5 border border-white/10 rounded-2xl space-x-3 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+              <ShieldCheck className="w-4 h-4 text-emerald-400" />
+              <span className="text-[9px] font-black uppercase tracking-widest text-white">Sikker Betaling</span>
             </div>
-            <div className="flex items-center px-6 py-3 bg-gray-50 rounded-2xl space-x-3 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all">
-              <Globe className="w-4 h-4 text-orange-500" />
-              <span className="text-[9px] font-black uppercase tracking-widest text-primary">Medlem av RGF</span>
+            <div className="flex items-center px-6 py-3 bg-white/5 border border-white/10 rounded-2xl space-x-3 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+              <Globe className="w-4 h-4 text-orange-400" />
+              <span className="text-[9px] font-black uppercase tracking-widest text-white">Medlem av RGF</span>
             </div>
           </div>
         </div>

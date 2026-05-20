@@ -27,15 +27,15 @@ export default function DestinationCards({ content }) {
   if (loading) return null; 
 
   return (
-    <section className="py-24 sm:py-32 bg-white overflow-hidden">
+    <section className="py-16 sm:py-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 sm:mb-20 gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 sm:mb-16 gap-6">
           <div className="max-w-2xl">
             <motion.h5 
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="text-orange-500 font-black uppercase tracking-[0.3em] sm:tracking-[0.4em] text-[9px] sm:text-[10px] mb-4 sm:mb-6"
+              className="text-orange-500 font-bold uppercase tracking-wider text-xs mb-3"
             >
               {content?.subtitle || 'Oppdag verden med oss'}
             </motion.h5>
@@ -43,9 +43,9 @@ export default function DestinationCards({ content }) {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-black text-primary uppercase tracking-tighter leading-[0.95] italic"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-display text-primary tracking-tight leading-tight"
             >
-              {content?.title || 'Velg Din Neste Destinasjon'}
+              {content?.title || 'Velg din neste destinasjon'}
             </motion.h2>
           </div>
           <motion.div
@@ -54,13 +54,13 @@ export default function DestinationCards({ content }) {
              viewport={{ once: true }}
              className="shrink-0"
           >
-            <Link href="/destination/nepal" className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.3em] text-primary border-b-4 border-orange-500 pb-2 hover:text-orange-500 transition-colors">
+            <Link href="/destination/nepal" className="text-xs font-bold uppercase tracking-wider text-primary border-b-2 border-orange-500 pb-1.5 hover:text-orange-500 transition-colors">
               Se alle destinasjoner
             </Link>
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {destinations.map((destination, index) => (
             <motion.div
               key={destination.name}
@@ -71,26 +71,26 @@ export default function DestinationCards({ content }) {
             >
               <Link 
                 href={`/destination/${destination.slug}`}
-                className="group relative rounded-[2.5rem] sm:rounded-[3rem] overflow-hidden h-[450px] sm:h-[550px] block transition-all duration-700 hover:shadow-[0_40px_80px_rgba(0,0,0,0.2)]"
+                className="group relative rounded-3xl overflow-hidden h-[400px] sm:h-[480px] block transition-all duration-700 hover:shadow-lg"
               >
                 <div 
-                  className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110"
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105"
                   style={{ backgroundImage: `url(${destination.image})` }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-60 group-hover:opacity-80 transition-all duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/10 to-transparent opacity-70 group-hover:opacity-80 transition-all duration-700" />
                 
-                <div className="absolute inset-0 flex flex-col items-center justify-end p-8 sm:p-12 text-center">
-                  <div className="translate-y-6 sm:translate-y-8 group-hover:translate-y-0 transition-transform duration-700">
-                    <span className="text-orange-400 font-black uppercase text-[9px] sm:text-[10px] tracking-[0.3em] mb-3 sm:mb-4 block opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                <div className="absolute inset-0 flex flex-col items-center justify-end p-6 sm:p-8 text-center">
+                  <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
+                    <span className="text-orange-400 font-bold uppercase text-[10px] tracking-wider mb-2 block opacity-0 group-hover:opacity-100 transition-opacity duration-700">
                       Nepalvibb Reise
                     </span>
-                    <h3 className="text-3xl sm:text-4xl font-black text-white uppercase tracking-tighter mb-6 sm:mb-8 group-hover:scale-110 transition-transform duration-700">
+                    <h3 className="text-2xl sm:text-3xl font-bold font-display text-white tracking-tight mb-4">
                       {destination.name}
                     </h3>
                   </div>
                   
-                  <div className="bg-white/10 backdrop-blur-md w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center border border-white/20 opacity-0 group-hover:opacity-100 transition-all duration-700 translate-y-10 group-hover:translate-y-0 shadow-2xl">
-                    <ArrowUpRight className="text-white w-5 h-5 sm:w-6 sm:h-6" />
+                  <div className="bg-white/10 backdrop-blur-md w-12 h-12 rounded-full flex items-center justify-center border border-white/20 opacity-0 group-hover:opacity-100 transition-all duration-700 translate-y-6 group-hover:translate-y-0 shadow-lg">
+                    <ArrowUpRight className="text-white w-5 h-5" />
                   </div>
                 </div>
               </Link>

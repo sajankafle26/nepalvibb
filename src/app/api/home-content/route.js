@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import dbConnect from '@/lib/mongodb';
 import HomeContent from '@/models/HomeContent';
 
@@ -28,8 +29,12 @@ export async function POST(request) {
       content = await HomeContent.create(body);
     }
     
+    // Revalidate the homepage so changes appear immediately
+    revalidatePath('/');
+    
     return NextResponse.json(content);
   } catch (error) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }
+

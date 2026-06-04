@@ -76,7 +76,7 @@ export default function HeroBanner() {
               backgroundAttachment: 'fixed'
             }}
           >
-            <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/80"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/15 to-black/50"></div>
           </motion.div>
 
           <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6 max-w-6xl mx-auto pt-20">

@@ -291,20 +291,17 @@ export default function TripDetailPage({ params }) {
           {/* Info Section */}
           <section id="info" className="scroll-mt-36 space-y-6">
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold font-display text-primary tracking-tight">Viktig informasjon</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            <div className="bg-white border border-gray-100 rounded-3xl overflow-hidden divide-y divide-gray-100">
               {[
-                { label: 'Beste Reisetid', value: trip.usefulInfo?.bestTime, icon: Calendar },
-                { label: 'Overnatting', value: trip.usefulInfo?.accommodation, icon: Bed },
-                { label: 'Måltider', value: trip.usefulInfo?.meals, icon: Utensils },
-                { label: 'Visum & Forsikring', value: trip.usefulInfo?.visaInfo, icon: CreditCard },
-                { label: 'Pakkeliste', value: trip.usefulInfo?.packingList, icon: Briefcase },
+                { label: 'Beste Reisetid', value: trip.usefulInfo?.bestTime },
+                { label: 'Overnatting', value: trip.usefulInfo?.accommodation },
+                { label: 'Måltider', value: trip.usefulInfo?.meals },
+                { label: 'Visum & Forsikring', value: trip.usefulInfo?.visaInfo },
+                { label: 'Pakkeliste', value: trip.usefulInfo?.packingList },
               ].map((item, i) => item.value && (
-                <div key={i} className="p-6 bg-gray-50 rounded-2xl border border-gray-100/50 space-y-3">
-                  <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-sm">
-                    <item.icon className="w-5 h-5 text-orange-500" />
-                  </div>
-                  <h4 className="text-[10px] font-semibold uppercase tracking-wider text-gray-400">{item.label}</h4>
-                  <p className="text-xs font-medium text-primary leading-relaxed">{item.value}</p>
+                <div key={i} className="flex items-start gap-6 px-8 py-5">
+                  <span className="text-xs font-bold uppercase tracking-wider text-gray-400 min-w-[140px] pt-0.5">{item.label}</span>
+                  <span className="text-sm font-medium text-primary leading-relaxed">{item.value}</span>
                 </div>
               ))}
             </div>

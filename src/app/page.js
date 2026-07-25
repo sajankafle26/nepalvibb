@@ -11,7 +11,7 @@ import { ArrowRight } from 'lucide-react';
 import HomeContent from '@/models/HomeContent';
 import dbConnect from '@/lib/mongodb';
 
-export const revalidate = 0;
+export const revalidate = 60;
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://nepalvibb.com';
 

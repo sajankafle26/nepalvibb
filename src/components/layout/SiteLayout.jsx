@@ -1,14 +1,9 @@
 import Link from 'next/link';
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
 import { MessageCircle } from 'lucide-react';
 
-// This layout wraps all pages EXCEPT /plan-trip (which has its own layout)
-// This layout wraps all pages EXCEPT /plan-your-trip (which has its own layout)
 export default function SiteLayout({ children }) {
   return (
     <>
-      {/* Global Floating Side Tab */}
       <div className="fixed left-0 top-1/2 -translate-y-1/2 z-[60] hidden md:block">
         <Link 
           href="/plan-your-trip" 
@@ -20,11 +15,8 @@ export default function SiteLayout({ children }) {
         </Link>
       </div>
 
-      <Navbar />
       {children}
-      <Footer />
 
-      {/* Floating Chat Button */}
       <div className="fixed bottom-8 left-8 z-[60]">
         <Link 
           href="/plan-trip" 

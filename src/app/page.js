@@ -1,17 +1,20 @@
-import HeroBanner from '@/components/home/HeroBanner';
-import SearchSection from '@/components/home/SearchSection';
-import DestinationCards from '@/components/home/DestinationCards';
-import FeaturedActivities from '@/components/home/FeaturedActivities';
-import WhoWeAre from '@/components/home/WhoWeAre';
-import FeaturedTours from '@/components/home/FeaturedTours';
-import LatestBlogs from '@/components/home/LatestBlogs';
-import Testimonials from '@/components/home/Testimonials';
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import HomeContent from '@/models/HomeContent';
 import dbConnect from '@/lib/mongodb';
 
-export const revalidate = 60;
+import HeroBanner from '@/components/home/HeroBanner';
+
+const SearchSection = dynamic(() => import('@/components/home/SearchSection'), { ssr: true });
+const DestinationCards = dynamic(() => import('@/components/home/DestinationCards'), { ssr: true });
+const FeaturedActivities = dynamic(() => import('@/components/home/FeaturedActivities'), { ssr: true });
+const WhoWeAre = dynamic(() => import('@/components/home/WhoWeAre'), { ssr: true });
+const FeaturedTours = dynamic(() => import('@/components/home/FeaturedTours'), { ssr: true });
+const LatestBlogs = dynamic(() => import('@/components/home/LatestBlogs'), { ssr: true });
+const Testimonials = dynamic(() => import('@/components/home/Testimonials'), { ssr: true });
+
+export const revalidate = 300;
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://nepalvibb.com';
 

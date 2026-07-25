@@ -2,6 +2,7 @@ import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import HomeContent from '@/models/HomeContent';
+import Banner from '@/models/Banner';
 import dbConnect from '@/lib/mongodb';
 
 const HeroBanner = dynamic(() => import('@/components/home/HeroBanner'), { ssr: true });
@@ -75,11 +76,14 @@ async function getHomeContent() {
 }
 
 export default async function Home() {
-  const content = await getHomeContent();
+  const [content, banners] = await Promise.all([
+    getHomeContent(),
+    Banner.find({ isActive: true }).sort({ order: 1 }).lean().catch(() => []),
+  ]);
 
   return (
     <main className="relative bg-white">
-      <HeroBanner />
+      <HeroBanner initialBanners={JSON.parse(JSON.stringify(banners))} />
       
       {/* Filter Section */}
       <SearchSection />

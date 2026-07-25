@@ -15,11 +15,12 @@ const FALLBACK_BANNER = {
   buttonLink: "/trips"
 };
 
-export default function HeroBanner() {
-  const [banners, setBanners] = useState([]);
+export default function HeroBanner({ initialBanners }) {
+  const [banners, setBanners] = useState(initialBanners || []);
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
+    if (initialBanners?.length) return;
     fetch('/api/banners')
       .then(res => res.json())
       .then(data => {
@@ -28,7 +29,7 @@ export default function HeroBanner() {
         }
       })
       .catch(() => {});
-  }, []);
+  }, [initialBanners]);
 
   useEffect(() => {
     if (banners.length <= 1) return;

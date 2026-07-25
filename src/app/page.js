@@ -136,11 +136,11 @@ export default async function Home() {
 
               <div className="flex flex-col sm:flex-row items-start gap-4 pt-2">
                 <Link
-                  href="/plan-your-trip"
+                  href={content.purpose?.buttonLink || '/om-prosjektet'}
                   className="group inline-flex items-center gap-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-3.5 text-xs font-black uppercase tracking-widest transition-all duration-300 rounded-full shadow-[0_15px_35px_rgba(249,115,22,0.4)] hover:shadow-[0_20px_50px_rgba(249,115,22,0.5)] hover:scale-105 active:scale-95 overflow-hidden"
                 >
                   <span className="relative z-10 flex items-center gap-3">
-                    {content.purpose?.buttonText || 'Planlegg Reisen'}
+                    {content.purpose?.buttonText || 'Les mer om prosjektet'}
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
                   </span>
                   <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-orange-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

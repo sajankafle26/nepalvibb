@@ -280,6 +280,58 @@ export default function AdminHomeContentPage() {
                   />
                 </div>
               )}
+
+              {section.id === 'purpose' && (
+                <>
+                  <div className="space-y-3">
+                    <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 px-2">Long Description (HTML)</label>
+                    <textarea 
+                      rows={5}
+                      value={content[section.id]?.longDescription || ''}
+                      onChange={e => updateSection(section.id, 'longDescription', e.target.value)}
+                      className="w-full bg-gray-50 border-none rounded-2xl px-6 py-4 text-sm font-medium focus:ring-2 focus:ring-primary transition-all resize-none"
+                    />
+                  </div>
+                  <div className="space-y-3">
+                    <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 px-2">Mission Statement</label>
+                    <input 
+                      type="text" 
+                      value={content[section.id]?.mission || ''}
+                      onChange={e => updateSection(section.id, 'mission', e.target.value)}
+                      className="w-full bg-gray-50 border-none rounded-2xl px-6 py-4 text-sm font-medium focus:ring-2 focus:ring-primary transition-all"
+                    />
+                  </div>
+                  <div className="space-y-3">
+                    <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 px-2">Button Link</label>
+                    <input 
+                      type="text" 
+                      value={content[section.id]?.buttonLink || ''}
+                      onChange={e => updateSection(section.id, 'buttonLink', e.target.value)}
+                      className="w-full bg-gray-50 border-none rounded-2xl px-6 py-4 text-sm font-medium focus:ring-2 focus:ring-primary transition-all"
+                    />
+                  </div>
+                  <div className="space-y-3">
+                    <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 px-2">Stats (JSON array)</label>
+                    <textarea 
+                      rows={4}
+                      value={content[section.id]?.stats || ''}
+                      onChange={e => updateSection(section.id, 'stats', e.target.value)}
+                      className="w-full bg-gray-50 border-none rounded-2xl px-6 py-4 text-sm font-mono text-xs focus:ring-2 focus:ring-primary transition-all resize-none"
+                      placeholder='[{"number":"2000+","label":"Hunder sterilisert"},...]'
+                    />
+                  </div>
+                  <div className="space-y-3">
+                    <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 px-2">Gallery Images (JSON array of URLs)</label>
+                    <textarea 
+                      rows={3}
+                      value={content[section.id]?.images || ''}
+                      onChange={e => updateSection(section.id, 'images', e.target.value)}
+                      className="w-full bg-gray-50 border-none rounded-2xl px-6 py-4 text-sm font-mono text-xs focus:ring-2 focus:ring-primary transition-all resize-none"
+                      placeholder='["url1","url2",...]'
+                    />
+                  </div>
+                </>
+              )}
             </div>
           </motion.div>
         ))}

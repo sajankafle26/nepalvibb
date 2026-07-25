@@ -115,9 +115,10 @@ export default function DestinationDetailPage({ params }) {
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-display text-primary tracking-tight mb-8">
               Om <span className="text-orange-500">{destination.name}</span>
             </h2>
-            <div className="space-y-6 text-gray-600 font-light leading-relaxed text-lg border-l-2 border-orange-500 pl-6">
-              <p>{destination.description || 'Oppdag de skjulte perlene i denne praktfulle regionen. Fra eldgamle tradisjoner til pustebestående landskap, hvert hjørne forteller en historie om undring og styrke.'}</p>
-            </div>
+            <div
+              className="space-y-6 text-gray-600 font-light leading-relaxed text-lg border-l-2 border-orange-500 pl-6 [&_p]:m-0"
+              dangerouslySetInnerHTML={{ __html: destination.description || 'Oppdag de skjulte perlene i denne praktfulle regionen. Fra eldgamle tradisjoner til pustebestående landskap, hvert hjørne forteller en historie om undring og styrke.' }}
+            />
           </div>
         </div>
 
@@ -260,9 +261,10 @@ export default function DestinationDetailPage({ params }) {
                           <h3 className="text-lg sm:text-xl font-bold font-display text-primary mb-3 line-clamp-2 leading-snug group-hover:text-orange-500 transition-colors">
                             {tour.title}
                           </h3>
-                          <p className="text-sm text-gray-500 font-light line-clamp-2 leading-relaxed">
-                            {tour.summary}
-                          </p>
+                          <div
+                            className="text-sm text-gray-500 font-light line-clamp-2 leading-relaxed [&_p]:m-0 [&_p]:inline"
+                            dangerouslySetInnerHTML={{ __html: tour.summary }}
+                          />
                         </div>
 
                         <div className="flex items-center justify-between pt-6 border-t border-gray-50 mt-6">

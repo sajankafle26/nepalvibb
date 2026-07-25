@@ -142,6 +142,7 @@ export default function FeaturedActivities({ content }) {
                     src={activity.image} 
                     className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" 
                     alt={activity.name} 
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/30 to-transparent" />
                   

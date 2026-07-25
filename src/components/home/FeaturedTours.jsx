@@ -66,6 +66,7 @@ export default function FeaturedTours({ content }) {
                 <img
                   src={tour.image}
                   alt={tour.title}
+                  loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                 />
                 <div className="absolute top-4 left-4 bg-primary/95 text-white text-[9px] font-bold uppercase px-3 py-1.5 rounded-full tracking-wider shadow-md backdrop-blur-sm">

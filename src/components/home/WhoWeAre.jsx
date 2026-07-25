@@ -31,16 +31,18 @@ export default function WhoWeAre({ content }) {
                     src={content?.image1 || "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=600&q=80"} 
                     alt="Nepal landscape" 
                     className="rounded-[3rem] shadow-2xl w-full h-[500px] object-cover relative z-10 grayscale hover:grayscale-0 transition-all duration-700"
+                    loading="lazy"
                   />
                 </div>
               </div>
               <div className="relative group">
                 <div className="absolute -inset-4 bg-primary/10 rounded-[3rem] blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                <img 
-                  src={content?.image2 || "https://images.unsplash.com/photo-1486916856992-e4db22c8df33?auto=format&fit=crop&w=600&q=80"} 
-                  alt="Nepal culture" 
-                  className="rounded-[3rem] shadow-2xl w-full h-[500px] object-cover relative z-10 grayscale hover:grayscale-0 transition-all duration-700"
-                />
+                  <img 
+                    src={content?.image2 || "https://images.unsplash.com/photo-1486916856992-e4db22c8df33?auto=format&fit=crop&w=600&q=80"} 
+                    alt="Nepal culture" 
+                    className="rounded-[3rem] shadow-2xl w-full h-[500px] object-cover relative z-10 grayscale hover:grayscale-0 transition-all duration-700"
+                    loading="lazy"
+                  />
               </div>
             </motion.div>
 

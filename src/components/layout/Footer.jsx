@@ -186,11 +186,12 @@ export default function Footer() {
                   key={i}
                   className="group bg-white border border-transparent rounded-2xl p-4 flex items-center justify-center w-28 h-16 sm:w-36 sm:h-20 shadow-sm hover:shadow-md hover:border-orange-500/20 transition-all duration-300"
                 >
-                  <img
-                    src={logo.logoUrl}
-                    alt={logo.name}
-                    className="max-h-10 sm:max-h-12 max-w-full object-contain transition-all duration-300"
-                  />
+<img 
+                  src={logo.logoUrl}
+                  alt={logo.name}
+                  className="max-h-10 sm:max-h-12 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                  loading="lazy"
+                />
                 </div>
               ))}
             </div>
@@ -209,11 +210,12 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="group flex items-center space-x-3 px-6 py-3 rounded-2xl bg-green-900 hover:shadow-md transition-all duration-300 border border-transparent hover:border-orange-500/20 shadow-sm"
             >
-              <img
-                src={s.subsidiaryLogo}
-                alt="Subsidiary"
-                className="h-8 w-auto object-contain transition-all duration-300"
-              />
+<img 
+                    src={s.subsidiaryLogo}
+                    alt={s.name}
+                    className="h-8 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                    loading="lazy"
+                  />
               <ExternalLink className="w-3.5 h-3.5 text-emerald-600 group-hover:text-orange-500 transition-colors" />
             </a>
           </div>

@@ -85,7 +85,7 @@ export default function BlogListPage() {
                 >
                   <Link href={`/blogg/${blog.slug}`}>
                     <div className="overflow-hidden rounded-3xl mb-6 shadow-md h-80 relative border-2 border-white group-hover:border-orange-500/20 transition-all">
-                      <img src={blog.image} alt={blog.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
+                      <img src={blog.image} alt={blog.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" loading="lazy" />
                       <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-all duration-500"></div>
                       <div className="absolute top-6 left-6">
                         <span className="bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-wider text-primary flex items-center shadow-sm">

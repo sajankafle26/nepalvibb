@@ -116,7 +116,7 @@ export default function TripDetailPage({ params }) {
       
       {/* Cinematic Hero */}
       <section className="relative h-[60vh] md:h-[75vh] min-h-[400px] overflow-hidden">
-        <img src={trip.image} className="w-full h-full object-cover" alt={trip.title} />
+        <img src={trip.image} className="w-full h-full object-cover" alt={trip.title} fetchPriority="high" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
         
         <div className="absolute inset-0 flex items-end">
@@ -282,7 +282,7 @@ export default function TripDetailPage({ params }) {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               {trip.gallery?.map((img, i) => (
                 <div key={i} className="h-64 md:h-72 rounded-2xl overflow-hidden shadow-sm">
-                  <img src={img} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" alt="" />
+                  <img src={img} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" alt="" loading="lazy" />
                 </div>
               ))}
             </div>

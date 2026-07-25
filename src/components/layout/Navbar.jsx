@@ -145,6 +145,7 @@ export default function Navbar() {
                   "h-12 w-auto transition-all duration-500",
                   isScrolled ? "brightness-0" : "brightness-100"
                 )}
+                fetchPriority="high"
               />
             </Link>
 

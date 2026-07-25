@@ -75,6 +75,7 @@ export default function TurerPage() {
                       src={tour.image}
                       alt={tour.title}
                       className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                      loading="lazy"
                     />
                     <div className="absolute top-4 left-4 bg-primary/95 text-white text-[9px] font-bold uppercase px-3 py-1.5 rounded-full tracking-wider shadow-md backdrop-blur-sm">
                       {tour.category || 'Eventyr'}

@@ -139,7 +139,7 @@ export default function AboutPage() {
                   className="group"
                 >
                   <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-md mb-6">
-                    <img src={member.image} className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" alt={member.name} />
+                    <img src={member.image} className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" alt={member.name} loading="lazy" />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-8">
                       <div className="flex space-x-4">
                         {member.socialLinks?.facebook && <a href={member.socialLinks.facebook} className="text-white hover:text-orange-500"><Facebook className="w-5 h-5" /></a>}
@@ -186,7 +186,7 @@ export default function AboutPage() {
       <section className="py-20 max-w-7xl mx-auto px-6 text-center">
         <div className="bg-primary rounded-3xl p-10 sm:p-16 relative overflow-hidden shadow-lg">
           <div className="absolute inset-0 opacity-20">
-            <img src="https://images.unsplash.com/photo-1551882547-ff43c63faf76?q=80&w=2070&auto=format&fit=crop" className="w-full h-full object-cover" alt="" />
+            <img src="https://images.unsplash.com/photo-1551882547-ff43c63faf76?q=80&w=2070&auto=format&fit=crop" className="w-full h-full object-cover" alt="" loading="lazy" />
           </div>
           <div className="relative z-10 space-y-8">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-display text-white tracking-tight leading-tight">

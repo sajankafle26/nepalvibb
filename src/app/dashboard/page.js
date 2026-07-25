@@ -163,7 +163,7 @@ export default function DashboardPage() {
               href={`/trips/${tour.slug}`}
               className="group relative h-64 rounded-[2.5rem] overflow-hidden block border border-gray-100 shadow-sm"
             >
-              <img src={tour.image} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="" />
+              <img src={tour.image} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="" loading="lazy" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               <div className="absolute bottom-8 left-8 right-8 flex items-end justify-between">
                 <div className="text-white">

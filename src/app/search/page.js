@@ -95,7 +95,7 @@ function SearchContent() {
               {tours.map((tour) => (
                 <div key={tour._id} className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-500 group border border-gray-100 flex flex-col">
                   <div className="relative h-72 overflow-hidden">
-                    <img src={tour.image} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt={tour.title} />
+                    <img src={tour.image} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt={tour.title} loading="lazy" />
                     <div className="absolute top-6 left-6 bg-primary/90 backdrop-blur-md text-white text-[9px] font-bold uppercase px-4 py-1.5 rounded-full tracking-wider">
                       {tour.difficulty}
                     </div>

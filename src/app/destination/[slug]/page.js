@@ -250,7 +250,7 @@ export default function DestinationDetailPage({ params }) {
                       )}
                     >
                       <div className={cn("relative overflow-hidden border-b border-gray-50 md:border-b-0 md:border-r border-gray-50", view === 'list' ? "w-full md:w-[280px] h-52 md:h-full" : "h-64")}>
-                        <img src={tour.image} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt={tour.title} />
+                        <img src={tour.image} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt={tour.title} loading="lazy" />
                         <div className="absolute top-4 left-4 bg-primary/95 text-white text-[9px] font-bold uppercase px-3 py-1.5 rounded-full tracking-wider shadow-md backdrop-blur-sm">
                           {tour.category || 'Eventyr'}
                         </div>

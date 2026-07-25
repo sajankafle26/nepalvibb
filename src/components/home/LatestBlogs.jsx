@@ -58,6 +58,7 @@ export default function LatestBlogs() {
                 src={blog.image} 
                 alt={blog.title} 
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" 
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-all duration-500"></div>
               <div className="absolute top-6 left-6">

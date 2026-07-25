@@ -43,7 +43,9 @@ export default function HeroBanner({ initialBanners }) {
   const currentBanner = allBanners[current];
 
   return (
-    <div className="relative h-[100svh] min-h-[650px] flex items-center overflow-hidden bg-black">
+    <>
+      <link rel="preload" as="image" href={currentBanner.image} fetchPriority="high" />
+      <div className="relative h-[100svh] min-h-[650px] flex items-center overflow-hidden bg-black">
       {/* Background image with overlay */}
       <div className="absolute inset-0">
         <img src={currentBanner.image} alt="" className="absolute inset-0 w-full h-full object-cover" fetchPriority="high" />
@@ -143,5 +145,6 @@ export default function HeroBanner({ initialBanners }) {
         <div className="w-px h-16 bg-gradient-to-b from-white/30 to-transparent" />
       </div>
     </div>
+    </>
   );
 }

@@ -74,8 +74,6 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://images.unsplash.com" />
         <link rel="dns-prefetch" href="https://nepalvibb.com" />
-        <link rel="preload" as="image" href="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1920&q=80" fetchPriority="high" />
-        <link rel="preload" as="fetch" href="/api/banners" crossOrigin="anonymous" />
         <ClientLayout>{children}</ClientLayout>
       </body>
     </html>

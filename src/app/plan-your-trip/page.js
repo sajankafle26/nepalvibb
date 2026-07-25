@@ -18,6 +18,25 @@ const IconMap = {
   MapPin, Mountain, Landmark, Heart, Sparkles, Calendar, Users, Send, Mail, User, MessageSquare, Globe, Zap, Compass, Layout, Star
 };
 
+function DateField({ label, value, min, onChange }) {
+  const handleBoxClick = (e) => {
+    const input = e.currentTarget.querySelector('input[type="date"]');
+    if (input) input.showPicker();
+  };
+  return (
+    <div className="relative group" onClick={handleBoxClick}>
+      <div className="flex items-center space-x-2 text-gray-400 mb-3">
+        <Calendar className="w-4 h-4" />
+        <span className="text-[11px] font-black uppercase tracking-widest">{label}</span>
+      </div>
+      <div className="w-full bg-gray-50/50 border-2 border-gray-50 rounded-[2rem] px-8 py-5 text-sm font-bold text-gray-800 shadow-sm cursor-pointer transition-all hover:border-primary/30 group-hover:bg-white">
+        {value ? new Date(value).toLocaleDateString('no-NO', { day: '2-digit', month: 'long', year: 'numeric' }) : 'Velg dato'}
+      </div>
+      <input type="date" value={value || ''} min={min} onChange={e => onChange(e.target.value)} className="sr-only" />
+    </div>
+  );
+}
+
 function PlanYourTripContent() {
   const { data: session } = useSession();
   const searchParams = useSearchParams();
@@ -99,7 +118,7 @@ function PlanYourTripContent() {
         const [qData, tData, dData, aData] = await Promise.all([
           qRes.json(), tRes.json(), dRes.json(), aRes.json()
         ]);
-        setQuestions(Array.isArray(qData) ? qData : []);
+        setQuestions(Array.isArray(qData) ? qData.filter(q => !q.question?.toLowerCase().includes('oppleve')) : []);
         setTours(Array.isArray(tData?.tours) ? tData.tours : Array.isArray(tData) ? tData : []);
         setDestinations(Array.isArray(dData) ? dData : []);
         setActivities(Array.isArray(aData) ? aData : []);
@@ -155,10 +174,7 @@ function PlanYourTripContent() {
           setError('Vennligst velg et overnattingsalternativ.');
           return;
         }
-        if (!responses['budget_flexible']) {
-          setError('Vennligst oppgi om budsjettet ditt er fleksibelt.');
-          return;
-        }
+
       } else {
         const isTravelDateStep = currentQuestion.question?.toLowerCase().includes('date') ||
           currentQuestion.question?.toLowerCase().includes('when') ||
@@ -249,7 +265,7 @@ function PlanYourTripContent() {
     </div>
   );
 
-  const stepLabels = ["Reisefølge", "Når reiser du?", "Hva vil du oppleve?", "Planlegg detaljer", "Kontakt oss"];
+  const stepLabels = ["Reisefølge", "Når reiser du?", "Planlegg detaljer", "Kontakt oss"];
 
   return (
     <div className="min-h-screen bg-white font-sans text-gray-900 selection:bg-primary/10">
@@ -304,7 +320,7 @@ function PlanYourTripContent() {
         </div>
 
         <div className="flex flex-col lg:flex-row gap-12 items-start">
-          <div className="flex-1 space-y-12 w-full lg:max-w-3xl">
+          <div className="flex-1 space-y-12 w-full">
             <AnimatePresence mode="wait">
               <motion.div key={currentStepIdx} initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="space-y-12">
                 <div className="space-y-16">
@@ -318,20 +334,18 @@ function PlanYourTripContent() {
                       {currentQuestion.question?.toLowerCase().includes('date') || currentQuestion.question?.toLowerCase().includes('when') || currentQuestion.question?.toLowerCase().includes('reisedato') ? (
                         <div className="space-y-10">
                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                            <div className="group space-y-3">
-                              <div className="flex items-center space-x-2 text-gray-400 group-focus-within:text-primary transition-colors">
-                                <Calendar className="w-4 h-4" />
-                                <label className="text-[11px] font-black uppercase tracking-widest">Avreisedato</label>
-                              </div>
-                              <input type="date" value={responses['startDate'] || ''} min={new Date().toISOString().split('T')[0]} onChange={e => { setError(''); setResponses(r => ({ ...r, startDate: e.target.value })); }} className="w-full bg-gray-50/50 border-2 border-gray-50 rounded-[2rem] px-8 py-5 text-sm font-bold text-gray-800 focus:outline-none focus:border-primary focus:bg-white transition-all cursor-pointer shadow-sm" />
-                            </div>
-                            <div className="group space-y-3">
-                              <div className="flex items-center space-x-2 text-gray-400 group-focus-within:text-primary transition-colors">
-                                <Calendar className="w-4 h-4" />
-                                <label className="text-[11px] font-black uppercase tracking-widest">Returdato</label>
-                              </div>
-                              <input type="date" value={responses['endDate'] || ''} min={responses['startDate'] || new Date().toISOString().split('T')[0]} onChange={e => { setError(''); setResponses(r => ({ ...r, endDate: e.target.value })); }} className="w-full bg-gray-50/50 border-2 border-gray-50 rounded-[2rem] px-8 py-5 text-sm font-bold text-gray-800 focus:outline-none focus:border-primary focus:bg-white transition-all cursor-pointer shadow-sm" />
-                            </div>
+                            <DateField
+                              label="Avreisedato"
+                              value={responses['startDate']}
+                              min={new Date().toISOString().split('T')[0]}
+                              onChange={v => { setError(''); setResponses(r => ({ ...r, startDate: v })); }}
+                            />
+                            <DateField
+                              label="Returdato"
+                              value={responses['endDate']}
+                              min={responses['startDate'] || new Date().toISOString().split('T')[0]}
+                              onChange={v => { setError(''); setResponses(r => ({ ...r, endDate: v })); }}
+                            />
                           </div>
                           <motion.label whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.99 }} className="flex items-center space-x-4 cursor-pointer group p-6 bg-emerald-50/50 rounded-3xl border-2 border-transparent hover:border-primary/20 transition-all">
                             <div onClick={() => { setError(''); setResponses(r => ({ ...r, flexible_dates: !r.flexible_dates })); }} className={cn("w-6 h-6 rounded-lg border-2 flex items-center justify-center transition-all flex-shrink-0", responses['flexible_dates'] ? "bg-primary border-primary" : "bg-white border-gray-200 group-hover:border-primary")}>
@@ -418,8 +432,15 @@ function PlanYourTripContent() {
                                 <label className="text-[11px] font-black uppercase tracking-widest">Budsjett per person (NOK)</label>
                               </div>
                               <div className="relative group">
-                                <div className="absolute left-6 top-1/2 -translate-y-1/2 text-gray-400 font-black text-sm group-focus-within:text-primary transition-colors">NOK</div>
-                                <input type="number" placeholder="f.eks 15000" value={responses['budget'] || ''} onChange={e => setResponses({ ...responses, 'budget': e.target.value })} className="w-full bg-gray-50/50 border-2 border-gray-50 rounded-2xl px-12 py-5 text-sm font-black text-primary focus:outline-none focus:border-primary focus:bg-white transition-all shadow-sm" />
+                                <div className="absolute left-5 top-1/2 -translate-y-1/2 z-10 flex items-center gap-1.5 bg-gray-100 rounded-xl px-3 py-2 group-focus-within:bg-primary/10 group-focus-within:text-primary transition-all">
+                                  <span className="text-xs font-black text-gray-400 group-focus-within:text-primary transition-colors">kr</span>
+                                </div>
+                                <input type="number" placeholder="0" value={responses['budget'] || ''} onChange={e => setResponses({ ...responses, 'budget': e.target.value })} className="w-full bg-white border-2 border-gray-100 rounded-[2rem] pl-[4.5rem] pr-8 py-5 text-lg font-bold text-primary focus:outline-none focus:border-primary focus:bg-white transition-all shadow-sm placeholder:text-gray-200" />
+                              </div>
+                              <div className="flex gap-2 pt-1">
+                                {[5000, 10000, 15000, 25000].map(amount => (
+                                  <button key={amount} type="button" onClick={() => setResponses({ ...responses, 'budget': String(amount), 'budget_flexible': responses['budget_flexible'] || 'enough' })} className={`px-4 py-2 rounded-xl text-[11px] font-bold uppercase tracking-wider border transition-all ${responses['budget'] === String(amount) ? 'bg-primary text-white border-primary' : 'bg-white text-gray-400 border-gray-100 hover:border-primary/30 hover:text-primary'}`}>{amount.toLocaleString('no-NO')} kr</button>
+                                ))}
                               </div>
                             </div>
                             <div className="space-y-4">
@@ -625,9 +646,9 @@ function PlanYourTripContent() {
                   </div>
                 </div>
                 <div className="space-y-8">
-                  {questions.map((q) => { 
-                    const selection = responses[q._id]; 
-                    if (!selection || (Array.isArray(selection) && selection.length === 0)) return null; 
+                  {questions.map((q) => {
+                    const selection = responses[q._id];
+                    if (!selection || (Array.isArray(selection) && selection.length === 0)) return null;
                     return (
                       <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} key={q._id} className="space-y-3 group">
                         <div className="flex items-center space-x-3 text-white/40 group-hover:text-orange-400 transition-colors">
@@ -644,7 +665,7 @@ function PlanYourTripContent() {
                           )}
                         </div>
                       </motion.div>
-                    ); 
+                    );
                   })}
                   {(!responses[questions.find(q => q.question === 'Tour details')?._id]) && (responses['tour'] || responses['destination']) && (
                     <div className="space-y-6 pt-6 border-t border-white/10">

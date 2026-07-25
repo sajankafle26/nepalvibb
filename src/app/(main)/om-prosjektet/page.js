@@ -44,10 +44,10 @@ export default function OmProsjektetPage() {
                 <span className="w-2 h-2 rounded-full bg-orange-400 animate-pulse" />
                 <span className="text-orange-300 font-bold uppercase tracking-widest text-[10px]">{p.subtitle || 'Vårt samfunnsansvar'}</span>
               </div>
-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold font-display text-white tracking-tight leading-[1.05]">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-display text-white tracking-tight leading-[1.1]">
                 {p.title || 'En Reise med Formål'}
               </h1>
-              <p className="text-white/70 text-lg sm:text-xl font-light leading-relaxed max-w-xl">
+              <p className="text-white/70 text-base sm:text-lg font-light leading-relaxed max-w-xl">
                 {p.description || ''}
               </p>
               <div className="flex gap-4 pt-4">
@@ -86,7 +86,7 @@ export default function OmProsjektetPage() {
       </section>
 
       {/* ===== OUR STORY ===== */}
-      <section className="py-28 sm:py-36">
+      <section className="py-20 sm:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-28 items-center">
             <div className="space-y-8 order-2 lg:order-1">
@@ -94,12 +94,12 @@ export default function OmProsjektetPage() {
                 <h5 className="text-orange-500 font-bold uppercase tracking-wider text-xs flex items-center gap-2">
                   <span className="w-6 h-px bg-orange-500" /> Historien Vår
                 </h5>
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display text-primary tracking-tight leading-tight">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-display text-primary tracking-tight leading-tight">
                   Hvordan Det Hele Startet
                 </h2>
               </div>
               <div
-                className="text-gray-600 font-light text-[17px] leading-[1.8] space-y-5 [&_p]:m-0"
+                className="text-gray-600 font-light text-[15px] leading-[1.7] space-y-4 [&_p]:m-0"
                 dangerouslySetInnerHTML={{ __html: p.longDescription || '' }}
               />
               <div className="flex flex-wrap gap-6 pt-4">
@@ -146,17 +146,17 @@ export default function OmProsjektetPage() {
 
       {/* ===== IMPACT STATS ===== */}
       {stats.length > 0 && (
-        <section id="impact" className="relative py-20 sm:py-28 overflow-hidden">
+        <section id="impact" className="relative py-16 sm:py-24 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-emerald-900" />
           <div className="absolute top-0 left-1/2 w-[800px] h-[800px] bg-orange-500/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/3" />
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-emerald-400/10 rounded-full blur-3xl" />
 
           <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h5 className="text-orange-400 font-bold uppercase tracking-wider text-xs flex items-center justify-center gap-2 mb-4">
+            <div className="text-center mb-12">
+              <h5 className="text-orange-400 font-bold uppercase tracking-wider text-xs flex items-center justify-center gap-2 mb-3">
                 <Sparkles className="w-3.5 h-3.5" /> Vår Påvirkning
               </h5>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display text-white tracking-tight leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-display text-white tracking-tight leading-tight">
                 Sammen Gjør Vi En Forskjell
               </h2>
             </div>
@@ -166,7 +166,7 @@ export default function OmProsjektetPage() {
                 <div key={i} className="relative text-center group">
                   <div className="absolute inset-0 bg-white/5 rounded-[2rem] blur-sm group-hover:blur-md transition-all" />
                   <div className="relative p-8 sm:p-10 rounded-[2rem] border border-white/10 bg-white/[0.03] backdrop-blur-sm">
-                    <p className="text-4xl sm:text-5xl lg:text-6xl font-black font-display text-transparent bg-clip-text bg-gradient-to-br from-orange-300 to-orange-500 mb-3">
+                    <p className="text-3xl sm:text-4xl lg:text-5xl font-black font-display text-transparent bg-clip-text bg-gradient-to-br from-orange-300 to-orange-500 mb-2">
                       {stat.number}
                     </p>
                     <p className="text-white/60 text-xs font-bold uppercase tracking-wider leading-relaxed">
@@ -181,16 +181,16 @@ export default function OmProsjektetPage() {
       )}
 
       {/* ===== HOW IT WORKS ===== */}
-      <section className="py-28 sm:py-36">
+      <section className="py-20 sm:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-20">
-            <h5 className="text-orange-500 font-bold uppercase tracking-wider text-xs flex items-center justify-center gap-2 mb-4">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h5 className="text-orange-500 font-bold uppercase tracking-wider text-xs flex items-center justify-center gap-2 mb-3">
               <span className="w-6 h-px bg-orange-500" /> Slik Fungerer Det <span className="w-6 h-px bg-orange-500" />
             </h5>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display text-primary tracking-tight leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-display text-primary tracking-tight leading-tight">
               Ditt Eventyr Gir Håp
             </h2>
-            <p className="text-gray-500 font-light text-lg mt-4 leading-relaxed">
+            <p className="text-gray-500 font-light text-base mt-3 leading-relaxed">
               Hver reise du bestiller hos oss støtter direkte vårt arbeid for gatehunder i Nepal.
             </p>
           </div>
@@ -210,8 +210,8 @@ export default function OmProsjektetPage() {
                       <item.icon className="w-7 h-7 text-white" />
                     </div>
                     <span className="text-[10px] font-black text-gray-300 uppercase tracking-widest mb-3 block">{item.step}</span>
-                    <h3 className="text-xl font-bold font-display text-primary mb-4 leading-tight">{item.title}</h3>
-                    <p className="text-gray-500 font-light text-sm leading-relaxed">{item.desc}</p>
+                    <h3 className="text-lg font-bold font-display text-primary mb-3 leading-tight">{item.title}</h3>
+                    <p className="text-gray-500 font-light text-[13px] leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -222,11 +222,11 @@ export default function OmProsjektetPage() {
 
       {/* ===== GALLERY ===== */}
       {images.length > 1 && (
-        <section className="py-20 sm:py-28 bg-white">
+        <section className="py-16 sm:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h5 className="text-orange-500 font-bold uppercase tracking-wider text-xs mb-3">Bildegalleri</h5>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display text-primary tracking-tight leading-tight">
+            <div className="text-center mb-12">
+              <h5 className="text-orange-500 font-bold uppercase tracking-wider text-xs mb-2">Bildegalleri</h5>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-display text-primary tracking-tight leading-tight">
                 Prosjektet I Bilder
               </h2>
             </div>
@@ -249,7 +249,7 @@ export default function OmProsjektetPage() {
       )}
 
       {/* ===== CTA ===== */}
-      <section className="relative py-28 sm:py-36 overflow-hidden">
+      <section className="relative py-20 sm:py-28 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-emerald-900" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-orange-500/10 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#FAFAF9] to-transparent" />
@@ -260,20 +260,20 @@ export default function OmProsjektetPage() {
             <span className="text-orange-300 font-bold uppercase tracking-widest text-[10px]">Bli Med</span>
           </div>
 
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold font-display text-white tracking-tight leading-tight mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display text-white tracking-tight leading-tight mb-5">
             Klar for å gjøre en <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-300">forskjell</span>?
           </h2>
 
-          <p className="text-white/60 text-lg font-light max-w-2xl mx-auto mb-12 leading-relaxed">
+          <p className="text-white/60 text-base font-light max-w-2xl mx-auto mb-10 leading-relaxed">
             Book din neste reise til Nepal. Opplev Himalaya, kulturen og naturen – og gi samtidig noe tilbake til lokalsamfunnene.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/plan-your-trip"
-              className="group inline-flex items-center gap-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-10 py-4 text-xs font-black uppercase tracking-widest rounded-full shadow-[0_15px_35px_rgba(249,115,22,0.4)] hover:shadow-[0_20px_50px_rgba(249,115,22,0.5)] hover:scale-105 transition-all"
-            >
-              Planlegg Reisen <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <Link
+                href="/plan-your-trip"
+                className="group inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-3.5 text-[11px] font-bold uppercase tracking-widest rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all"
+              >
+                Planlegg Reisen <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               href="/turer"

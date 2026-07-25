@@ -97,3 +97,25 @@ h1, h2, h3, h4, h5, h6 {
 .prose-2xl p {
   @apply text-2xl;
 }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes kenBurns {
+  from { transform: scale(1.1); }
+  to { transform: scale(1); }
+}
+@keyframes heroContent {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fadeIn 1s ease-out;
+}
+.animate-ken-burns {
+  animation: kenBurns 10s linear;
+}
+.animate-hero-content {
+  animation: heroContent 1s ease-out 0.3s both;
+}

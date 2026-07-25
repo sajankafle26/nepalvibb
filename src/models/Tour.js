@@ -10,7 +10,7 @@ const TourSchema = new mongoose.Schema({
   image: { type: String, required: true },
   summary: { type: String, required: true },
   overview: { type: String },
-  category: { type: String, default: 'Trekking' },
+  category: { type: [String], default: ['Trekking'] },
   highlights: [String],
   itinerary: [
     {

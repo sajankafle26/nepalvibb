@@ -26,17 +26,23 @@ export default function DestinationDetailPage({ params }) {
       .finally(() => setLoading(false));
   }, [slug]);
 
-  if (!loading && !data?.destination) return (
+  if (loading) return (
+    <div className="min-h-screen bg-stone-50/30 flex items-center justify-center">
+      <div className="w-12 h-12 border-4 border-primary/10 border-t-orange-500 rounded-full animate-spin" />
+    </div>
+  );
+
+  if (!data?.destination) return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-white space-y-6">
       <h1 className="text-4xl font-black text-primary uppercase tracking-tighter italic">Destinasjon ikke funnet</h1>
       <Link href="/" className="bg-orange-500 text-white px-8 py-3 rounded-xl font-black uppercase tracking-widest text-xs shadow-xl">Tilbake til hjem</Link>
     </div>
   );
 
-  const destination = data?.destination;
+  const destination = data.destination;
   const tours = data?.tours || [];
   const filteredTours = destination ? tours.filter(tour => {
-    const matchActivity = filters.activity === 'Alle' || tour.category === filters.activity;
+    const matchActivity = filters.activity === 'Alle' || (tour.category || []).includes(filters.activity);
     let matchDuration = true;
     if (filters.duration !== 'Alle') {
       const days = parseInt(tour.duration);
@@ -46,7 +52,7 @@ export default function DestinationDetailPage({ params }) {
     }
     return matchActivity && matchDuration;
   }) : [];
-  const activities = destination ? ['Alle', ...new Set(tours.map(t => t.category).filter(Boolean))] : [];
+  const activities = destination ? ['Alle', ...new Set(tours.flatMap(t => t.category || []).filter(Boolean))] : [];
 
   return (
     <div className="min-h-screen bg-stone-50/30">
@@ -211,7 +217,7 @@ export default function DestinationDetailPage({ params }) {
                     <div className={cn("relative overflow-hidden border-b border-gray-50 md:border-b-0 md:border-r border-gray-50", view === 'list' ? "w-full md:w-[280px] h-52 md:h-full" : "h-64")}>
                       <img src={tour.image} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt={tour.title} loading="lazy" />
                       <div className="absolute top-4 left-4 bg-primary/95 text-white text-[9px] font-bold uppercase px-3 py-1.5 rounded-full tracking-wider shadow-md backdrop-blur-sm">
-                        {tour.category || 'Eventyr'}
+                        {Array.isArray(tour.category) ? tour.category[0] : tour.category || 'Eventyr'}
                       </div>
                     </div>
 

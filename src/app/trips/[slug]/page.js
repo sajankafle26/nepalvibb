@@ -123,7 +123,7 @@ export default function TripDetailPage({ params }) {
           <div className="max-w-[85rem] mx-auto px-6 pb-12 md:pb-16 w-full">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl space-y-6">
               <span className="inline-block bg-orange-500 text-white px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-md">
-                {trip.category}
+                {Array.isArray(trip.category) ? trip.category[0] : trip.category}
               </span>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-display text-white tracking-tight leading-tight">
                 {trip.title}

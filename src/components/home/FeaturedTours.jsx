@@ -16,8 +16,8 @@ export default function FeaturedTours({ content }) {
         const data = await res.json();
         if (Array.isArray(data)) {
           const sorted = [...data].sort((a, b) => {
-            const catA = a.category?.toLowerCase() || '';
-            const catB = b.category?.toLowerCase() || '';
+            const catA = (Array.isArray(a.category) ? a.category[0] : a.category)?.toLowerCase() || '';
+            const catB = (Array.isArray(b.category) ? b.category[0] : b.category)?.toLowerCase() || '';
             const scoreA = catA === 'tour' ? 2 : catA === 'trekking' ? 1 : 0;
             const scoreB = catB === 'tour' ? 2 : catB === 'trekking' ? 1 : 0;
             return scoreB - scoreA;
@@ -70,7 +70,7 @@ export default function FeaturedTours({ content }) {
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                 />
                 <div className="absolute top-4 left-4 bg-primary/95 text-white text-[9px] font-bold uppercase px-3 py-1.5 rounded-full tracking-wider shadow-md backdrop-blur-sm">
-                  {tour.category || 'Eventyr'}
+                  {Array.isArray(tour.category) ? tour.category[0] : tour.category || 'Eventyr'}
                 </div>
                 <div className="absolute bottom-4 right-4 bg-orange-500 text-white font-bold px-4 py-2 rounded-2xl shadow-md transition-transform duration-500">
                   <p className="text-[9px] block font-light text-orange-200 uppercase tracking-wider leading-none mb-0.5">Fra</p>

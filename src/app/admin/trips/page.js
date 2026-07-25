@@ -29,7 +29,7 @@ export default function AdminTripsPage() {
     price: '',
     difficulty: 'Moderat',
     duration: '',
-    category: 'Trekking',
+    category: ['Trekking'],
     destination: 'Nepal',
     summary: '',
     overview: '',
@@ -147,7 +147,7 @@ export default function AdminTripsPage() {
     const matchesSearch = (t.title || '').toLowerCase().includes(searchTerm.toLowerCase()) ||
                          (t.destination || '').toLowerCase().includes(searchTerm.toLowerCase());
     const matchesDest = filterDest === 'All' || t.destination === filterDest;
-    const matchesAct = filterAct === 'All' || t.category === filterAct;
+    const matchesAct = filterAct === 'All' || (t.category || []).includes(filterAct);
     return matchesSearch && matchesDest && matchesAct;
   });
 
@@ -170,7 +170,7 @@ export default function AdminTripsPage() {
               setIsEditing('new');
               setFormData({
                 title: '', slug: '', image: '', price: '',
-                difficulty: 'Moderat', duration: '', category: 'Trekking',
+                difficulty: 'Moderat', duration: '', category: ['Trekking'],
                 destination: 'Nepal', summary: '', overview: '',
                 highlights: [], itinerary: [], priceIncludes: [],
                 priceExcludes: [], gallery: [], usefulInfo: {
@@ -281,9 +281,21 @@ export default function AdminTripsPage() {
                         </div>
                         <div className="space-y-4">
                           <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 px-2">Category</label>
-                          <select value={formData.category} onChange={e => setFormData({...formData, category: e.target.value})} className="w-full bg-gray-50 border-none rounded-2xl px-6 py-4 text-sm font-medium focus:ring-2 focus:ring-primary transition-all">
-                            {activities.map(a => <option key={a._id} value={a.name}>{a.name}</option>)}
-                          </select>
+                          <div className="flex flex-wrap gap-2">
+                            {activities.map(a => {
+                              const isSelected = (formData.category || []).includes(a.name);
+                              return (
+                                <button key={a._id} type="button" onClick={() => setFormData({
+                                  ...formData,
+                                  category: isSelected
+                                    ? formData.category.filter(c => c !== a.name)
+                                    : [...(formData.category || []), a.name]
+                                })} className={`px-4 py-2.5 rounded-xl text-[11px] font-bold uppercase tracking-wider border transition-all ${isSelected ? 'bg-primary text-white border-primary' : 'bg-gray-50 text-gray-500 border-gray-100 hover:border-primary/30'}`}>
+                                  {a.name}
+                                </button>
+                              );
+                            })}
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -445,7 +457,7 @@ export default function AdminTripsPage() {
               </div>
               <div className="p-8">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-[10px] font-black uppercase tracking-widest text-emerald-500">{trip.category}</span>
+                  <span className="text-[10px] font-black uppercase tracking-widest text-emerald-500">{Array.isArray(trip.category) ? trip.category[0] : trip.category}</span>
                   <span className="text-[10px] font-black text-gray-300 uppercase tracking-widest">{trip.duration}</span>
                 </div>
                 <h3 className="text-xl font-black text-primary uppercase tracking-tight line-clamp-1">{trip.title}</h3>

@@ -42,141 +42,108 @@ export default function HeroBanner() {
   const currentBanner = allBanners[current];
 
   return (
-    <div className="relative h-[100svh] sm:h-[95vh] min-h-[600px] sm:min-h-[750px] flex items-center justify-center overflow-hidden bg-black">
-      <div className="absolute inset-0 z-0 animate-fade-in">
+    <div className="relative h-[100svh] min-h-[650px] flex items-center overflow-hidden bg-black">
+      {/* Background image with overlay */}
+      <div className="absolute inset-0">
         <div
-          className="absolute inset-0 bg-cover bg-center animate-ken-burns"
-          style={{
-            backgroundImage: `url("${currentBanner.image}")`,
-          }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/15 to-black/50"></div>
-        </div>
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url("${currentBanner.image}")` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+      </div>
 
-        <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6 max-w-6xl mx-auto pt-20 animate-hero-content">
-          <span className="inline-block text-white text-[10px] sm:text-[14px] font-black uppercase tracking-[0.4em] mb-6 sm:mb-8 py-2 px-6 border border-white/20 rounded-full backdrop-blur-md bg-white/5">
-            {currentBanner.badgeText || "Explore Nepal"}
-          </span>
-          
-          <h1 className="text-4xl xs:text-5xl sm:text-7xl md:text-8xl lg:text-[6.5rem] font-bold font-display text-white mb-10 sm:mb-12 drop-shadow-[0_10px_20px_rgba(0,0,0,0.3)] tracking-tight leading-[1.05]">
-            {currentBanner.title} <br /> 
+      {/* Decorative gradient orbs */}
+      <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-orange-500/20 rounded-full blur-[120px]" />
+      <div className="absolute -bottom-40 -left-40 w-[400px] h-[400px] bg-emerald-500/10 rounded-full blur-[100px]" />
+
+      {/* Content */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-8 lg:px-12 pt-24">
+        <div className="max-w-3xl">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md px-5 py-2.5 rounded-full border border-white/10 mb-8">
+            <span className="w-2 h-2 rounded-full bg-orange-400 animate-pulse" />
+            <span className="text-orange-300 text-[11px] font-bold uppercase tracking-[0.25em]">
+              {currentBanner.badgeText || "Explore Nepal"}
+            </span>
+          </div>
+
+          {/* Title */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-display text-white leading-[1.1] tracking-tight">
+            {currentBanner.title}{' '}
             {currentBanner.highlightText && (
-              <>
-                <span className="text-transparent stroke-text-white">{currentBanner.highlightText}</span> <br />
-              </>
-            )}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-300 to-amber-200">
+                {currentBanner.highlightText}
+              </span>
+            )}{' '}
             {currentBanner.subtitle}
           </h1>
-          
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-8 w-full sm:w-auto">
-            <Link 
-              href={currentBanner.buttonLink || "/trips"} 
-              className="group relative w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white px-10 sm:px-14 py-5 sm:py-6 text-[10px] sm:text-xs font-black uppercase tracking-[0.3em] transition-all rounded-2xl sm:rounded-full shadow-[0_20px_40px_rgba(249,115,22,0.4)] overflow-hidden"
+
+          {/* Actions */}
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 mt-10">
+            <Link
+              href={currentBanner.buttonLink || "/trips"}
+              className="group inline-flex items-center gap-3 bg-orange-500 hover:bg-orange-600 text-white px-10 py-4 text-xs font-black uppercase tracking-[0.25em] rounded-full shadow-[0_15px_35px_rgba(249,115,22,0.35)] hover:shadow-[0_20px_50px_rgba(249,115,22,0.45)] hover:scale-105 transition-all duration-300"
             >
-              <span className="relative z-10 flex items-center justify-center">
-                {currentBanner.buttonText || "DISCOVER"} <ArrowRight className="ml-3 w-4 h-4 group-hover:translate-x-2 transition-transform" />
-              </span>
+              {currentBanner.buttonText || "DISCOVER"}
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
             </Link>
-            
+
             {currentBanner.videoLink && (
-              <button className="flex items-center text-white group">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border border-white/30 flex items-center justify-center mr-4 group-hover:bg-white group-hover:text-primary transition-all duration-500">
-                  <Play className="w-5 h-5 fill-current" />
+              <button className="inline-flex items-center gap-4 text-white/70 hover:text-white transition-colors group">
+                <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-white group-hover:border-white group-hover:text-primary transition-all duration-300">
+                  <Play className="w-5 h-5 fill-current ml-0.5" />
                 </div>
-                <span className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.3em]">Se video</span>
+                <span className="text-xs font-bold uppercase tracking-[0.2em]">Se video</span>
               </button>
             )}
           </div>
         </div>
       </div>
 
-      {/* Navigation Controls */}
+      {/* Navigation arrows */}
       {allBanners.length > 1 && (
-        <>
-          <div className="absolute bottom-8 right-6 sm:bottom-12 sm:right-12 flex flex-row sm:flex-col gap-3 sm:gap-4 z-20">
-            {allBanners.map((_, i) => (
-              <button 
-                key={i} 
-                onClick={() => setCurrent(i)}
-                className={cn(
-                  "rounded-full transition-all duration-500",
-                  i === current 
-                    ? "bg-orange-500 w-8 h-2 sm:w-2 sm:h-8" 
-                    : "bg-white/20 hover:bg-white/40 w-2 h-2"
-                )} 
-              />
-            ))}
-          </div>
-
-          <div className="absolute bottom-20 sm:bottom-12 left-1/2 -translate-x-1/2 flex items-center space-x-8 sm:space-x-12 z-20 scale-90 sm:scale-100">
-            <button 
+        <div className="absolute inset-0 z-20 pointer-events-none group/arrows">
+          <div className="relative h-full max-w-7xl mx-auto px-4">
+            <button
               onClick={() => setCurrent(prev => (prev - 1 + allBanners.length) % allBanners.length)}
-              className="p-3 border border-white/10 rounded-full text-white hover:bg-white hover:text-black transition-all"
+              className="pointer-events-auto absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full border border-white/20 text-white/60 hover:text-white hover:bg-white/10 hover:border-white/40 backdrop-blur-sm transition-all duration-300 opacity-0 group-hover/arrows:opacity-100"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
-            <button 
+            <button
               onClick={() => setCurrent(prev => (prev + 1) % allBanners.length)}
-              className="p-3 border border-white/10 rounded-full text-white hover:bg-white hover:text-black transition-all"
+              className="pointer-events-auto absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full border border-white/20 text-white/60 hover:text-white hover:bg-white/10 hover:border-white/40 backdrop-blur-sm transition-all duration-300 opacity-0 group-hover/arrows:opacity-100"
             >
               <ChevronRight className="w-5 h-5" />
             </button>
           </div>
-        </>
+        </div>
       )}
 
-      {/* Decorations */}
-      <div className="absolute bottom-16 left-12 hidden xl:block text-white/50 text-[10px] font-black uppercase tracking-[0.5em] [writing-mode:vertical-lr] rotate-180">
-        Scroll for å oppdage
+      {/* Slide indicators */}
+      {allBanners.length > 1 && (
+        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex items-center gap-3 z-20">
+          {allBanners.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              className={cn(
+                "rounded-full transition-all duration-500",
+                i === current
+                  ? "bg-orange-500 w-10 h-2"
+                  : "bg-white/30 hover:bg-white/50 w-2 h-2"
+              )}
+            />
+          ))}
+        </div>
+      )}
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-12 right-12 hidden lg:flex flex-col items-center gap-3 text-white/30 z-20">
+        <span className="text-[9px] font-bold uppercase tracking-[0.3em] [writing-mode:vertical-lr]">Scroll</span>
+        <div className="w-px h-16 bg-gradient-to-b from-white/30 to-transparent" />
       </div>
-
-      {/* Cloud Wavy Divider */}
-      <div 
-        className="cloud-img pointer-events-none"
-        style={{
-          backgroundImage: `url('/cloud-overlay.png')`,
-        }}
-      />
-
-      <style jsx>{`
-        .stroke-text-white {
-          -webkit-text-stroke: 1px rgba(255,255,255,0.8);
-          color: transparent;
-        }
-        .cloud-img {
-          position: absolute;
-          bottom: -100px;
-          left: 0;
-          right: 0;
-          width: 100%;
-          height: 300px;
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: center;
-          z-index: 1;
-        }
-        @keyframes fadeIn {
-          from { opacity: 0; }
-          to { opacity: 1; }
-        }
-        @keyframes kenBurns {
-          from { transform: scale(1.1); }
-          to { transform: scale(1); }
-        }
-        @keyframes heroContent {
-          from { opacity: 0; transform: translateY(30px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        :global(.animate-fade-in) {
-          animation: fadeIn 1s ease-out;
-        }
-        :global(.animate-ken-burns) {
-          animation: kenBurns 10s linear;
-        }
-        :global(.animate-hero-content) {
-          animation: heroContent 1s ease-out 0.3s both;
-        }
-      `}</style>
     </div>
   );
 }

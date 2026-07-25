@@ -69,13 +69,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="no" className="scroll-smooth">
-      <head>
+      <body className={`${sora.variable} ${inter.variable} font-sans bg-white text-gray-900 antialiased`}>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://nepalvibb.com" />
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
-      </head>
-      <body className={`${sora.variable} ${inter.variable} font-sans bg-white text-gray-900 antialiased`}>
         <ClientLayout>{children}</ClientLayout>
       </body>
     </html>

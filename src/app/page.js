@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 import HomeContent from '@/models/HomeContent';
 import dbConnect from '@/lib/mongodb';
 
-import HeroBanner from '@/components/home/HeroBanner';
+const HeroBanner = dynamic(() => import('@/components/home/HeroBanner'), { ssr: true });
 
 const SearchSection = dynamic(() => import('@/components/home/SearchSection'), { ssr: true });
 const DestinationCards = dynamic(() => import('@/components/home/DestinationCards'), { ssr: true });
@@ -104,6 +104,7 @@ export default async function Home() {
             src={content.purpose?.image || 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1920&q=80'}
             alt=""
             className="w-full h-full object-cover"
+            fetchPriority="high"
           />
         </div>
 

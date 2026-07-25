@@ -45,10 +45,7 @@ export default function HeroBanner() {
     <div className="relative h-[100svh] min-h-[650px] flex items-center overflow-hidden bg-black">
       {/* Background image with overlay */}
       <div className="absolute inset-0">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url("${currentBanner.image}")` }}
-        />
+        <img src={currentBanner.image} alt="" className="absolute inset-0 w-full h-full object-cover" fetchPriority="high" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/30" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
       </div>

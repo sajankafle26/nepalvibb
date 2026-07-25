@@ -10,7 +10,6 @@ const nextConfig = {
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 86400,
   },
-  swcMinify: true,
   reactStrictMode: true,
   compress: true,
 };

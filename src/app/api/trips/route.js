@@ -2,11 +2,25 @@ import { NextResponse } from 'next/server';
 import dbConnect from '@/lib/mongodb';
 import Tour from '@/models/Tour';
 
-export async function GET() {
+export async function GET(request) {
   try {
     await dbConnect();
-    const tours = await Tour.find({}).sort({ createdAt: -1 });
-    return NextResponse.json(tours);
+    const { searchParams } = new URL(request.url);
+    const page = parseInt(searchParams.get('page')) || 1;
+    const limit = parseInt(searchParams.get('limit')) || 12;
+    const skip = (page - 1) * limit;
+
+    const [tours, total] = await Promise.all([
+      Tour.find({}).sort({ createdAt: -1 }).skip(skip).limit(limit),
+      Tour.countDocuments({}),
+    ]);
+
+    return NextResponse.json({
+      tours,
+      total,
+      totalPages: Math.ceil(total / limit),
+      currentPage: page,
+    });
   } catch (error) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }

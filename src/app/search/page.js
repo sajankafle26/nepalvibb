@@ -108,9 +108,10 @@ function SearchContent() {
                     <h3 className="text-lg sm:text-xl font-bold font-display text-primary mb-3 tracking-tight line-clamp-2 leading-snug group-hover:text-orange-500 transition-colors">
                       {tour.title}
                     </h3>
-                    <p className="text-gray-500 font-light mb-8 line-clamp-2 leading-relaxed text-sm">
-                      {tour.summary}
-                    </p>
+                    <div
+                      className="text-gray-500 font-light mb-8 line-clamp-2 leading-relaxed text-sm [&_p]:m-0 [&_p]:inline"
+                      dangerouslySetInnerHTML={{ __html: tour.summary }}
+                    />
                     <div className="mt-auto pt-6 border-t border-gray-50 flex items-center justify-between">
                       <div className="flex items-center space-x-6">
                         <div className="flex items-center space-x-1.5 text-[10px] font-bold uppercase tracking-wider text-gray-400">

@@ -63,6 +63,18 @@ export default function FeaturedActivities({ content }) {
     }
   };
 
+  useEffect(() => {
+    if (activities.length === 0) return;
+    const interval = setInterval(() => {
+      if (!canScrollRight && scrollRef.current) {
+        scrollRef.current.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        scroll('right');
+      }
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [canScrollRight, activities]);
+
   if (loading || activities.length === 0) return null;
 
   return (
@@ -140,9 +152,10 @@ export default function FeaturedActivities({ content }) {
                     <h3 className="text-xl sm:text-2xl font-bold font-display text-white tracking-tight mb-2 leading-tight">
                       {activity.name}
                     </h3>
-                    <p className="hidden sm:block text-sm text-white/70 font-light line-clamp-2 mb-6 group-hover:text-white transition-colors">
-                      {activity.description}
-                    </p>
+                    <div
+                      className="hidden sm:block text-sm text-white/70 font-light line-clamp-2 mb-6 group-hover:text-white transition-colors [&_p]:m-0 [&_p]:inline"
+                      dangerouslySetInnerHTML={{ __html: activity.description }}
+                    />
                     <div className="flex items-center space-x-2 text-xs font-bold uppercase tracking-wider text-orange-400">
                       <span>Utforsk</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />

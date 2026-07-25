@@ -52,7 +52,7 @@ export default function AdminTripsPage() {
     try {
       const res = await fetch('/api/trips');
       const data = await res.json();
-      setTrips(data);
+      setTrips(data?.tours || data || []);
     } catch (err) {
       console.error(err);
     } finally {

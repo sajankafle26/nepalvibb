@@ -68,9 +68,10 @@ export default function ActivityDetailPage({ params }) {
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold font-display text-white tracking-tight leading-tight">
               {activity.name}
             </h1>
-            <p className="text-lg sm:text-xl text-white/90 font-light leading-relaxed border-l-4 border-orange-500 pl-6">
-              {activity.description || `Oppdag de mest spektakulære ${activity.name.toLowerCase()} opplevelsene i hjertet av Nepal.`}
-            </p>
+            <div
+              className="text-lg sm:text-xl text-white/90 font-light leading-relaxed border-l-4 border-orange-500 pl-6 [&_p]:m-0"
+              dangerouslySetInnerHTML={{ __html: activity.description || `Oppdag de mest spektakulære ${activity.name.toLowerCase()} opplevelsene i hjertet av Nepal.` }}
+            />
           </motion.div>
         </div>
       </section>
@@ -116,9 +117,10 @@ export default function ActivityDetailPage({ params }) {
                   <h3 className="text-xl font-bold font-display text-primary tracking-tight group-hover:text-orange-500 transition-colors line-clamp-2 leading-snug">
                     {trip.title}
                   </h3>
-                  <p className="text-sm font-light text-gray-500 line-clamp-2 leading-relaxed">
-                    {trip.summary}
-                  </p>
+                  <div
+                    className="text-sm font-light text-gray-500 line-clamp-2 leading-relaxed [&_p]:m-0 [&_p]:inline"
+                    dangerouslySetInnerHTML={{ __html: trip.summary }}
+                  />
                   <div className="pt-6 border-t border-gray-100 flex items-center justify-between">
                     <div className="text-primary">
                       <span className="text-[9px] block font-bold uppercase tracking-wider text-gray-400 mb-1">Pris Fra</span>

@@ -100,7 +100,7 @@ function PlanYourTripContent() {
           qRes.json(), tRes.json(), dRes.json(), aRes.json()
         ]);
         setQuestions(Array.isArray(qData) ? qData : []);
-        setTours(Array.isArray(tData) ? tData : []);
+        setTours(Array.isArray(tData?.tours) ? tData.tours : Array.isArray(tData) ? tData : []);
         setDestinations(Array.isArray(dData) ? dData : []);
         setActivities(Array.isArray(aData) ? aData : []);
       } catch (err) {
